@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Asia B the Techie Personal Portfolio
+This is the portfolio website for Asia/Asia B the Techie.
 
-## Getting Started
+This README will not offer a step-by-step written guide to creating everything in this project. Instead it should act as a reference guide for myself and other developers who are familiar with the concepts featured in this project but may need access to more detailed explanations and resources during the build process. 
 
-First, run the development server:
+## Making the Project
+The goal is to create a personal portfolio website to showcase design and development skills. This project was designed in Figma and the code housed on the asia-b-the-techie-portfolio repository on GitHub.
 
-```bash
-npm run dev
-# or
-yarn dev
+Construction of this project was made possible with the use of the following:
+- [How to build a portfolio website using Next.js, Chakra UI, Framer Motion, and Three.js](https://www.youtube.com/watch?v=bSMZgXzC9AA&t=336s&ab_channel=devaslife)
+- [Next.js Documentation](https://nextjs.org/docs/getting-started)
+- [Chakra UI Documentation](https://chakra-ui.com/guides/getting-started/nextjs-guide)
+
+1. Create the Project 🚧
+Enter the folder that should house the project through the terminal and then create the project by running the following command: 
+```
+npx create-next-app@latest  asia-b-the-techie-portfolio
+```
+This is the easiest way to get started with Next.js and gets a default Next.js template set up quickly. 
+
+**BABEL**  
+Once the application is set up open it in any code editor and create a `.babelrc` file. Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers. Within that file add the following:
+```
+{
+    "presets": ["next/babel"],
+    "plugins": []
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**RUN THE PROJECT**  
+Once that's done to run the application enter the following command into the terminal: 
+```
+npm run dev 
+```
+Then open the project in http://localhost:3000.  
+To reuse the terminal enter CTRL + C, and when asked if the batch job should be terminated enter Y (for yes).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+**INSTALL DEPENDENCIES/PACKAGES**  
+To install the necessary dependencies for this project run the following command:
+```
+npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion react-icons
+```
+The command above installs Chakra UI, Emotion, Framer Motion, React Icons
+- Chakra UI - A component library that helps build React applications
+- Emotion - A library designed for writing CSS styles with JavaScript 
+- Framer Motion - A production-ready motion library for React
+- React Icons - A collection of popular icons to use within a React project
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+2. Edit the Project 🛠️
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
