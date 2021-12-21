@@ -4,7 +4,7 @@ This is the portfolio website for Asia/Asia B the Techie.
 This README will not offer a step-by-step written guide to creating everything in this project. Instead it should act as a reference guide for myself and other developers who are familiar with the concepts featured in this project but may need access to more detailed explanations and resources during the build process. 
 
 ## Making the Project
-The goal is to create a personal portfolio website to showcase design and development skills. This project was designed in Figma and the code housed on the asia-b-the-techie-portfolio repository on GitHub.
+The goal is to create a personal portfolio website to showcase design and development skills. This project was designed in Figma and the code housed on the [asia-b-the-techie-portfolio](https://github.com/asiabthetechie/asia-b-the-techie-portfolio) repository on GitHub.
 
 Construction of this project was made possible with the use of the following:
 - [How to build a portfolio website using Next.js, Chakra UI, Framer Motion, and Three.js](https://www.youtube.com/watch?v=bSMZgXzC9AA&t=336s&ab_channel=devaslife)
@@ -46,13 +46,14 @@ To reuse the terminal enter CTRL + C, and when asked if the batch job should be 
 **INSTALL DEPENDENCIES/PACKAGES**  
 To install the necessary dependencies for this project run the following command:
 ```
-npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion react-icons
+npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion react-icons emoji-dictionary
 ```
-The command above installs Chakra UI, Emotion, Framer Motion, React Icons
+The command above installs Chakra UI, Emotion, Framer Motion, React Icons, and Emoji Dictionary
 - Chakra UI - A component library that helps build React applications
 - Emotion - A library designed for writing CSS styles with JavaScript 
 - Framer Motion - A production-ready motion library for React
 - React Icons - A collection of popular icons to use within a React project
+- Emoji Dictionary - Displays emojis using unicode characters
 ___
 
 ### 2. Edit the Project 🛠️
@@ -91,23 +92,31 @@ To learn more about components see the following:
 
 <br/>
 
-**ASSETS - IMAGES, ILLUSTRATIONS, ETC.**
+**ASSETS**  
 Assets are typically contained in a assets folder that is created in the root project folder. Within this folder there may be additional folders for images, illustrations, etc.
 
-To display these assets the Next.js Image component from next/image is a common solution. This component acts as an extension of the HTML <img> element. Note, when using this component height and width are required passed through as props.
+To display these assets the Next.js Image component from next/image is a common solution. This component acts as an extension of the HTML `<img>` element. Note, when using this component height and width are required passed through as props.
 
 To learn more about the Next.js image component see the following:
 
-Next.js Image Component/Image Optimization
+- Next.js Image Component/Image Optimization
 ___
 
 ### 3. Style the Project 🎨
-This project utilizes Chakra UI for styling. Chakra UI is a component library. By importing the necessary components one can create easily styled projects. For example, the Flex, Box, Text, and Button components are common components seen throughout this project. They render elements such as `<div>` and `<button>`. 
+This project utilizes the component library, Chakra UI for styling. By importing the necessary components one can create easily styled projects. For example, the Flex, Box, Text, and Button components are common components that render the corresponding elements. From there the components can be given shorthand props such as color, alignItems, justifyContent, etc.
 
-From there the components can be given shorthand props such as color, alignItems, justifyContent, etc.
+<br />
 
-However, one important note is that for Chakra UI to work properly, the `ChakraProvider` needs to be set up at the root of the application. This can be done by going to /pages/_app.js importing the ChakraProvider from '@chakra-ui/react' and including it within the MyApp function.
+**THE CHAKRAPROVIDER**  
+One important note is that for Chakra UI to work properly, the `ChakraProvider` needs to be set up at the root of the application. This can be done by going to `/pages/_app.js` and including the following line of code:
+```
+import { ChakraProvider } from '@chakra-ui/react';
+```
+From there, include the `<ChakraProvider>` within the `MyApp` function.
 
 To learn more about the Chakra UI see the official documentation:
+- [Chakra UI Website]()
+___
 
-[Chakra UI Website]()
+### 4. Animate the Project ✨
+### 5. Launch the Project 🚀

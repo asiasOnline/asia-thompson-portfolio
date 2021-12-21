@@ -1,7 +1,15 @@
+import Head from 'next/head';
+import { Box, Stack, Heading, Text, IconButton} from '@chakra-ui/react';
+
 const Contact = () => (
-    <div>
-        <h1>Contact Me</h1>
-    </div>
+    <Box>
+        <Head>
+            <title>
+                Contact Me | Asia B the Techie Portfolio
+            </title>
+        </Head>
+        <Heading>Contact Me</Heading>
+    </Box>
 )
 
 export default Contact;

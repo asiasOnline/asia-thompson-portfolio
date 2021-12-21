@@ -1,14 +1,16 @@
+import { Stack } from '@chakra-ui/react';
+
 import Navigation from "./Navigation";
 
 const Layout = ({children}) => (
-    <div>
+    <Stack direction="row">
         <header>
             <Navigation />
         </header>
         <main>
             {children}
         </main>
-    </div>
+    </Stack>
 )
 
 export default Layout;
