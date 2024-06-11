@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Hero from "../components/Hero"
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <main>
+      <Navbar/>
       <Hero />
-      <BackgroundGradientAnimation />
     </main>
   );
 }
