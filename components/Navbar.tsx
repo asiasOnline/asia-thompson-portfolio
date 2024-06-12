@@ -4,7 +4,7 @@ import ThemeButton from './ui/ThemeButton'
 
 const Navbar = () => {
   return (
-    <nav className='w-screen px-24 py-14 flex justify-between items-center'>
+    <nav className='w-screen px-32 py-14 flex justify-between items-center'>
       <Logo 
         width="172"
         height="88"
