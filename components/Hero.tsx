@@ -1,26 +1,48 @@
 import React from 'react'
 import Image from 'next/image'
 import { PiMapPinLineFill } from "react-icons/pi";
+import { PiFileText } from "react-icons/pi";
+import { TbMail } from "react-icons/tb";
 import { Button } from '@/components/ui/Button'
 
 const Hero = () => {
   return (
-    <div className='w-4/5 px-32 mt-8 mx-auto'>
+    <div className='w-4/5 px-24 mx-auto'>
         <div>
-            <p className='text-9xl font-display font-semibold tracking-wide'>Hello there!</p>
-            <p className='text-9xl font-display font-semibold tracking-wide mt-5'>My name is <span className='text-9xl'>Asia</span></p>
+          <div className='relative w-full'>
+            <div className='absolute top-0 -left-4 w-80 h-80 bg-steelPink rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-gradientAnimation
+            dark:mix-blend-screen dark:opacity-20'></div>
+            <div className='
+            absolute -top-8 left-24 w-80 h-80 bg-ultramarine rounded-full mix-blend-multiply filter blur-2xl opacity-10 animate-gradientAnimation animation-delay-2000
+            dark:bg-slateBlue dark:mix-blend-screen dark:opacity-15'></div>
+            <div className='
+            absolute top-0 left-48 w-80 h-80 bg-fountainBlue rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-gradientAnimation animation-delay-4000
+            dark:mix-blend-screen dark:opacity-20'></div>
+            <div className='flex items-end gap-16'>
+              <p className='text-9xl font-display font-bold tracking-wider'>Hello there!</p>
+              <Image 
+                src="/asiaSmilingAvatar.png"
+                width={160}
+                height={160}
+                alt="Asia's profile avatar"
+              />
+              </div>
+          </div>
+            <p className='text-9xl font-display font-bold tracking-wider mt-5'>
+              My name is <span className='text-9xl text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink '>Asia</span>
+            </p>
         </div>
       <div className='mt-10'>
-        <p className='text-4xl font-display tracking-wider'>I'm a digital product designer and a full-stack developer with a passion for concise planning and thorough execution.</p>
+        <p className='text-4xl font-display tracking-wider leading-relaxed'>I'm a <span className='underline decoration-steelPink decoration-4 underline-offset-8'>digital product designer</span> and a <span className='underline decoration-fountainBlue decoration-4 underline-offset-8'>full-stack developer</span> with a passion for <span className='underline decoration-ultramarine dark:decoration-slateBlue decoration-4 underline-offset-8'>concise planning and thorough execution</span>.</p>
       </div>
       <div className='mt-20 flex justify-between'>
         <div className='flex items-center gap-4'>
           <PiMapPinLineFill className='w-8 h-8'/>
-          <p className='text-2xl font-display'>Based in Anaheim, CA</p>
+          <p className='text-2xl font-display font-bold tracking-wider'>Based in Anaheim, CA</p>
         </div>
-        <div className='flex'>
-          <Button>Contact</Button>
-          <Button>View Resume</Button>
+        <div className='flex gap-6'>
+          <Button className='bg-ultramarine text-white font-bold uppercase tracking-wider px-6 py-6 dark:bg-slateBlue dark:text-black'><TbMail className='mr-2 h-8 w-8'/>Contact</Button>
+          <Button className='text-black font-bold uppercase tracking-wider px-6 py-6 dark:text-white'><PiFileText className='mr-2 h-8 w-8'/>View Resume</Button>
         </div>
       </div>
     </div>
