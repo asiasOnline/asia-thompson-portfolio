@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Raleway, Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/ThemeProvider"
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ 
+  subsets: ["latin"], 
+  weight: ['400', '700'],
+  variable: '--font-roboto' });
+
+const raleway = Raleway({
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
   title: "Asia Thompson",
@@ -15,7 +22,7 @@ export default function RootLayout({children }: Readonly<{
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${roboto.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

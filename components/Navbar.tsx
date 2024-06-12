@@ -11,7 +11,7 @@ const Navbar = () => {
       />
       <div className='flex items-center gap-20'>
         <ThemeButton />
-        <div className='flex gap-10 text-base '>
+        <div className='flex gap-10 font-bold uppercase tracking-wider'>
           <a>Expertise</a>
           <a>Projects</a>
           <a>About</a>

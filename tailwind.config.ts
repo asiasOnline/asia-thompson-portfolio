@@ -20,7 +20,7 @@ const config = {
       },
     },
     fontFamily: {
-      'display': []
+      'display': ['var(--font-raleway)']
     },
     colors: {
       'white': '#F9F8F8',
@@ -31,7 +31,9 @@ const config = {
       'fountainBlue': '#32B6BE',
     },
     extend: { 
-
+      fontFamily: {
+        sans: ['var(--font-roboto)']
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

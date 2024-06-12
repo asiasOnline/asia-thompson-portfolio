@@ -21,21 +21,33 @@ const ThemeButton = () => {
   )
 
   if (resolvedTheme === 'dark') {
-    return <div className="relative">
-        <div className='absolute -inset-0.5 bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink rounded-md blur'>
-        </div>
+    return <div className="relative group">
+        <div className='absolute 
+        -inset-0.5 
+        bg-gradient-to-r from-fountainBlue via-slateBlue to-steelPink 
+        rounded-md 
+        blur-md 
+        opacity-75
+        group-hover:opacity-100 transition duration-150
+        '/>
         <Button className="bg-black relative" variant="outline" size="icon" onClick={() => setTheme('light')}>
-              <PiSun className='h-6 w-6'/>
+              <PiSun className='h-6 w-6 opacity-75 group-hover:opacity-100 transition duration-150'/>
           </Button>
       </div>
   }
 
   if (resolvedTheme === 'light') {
-    return <div className="relative">
-        <div className='absolute -inset-0.5 bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink rounded-md blur'>
-        </div>
+    return <div className="relative group">
+        <div className='absolute 
+        -inset-0.5 
+        bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink 
+        rounded-md 
+        blur-md 
+        opacity-75
+        group-hover:opacity-100 transition duration-150
+        '/>
         <Button className="bg-white relative" variant="outline" size="icon" onClick={() => setTheme('dark')}>
-              <PiMoon className='h-6 w-6'/>
+              <PiMoon className='h-6 w-6 opacity-75 group-hover:opacity-100 transition duration-150'/>
         </Button>
       </div>
   }
