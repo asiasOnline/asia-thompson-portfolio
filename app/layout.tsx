@@ -17,7 +17,7 @@ export default function RootLayout({children }: Readonly<{
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider
-          attribute="selector"
+          attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange

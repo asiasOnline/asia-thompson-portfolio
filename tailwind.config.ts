@@ -1,7 +1,9 @@
 import type { Config } from "tailwindcss"
 
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 const config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -17,21 +19,19 @@ const config = {
         "2xl": "1400px",
       },
     },
-    extend: {
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
+    fontFamily: {
+      'display': []
+    },
+    colors: {
+      'white': '#F9F8F8',
+      'black': '#1E1E1E',
+      'ultramarine': '#190F88',
+      'slateBlue': '#8175FF',
+      'steelPink': '#C554B9',
+      'fountainBlue': '#32B6BE',
+    },
+    extend: { 
+
     },
   },
   plugins: [require("tailwindcss-animate")],

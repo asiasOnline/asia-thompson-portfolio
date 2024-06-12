@@ -15,21 +15,29 @@ const ThemeButton = () => {
   useEffect(() => setMounted(true), [])
 
   if(!mounted) return (
-    <Button disabled>
+    <Button className="bg-transparent" variant="outline" size="icon">
       <TbLoader2 className='h-6 w-6 animate-spin'/>
     </Button>
   )
 
   if (resolvedTheme === 'dark') {
-    return <Button variant="outline" size="icon" onClick={() => setTheme('light')}>
+    return <div className="relative">
+        <div className='absolute -inset-0.5 bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink rounded-md blur'>
+        </div>
+        <Button className="bg-black relative" variant="outline" size="icon" onClick={() => setTheme('light')}>
               <PiSun className='h-6 w-6'/>
           </Button>
+      </div>
   }
 
   if (resolvedTheme === 'light') {
-    return <Button variant="outline" size="icon" onClick={() => setTheme('dark')}>
+    return <div className="relative">
+        <div className='absolute -inset-0.5 bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink rounded-md blur'>
+        </div>
+        <Button className="bg-white relative" variant="outline" size="icon" onClick={() => setTheme('dark')}>
               <PiMoon className='h-6 w-6'/>
-          </Button>
+        </Button>
+      </div>
   }
 }
 
