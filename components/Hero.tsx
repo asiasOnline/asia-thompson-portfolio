@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/Button'
 
 const Hero = () => {
   return (
-    <div className='w-4/5 px-24 mx-auto'>
+    <div className='mx-auto mt-6'>
         <div>
           <div className='relative w-full'>
             <div className='absolute top-0 -left-4 w-80 h-80 bg-steelPink rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-gradientAnimation
