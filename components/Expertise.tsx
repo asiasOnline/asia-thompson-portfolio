@@ -101,13 +101,26 @@ const Expertise = () => {
   return (
     <div className='mt-32'>
         <PageHeader title="Expertise"/>
-        {expertise.map((card, i) => (
+        <ExpertiseCard 
+            id={expertise[0].id}
+            title={expertise[0].title}
+            description={expertise[0].description}
+        />
             <ExpertiseCard 
-                key={i}
-                description={card.description}
-
-            />
-        ))}
+            id={expertise[1].id}
+            title={expertise[1].title}
+            description={expertise[1].description}
+        />
+            <ExpertiseCard 
+            id={expertise[2].id}
+            title={expertise[2].title}
+            description={expertise[2].description}
+        />
+            <ExpertiseCard 
+            id={expertise[3].id}
+            title={expertise[3].title}
+            description={expertise[3].description}
+        />
     </div>
   )
 }
