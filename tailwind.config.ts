@@ -36,7 +36,7 @@ const config = {
         sans: ['var(--font-roboto)']
       },
       animation: {
-        gradientAnimation: "gradientAnimation 7s infinite"
+        gradientAnimation: "gradientAnimation 5s infinite"
       },
       keyframes: {
         gradientAnimation: {

@@ -14,7 +14,7 @@ export const AnimatedTooltip = ({
 }: {
   items: {
     id: number;
-    name: string;
+    toolName: string;
     designation: string;
     icon?: React.ReactNode;
   }[];
@@ -41,8 +41,8 @@ export const AnimatedTooltip = ({
     <>
       {items.map((item, idx) => (
         <div
-          className="-mr-4  relative group"
-          key={item.name}
+          className="m-2 relative group"
+          key={item.toolName}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -71,13 +71,13 @@ export const AnimatedTooltip = ({
                 <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
                 <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
                 <div className="font-bold text-white relative z-30 text-base">
-                  {item.name}
+                  {item.toolName}
                 </div>
                 <div className="text-white text-xs">{item.designation}</div>
               </motion.div>
             )}
           </AnimatePresence>
-          <div className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500">
+          <div className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-black  relative transition duration-500 flex items-center">
             {item.icon}
           </div>
         </div>

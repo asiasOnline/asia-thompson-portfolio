@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { AnimatedTooltip } from "./AnimatedTooltip";
-const tools = [
+const oldTools = [
   {
     id: 1,
     name: "John Doe",
@@ -34,9 +34,9 @@ const tools = [
   },
 ];
 
-export function ExpertiseTools() {
+export function ExpertiseTools({ tools }: any) {
   return (
-    <div className="flex flex-row items-center justify-center mb-10 w-full">
+    <div className="flex flex-row items-center justify-center w-full">
       <AnimatedTooltip items={tools} />
     </div>
   );

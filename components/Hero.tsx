@@ -10,14 +10,14 @@ const Hero = () => {
     <div className='mx-auto mt-6'>
         <div>
           <div className='relative w-full'>
-            <div className='absolute top-0 -left-4 w-80 h-80 bg-steelPink rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-gradientAnimation
-            dark:mix-blend-screen dark:opacity-20'></div>
+            <div className='absolute top-0 -left-4 w-80 h-80 bg-steelPink rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-gradientAnimation
+            dark:mix-blend-screen dark:opacity-25'></div>
             <div className='
             absolute -top-8 left-24 w-80 h-80 bg-ultramarine rounded-full mix-blend-multiply filter blur-2xl opacity-10 animate-gradientAnimation animation-delay-2000
-            dark:bg-slateBlue dark:mix-blend-screen dark:opacity-15'></div>
+            dark:bg-slateBlue dark:mix-blend-screen dark:opacity-20'></div>
             <div className='
-            absolute top-0 left-48 w-80 h-80 bg-fountainBlue rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-gradientAnimation animation-delay-4000
-            dark:mix-blend-screen dark:opacity-20'></div>
+            absolute top-0 left-48 w-80 h-80 bg-fountainBlue rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-gradientAnimation animation-delay-4000
+            dark:mix-blend-screen dark:opacity-25'></div>
             <div className='flex items-end gap-16'>
               <p className='text-9xl font-display font-bold tracking-wider'>Hello there!</p>
               <Image 
