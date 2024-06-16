@@ -3,6 +3,9 @@ import React from 'react'
 import PageHeader from './ui/PageHeader'
 import ExpertiseCard from './ui/ExpertiseCard'
 import { CgFigma } from "react-icons/cg";
+import { SiBlender, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
+import { FaInvision } from "react-icons/fa6";
+
 
 const expertise = [
     {
@@ -20,11 +23,25 @@ const expertise = [
                 id: 2,
                 toolName: "Blender",
                 designation: "For custom 3D assets",
+                icon: <SiBlender className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 3,
-                toolName: "Photoshop",
+                toolName: "Adobe Photoshop",
                 designation: "Photo editor standard",
+                icon: <SiAdobephotoshop className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 4,
+                toolName: "Adobe Illustrator",
+                designation: "Vector editor standard",
+                icon: <SiAdobeillustrator className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 5,
+                toolName: "Invision",
+                designation: "Planning and prototyping",
+                icon: <FaInvision className='w-9 h-9 mx-auto'/>
             }
         ]
     },
@@ -32,7 +49,7 @@ const expertise = [
         id: 2,
         title: "Front End Development",
         description: "I craft captivating, interactive web experiences by implementing modern design aesthetics, optimizing user engagement, and capitalizing on the latest front-end technologies for the appropriate projects. ",
-        /*tools: [
+        tools: [
             {
                 id: 1,
                 toolName: "Figma",
@@ -48,7 +65,7 @@ const expertise = [
                 toolName: "Photoshop",
                 designation: "Photo editor standard",
             }
-        ]*/
+        ]
     },
     {
         id: 3,
@@ -102,12 +119,20 @@ const Expertise = () => {
   return (
     <div className='mt-32'>
         <PageHeader title="Expertise"/>
-        <ExpertiseCard 
-            id={expertise[0].id}
-            title={expertise[0].title}
-            description={expertise[0].description}
-            tools={expertise[0].tools}
-        />
+        <div className='flex flex-col gap-12'>
+            <ExpertiseCard 
+                id={expertise[0].id}
+                title={expertise[0].title}
+                description={expertise[0].description}
+                tools={expertise[0].tools}
+            />
+            <ExpertiseCard 
+                id={expertise[1].id}
+                title={expertise[1].title}
+                description={expertise[1].description}
+                tools={expertise[1].tools}
+            />
+        </div>
         {/*
         <ExpertiseCard 
         id={expertise[1].id}

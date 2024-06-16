@@ -5,7 +5,7 @@ import Expertise from "@/components/Expertise";
 
 export default function Home() {
   return (
-    <main className="w-screen">
+    <main className="w-screen bg-white dark:bg-black">
       <Navbar/>
       <div className="w-4/5 px-24 mx-auto">
         <Hero />
