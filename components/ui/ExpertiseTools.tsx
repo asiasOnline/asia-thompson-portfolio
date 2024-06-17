@@ -36,7 +36,7 @@ const oldTools = [
 
 export function ExpertiseTools({ tools }: any) {
   return (
-    <div className="flex flex-row items-center justify-center w-full">
+    <div className="flex flex-row flex-wrap items-center justify-center w-3/5">
       <AnimatedTooltip items={tools} />
     </div>
   );

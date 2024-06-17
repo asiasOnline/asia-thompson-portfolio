@@ -3,8 +3,8 @@ import React from 'react'
 import PageHeader from './ui/PageHeader'
 import ExpertiseCard from './ui/ExpertiseCard'
 import { CgFigma } from "react-icons/cg";
-import { SiBlender, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
-import { FaInvision } from "react-icons/fa6";
+import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiElectron } from "react-icons/si";
+import { FaInvision, FaVuejs } from "react-icons/fa6";
 
 
 const expertise = [
@@ -52,18 +52,63 @@ const expertise = [
         tools: [
             {
                 id: 1,
-                toolName: "Figma",
-                designation: "Industry design standard",
+                toolName: "HTML5",
+                designation: "The foundation of any website",
+                icon: <SiHtml5 className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 2,
-                toolName: "Blender",
-                designation: "For custom 3D assets",
+                toolName: "CSS3",
+                designation: "Website styling",
+                icon: <SiCss3 className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 3,
-                toolName: "Photoshop",
-                designation: "Photo editor standard",
+                toolName: "SASS",
+                designation: "Traditional CSS extension",
+                icon: <SiSass className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 4,
+                toolName: "TailwindCSS",
+                designation: "The current standard CSS framework",
+                icon: <SiTailwindcss className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 5,
+                toolName: "JavaScript",
+                designation: "The programming language of the web",
+                icon: <SiJavascript className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 6,
+                toolName: "TypeScript",
+                designation: "The working developer's JavaScript",
+                icon: <SiTypescript className='w-8 h-8 mx-auto'/>
+            }, 
+            {
+                id: 7,
+                toolName: "React",
+                designation: "The library dominating the JavaScript frameworks",
+                icon: <SiReact className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 8,
+                toolName: "Next.js",
+                designation: "React if it was actually a framework",
+                icon: <SiNextdotjs className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 9,
+                toolName: "Vue",
+                designation: "The cool middle sister of the JavaScript frameworks",
+                icon: <FaVuejs className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 10,
+                toolName: "Electron",
+                designation: "The web developer's entry to desktop apps",
+                icon: <SiElectron className='w-8 h-8 mx-auto'/>
             }
         ]
     },
