@@ -3,7 +3,7 @@ import React from 'react'
 import PageHeader from './ui/PageHeader'
 import ExpertiseCard from './ui/ExpertiseCard'
 import { CgFigma } from "react-icons/cg";
-import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiElectron } from "react-icons/si";
+import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiElectron, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql } from "react-icons/si";
 import { FaInvision, FaVuejs } from "react-icons/fa6";
 
 
@@ -116,7 +116,31 @@ const expertise = [
         id: 3,
         title: "Back End Development",
         description: "I build robust, scalable back-end systems architecting secure APIs, optimizing database interactions, and ensuring seamless integration with front-end technologies for enhanced performance and reliability. ",
-        /*
+        tools: [
+            {
+                id: 1,
+                toolName: "Node.js",
+                designation: "The JavaScript runtime",
+                icon: <SiNodedotjs className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 2,
+                toolName: "C#",
+                designation: "The Microsoft programming language",
+                icon: <SiCsharp className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 3,
+                toolName: ".NET",
+                designation: "The application platform for C#",
+                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+            },
+        ]
+    },
+    {
+        id: 4,
+        title: "Database Engineering",
+        description: "I design and optimize high-performance databases by implementing efficient data structures, ensuring database integrity, and enabling storage solutions to power dynamic and data-driven applications.",
         tools: [
             {
                 id: 1,
@@ -133,30 +157,7 @@ const expertise = [
                 toolName: "Photoshop",
                 designation: "Photo editor standard",
             }
-        ]*/
-    },
-    {
-        id: 4,
-        title: "Database Engineering",
-        description: "I design and optimize high-performance databases by implementing efficient data structures, ensuring database integrity, and enabling storage solutions to power dynamic and data-driven applications.",
-        /*tools: [
-            {
-                id: 1,
-                toolName: "Figma",
-                designation: "Industry design standard",
-            },
-            {
-                id: 2,
-                toolName: "Blender",
-                designation: "For custom 3D assets",
-            },
-            {
-                id: 3,
-                toolName: "Photoshop",
-                designation: "Photo editor standard",
-            }
         ]
-        */
     }
 ]
 
@@ -176,6 +177,18 @@ const Expertise = () => {
                 title={expertise[1].title}
                 description={expertise[1].description}
                 tools={expertise[1].tools}
+            />
+            <ExpertiseCard 
+                id={expertise[2].id}
+                title={expertise[2].title}
+                description={expertise[2].description}
+                tools={expertise[2].tools}
+            />
+            <ExpertiseCard 
+                id={expertise[3].id}
+                title={expertise[3].title}
+                description={expertise[3].description}
+                tools={expertise[3].tools}
             />
         </div>
         {/*
