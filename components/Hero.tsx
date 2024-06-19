@@ -33,7 +33,7 @@ const Hero = () => {
             </p>
         </div>
       <div className='mt-10'>
-        <p className='text-4xl font-display tracking-wider leading-relaxed'>I'm a <span className='underline decoration-steelPink decoration-4 underline-offset-8'>digital product designer</span> and a <span className='underline decoration-fountainBlue decoration-4 underline-offset-8'>full-stack developer</span> with a passion for <span className='underline decoration-ultramarine dark:decoration-slateBlue decoration-4 underline-offset-8'>concise planning and thorough execution</span>.</p>
+        <p className='text-4xl font-display tracking-wider leading-relaxed'>I&apos;m a <span className='underline decoration-steelPink decoration-4 underline-offset-8'>digital product designer</span> and a <span className='underline decoration-fountainBlue decoration-4 underline-offset-8'>full-stack developer</span> with a passion for <span className='underline decoration-ultramarine dark:decoration-slateBlue decoration-4 underline-offset-8'>concise planning and thorough execution</span>.</p>
       </div>
       <div className='mt-20 flex justify-between'>
         <div className='flex items-center gap-4'>
