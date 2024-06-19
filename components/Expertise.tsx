@@ -3,7 +3,7 @@ import React from 'react'
 import PageHeader from './ui/PageHeader'
 import ExpertiseCard from './ui/ExpertiseCard'
 import { CgFigma } from "react-icons/cg";
-import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiElectron, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql } from "react-icons/si";
+import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiElectron, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql, SiDocker } from "react-icons/si";
 import { FaInvision, FaVuejs } from "react-icons/fa6";
 
 
@@ -135,6 +135,48 @@ const expertise = [
                 designation: "The application platform for C#",
                 icon: <SiDotnet className='w-8 h-8 mx-auto'/>
             },
+            {
+                id: 4,
+                toolName: "PHP",
+                designation: "The application platform for C#",
+                icon: <SiPhp className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 5,
+                toolName: "Python",
+                designation: "The application platform for C#",
+                icon: <SiPython className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 6,
+                toolName: "Apollo GraphQL",
+                designation: "The application platform for C#",
+                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 7,
+                toolName: "Apollo GraphQL",
+                designation: "The application platform for C#",
+                icon: <SiApollographql className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 8,
+                toolName: "Dockers",
+                designation: "The application platform for C#",
+                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 9,
+                toolName: "Amazon Web Services",
+                designation: "The application platform for C#",
+                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 10,
+                toolName: "Terraform",
+                designation: "The application platform for C#",
+                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+            },
         ]
     },
     {
@@ -156,7 +198,37 @@ const expertise = [
                 id: 3,
                 toolName: "Photoshop",
                 designation: "Photo editor standard",
-            }
+            },
+            {
+                id: 4,
+                toolName: "PHP",
+                designation: "The application platform for C#",
+                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 5,
+                toolName: "Python",
+                designation: "The application platform for C#",
+                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 6,
+                toolName: "Apollo GraphQL",
+                designation: "The application platform for C#",
+                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 7,
+                toolName: "Apollo GraphQL",
+                designation: "The application platform for C#",
+                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 8,
+                toolName: "Dockers",
+                designation: "The application platform for C#",
+                icon: <SiDocker className='w-8 h-8 mx-auto'/>
+            },
         ]
     }
 ]
