@@ -3,8 +3,8 @@ import React from 'react'
 import PageHeader from './ui/PageHeader'
 import ExpertiseCard from './ui/ExpertiseCard'
 import { CgFigma } from "react-icons/cg";
-import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiElectron, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql, SiDocker } from "react-icons/si";
-import { FaInvision, FaVuejs } from "react-icons/fa6";
+import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiAdobeaftereffects, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiElectron, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql, SiDocker, SiKubernetes, SiAmazonaws, SiTerraform, SiPostgresql } from "react-icons/si";
+import { FaAngular } from "react-icons/fa6";
 
 
 const expertise = [
@@ -16,32 +16,32 @@ const expertise = [
             {
                 id: 1,
                 toolName: "Figma",
-                designation: "Industry design standard",
+                designation: "The industry standard collaborative design tool",
                 icon: <CgFigma className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 2,
                 toolName: "Blender",
-                designation: "For custom 3D assets",
+                designation: "A open-source tool for creating 3D assets",
                 icon: <SiBlender className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 3,
                 toolName: "Adobe Photoshop",
-                designation: "Photo editor standard",
+                designation: "The industry standard photo editor and raster graphics software",
                 icon: <SiAdobephotoshop className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 4,
                 toolName: "Adobe Illustrator",
-                designation: "Vector editor standard",
+                designation: "A vector graphics editor that's part of the Adobe Creative Suite",
                 icon: <SiAdobeillustrator className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 5,
-                toolName: "Invision",
-                designation: "Planning and prototyping",
-                icon: <FaInvision className='w-9 h-9 mx-auto'/>
+                toolName: "Adobe After Effects",
+                designation: "A industry standard motion graphics and visual effects tool",
+                icon: <SiAdobeaftereffects className='w-8 h-8 mx-auto'/>
             }
         ]
     },
@@ -53,19 +53,19 @@ const expertise = [
             {
                 id: 1,
                 toolName: "HTML5",
-                designation: "The foundation of any website",
+                designation: "The markup language for web pages",
                 icon: <SiHtml5 className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 2,
                 toolName: "CSS3",
-                designation: "Website styling",
+                designation: "The stylesheet language for web design",
                 icon: <SiCss3 className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 3,
                 toolName: "SASS",
-                designation: "Traditional CSS extension",
+                designation: "The standard preprocessor scripting language",
                 icon: <SiSass className='w-8 h-8 mx-auto'/>
             },
             {
@@ -77,7 +77,7 @@ const expertise = [
             {
                 id: 5,
                 toolName: "JavaScript",
-                designation: "The programming language of the web",
+                designation: "A core programming language for building web page behavior",
                 icon: <SiJavascript className='w-8 h-8 mx-auto'/>
             },
             {
@@ -89,25 +89,25 @@ const expertise = [
             {
                 id: 7,
                 toolName: "React",
-                designation: "The library dominating the JavaScript frameworks",
+                designation: "The front-end library for creating user interfaces",
                 icon: <SiReact className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 8,
                 toolName: "Next.js",
-                designation: "React if it was actually a framework",
+                designation: "Vercel's web development framework built on React",
                 icon: <SiNextdotjs className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 9,
-                toolName: "Vue",
-                designation: "The cool middle sister of the JavaScript frameworks",
-                icon: <FaVuejs className='w-8 h-8 mx-auto'/>
+                toolName: "Angular",
+                designation: "A Typescript-based framework developed by Google",
+                icon: <FaAngular className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 10,
                 toolName: "Electron",
-                designation: "The web developer's entry to desktop apps",
+                designation: "A tool for building desktop apps using web tech",
                 icon: <SiElectron className='w-8 h-8 mx-auto'/>
             }
         ]
@@ -126,7 +126,7 @@ const expertise = [
             {
                 id: 2,
                 toolName: "C#",
-                designation: "The Microsoft programming language",
+                designation: "A programming language developed by Microsoft and runs on the .NET framework",
                 icon: <SiCsharp className='w-8 h-8 mx-auto'/>
             },
             {
@@ -138,44 +138,44 @@ const expertise = [
             {
                 id: 4,
                 toolName: "PHP",
-                designation: "The application platform for C#",
+                designation: "A general-purpose scripting language for dynamic web development",
                 icon: <SiPhp className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 5,
                 toolName: "Python",
-                designation: "The application platform for C#",
+                designation: "A high-level language for automation, databases, and machine learning",
                 icon: <SiPython className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 6,
                 toolName: "Apollo GraphQL",
-                designation: "The application platform for C#",
-                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
-            },
-            {
-                id: 7,
-                toolName: "Apollo GraphQL",
-                designation: "The application platform for C#",
+                designation: "A tool for managing local and remote data with GraphQL",
                 icon: <SiApollographql className='w-8 h-8 mx-auto'/>
             },
             {
-                id: 8,
+                id: 7,
                 toolName: "Dockers",
-                designation: "The application platform for C#",
-                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+                designation: "A containerization platform for virtualized app containers",
+                icon: <SiDocker className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 8,
+                toolName: "Kubernetes",
+                designation: "A container orchestration system for automatic deployment and scaling",
+                icon: <SiKubernetes className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 9,
                 toolName: "Amazon Web Services",
-                designation: "The application platform for C#",
-                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+                designation: "A collection of various cloud computing services from Amazon",
+                icon: <SiAmazonaws className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 10,
                 toolName: "Terraform",
-                designation: "The application platform for C#",
-                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+                designation: "A tool for automating various infrastructure tasks",
+                icon: <SiTerraform className='w-8 h-8 mx-auto'/>
             },
         ]
     },
@@ -186,8 +186,10 @@ const expertise = [
         tools: [
             {
                 id: 1,
-                toolName: "Figma",
-                designation: "Industry design standard",
+                toolName: "PostgreSQL",
+                designation: "A popular relational database maangement system",
+                icon: <SiPostgresql className='w-8 h-8 mx-auto'/>
+
             },
             {
                 id: 2,
