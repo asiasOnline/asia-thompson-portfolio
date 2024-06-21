@@ -10,14 +10,14 @@ const Hero = () => {
     <div className='mx-auto mt-6'>
         <div>
           <div className='relative w-full'>
-            <div className='absolute top-0 -left-4 w-80 h-80 bg-steelPink rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-gradientAnimation
-            dark:mix-blend-screen dark:opacity-25'></div>
+            <div className='absolute top-0 -left-4 w-80 h-80 bg-steelPink rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-gradientAnimation
+            dark:mix-blend-screen dark:opacity-35'></div>
             <div className='
-            absolute -top-8 left-24 w-80 h-80 bg-ultramarine rounded-full mix-blend-multiply filter blur-2xl opacity-10 animate-gradientAnimation animation-delay-2000
-            dark:bg-slateBlue dark:mix-blend-screen dark:opacity-20'></div>
+            absolute -top-8 left-24 w-80 h-80 bg-ultramarine rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-gradientAnimation animation-delay-2000
+            dark:bg-slateBlue dark:mix-blend-screen dark:opacity-30'></div>
             <div className='
-            absolute top-0 left-48 w-80 h-80 bg-fountainBlue rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-gradientAnimation animation-delay-4000
-            dark:mix-blend-screen dark:opacity-25'></div>
+            absolute top-0 left-48 w-80 h-80 bg-fountainBlue rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-gradientAnimation animation-delay-4000
+            dark:mix-blend-screen dark:opacity-35'></div>
             <div className='flex items-end gap-16'>
               <p className='text-9xl font-display font-bold tracking-wider'>Hello there!</p>
               <Image 
@@ -29,7 +29,7 @@ const Hero = () => {
               </div>
           </div>
             <p className='text-9xl font-display font-bold tracking-wider mt-5'>
-              My name is <span className='text-9xl text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink '>Asia</span>
+              My name is <span className='text-9xl text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink animate-gradientAnimation '>Asia</span>
             </p>
         </div>
       <div className='mt-10'>
