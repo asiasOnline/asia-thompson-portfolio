@@ -3,7 +3,8 @@ import React from 'react'
 import PageHeader from './ui/PageHeader'
 import ExpertiseCard from './ui/ExpertiseCard'
 import { CgFigma } from "react-icons/cg";
-import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiAdobeaftereffects, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiElectron, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql, SiDocker, SiKubernetes, SiAmazonaws, SiTerraform, SiPostgresql } from "react-icons/si";
+import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiAdobeaftereffects, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiElectron, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql, SiDocker, SiKubernetes, SiAmazonaws, SiTerraform, SiMongodb, SiMicrosoftazure, SiSnowflake, SiRedis, SiApacheairflow, SiApachespark, SiElasticsearch } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
 import { FaAngular } from "react-icons/fa6";
 
 
@@ -78,13 +79,13 @@ const expertise = [
                 id: 5,
                 toolName: "JavaScript",
                 designation: "A core programming language for building web page behavior",
-                icon: <SiJavascript className='w-8 h-8 mx-auto'/>
+                icon: <SiJavascript className='w-7 h-7 mx-auto'/>
             },
             {
                 id: 6,
                 toolName: "TypeScript",
                 designation: "The working developer's JavaScript",
-                icon: <SiTypescript className='w-8 h-8 mx-auto'/>
+                icon: <SiTypescript className='w-7 h-7 mx-auto'/>
             }, 
             {
                 id: 7,
@@ -102,7 +103,7 @@ const expertise = [
                 id: 9,
                 toolName: "Angular",
                 designation: "A Typescript-based framework developed by Google",
-                icon: <FaAngular className='w-8 h-8 mx-auto'/>
+                icon: <FaAngular className='w-10 h-10 mx-auto'/>
             },
             {
                 id: 10,
@@ -120,19 +121,19 @@ const expertise = [
             {
                 id: 1,
                 toolName: "Node.js",
-                designation: "The JavaScript runtime",
+                designation: "A tool used to write JavaScript for command line tools and server-side scripts",
                 icon: <SiNodedotjs className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 2,
                 toolName: "C#",
-                designation: "A programming language developed by Microsoft and runs on the .NET framework",
+                designation: "A general purpose programming language developed by Microsoft",
                 icon: <SiCsharp className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 3,
                 toolName: ".NET",
-                designation: "The application platform for C#",
+                designation: "A framework for creating and running software apps written in C#",
                 icon: <SiDotnet className='w-8 h-8 mx-auto'/>
             },
             {
@@ -188,48 +189,50 @@ const expertise = [
                 id: 1,
                 toolName: "PostgreSQL",
                 designation: "A popular relational database maangement system",
-                icon: <SiPostgresql className='w-8 h-8 mx-auto'/>
+                icon: <BiLogoPostgresql className='w-10 h-10 mx-auto'/>
 
             },
             {
                 id: 2,
-                toolName: "Blender",
-                designation: "For custom 3D assets",
+                toolName: "MongoDB",
+                designation: "A popular NoSQL database that utilizes JSON-like documents",
+                icon: <SiMongodb className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 3,
-                toolName: "Photoshop",
-                designation: "Photo editor standard",
+                toolName: "Azure",
+                designation: "Microsoft's public cloud platform providing infrastructure and database services",
+                icon: <SiMicrosoftazure className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 4,
-                toolName: "PHP",
-                designation: "The application platform for C#",
-                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+                toolName: "Snowflake",
+                designation: "A platform enabling data storage, processing, and analytic solutions",
+                icon: <SiSnowflake className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 5,
-                toolName: "Python",
-                designation: "The application platform for C#",
-                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+                toolName: "Redis",
+                designation: "A NoSQL key-value database used for storage of complex data types",
+                icon: <SiRedis className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 6,
-                toolName: "Apollo GraphQL",
-                designation: "The application platform for C#",
-                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+                toolName: "Apache Airflow",
+                designation: "An automation tool to programmatically schedule and monitor workflows",
+                icon: <SiApacheairflow className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 7,
-                toolName: "Apollo GraphQL",
-                designation: "The application platform for C#",
-                icon: <SiDotnet className='w-8 h-8 mx-auto'/>
+                toolName: "Apache Spark",
+                designation: "A distributed data processing engine for data analytics and machine learning",
+                icon: <SiApachespark className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 8,
-                toolName: "Dockers",
-                designation: "The application platform for C#",
-                icon: <SiDocker className='w-8 h-8 mx-auto'/>
+                toolName: "Elasticsearch",
+                designation: "A search and analytics engine for structured and unstructured data",
+                icon: <SiElasticsearch className='w-8 h-8 mx-auto'/>
             },
         ]
     }
