@@ -2,6 +2,8 @@ import ProjectHighlights from "@/components/ProjectHighlights";
 import Hero from "../components/Hero"
 import Navbar from "@/components/Navbar";
 import Expertise from "@/components/Expertise";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
         <Hero />
         <Expertise />
         <ProjectHighlights />
+        <About />
+        <Contact />
       </div>
     </main>
   );

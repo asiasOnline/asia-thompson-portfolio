@@ -14,7 +14,7 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 const ProjectHighlights = () => {
   return (
-    <div className='mt-32'>
+    <div id="projectHighlights" className='my-20'>
         <PageHeader title="Project Highlights"/>
         <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[18rem]" >
         {items.map((item, i) => (
@@ -71,6 +71,7 @@ const items = [
   },
   {
     title: "MM Florist",
+    year: "2023",
     description: "A responsive website for an online florist shop",
     className: "md:col-span-3 row-span-2 saturate-0 hover:saturate-100",
     header: <Skeleton 
@@ -80,6 +81,7 @@ const items = [
   },
   {
     title: "Happy Home Manager",
+    year: "2023",
     description:
       "A web and mobile app for a family oriented task manager",
     className: "md:col-span-1 row-span-2 saturate-0 hover:saturate-100",
@@ -100,6 +102,7 @@ const items = [
   },
   {
     title: "Mastery Coding Color Picker",
+    year: "2022",
     description: "An in-depth tutorial for a color picker tool made using HTML, CSS, and JavaScript for middle school students",
     className: "md:col-span-2 row-span-2 saturate-0 hover:saturate-100",
     header: <Skeleton 

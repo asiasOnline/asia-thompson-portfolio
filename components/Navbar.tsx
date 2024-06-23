@@ -17,10 +17,10 @@ const Navbar = () => {
       <div className='flex items-center gap-20'>
         <ThemeButton />
         <div className='flex gap-10 font-bold uppercase tracking-wider'>
-          <a>Projects</a>
-          <a>Expertise</a>
-          <a>About</a>
-          <a>Contact</a>
+          <Link href="#expertise">Expertise</Link>
+          <Link href="#projectHighlights">Projects</Link>
+          <Link href="#about">About</Link>
+          <Link href="#contact">Contact</Link>
         </div>
       </div>
     </nav>
