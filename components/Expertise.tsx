@@ -3,7 +3,7 @@ import React from 'react'
 import PageHeader from './ui/PageHeader'
 import ExpertiseCard from './ui/ExpertiseCard'
 import { CgFigma } from "react-icons/cg";
-import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiAdobeaftereffects, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiElectron, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql, SiDocker, SiKubernetes, SiAmazonaws, SiTerraform, SiMongodb, SiMicrosoftazure, SiSnowflake, SiRedis, SiApacheairflow, SiApachespark, SiElasticsearch } from "react-icons/si";
+import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiAdobeaftereffects, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiLaravel, SiElectron, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql, SiDocker, SiKubernetes, SiAmazonaws, SiTerraform, SiMongodb, SiMicrosoftazure, SiSnowflake, SiRedis, SiApacheairflow, SiApachespark, SiTableau, SiElasticsearch } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaAngular } from "react-icons/fa6";
 
@@ -95,15 +95,15 @@ const expertise = [
             },
             {
                 id: 8,
-                toolName: "Next.js",
-                designation: "Vercel's web development framework built on React",
-                icon: <SiNextdotjs className='w-8 h-8 mx-auto'/>
-            },
-            {
-                id: 9,
                 toolName: "Angular",
                 designation: "A Typescript-based framework developed by Google",
                 icon: <FaAngular className='w-10 h-10 mx-auto'/>
+            },
+            {
+                id: 9,
+                toolName: "Laravel",
+                designation: "A PHP web framework for building web apps",
+                icon: <SiLaravel className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 10,
@@ -230,6 +230,12 @@ const expertise = [
             },
             {
                 id: 8,
+                toolName: "Tableau",
+                designation: "A business intelligence and analytics software for visualizing data",
+                icon: <SiTableau className='w-8 h-8 mx-auto'/>
+            },
+            {
+                id: 9,
                 toolName: "Elasticsearch",
                 designation: "A search and analytics engine for structured and unstructured data",
                 icon: <SiElasticsearch className='w-8 h-8 mx-auto'/>
