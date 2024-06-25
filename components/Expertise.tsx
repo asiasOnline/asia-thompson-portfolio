@@ -3,7 +3,7 @@ import React from 'react'
 import PageHeader from './ui/PageHeader'
 import ExpertiseCard from './ui/ExpertiseCard'
 import { CgFigma } from "react-icons/cg";
-import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiAdobeaftereffects, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiLaravel, SiElectron, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql, SiDocker, SiKubernetes, SiAmazonaws, SiTerraform, SiMongodb, SiMicrosoftazure, SiSnowflake, SiRedis, SiApacheairflow, SiApachespark, SiTableau, SiElasticsearch } from "react-icons/si";
+import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiAdobeaftereffects, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiLaravel, SiAstro, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql, SiDocker, SiKubernetes, SiAmazonaws, SiTerraform, SiMongodb, SiMicrosoftazure, SiSnowflake, SiRedis, SiApacheairflow, SiApachespark, SiTableau, SiElasticsearch } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaAngular } from "react-icons/fa6";
 
@@ -89,8 +89,8 @@ const expertise = [
             }, 
             {
                 id: 7,
-                toolName: "React",
-                designation: "The front-end library for creating user interfaces",
+                toolName: "React & React Native",
+                designation: "The front-end library for creating responsive user interfaces for various devices",
                 icon: <SiReact className='w-8 h-8 mx-auto'/>
             },
             {
@@ -107,9 +107,9 @@ const expertise = [
             },
             {
                 id: 10,
-                toolName: "Electron",
-                designation: "A tool for building desktop apps using web tech",
-                icon: <SiElectron className='w-8 h-8 mx-auto'/>
+                toolName: "Astro",
+                designation: "A web framework for building content-driven websites",
+                icon: <SiAstro className='w-8 h-8 mx-auto'/>
             }
         ]
     },
@@ -274,23 +274,6 @@ const Expertise = () => {
                 tools={expertise[3].tools}
             />
         </div>
-        {/*
-        <ExpertiseCard 
-        id={expertise[1].id}
-        title={expertise[1].title}
-        description={expertise[1].description}
-        />
-        <ExpertiseCard 
-        id={expertise[2].id}
-        title={expertise[2].title}
-        description={expertise[2].description}
-        />
-        <ExpertiseCard 
-        id={expertise[3].id}
-        title={expertise[3].title}
-        description={expertise[3].description}
-        />
-        */}
     </div>
   )
 }
