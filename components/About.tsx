@@ -74,7 +74,7 @@ const tools = [
 const About = () => {
 
   return (
-    <div id="about" className='my-20'>
+    <div id="about">
         <PageHeader title="About"/>
         <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[8rem] gap-y-8 gap-x-4" >
           {/*About section - Top Row*/}
