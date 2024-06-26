@@ -42,7 +42,7 @@ export const ProjectGridItem = ({
       )}>
         <div className="invisible group-hover/bento:visible">
           <div className="w-full flex justify-between font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
-            <div className='text-2xl font-bold'>{title}</div>
+            <div className='text-2xl font-bold tracking-wider'>{title}</div>
             <div>{year}</div>
           </div>
           <div className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">

@@ -41,9 +41,16 @@ const Hero = () => {
           <PiMapPinLineFill className='w-8 h-8'/>
           <p className='text-2xl font-display font-bold tracking-wider'>Based in Anaheim, CA</p>
         </div>
-        <div className='flex gap-6'>
+        <div className='flex items-center gap-6'>
           <Button className='bg-ultramarine text-white font-bold uppercase tracking-wider px-6 py-6 dark:bg-slateBlue dark:text-black'><TbMail className='mr-2 h-8 w-8'/>Contact</Button>
-          <Button className='text-black font-bold uppercase tracking-wider px-6 py-6 dark:text-white'><PiFileText className='mr-2 h-8 w-8'/>View Resume</Button>
+          <Link 
+          href="/Asia-Thompson-Public-Resume.pdf"
+          target='_blank'
+          locale={false}
+          className='text-black font-bold uppercase tracking-wider px-6 py-6 dark:text-white flex items-center'>
+            <PiFileText className='mr-2 h-8 w-8'/>
+            <p>View Resume</p>
+          </Link>
         </div>
       </div>
     </div>
