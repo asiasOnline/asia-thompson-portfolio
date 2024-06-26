@@ -134,7 +134,7 @@ const About = () => {
             />
             <h3 className='text-2xl font-bold tracking-wider'>Asia Thompson</h3>
             <div className='flex items-center gap-2'>
-              <div className='w-4 h-4 rounded-full bg-green-600'></div>
+              <div className='w-4 h-4 rounded-full bg-green'></div>
               Open for Work
             </div>
           </AboutCard>

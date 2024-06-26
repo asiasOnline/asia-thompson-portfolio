@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/Button'
 
 const Hero = () => {
   return (
-    <div className='mx-auto mt-6'>
+    <div className='mx-auto'>
         <div>
           <div className='relative w-full'>
             <div className='absolute top-0 -left-4 w-80 h-80 bg-steelPink rounded-full mix-blend-multiply filter blur-2xl opacity-25 animate-gradientAnimation
@@ -42,7 +42,9 @@ const Hero = () => {
           <p className='text-2xl font-display font-bold tracking-wider'>Based in Anaheim, CA</p>
         </div>
         <div className='flex items-center gap-6'>
-          <Button className='bg-ultramarine text-white font-bold uppercase tracking-wider px-6 py-6 dark:bg-slateBlue dark:text-black'><TbMail className='mr-2 h-8 w-8'/>Contact</Button>
+          <Button className='w-fit bg-ultramarine text-white font-bold uppercase tracking-wider px-10 py-6 dark:bg-slateBlue dark:text-black'>
+            <TbMail className='mr-2 h-8 w-8'/>Contact
+          </Button>
           <Link 
           href="/Asia-Thompson-Public-Resume.pdf"
           target='_blank'

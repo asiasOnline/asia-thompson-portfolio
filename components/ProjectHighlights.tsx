@@ -16,7 +16,7 @@ import MCColorPicker from "../public/MC Color Picker Tutorial Mockup.png"
 
 const ProjectHighlights = () => {
   return (
-    <div id="projectHighlights" className='my-20'>
+    <div id="projectHighlights">
         <PageHeader title="Project Highlights"/>
         <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[18rem]" >
         {items.map((item, i) => (

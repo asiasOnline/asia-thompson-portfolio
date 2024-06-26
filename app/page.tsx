@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Expertise from "@/components/Expertise";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <About />
         <Contact />
       </div>
+      <Footer />
     </main>
   );
 }

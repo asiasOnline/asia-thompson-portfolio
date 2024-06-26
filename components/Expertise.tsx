@@ -246,7 +246,7 @@ const expertise = [
 
 const Expertise = () => {
   return (
-    <div id="expertise" className='mt-32'>
+    <div id="expertise">
         <PageHeader title="Expertise"/>
         <div className='flex flex-col gap-12'>
             <ExpertiseCard 
