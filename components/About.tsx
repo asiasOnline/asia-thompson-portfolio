@@ -102,7 +102,10 @@ const About = () => {
               className='rounded-full'
             />
             <h3 className='text-2xl font-bold'>Asia Thompson</h3>
-            <div>Open for Work</div>
+            <div className='flex items-center gap-2'>
+              <div className='w-4 h-4 rounded-full bg-green-600'></div>
+              Open for Work
+            </div>
           </AboutCard>
 
           <AboutCard className='p-10 col-span-2 row-span-2'>

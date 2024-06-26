@@ -22,16 +22,16 @@ const config = {
     fontFamily: {
       'display': ['var(--font-raleway)']
     },
-    colors: {
-      'transparent': 'transparent',
-      'white': '#F9F8F8',
-      'black': '#1E1E1E',
-      'ultramarine': '#190F88',
-      'slateBlue': '#8175FF',
-      'steelPink': '#C554B9',
-      'fountainBlue': '#32B6BE',
-    },
     extend: { 
+      colors: {
+        'transparent': 'transparent',
+        'white': '#F9F8F8',
+        'black': '#1E1E1E',
+        'ultramarine': '#190F88',
+        'slateBlue': '#8175FF',
+        'steelPink': '#C554B9',
+        'fountainBlue': '#32B6BE',
+      },
       fontFamily: {
         sans: ['var(--font-roboto)']
       },

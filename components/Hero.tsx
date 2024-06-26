@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { PiMapPinLineFill } from "react-icons/pi";
 import { PiFileText } from "react-icons/pi";
 import { TbMail } from "react-icons/tb";
