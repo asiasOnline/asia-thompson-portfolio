@@ -3,8 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { PiMapPinLineFill } from "react-icons/pi";
 import { PiFileText } from "react-icons/pi";
-import { TbMail } from "react-icons/tb";
-import { Button } from '@/components/ui/Button'
+import ContactLinks from './ui/ContactLinks';
 
 const Hero = () => {
   return (
@@ -41,10 +40,7 @@ const Hero = () => {
           <PiMapPinLineFill className='w-8 h-8'/>
           <p className='text-2xl font-display font-bold tracking-wider'>Based in Anaheim, CA</p>
         </div>
-        <div className='flex items-center gap-6'>
-          <Button className='w-fit bg-ultramarine text-white font-bold uppercase tracking-wider px-10 py-6 dark:bg-slateBlue dark:text-black'>
-            <TbMail className='mr-2 h-8 w-8'/>Contact
-          </Button>
+        <div className='flex items-center gap-10'>
           <Link 
           href="/Asia-Thompson-Public-Resume.pdf"
           target='_blank'
@@ -53,6 +49,7 @@ const Hero = () => {
             <PiFileText className='mr-2 h-8 w-8'/>
             <p>View Resume</p>
           </Link>
+          <ContactLinks />
         </div>
       </div>
     </div>
