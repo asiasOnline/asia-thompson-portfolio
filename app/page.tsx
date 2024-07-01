@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="w-screen bg-white dark:bg-black">
+    <main className="w-screen max-w-[1920px] bg-white dark:bg-black">
       <Navbar/>
       <div className="w-4/5 px-24 mx-auto flex flex-col gap-20">
         <Hero />

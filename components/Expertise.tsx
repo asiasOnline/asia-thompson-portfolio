@@ -17,31 +17,31 @@ const expertise = [
             {
                 id: 1,
                 toolName: "Figma",
-                designation: "The industry standard collaborative design tool",
+                designation: "Industry standard collaborative design tool | 4+ Years",
                 icon: <CgFigma className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 2,
                 toolName: "Blender",
-                designation: "A open-source tool for creating 3D assets",
+                designation: "Open-source tool for creating 3D assets | 2+ Years",
                 icon: <SiBlender className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 3,
                 toolName: "Adobe Photoshop",
-                designation: "The industry standard photo editor and raster graphics software",
+                designation: "Industry standard photo and raster graphic software | 3+ Years",
                 icon: <SiAdobephotoshop className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 4,
                 toolName: "Adobe Illustrator",
-                designation: "A vector graphics editor that's part of the Adobe Creative Suite",
+                designation: "Industry standard vector graphics editor | 1+ Years",
                 icon: <SiAdobeillustrator className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 5,
                 toolName: "Adobe After Effects",
-                designation: "A industry standard motion graphics and visual effects tool",
+                designation: "Industry standard motion graphics tool | 1+ Years",
                 icon: <SiAdobeaftereffects className='w-8 h-8 mx-auto'/>
             }
         ]
@@ -54,61 +54,61 @@ const expertise = [
             {
                 id: 1,
                 toolName: "HTML5",
-                designation: "The markup language for web pages",
+                designation: "Markup language for web pages | 10+ Years",
                 icon: <SiHtml5 className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 2,
                 toolName: "CSS3",
-                designation: "The stylesheet language for web design",
+                designation: "Stylesheet language for web design | 10+ Years",
                 icon: <SiCss3 className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 3,
                 toolName: "SASS",
-                designation: "The standard preprocessor scripting language",
+                designation: "Standard CSS extension | 4+ Years",
                 icon: <SiSass className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 4,
                 toolName: "TailwindCSS",
-                designation: "The current standard CSS framework",
+                designation: "Current standard CSS framework | 1+ Years",
                 icon: <SiTailwindcss className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 5,
                 toolName: "JavaScript",
-                designation: "A core programming language for building web page behavior",
+                designation: "Core programming language for web page behavior | 10+ Years",
                 icon: <SiJavascript className='w-7 h-7 mx-auto'/>
             },
             {
                 id: 6,
                 toolName: "TypeScript",
-                designation: "The working developer's JavaScript",
+                designation: "The working developer's JavaScript | 2+ Years",
                 icon: <SiTypescript className='w-7 h-7 mx-auto'/>
             }, 
             {
                 id: 7,
                 toolName: "React & React Native",
-                designation: "The front-end library for creating responsive user interfaces for various devices",
+                designation: "Front end framework for web, iOS, and Android | 4+ Years",
                 icon: <SiReact className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 8,
                 toolName: "Angular",
-                designation: "A Typescript-based framework developed by Google",
+                designation: "Typescript-based framework for web applications | 1+ Years",
                 icon: <FaAngular className='w-10 h-10 mx-auto'/>
             },
             {
                 id: 9,
                 toolName: "Laravel",
-                designation: "A PHP web framework for building web apps",
+                designation: "PHP-based framework for web applications | 1+ Years",
                 icon: <SiLaravel className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 10,
                 toolName: "Astro",
-                designation: "A web framework for building content-driven websites",
+                designation: "Web framework for building content-driven websites | 1+ Years",
                 icon: <SiAstro className='w-8 h-8 mx-auto'/>
             }
         ]
@@ -121,61 +121,61 @@ const expertise = [
             {
                 id: 1,
                 toolName: "Node.js",
-                designation: "A tool used to write JavaScript for command line tools and server-side scripts",
+                designation: "Tool for running JavaScript server-side | 4+ Years",
                 icon: <SiNodedotjs className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 2,
                 toolName: "C#",
-                designation: "A general purpose programming language developed by Microsoft",
+                designation: "General purpose programming language for apps and games | 4+ Years",
                 icon: <SiCsharp className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 3,
                 toolName: ".NET",
-                designation: "A framework for creating and running software apps written in C#",
+                designation: "C# framework for building web, mobile, and desktop apps | 2+ Years",
                 icon: <SiDotnet className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 4,
                 toolName: "PHP",
-                designation: "A general-purpose scripting language for dynamic web development",
+                designation: "General-purpose scripting language for web development | 2+ Years",
                 icon: <SiPhp className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 5,
                 toolName: "Python",
-                designation: "A high-level language for automation, databases, and machine learning",
+                designation: "High-level language for automation, databases, and machine learning | 6+ Years",
                 icon: <SiPython className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 6,
                 toolName: "Apollo GraphQL",
-                designation: "A tool for managing local and remote data with GraphQL",
+                designation: "Tool for managing local and remote data with GraphQL | 2+ Years",
                 icon: <SiApollographql className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 7,
                 toolName: "Dockers",
-                designation: "A containerization platform for virtualized app containers",
+                designation: "Containerization platform for virtualized app containers | 1+ Years",
                 icon: <SiDocker className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 8,
                 toolName: "Kubernetes",
-                designation: "A container orchestration system for automatic deployment and scaling",
+                designation: "Container orchestration system for automatic deployment and scaling | 1+ Years",
                 icon: <SiKubernetes className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 9,
                 toolName: "Amazon Web Services",
-                designation: "A collection of various cloud computing services from Amazon",
+                designation: "Collection of cloud computing services from Amazon | 3+ Years",
                 icon: <SiAmazonaws className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 10,
                 toolName: "Terraform",
-                designation: "A tool for automating various infrastructure tasks",
+                designation: "Tool for automating various infrastructure tasks | 1+ Years",
                 icon: <SiTerraform className='w-8 h-8 mx-auto'/>
             },
         ]
@@ -188,56 +188,56 @@ const expertise = [
             {
                 id: 1,
                 toolName: "PostgreSQL",
-                designation: "A popular relational database maangement system",
+                designation: "Relational database management system | 6+ Years",
                 icon: <BiLogoPostgresql className='w-10 h-10 mx-auto'/>
 
             },
             {
                 id: 2,
                 toolName: "MongoDB",
-                designation: "A popular NoSQL database that utilizes JSON-like documents",
+                designation: "NoSQL database that utilizes JSON-like documents | 4+ Years",
                 icon: <SiMongodb className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 3,
                 toolName: "Azure",
-                designation: "Microsoft's public cloud platform providing infrastructure and database services",
+                designation: "Microsoft's cloud platform for infrastructure and database services | 2+ Years",
                 icon: <SiMicrosoftazure className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 4,
                 toolName: "Snowflake",
-                designation: "A platform enabling data storage, processing, and analytic solutions",
+                designation: "Platform for data storage, processing, and analytic solutions | 1+ Years",
                 icon: <SiSnowflake className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 5,
                 toolName: "Redis",
-                designation: "A NoSQL key-value database used for storage of complex data types",
+                designation: "NoSQL key-value database used for storage of complex data types | 1+ Years",
                 icon: <SiRedis className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 6,
                 toolName: "Apache Airflow",
-                designation: "An automation tool to programmatically schedule and monitor workflows",
+                designation: "Automation tool to programmatically schedule and monitor workflows | 1+ Years",
                 icon: <SiApacheairflow className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 7,
                 toolName: "Apache Spark",
-                designation: "A distributed data processing engine for data analytics and machine learning",
+                designation: "Distributed data processing engine for data analytics and machine learning | 1+ Years",
                 icon: <SiApachespark className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 8,
                 toolName: "Tableau",
-                designation: "A business intelligence and analytics software for visualizing data",
+                designation: "Business intelligence and analytics software for visualizing data | 2+ Years",
                 icon: <SiTableau className='w-8 h-8 mx-auto'/>
             },
             {
                 id: 9,
                 toolName: "Elasticsearch",
-                designation: "A search and analytics engine for structured and unstructured data",
+                designation: "Search and analytics engine for structured and unstructured data | 1+ Years",
                 icon: <SiElasticsearch className='w-8 h-8 mx-auto'/>
             },
         ]

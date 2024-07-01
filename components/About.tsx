@@ -1,22 +1,23 @@
 "use client"
-import React from 'react'
-import { cn } from "@/lib/utils"
+import React from 'react';
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
-import Lottie from 'lottie-react'
+import { TypeAnimation } from 'react-type-animation';
+import Lottie from 'lottie-react';
 
-import PageHeader from './ui/PageHeader'
+import PageHeader from './ui/PageHeader';
 import { BentoGrid } from "./ui/BentoGrid";
 import { ExpertiseTools } from './ui/ExpertiseTools';
 
-import profilePic from '../public/profile-pic.png'
-import CSULBSeal from '../public/CSU-long-beach-seal.svg'
-import coffeeCup from '../public/coffee-cup.svg'
-import meltingPizza from '../public/melting-pizza.svg'
-import sleepyFace from '../public/sleepy-face.svg'
-import sunset from '../public/sunset.svg'
-import cityBuildings from '../public/city-buildings.svg'
-import SwordSlash from '../public/Sword_Slash.json'
+import profilePic from '../public/profile-pic.png';
+import CSULBSeal from '../public/CSU-long-beach-seal.svg';
+import coffeeCup from '../public/coffee-cup.svg';
+import meltingPizza from '../public/melting-pizza.svg';
+import sleepyFace from '../public/sleepy-face.svg';
+import sunset from '../public/sunset.svg';
+import cityBuildings from '../public/city-buildings.svg';
+import SwordSlash from '../public/Sword_Slash.json';
 import { SiFigma, SiHtml5, SiCss3, SiTailwindcss, SiTypescript, SiReact, SiPython } from "react-icons/si";
 import { BiLogoPostgresql } from 'react-icons/bi';
 
@@ -85,7 +86,19 @@ const About = () => {
 
           <AboutCard className='p-10 col-span-2 row-span-2'>
             <h3 className='text-2xl font-bold tracking-wider '>Hobbies</h3>
-            <p>I won’t lie I spend a ton of time working but you might also catch me... spending time with my cats</p>
+            <p>I won’t lie I spend a ton of time working but you might also catch me...
+              <TypeAnimation 
+                sequence={[
+                  "playing a new RPG that's consumed my personal life 🎮", 1000,
+                  "hanging out with my daughter watching dancing fruit 🍓", 1000,
+                  "trying out a new recipe I found on YouTube 🍲", 1000,
+                  "spending time in my garden trying to grow something new 🪴", 1000,
+                  "going on long drives through the city with my husband 🚗", 1000,
+                ]}
+                wrapper='span'
+                repeat={Infinity}
+              />
+            </p>
           </AboutCard>
 
           <AboutCard className='p-5 col-span-1 row-span-2'>
