@@ -26,7 +26,7 @@ const Hero = () => {
                 alt="Asia's profile avatar"
                 sizes="(min-width: 1280px) 20vw, 30vw"
                 style={{
-                  width: '100%',
+                  width: '160px',
                   height: 'auto',
                 }}
               />
