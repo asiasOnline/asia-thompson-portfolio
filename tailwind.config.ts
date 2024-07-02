@@ -33,6 +33,11 @@ const config = {
       'display': ['var(--font-raleway)']
     },
     extend: { 
+      lineHeight: {
+        '12': '3rem',
+        '14': '3.5rem',
+        '16': '4rem',
+      },
       fontFamily: {
         sans: ['var(--font-roboto)']
       },

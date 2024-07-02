@@ -84,7 +84,7 @@ const About = () => {
               <p>As a UX/UI designer and full-stack developer I have and continue to have a passion for design and development fueled be a personal desire for learning and self-improvement.</p>
           </AboutCard>
 
-          <AboutCard className='p-10 col-span-2 row-span-2'>
+          <AboutCard className='p-10 col-span-3 row-span-2'>
             <h3 className='text-2xl font-bold tracking-wider '>Hobbies</h3>
             <p>I won’t lie I spend a ton of time working but you might also catch me...
               <TypeAnimation 
@@ -101,12 +101,14 @@ const About = () => {
             </p>
           </AboutCard>
 
+          {/*
           <AboutCard className='p-5 col-span-1 row-span-2'>
             <Lottie 
               animationData={SwordSlash}
               loop={true}
             />
           </AboutCard>
+          */}
 
           {/*About section - Middle Row*/}
           <AboutCard className='col-span-2 row-span-1'>
