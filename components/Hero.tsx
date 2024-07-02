@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { PiMapPinLineFill } from "react-icons/pi";
 import { PiFileText } from "react-icons/pi";
-import ProfileAvatar from "../public/asiaSmilingAvatar.png"
+import HeroAvatar from './ui/HeroAvatar';
 import ContactLinks from './ui/ContactLinks';
 
 const Hero = () => {
@@ -21,15 +21,7 @@ const Hero = () => {
             dark:mix-blend-screen dark:opacity-35'></div>
             <div className='flex items-end gap-16'>
               <p className='text-4xl sm:text-6xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>Hello there!</p>
-              <Image 
-                src={ProfileAvatar}
-                alt="Asia's profile avatar"
-                sizes="(min-width: 1280px) 20vw, 30vw"
-                style={{
-                  width: '160px',
-                  height: 'auto',
-                }}
-              />
+              <HeroAvatar />
               </div>
           </div>
             <p className='text-4xl sm:text-6xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider mt-5'>
