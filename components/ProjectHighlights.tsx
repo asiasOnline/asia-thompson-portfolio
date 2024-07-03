@@ -1,10 +1,11 @@
 "use client";
 import React from 'react'
 import Image from "next/image";
+import { motion } from "framer-motion"
+import { twMerge } from 'tailwind-merge';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 import PageHeader from './ui/PageHeader'
-import { AspectRatio } from './ui/AspectRatio';
 import { BentoGrid, ProjectGridItem } from "./ui/BentoGrid";
 
 import warmWoodPic from "../public/Warm-Wood-Portfolio-Cover.png"
@@ -36,93 +37,94 @@ const ProjectHighlights = () => {
 }
 
 const Skeleton = ({
-  aspectRatio,
   imageSrc,
   altText,
+  className,
 }: {
-  aspectRatio: number,
   imageSrc: StaticImport;
   altText: string;
+  className?: string;
 }) => (
-  <div className="relative flex flex-1 w-full h-full rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
-    <AspectRatio ratio={aspectRatio}>
+  <motion.div 
+  initial={{ opacity:0 }}
+  whileInView={{ opacity:1 }}
+  transition={{ delay:0.20, ease: [0.17, 0.67, 0.83, 0.67] }}
+  className={twMerge('aspect-w-1 aspect-h-1 relative flex w-full h-full rounded-xl', className)}>
       <Image 
-          src={imageSrc}
-          alt={altText}
-          fill
-          style={{objectFit: 'contain'}}
-          className='hover:rounded-lg'
-        />
-    </AspectRatio>
-  </div>
+        src={imageSrc}
+        alt={altText}
+        fill
+        style={{objectFit: 'cover'}}
+        className='group-hover/bento:rounded-lg'
+      />
+  </motion.div>
 );
+
+const saturateHover = "saturate-0 hover:saturate-100"
+const rowSpan = "row-span-2"
+
 const items = [
   {
     title: "Warm Wood",
     year: "2024",
     description: "Website for an interior design company.",
     header: <Skeleton 
-      aspectRatio={1 / 1}
       imageSrc={warmWoodPic}
       altText="Warm Wood Project Cover"
     />,
-    className: "md:col-span-3 row-span-2 saturate-0 hover:saturate-100",
+    className: `md:col-span-3 ${rowSpan} ${saturateHover}`,
   },
   {
     title: "Overanalyzing Anime",
     year: "2024",
     description: "A redesigned responsive website for a content creator seeking to revamp their pre-existing blog.",
-    className: "md:col-span-3 row-span-2 saturate-0 hover:saturate-100",
     header: <Skeleton 
-      aspectRatio={1 / 1}
       imageSrc={OABlog}
       altText="Overanalyzing Anime Blog Project Cover"
     />,
+    className: `md:col-span-3 ${rowSpan} ${saturateHover}`,
   },
   {
     title: "Magic Moon Florist",
     year: "2023",
     description: "A responsive website for an online florist shop",
-    className: "md:col-span-4 row-span-2 saturate-0 hover:saturate-100",
     header: <Skeleton 
-      aspectRatio={16 / 9}
       imageSrc={MMFlorist}
       altText="Magic Moon Florist Project Cover"  
+      className='aspect-w-16 aspect-h-9'
     />,
+    className: `md:col-span-4 ${rowSpan} ${saturateHover}`,
   },
   {
     title: "Happy Home Manager",
     year: "2023",
-    description:
-      "A web and mobile app for a family oriented task manager",
-    className: "md:col-span-2 row-span-2 saturate-0 hover:saturate-100",
+    description: "A web and mobile app for a family oriented task manager",
     header: <Skeleton 
-      aspectRatio={1 / 1}
       imageSrc={HHManager}
       altText="Warm Wood Project Cover"
+      className='aspect-w-3 aspect-h-4'
     />,
+    className: `md:col-span-2 ${rowSpan} ${saturateHover}`,
   },
   {
     title: "Bee & Tea",
     year: "2023",
     description: "A ecommerce website for a California-based honey and tea vendor.",
-    className: "md:col-span-3 row-span-2 saturate-0 hover:saturate-100", 
     header: <Skeleton 
-      aspectRatio={1 / 1}
       imageSrc={BeeTeaPic}
       altText="Bee & Tea Project Cover"
     />,
+    className: `md:col-span-3 ${rowSpan} ${saturateHover}`, 
   },
   {
     title: "Asia Thompson's Portfolio",
     year: "2022",
     description: "An in-depth tutorial for a color picker tool made using HTML, CSS, and JavaScript for middle school students",
-    className: "md:col-span-3 row-span-2 saturate-0 hover:saturate-100",
     header: <Skeleton 
-      aspectRatio={1 / 1}
       imageSrc={ATPortfolio}
       altText="Mastery Coding Color Picker Project Cover"
     />,
+    className: `md:col-span-3 ${rowSpan} ${saturateHover}`, 
   },
 ];
 

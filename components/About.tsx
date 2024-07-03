@@ -95,7 +95,7 @@ const About = () => {
 
             <AboutCard className='p-10 col-span-3 row-span-2'>
               <h3 className='text-2xl font-bold tracking-wider '>Hobbies</h3>
-              <p>I won’t lie I spend a ton of time working but you might also catch me...
+              <p>I'll be honest, I spend a ton of time working. I'm  still getting the work/life balance thing right 😅. However, when I do have some free time you might also catch me...
                 <TypeAnimation 
                   sequence={[
                     "playing a new RPG that's consumed my personal life 🎮", 1000,
