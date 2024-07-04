@@ -15,7 +15,7 @@ const HeroAvatar = () => {
         <picture>
           <source media="(prefers-color-scheme: dark)" srcSet={dark} />
           <source media="(prefers-color-scheme: light)" srcSet={light} />
-          <img {...rest} />
+          <img {...rest} style={{ width: '100%', height: 'auto'}}/>
         </picture>
       )
     }

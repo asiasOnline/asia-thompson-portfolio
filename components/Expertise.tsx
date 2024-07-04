@@ -8,6 +8,10 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { FaAngular } from "react-icons/fa6";
 
 
+const smallIconSize = `w-6 h-6`
+const baseIconSize = `w-8 h-8`
+
+
 const expertise = [
     {
         id: 1,
@@ -18,31 +22,31 @@ const expertise = [
                 id: 1,
                 toolName: "Figma",
                 designation: "Industry standard collaborative design tool | 4+ Years",
-                icon: <CgFigma className='w-8 h-8 mx-auto'/>
+                icon: <CgFigma className={`${smallIconSize} md:${baseIconSize} mx-auto`}/>
             },
             {
                 id: 2,
                 toolName: "Blender",
                 designation: "Open-source tool for creating 3D assets | 2+ Years",
-                icon: <SiBlender className='w-8 h-8 mx-auto'/>
+                icon: <SiBlender className={`${smallIconSize} md:${baseIconSize} mx-auto`}/>
             },
             {
                 id: 3,
                 toolName: "Adobe Photoshop",
                 designation: "Industry standard photo and raster graphic software | 3+ Years",
-                icon: <SiAdobephotoshop className='w-8 h-8 mx-auto'/>
+                icon: <SiAdobephotoshop  className={`${smallIconSize} md:${baseIconSize} mx-auto`}/>
             },
             {
                 id: 4,
                 toolName: "Adobe Illustrator",
                 designation: "Industry standard vector graphics editor | 1+ Years",
-                icon: <SiAdobeillustrator className='w-8 h-8 mx-auto'/>
+                icon: <SiAdobeillustrator  className={`${smallIconSize} md:${baseIconSize} mx-auto`}/>
             },
             {
                 id: 5,
                 toolName: "Adobe After Effects",
                 designation: "Industry standard motion graphics tool | 1+ Years",
-                icon: <SiAdobeaftereffects className='w-8 h-8 mx-auto'/>
+                icon: <SiAdobeaftereffects  className={`${smallIconSize} md:${baseIconSize} mx-auto`}/>
             }
         ]
     },

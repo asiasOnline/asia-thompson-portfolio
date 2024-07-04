@@ -23,29 +23,36 @@ const Navbar = () => {
     {name: "About", link: "#about"}
 ]
 
+const defaultNavbarStyle = `md:flex gap-10 font-bold uppercase tracking-wider`
 
   return (
-    <div className='w-screen max-w-[1920px] mx-auto p-6 md:px-12 lg:px-24 xl:px-32 xl:py-14 mb-6 flex justify-between items-center'>
-      <Logo 
-        width="172"
-        height="88"
-      />
-      <div className='flex items-center gap-10 md:gap-12 lg:gap-20'>
-        <ThemeButton />
-        <Button className="md:hidden bg-white dark:bg-black" variant="outline" size="icon" onClick={toggleMenu}>
-          {isMenuOpen ? <CgClose className='w-8 h-8'/> : <SlMenu className='w-8 h-8'/>}
-        </Button>
-        <nav className={`hidden md:flex gap-10 font-bold uppercase tracking-wider`}>
-          {
-              Links.map((link) => (
-                <Link key={link.name}
-                className='hover:underline'
-                href={link.link}> {link.name}
-                </Link>
-              ))
-          }
-        </nav>
-      </div>  
+    <div>
+      <div className='w-screen max-w-[1920px] sticky top-0 mx-auto p-6 md:px-12 lg:px-24 xl:px-32 xl:py-14 mb-6 flex justify-between items-center z-20'>
+        <div className='w-1/3'>
+          <Logo />
+        </div>
+        <div className='flex items-center gap-10 md:gap-12 lg:gap-20'>
+          <ThemeButton />
+          <Button className="md:hidden text-black dark:text-white" variant="outline" size="icon" onClick={toggleMenu}>
+            {isMenuOpen ? <CgClose className='w-8 h-8'/> : <SlMenu className='w-8 h-8'/>}
+          </Button>
+          <nav className={isMenuOpen? `absolute top-[125%] right-10 flex flex-col ${defaultNavbarStyle}` : `hidden ${defaultNavbarStyle}`}>
+            {
+                Links.map((link) => (
+                  <Link key={link.name}
+                  className='hover:underline'
+                  href={link.link}
+                  onClick={toggleMenu}
+                  > {link.name}
+                  </Link>
+                ))
+            }
+          </nav>
+        </div>
+      </div> 
+      <div className={ isMenuOpen ? `fixed w-screen h-screen top-0 left-0 bg-white opacity-80 z-10 dark:bg-black` : `hidden`}>
+
+      </div> 
     </div>
   )
 }

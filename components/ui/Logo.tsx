@@ -21,7 +21,7 @@ const Logo = ({width, height}: SvgProps) => {
   )
 
   if (resolvedTheme === 'light') {
-    return     <svg width={width || "400"} height={height || "182"} viewBox="0 0 1385 711" fill="none" xmlns="http://www.w3.org/2000/svg">
+    return     <svg width={width || "100%"} height={height || "auto"} viewBox="0 0 1385 711" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0_109_3)">
     <ellipse cx="415.5" cy="579" rx="36.5" ry="45" className="fill-steelPink"/>
     <ellipse cx="1153.5" cy="579" rx="36.5" ry="45" className="fill-fountainBlue"/>
@@ -40,7 +40,7 @@ const Logo = ({width, height}: SvgProps) => {
   }
   
   if (resolvedTheme === 'dark') {
-    return     <svg width={width || "400"} height={height || "182"} viewBox="0 0 1385 711" fill="none" xmlns="http://www.w3.org/2000/svg">
+    return     <svg width={width || "100%"} height={height || "auto"} viewBox="0 0 1385 711" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0_109_3)">
     <ellipse cx="415.5" cy="579" rx="36.5" ry="45" fill="#C554B9"/>
     <ellipse cx="1153.5" cy="579" rx="36.5" ry="45" fill="#32B6BE"/>

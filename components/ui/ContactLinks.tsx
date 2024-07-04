@@ -5,7 +5,7 @@ import { BsTwitterX } from "react-icons/bs";
 
 const ContactLinks = () => {
   return (
-    <div className='flex gap-6'>
+    <div className='w-full flex justify-evenly md:gap-6'>
         <a href="mailto:asiasatwork@gmail.com">
             <TbMailFilled className='h-8 w-8'/>
         </a>
