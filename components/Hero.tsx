@@ -28,7 +28,7 @@ const Hero = () => {
             </p>
         </div>
       <div className='mt-6 md:mt-10'>
-        <p className='text-lg md:text-2xl leading-10 lg:text-4xl lg:leading-14 2xl:leading-16 font-display tracking-wider'>I&apos;m a <span className='underline decoration-steelPink decoration-4 underline-offset-8'>digital product designer</span> and a <span className='underline decoration-fountainBlue decoration-4 underline-offset-8'>full-stack developer</span> with a passion for <span className='underline decoration-ultramarine dark:decoration-slateBlue decoration-4 underline-offset-8'>concise planning and thorough execution</span>.</p>
+        <p className='text-lg md:text-2xl leading-8 lg:text-4xl lg:leading-14 2xl:leading-16 font-display tracking-wider'>I&apos;m a <span className='underline decoration-steelPink decoration-4 underline-offset-8'>digital product designer</span> and a <span className='underline decoration-fountainBlue decoration-4 underline-offset-8'>full-stack developer</span> with a passion for <span className='underline decoration-ultramarine dark:decoration-slateBlue decoration-4 underline-offset-8'>concise planning and thorough execution</span>.</p>
       </div>
       <div className='mt-6 lg:mt-10 flex flex-col md:flex-row md:justify-between'>
         <div className='flex items-center gap-4'>

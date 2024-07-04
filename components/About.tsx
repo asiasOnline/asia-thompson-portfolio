@@ -88,12 +88,12 @@ const About = () => {
             dark:mix-blend-screen dark:opacity-35'></div>
           <BentoGrid className="relative max-w-7xl mx-auto md:auto-rows-[8rem] gap-y-8 gap-x-4 z-10" >
             {/*About section - Top Row*/}
-            <AboutCard className='p-10 col-span-3 row-span-2'>
+            <AboutCard className='p-6 md:p-10 col-span-6 md:col-span-3 row-span-2'>
                 <h3 className='text-2xl font-bold tracking-wider '>Bio</h3>
                 <p>As a UX/UI designer and full-stack developer I have and continue to have a passion for design and development fueled be a personal desire for learning and self-improvement.</p>
             </AboutCard>
 
-            <AboutCard className='p-10 col-span-3 row-span-2'>
+            <AboutCard className='h-72 md:h-auto p-6 md:p-10 col-span-6 md:col-span-3 row-span-2'>
               <h3 className='text-2xl font-bold tracking-wider '>Hobbies</h3>
               <p>I'll be honest, I spend a ton of time working. I'm  still getting the work/life balance thing right 😅. However, when I do have some free time you might also catch me...
                 <TypeAnimation 
@@ -120,41 +120,36 @@ const About = () => {
             */}
 
             {/*About section - Middle Row*/}
-            <AboutCard className='col-span-2 row-span-1'>
+            <AboutCard className='p-6 col-span-6 md:col-span-2 row-span-1'>
               <h3 className='text-2xl font-bold text-center tracking-wider'>6+ Years of Experience</h3>
             </AboutCard>
 
-            <AboutCard className='p-5 col-span-2 row-span-2 row-start-4'>
+            <AboutCard className='p-5 col-span-6 md:col-span-2 md:row-span-2 md:row-start-4'>
               <h3 className='text-2xl font-bold text-center tracking-wider'>Fueled By...</h3>
-              <div className='mx-auto flex gap-6'>
+              <div className='md:mx-auto flex md:gap-6 gap:4 justify-around md:items-center'>
                 <Image
                   src={coffeeCup}
                   alt="Coffee cup with heart"
-                  width={80}
-                  height={80}
+                  className='w-16 h-16 md:w-20 md:h-20'
                 />
-                  <Image
+                <Image
                   src={meltingPizza}
                   alt="Coffee cup with heart"
-                  width={80}
-                  height={80}
+                  className='w-16 h-16 md:w-20 md:h-20'
                 />
                 <Image
                   src={sleepyFace}
                   alt="Coffee cup with heart"
-                  width={80}
-                  height={80}
+                  className='w-16 h-16 md:w-20 md:h-20'
                 />
               </div>
             </AboutCard>
 
-            <AboutCard className='col-span-2 row-span-3 place-items-center p-4'>
+            <AboutCard className='col-span-6 md:col-span-2 row-span-3 place-items-center p-8 md:p-4'>
               <Image
                 src={profilePic}
                 alt="Asia Thompson Profile Pic"
-                width={200}
-                height={200}
-                className='rounded-full'
+                className='w-40 md:w-48 rounded-full'
               />
               <h3 className='text-2xl font-bold tracking-wider'>Asia Thompson</h3>
               <div className='flex items-center gap-2'>
@@ -163,12 +158,12 @@ const About = () => {
               </div>
             </AboutCard>
 
-            <AboutCard className='p-10 col-span-2 row-span-2'>
+            <AboutCard className='p-10 col-span-6 md:col-span-2 row-span-2'>
               <h3 className='text-2xl font-bold tracking-wider'>Born & Raised</h3>
               <p>As a Cali girl I’m used to perfect weather, crowded cities, and PST time, but I can work with any time zone.</p>
             </AboutCard>
 
-            <AboutCard className='col-span-1 row-span-1 col-start-5 row-start-5'>
+            <AboutCard className='col-span-3 row-span-1 md:col-start-5 md:row-start-5'>
               <Image 
                 src={sunset}
                 alt="Sunset"
@@ -178,7 +173,7 @@ const About = () => {
               />
             </AboutCard>
 
-            <AboutCard className='col-span-1 row-span-1 col-start-6 row-start-5'>
+            <AboutCard className='col-span-3 row-span-1 md:col-start-6 md:row-start-5'>
               <Image 
                 src={cityBuildings}
                 alt="City buildings"
@@ -189,7 +184,7 @@ const About = () => {
             </AboutCard>
 
             {/*About section - Bottom Row*/}
-            <AboutCard className='p-6 col-span-1 row-span-2 place-items-center content-between'>
+            <AboutCard className='p-6 col-span-6 md:col-span-1 row-span-2 place-items-center content-between'>
               <h3 className='text-2xl font-bold tracking-wider'>Attended</h3>
               <Image
                 src={CSULBSeal}
@@ -197,7 +192,7 @@ const About = () => {
               />
             </AboutCard>
 
-            <AboutCard className='p-10 col-span-3 row-span-2 content-between'>
+            <AboutCard className='p-10 col-span-6 md:col-span-3 row-span-2 content-between'>
               <h3 className='text-2xl font-bold tracking-wider'>Prior Positions</h3>
               <div className='flex flex-col gap-6'>
                 <div className='flex flex-col gap-4'>
@@ -218,7 +213,7 @@ const About = () => {
             </AboutCard>
 
 
-            <AboutCard className='p-10 col-span-2 row-span-2'>
+            <AboutCard className='p-10 col-span-6 md:col-span-2 row-span-2'>
               <h3 className='text-2xl font-bold tracking-wider'>Most Used Tech</h3>
               <ExpertiseTools className="flex flex-row flex-wrap items-center justify-center" tools={tools}/>
             </AboutCard>
@@ -238,7 +233,7 @@ const AboutCard = ({
 }) => (
   <div 
     className={cn(
-      "flex flex-col flex-1 place-content-center gap-6 w-full h-full min-h-[8rem] border-4 rounded-2xl border-black/10 shadow-lg bg-white dark:bg-black dark:border-white/10", 
+      "flex flex-col flex-1 place-content-center gap-6 w-full h-full md:min-h-[8rem] border-4 rounded-2xl border-black/10 shadow-lg bg-white dark:bg-black dark:border-white/10", 
       className
     )}
   >

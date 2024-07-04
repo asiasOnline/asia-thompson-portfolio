@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="w-screen min-w-80 *:max-w-[1920px] bg-white dark:bg-black">
       <Navbar/>
-      <div className="w-screen lg:w-4/5 px-10 md:px-12 2xl:px-28 mx-auto flex flex-col gap-20">
+      <div className="w-screen lg:w-4/5 px-8 md:px-12 2xl:px-28 mx-auto flex flex-col gap-12 md:gap-20">
         <Hero />
         <Expertise />
         <ProjectHighlights />
