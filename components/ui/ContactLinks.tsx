@@ -1,11 +1,12 @@
 import React from 'react'
+import { cn } from "@/lib/utils"
 import { TbMailFilled } from "react-icons/tb";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
 
 const ContactLinks = () => {
   return (
-    <div className='w-full flex justify-evenly md:gap-6'>
+    <div className='w-full md:w-1/2 flex flex-row justify-evenly md:gap-6'>
         <a href="mailto:asiasatwork@gmail.com">
             <TbMailFilled className='h-8 w-8'/>
         </a>

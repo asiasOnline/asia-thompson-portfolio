@@ -21,54 +21,60 @@ import SwordSlash from '../public/Sword_Slash.json';
 import { SiFigma, SiHtml5, SiCss3, SiTailwindcss, SiTypescript, SiReact, SiPython } from "react-icons/si";
 import { BiLogoPostgresql } from 'react-icons/bi';
 
+const IconSize20px = `w-5 h-5`
+const IconSize24px = `w-6 h-6`
+const IconSize28px = `w-7 h-7`
+const IconSize32px = `w-8 h-8`
+const IconSize40px = `w-10 h-10`
+
 const tools = [
   {
     id: 1,
     toolName: "Figma",
     designation: "The industry standard collaborative design tool",
-    icon: <SiFigma className='w-8 h-8 mx-auto'/>
+    icon: <SiFigma className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
   },
   {
     id: 2,
     toolName: "HTML5",
     designation: "The markup language for web pages",
-    icon: <SiHtml5 className='w-8 h-8 mx-auto'/>
+    icon: <SiHtml5 className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
   },
   {
     id: 3,
     toolName: "CSS3",
     designation: "The stylesheet language for web design",
-    icon: <SiCss3 className='w-8 h-8 mx-auto'/>
+    icon: <SiCss3 className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
 },
   {
     id: 4,
     toolName: "TailwindCSS",
     designation: "The current standard CSS framework",
-    icon: <SiTailwindcss className='w-8 h-8 mx-auto'/>
+    icon: <SiTailwindcss className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
   },
   {
     id: 5,
     toolName: "TypeScript",
     designation: "The working developer's JavaScript",
-    icon: <SiTypescript className='w-7 h-7 mx-auto'/>
+    icon: <SiTypescript className={`${IconSize20px} md:${IconSize28px} mx-auto`}/>
 }, 
   {
     id: 6,
     toolName: "React & React Native",
     designation: "The front-end library for creating responsive user interfaces for various devices",
-    icon: <SiReact className='w-8 h-8 mx-auto'/>
+    icon: <SiReact className={`${IconSize20px} md:${IconSize28px} mx-auto`}/>
   },
   {
     id: 7,
     toolName: "Python",
     designation: "A high-level language for automation, databases, and machine learning",
-    icon: <SiPython className='w-8 h-8 mx-auto'/>
+    icon: <SiPython className={`${IconSize20px} md:${IconSize28px} mx-auto`}/>
 },
 {
     id: 8,
     toolName: "PostgreSQL",
     designation: "A popular relational database maangement system",
-    icon: <BiLogoPostgresql className='w-10 h-10 mx-auto'/>
+    icon: <BiLogoPostgresql className={`${IconSize32px} md:${IconSize40px} mx-auto`}/>
 },
 ]
 
@@ -93,7 +99,7 @@ const About = () => {
                 <p>As a UX/UI designer and full-stack developer I have and continue to have a passion for design and development fueled be a personal desire for learning and self-improvement.</p>
             </AboutCard>
 
-            <AboutCard className='h-72 md:h-auto p-6 md:p-10 col-span-6 md:col-span-3 row-span-2'>
+            <AboutCard className='w-full h-72 md:h-auto p-6 md:p-10 col-span-6 md:col-span-3 row-span-2'>
               <h3 className='text-2xl font-bold tracking-wider '>Hobbies</h3>
               <p>I'll be honest, I spend a ton of time working. I'm  still getting the work/life balance thing right 😅. However, when I do have some free time you might also catch me...
                 <TypeAnimation 
@@ -167,9 +173,7 @@ const About = () => {
               <Image 
                 src={sunset}
                 alt="Sunset"
-                width={80}
-                height={80}
-                className='mx-auto'
+                className='p-2 mx-auto w-24 h-24 md:w-32 md:h-32'
               />
             </AboutCard>
 
@@ -177,9 +181,7 @@ const About = () => {
               <Image 
                 src={cityBuildings}
                 alt="City buildings"
-                width={80}
-                height={80}
-                className='mx-auto'
+                className='p-2 mx-auto w-24 h-24 md:w-32 md:h-32'
               />
             </AboutCard>
 
