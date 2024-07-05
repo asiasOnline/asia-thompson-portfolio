@@ -1,6 +1,7 @@
 import React from 'react'
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
+import { GoArrowUpRight } from "react-icons/go";
 
 export const BentoGrid = ({
     className,
@@ -32,14 +33,14 @@ export const ProjectGridItem = ({
     year,
     description,
     header,
-    icon,
+    locked,
   }: {
     className?: string;
     title?: string | React.ReactNode;
     year?: string | React.ReactNode;
     description?: string | React.ReactNode;
     header?: React.ReactNode;
-    icon?: React.ReactNode;
+    locked: boolean;
   }) => {
     return (
       <motion.div 
@@ -55,6 +56,7 @@ export const ProjectGridItem = ({
             <div className='text-xl md:text-2xl font-bold tracking-wider'>{title}</div>
             <div className="text-sm md:text-base">{year}</div>
           </div>
+          <div>{locked ? <p>Contact to discuss this project</p> : <div><p>View Project</p><GoArrowUpRight /></div> }</div>
           <div className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
             {description}
           </div>

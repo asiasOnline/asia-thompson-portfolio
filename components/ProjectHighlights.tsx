@@ -29,6 +29,7 @@ const ProjectHighlights = () => {
           description={item.description}
           header={item.header}
           className={item.className}
+          locked={item.locked}
         />
       ))}
       </BentoGrid>
@@ -73,6 +74,7 @@ const items = [
       altText="Warm Wood Project Cover"
     />,
     className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
+    locked: false,
   },
   {
     title: "Overanalyzing Anime",
@@ -83,6 +85,7 @@ const items = [
       altText="Overanalyzing Anime Blog Project Cover"
     />,
     className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
+    locked: false,
   },
   {
     title: "Magic Moon Florist",
@@ -94,6 +97,7 @@ const items = [
       className='aspect-w-16 aspect-h-9'
     />,
     className: `col-span-6 xl:col-span-4 ${rowSpan} md:${saturateHover}`,
+    locked: false,
   },
   {
     title: "Happy Home Manager",
@@ -105,6 +109,7 @@ const items = [
       className='aspect-w-3 aspect-h-4'
     />,
     className: `col-span-6 md:row-span-3 lg:col-start-2 lg:col-span-4 xl:col-span-2 ${rowSpan} md:${saturateHover} justify-self-center`,
+    locked: true,
   },
   {
     title: "Bee & Tea",
@@ -115,6 +120,7 @@ const items = [
       altText="Bee & Tea Project Cover"
     />,
     className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
+    locked: false,
   },
   {
     title: "Asia Thompson's Portfolio",
@@ -125,6 +131,7 @@ const items = [
       altText="Mastery Coding Color Picker Project Cover"
     />,
     className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
+    locked: false,
   },
 ];
 
