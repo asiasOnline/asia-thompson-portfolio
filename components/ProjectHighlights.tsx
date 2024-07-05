@@ -20,7 +20,7 @@ const ProjectHighlights = () => {
   return (
     <div id="projectHighlights">
         <PageHeader title="Project Highlights"/>
-        <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[20rem]" >
+        <BentoGrid className="max-w-7xl mx-auto" >
         {items.map((item, i) => (
         <ProjectGridItem
           key={i}
@@ -104,7 +104,7 @@ const items = [
       altText="Warm Wood Project Cover"
       className='aspect-w-3 aspect-h-4'
     />,
-    className: `col-span-6 lg:col-span-2 ${rowSpan} md:${saturateHover}`,
+    className: `col-span-6 md:row-span-3 lg:col-span-2 ${rowSpan} md:${saturateHover} justify-self-center`,
   },
   {
     title: "Bee & Tea",

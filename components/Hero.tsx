@@ -20,7 +20,7 @@ const Hero = () => {
             dark:mix-blend-screen dark:opacity-35'></div>
             <div className='flex items-end gap-4 lg:gap-16'>
               <p className='text-4xl sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>Hello there!</p>
-              <div className='w-20 md:w-32 h-auto'><HeroAvatar /></div>
+              <div className='w-20 md:w-40 h-auto'><HeroAvatar /></div>
             </div>
           </div>
             <p className='text-4xl sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider mt-5'>
@@ -30,7 +30,7 @@ const Hero = () => {
       <div className='mt-6 md:mt-10'>
         <p className='text-lg md:text-2xl lg:text-4xl leading-8 md:leading-10 lg:leading-14 2xl:leading-16 font-display tracking-wider'>I&apos;m a <span className='underline decoration-steelPink decoration-4 underline-offset-8'>digital product designer</span> and a <span className='underline decoration-fountainBlue decoration-4 underline-offset-8'>full-stack developer</span> with a passion for <span className='underline decoration-ultramarine dark:decoration-slateBlue decoration-4 underline-offset-8'>concise planning and thorough execution</span>.</p>
       </div>
-      <div className='mt-8 lg:mt-10 flex flex-col md:gap-4 lg:flex-row lg:justify-between'>
+      <div className='mt-8 md:mt-16 lg:mt-10 flex flex-col md:gap-4 lg:flex-row lg:justify-between'>
         <div className='flex items-center gap-4'>
           <PiMapPinLineFill className='w-8 h-8'/>
           <p className='text-lg md:text-2xl font-display font-bold tracking-wider'>Based in Anaheim, CA</p>

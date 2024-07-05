@@ -11,12 +11,7 @@ import { BentoGrid } from "./ui/BentoGrid";
 import { ExpertiseTools } from './ui/ExpertiseTools';
 
 import profilePic from '../public/profile-pic.png';
-import CSULBSeal from '../public/CSU-long-beach-seal.svg';
-import coffeeCup from '../public/coffee-cup.svg';
-import meltingPizza from '../public/melting-pizza.svg';
-import sleepyFace from '../public/sleepy-face.svg';
-import sunset from '../public/sunset.svg';
-import cityBuildings from '../public/city-buildings.svg';
+import { CoffeeCup, MeltingPizza, SleepyFace, Sun, Building, CSULB } from './ui/ThemeAssets';
 import SwordSlash from '../public/Sword_Slash.json';
 import { SiFigma, SiHtml5, SiCss3, SiTailwindcss, SiTypescript, SiReact, SiPython } from "react-icons/si";
 import { BiLogoPostgresql } from 'react-icons/bi';
@@ -31,49 +26,49 @@ const tools = [
   {
     id: 1,
     toolName: "Figma",
-    designation: "The industry standard collaborative design tool",
+    designation: "4+ Years",
     icon: <SiFigma className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
   },
   {
     id: 2,
     toolName: "HTML5",
-    designation: "The markup language for web pages",
+    designation: "10+ Years",
     icon: <SiHtml5 className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
   },
   {
     id: 3,
     toolName: "CSS3",
-    designation: "The stylesheet language for web design",
+    designation: "10+ Years",
     icon: <SiCss3 className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
 },
   {
     id: 4,
     toolName: "TailwindCSS",
-    designation: "The current standard CSS framework",
+    designation: "1+ Years",
     icon: <SiTailwindcss className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
   },
   {
     id: 5,
     toolName: "TypeScript",
-    designation: "The working developer's JavaScript",
+    designation: "2+ Years",
     icon: <SiTypescript className={`${IconSize20px} md:${IconSize28px} mx-auto`}/>
 }, 
   {
     id: 6,
     toolName: "React & React Native",
-    designation: "The front-end library for creating responsive user interfaces for various devices",
+    designation: "4+ Years",
     icon: <SiReact className={`${IconSize20px} md:${IconSize28px} mx-auto`}/>
   },
   {
     id: 7,
     toolName: "Python",
-    designation: "A high-level language for automation, databases, and machine learning",
+    designation: "6+ Years",
     icon: <SiPython className={`${IconSize20px} md:${IconSize28px} mx-auto`}/>
 },
 {
     id: 8,
     toolName: "PostgreSQL",
-    designation: "A popular relational database maangement system",
+    designation: "6+ Years",
     icon: <BiLogoPostgresql className={`${IconSize32px} md:${IconSize40px} mx-auto`}/>
 },
 ]
@@ -92,14 +87,14 @@ const About = () => {
             <div className='
             absolute top-0 right-0 w-40 h-40 md:w-2/3 md:h-2/3 bg-fountainBlue rounded-full mix-blend-multiply filter blur-2xl opacity-25 animate-gradientAnimation animation-delay-4000
             dark:mix-blend-screen dark:opacity-35'></div>
-          <BentoGrid className="relative max-w-7xl mx-auto md:auto-rows-[8rem] gap-y-8 gap-x-4 z-10" >
+          <BentoGrid className="relative max-w-7xl mx-auto md:auto-rows-[6rem] lg:auto-rows-[8rem] gap-y-8 gap-x-4 z-10" >
             {/*About section - Top Row*/}
-            <AboutCard className='p-6 md:p-10 col-span-6 md:col-span-3 row-span-2'>
+            <AboutCard className='p-6 md:p-10 col-span-6 lg:col-span-3 row-span-2'>
                 <h3 className='text-2xl font-bold tracking-wider '>Bio</h3>
                 <p>As a UX/UI designer and full-stack developer I have and continue to have a passion for design and development fueled be a personal desire for learning and self-improvement.</p>
             </AboutCard>
 
-            <AboutCard className='w-full h-72 md:h-auto p-6 md:p-10 col-span-6 md:col-span-3 row-span-2'>
+            <AboutCard className='w-full h-72 md:h-auto p-6 md:p-10 col-span-6 lg:col-span-3 row-span-2'>
               <h3 className='text-2xl font-bold tracking-wider '>Hobbies</h3>
               <p>I'll be honest, I spend a ton of time working. I'm  still getting the work/life balance thing right 😅. However, when I do have some free time you might also catch me...
                 <TypeAnimation 
@@ -126,36 +121,24 @@ const About = () => {
             */}
 
             {/*About section - Middle Row*/}
-            <AboutCard className='p-6 col-span-6 md:col-span-2 row-span-1'>
+            <AboutCard className='p-6 col-span-6 md:col-span-3 row-span-1'>
               <h3 className='text-2xl font-bold text-center tracking-wider'>6+ Years of Experience</h3>
             </AboutCard>
 
-            <AboutCard className='p-5 col-span-6 md:col-span-2 md:row-span-2 md:row-start-4'>
+            <AboutCard className='p-5 col-span-6 md:col-span-3 md:row-span-2 lg:row-start-4'>
               <h3 className='text-2xl font-bold text-center tracking-wider'>Fueled By...</h3>
               <div className='md:mx-auto flex md:gap-6 gap:4 justify-around md:items-center'>
-                <Image
-                  src={coffeeCup}
-                  alt="Coffee cup with heart"
-                  className='w-16 h-16 md:w-20 md:h-20'
-                />
-                <Image
-                  src={meltingPizza}
-                  alt="Coffee cup with heart"
-                  className='w-16 h-16 md:w-20 md:h-20'
-                />
-                <Image
-                  src={sleepyFace}
-                  alt="Coffee cup with heart"
-                  className='w-16 h-16 md:w-20 md:h-20'
-                />
+                <div className='w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20'><CoffeeCup /></div>
+                <div className='w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20'><MeltingPizza /></div>
+                <div className='w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20'><SleepyFace /></div>
               </div>
             </AboutCard>
 
-            <AboutCard className='col-span-6 md:col-span-2 row-span-3 place-items-center p-8 md:p-4'>
+            <AboutCard className='col-span-6 md:col-span-3 lg:col-span-2 row-span-3 place-items-center p-8 md:p-4'>
               <Image
                 src={profilePic}
                 alt="Asia Thompson Profile Pic"
-                className='w-40 md:w-48 rounded-full'
+                className='w-40 lg:w-48 rounded-full'
               />
               <h3 className='text-2xl font-bold tracking-wider'>Asia Thompson</h3>
               <div className='flex items-center gap-2'>
@@ -164,37 +147,27 @@ const About = () => {
               </div>
             </AboutCard>
 
-            <AboutCard className='p-10 col-span-6 md:col-span-2 row-span-2'>
+            <AboutCard className='p-10 col-span-6 md:col-span-3 lg:col-span-2 row-span-2'>
               <h3 className='text-2xl font-bold tracking-wider'>Born & Raised</h3>
               <p>As a Cali girl I’m used to perfect weather, crowded cities, and PST time, but I can work with any time zone.</p>
             </AboutCard>
 
-            <AboutCard className='col-span-3 row-span-1 md:col-start-5 md:row-start-5'>
-              <Image 
-                src={sunset}
-                alt="Sunset"
-                className='p-2 mx-auto w-24 h-24 md:w-32 md:h-32'
-              />
+            <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-start-5 lg:row-start-5'>
+              <div className='p-2 mx-auto w-24 h-24 md:w-32 md:h-32'><Sun /></div>
             </AboutCard>
 
-            <AboutCard className='col-span-3 row-span-1 md:col-start-6 md:row-start-5'>
-              <Image 
-                src={cityBuildings}
-                alt="City buildings"
-                className='p-2 mx-auto w-24 h-24 md:w-32 md:h-32'
-              />
+            <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-start-6 lg:row-start-5'>
+            <div className='p-2 mx-auto w-24 h-24 md:w-32 md:h-32'><Building /></div>
             </AboutCard>
 
             {/*About section - Bottom Row*/}
-            <AboutCard className='p-6 col-span-6 md:col-span-1 row-span-2 place-items-center content-between'>
+            <AboutCard className='p-6 col-span-6 md:col-span-2 lg:col-span-1 row-span-2 place-items-center content-between'>
               <h3 className='text-2xl font-bold tracking-wider'>Attended</h3>
-              <Image
-                src={CSULBSeal}
-                alt="California State University Long Beach seal"
-              />
+              <div className='w-28 h-auto'><CSULB /></div>
+
             </AboutCard>
 
-            <AboutCard className='p-10 col-span-6 md:col-span-3 row-span-2 content-between'>
+            <AboutCard className='p-10 col-span-6 md:col-span-3 row-span-2  md:row-span-3 content-between'>
               <h3 className='text-2xl font-bold tracking-wider'>Prior Positions</h3>
               <div className='flex flex-col gap-6'>
                 <div className='flex flex-col gap-4'>
@@ -215,7 +188,7 @@ const About = () => {
             </AboutCard>
 
 
-            <AboutCard className='p-10 col-span-6 md:col-span-2 row-span-2'>
+            <AboutCard className='p-10 col-span-6 md:col-span-3 lg:col-span-2 row-span-2 md:row-span-3'>
               <h3 className='text-2xl font-bold tracking-wider'>Most Used Tech</h3>
               <ExpertiseTools className="flex flex-row flex-wrap items-center justify-center" tools={tools}/>
             </AboutCard>
@@ -235,7 +208,7 @@ const AboutCard = ({
 }) => (
   <div 
     className={cn(
-      "flex flex-col flex-1 place-content-center gap-6 w-full h-full md:min-h-[8rem] border-4 rounded-2xl border-black/10 shadow-lg bg-white dark:bg-black dark:border-white/10", 
+      "flex flex-col flex-1 place-content-center gap-6 w-full h-full lg:min-h-[8rem] border-4 rounded-2xl opacity-80 border-black/10 shadow-lg bg-white dark:bg-black dark:border-white/10", 
       className
     )}
   >
