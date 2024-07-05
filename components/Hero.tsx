@@ -18,31 +18,31 @@ const Hero = () => {
             <div className='
             absolute top-0 left-48 w-40 h-40 md:h-60 lg:w-80 bg-fountainBlue rounded-full mix-blend-multiply filter blur-2xl opacity-25 animate-gradientAnimation animation-delay-4000
             dark:mix-blend-screen dark:opacity-35'></div>
-            <div className='flex items-end gap-4 lg:gap-16'>
-              <p className='text-4xl sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>Hello there!</p>
-              <div className='w-20 md:w-40 h-auto'><HeroAvatar /></div>
+            <div className='flex items-end gap-4 lg:gap-8 xl:gap-16'>
+              <p className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>Hello there!</p>
+              <div className='w-20 md:w-40 lg:w-56 h-auto'><HeroAvatar /></div>
             </div>
           </div>
-            <p className='text-4xl sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider mt-5'>
+            <p className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider mt-5 lg:mt-8'>
               My name is <span className='text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink animate-gradientAnimation '> Asia</span>
             </p>
         </div>
       <div className='mt-6 md:mt-10'>
         <p className='text-lg md:text-2xl lg:text-4xl leading-8 md:leading-10 lg:leading-14 2xl:leading-16 font-display tracking-wider'>I&apos;m a <span className='underline decoration-steelPink decoration-4 underline-offset-8'>digital product designer</span> and a <span className='underline decoration-fountainBlue decoration-4 underline-offset-8'>full-stack developer</span> with a passion for <span className='underline decoration-ultramarine dark:decoration-slateBlue decoration-4 underline-offset-8'>concise planning and thorough execution</span>.</p>
       </div>
-      <div className='mt-8 md:mt-16 lg:mt-10 flex flex-col md:gap-4 lg:flex-row lg:justify-between'>
+      <div className='mt-8 md:mt-16 lg:mt-10 flex flex-col md:gap-4 lg:gap-8 xl:flex-row lg:justify-between'>
         <div className='flex items-center gap-4'>
-          <PiMapPinLineFill className='w-8 h-8'/>
-          <p className='text-lg md:text-2xl font-display font-bold tracking-wider'>Based in Anaheim, CA</p>
+          <PiMapPinLineFill className='w-8 h-8 lg:w-10 lg:h-10'/>
+          <p className='text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-wider'>Based in Anaheim, CA</p>
         </div>
-        <div className='flex flex-col gap-4 md:flex-row md:justify-between items-center md:gap-10'>
+        <div className='flex flex-col gap-4 md:flex-row xl:justify-between place-content-center md:gap-10'>
           <Link 
           href="/Asia-Thompson-Public-Resume.pdf"
           target='_blank'
           locale={false}
           className='text-black font-bold uppercase tracking-wider px-6 py-6 dark:text-white flex items-center'>
-            <PiFileText className='mr-2 h-8 w-8'/>
-            <p className="hover:underline">View Resume</p>
+            <PiFileText className='mr-2 h-8 w-8 lg:w-10 lg:h-10'/>
+            <p className="hover:underline lg:text-xl">View Resume</p>
           </Link>
           <ContactLinks/>
         </div>

@@ -72,7 +72,7 @@ const items = [
       imageSrc={warmWoodPic}
       altText="Warm Wood Project Cover"
     />,
-    className: `col-span-6 lg:col-span-3 ${rowSpan} md:${saturateHover}`,
+    className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
   },
   {
     title: "Overanalyzing Anime",
@@ -82,7 +82,7 @@ const items = [
       imageSrc={OABlog}
       altText="Overanalyzing Anime Blog Project Cover"
     />,
-    className: `col-span-6 lg:col-span-3 ${rowSpan} md:${saturateHover}`,
+    className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
   },
   {
     title: "Magic Moon Florist",
@@ -93,7 +93,7 @@ const items = [
       altText="Magic Moon Florist Project Cover"  
       className='aspect-w-16 aspect-h-9'
     />,
-    className: `col-span-6 lg:col-span-4 ${rowSpan} md:${saturateHover}`,
+    className: `col-span-6 xl:col-span-4 ${rowSpan} md:${saturateHover}`,
   },
   {
     title: "Happy Home Manager",
@@ -104,7 +104,7 @@ const items = [
       altText="Warm Wood Project Cover"
       className='aspect-w-3 aspect-h-4'
     />,
-    className: `col-span-6 md:row-span-3 lg:col-span-2 ${rowSpan} md:${saturateHover} justify-self-center`,
+    className: `col-span-6 md:row-span-3 lg:col-start-2 lg:col-span-4 xl:col-span-2 ${rowSpan} md:${saturateHover} justify-self-center`,
   },
   {
     title: "Bee & Tea",
@@ -114,7 +114,7 @@ const items = [
       imageSrc={BeeTeaPic}
       altText="Bee & Tea Project Cover"
     />,
-    className: `col-span-6 lg:col-span-3 ${rowSpan} md:${saturateHover}`, 
+    className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
   },
   {
     title: "Asia Thompson's Portfolio",
@@ -124,7 +124,7 @@ const items = [
       imageSrc={ATPortfolio}
       altText="Mastery Coding Color Picker Project Cover"
     />,
-    className: `col-span-6 lg:col-span-3 ${rowSpan} md:${saturateHover}`, 
+    className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
   },
 ];
 

@@ -134,7 +134,7 @@ const About = () => {
               </div>
             </AboutCard>
 
-            <AboutCard className='col-span-6 md:col-span-3 lg:col-span-2 row-span-3 place-items-center p-8 md:p-4'>
+            <AboutCard className='col-span-6 md:col-span-3 xl:col-span-2 row-span-3 place-items-center p-8 md:p-4'>
               <Image
                 src={profilePic}
                 alt="Asia Thompson Profile Pic"
@@ -152,22 +152,22 @@ const About = () => {
               <p>As a Cali girl I’m used to perfect weather, crowded cities, and PST time, but I can work with any time zone.</p>
             </AboutCard>
 
-            <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-start-5 lg:row-start-5'>
+            <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-start-5 xl:col-start-5 xl:row-start-5'>
               <div className='p-2 mx-auto w-24 h-24 md:w-32 md:h-32'><Sun /></div>
             </AboutCard>
 
-            <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-start-6 lg:row-start-5'>
+            <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-start-5 xl:col-start-6 xl:row-start-5'>
             <div className='p-2 mx-auto w-24 h-24 md:w-32 md:h-32'><Building /></div>
             </AboutCard>
 
             {/*About section - Bottom Row*/}
-            <AboutCard className='p-6 col-span-6 md:col-span-2 lg:col-span-1 row-span-2 place-items-center content-between'>
+            <AboutCard className='p-6 col-span-6 md:col-span-2 lg:row-start-6 xl:col-span-1 row-span-2 place-items-center content-between'>
               <h3 className='text-2xl font-bold tracking-wider'>Attended</h3>
               <div className='w-28 h-auto'><CSULB /></div>
 
             </AboutCard>
 
-            <AboutCard className='p-10 col-span-6 md:col-span-3 row-span-2  md:row-span-3 content-between'>
+            <AboutCard className='p-10 col-span-6 md:col-span-3 row-span-2  md:row-span-3 lg:row-span-2 content-between'>
               <h3 className='text-2xl font-bold tracking-wider'>Prior Positions</h3>
               <div className='flex flex-col gap-6'>
                 <div className='flex flex-col gap-4'>
@@ -188,7 +188,7 @@ const About = () => {
             </AboutCard>
 
 
-            <AboutCard className='p-10 col-span-6 md:col-span-3 lg:col-span-2 row-span-2 md:row-span-3'>
+            <AboutCard className='p-10 col-span-6 md:col-span-3 xl:col-span-2 row-span-2 md:row-span-3 lg:row-span-2'>
               <h3 className='text-2xl font-bold tracking-wider'>Most Used Tech</h3>
               <ExpertiseTools className="flex flex-row flex-wrap items-center justify-center" tools={tools}/>
             </AboutCard>
