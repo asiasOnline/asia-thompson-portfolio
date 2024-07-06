@@ -27,7 +27,7 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
 
   return (
     <div>
-      <div className='w-screen max-w-[1920px] sticky top-0 left-1/2 mx-auto p-6 md:px-12 lg:px-24 xl:px-32 xl:py-14 mb-6 flex justify-between items-center z-20'>
+      <div className='w-screen max-w-[1920px] sticky top-0 mx-auto p-6 md:px-12 lg:px-24 xl:px-32 xl:py-14 mb-6 flex justify-between items-center z-20'>
         <div className='w-1/3 md:w-1/6 lg:w-32'>
           <Link href="/">
             <Logo />
