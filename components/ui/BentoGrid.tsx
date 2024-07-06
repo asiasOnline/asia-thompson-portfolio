@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
+import { BiSolidLockAlt } from "react-icons/bi";
 import { GoArrowUpRight } from "react-icons/go";
 import { Url } from 'next/dist/shared/lib/router/router';
 
@@ -67,7 +68,7 @@ export const ProjectGridItem = ({
         <Link href={projectLink}>
         {header}
         <div className='mt-2'>
-            {locked ? <p className='text-sm md:text-base'>Contact to discuss this project</p> : <div className='flex'><p className='text-sm md:text-base'>View Project</p><GoArrowUpRight /></div> }
+            {locked ? <div className='flex items-center gap-2'><BiSolidLockAlt /><p className='text-sm md:text-base'>Contact to discuss this project</p></div> : <div className='flex'><p className='text-sm md:text-base'>View Project</p><GoArrowUpRight /></div> }
           </div>
         </Link>
       </motion.div>

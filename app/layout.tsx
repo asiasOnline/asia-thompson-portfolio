@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Raleway, Roboto } from "next/font/google";
 import "./globals.css";
+import { CSPostHogProvider } from "./providers";
 import { ThemeProvider } from "@/components/ui/ThemeProvider"
 
 const roboto = Roboto({ 
@@ -29,7 +30,9 @@ export default function RootLayout({children }: Readonly<{
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <CSPostHogProvider>
+            {children}
+          </CSPostHogProvider>
         </ThemeProvider>
       </body>
     </html>

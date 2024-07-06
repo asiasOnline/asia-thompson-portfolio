@@ -75,20 +75,20 @@ const items = [
       altText="Warm Wood Project Cover"
     />,
     className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
-    locked: false,
-    projectLink: "/projects/warm-wood"
+    locked: true,
+    projectLink: "/#projectHighlights"
   },
   {
-    title: "Overanalyzing Anime",
-    year: "2024",
-    description: "A redesigned responsive website for a content creator seeking to revamp their pre-existing blog.",
+    title: "Bee & Tea",
+    year: "2023",
+    description: "A ecommerce website for a California-based honey and tea vendor.",
     header: <Skeleton 
-      imageSrc={OABlog}
-      altText="Overanalyzing Anime Blog Project Cover"
+      imageSrc={BeeTeaPic}
+      altText="Bee & Tea Project Cover"
     />,
-    className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
-    locked: false,
-    projectLink: "/projects/overanalyzing-anime"
+    className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
+    locked: true,
+    projectLink: "/#projectHighlights",
   },
   {
     title: "Magic Moon Florist",
@@ -100,8 +100,8 @@ const items = [
       className='aspect-w-16 aspect-h-9'
     />,
     className: `col-span-6 xl:col-span-4 ${rowSpan} md:${saturateHover} xl:justify-center`,
-    locked: false,
-    projectLink: "/projects/magic-moon-florist"
+    locked: true,
+    projectLink: "/#projectHighlights"
   },
   {
     title: "Happy Home Manager",
@@ -114,19 +114,7 @@ const items = [
     />,
     className: `col-span-6 md:row-span-3 lg:col-start-2 lg:col-span-4 xl:col-span-2 xl:row-span-2 ${rowSpan} md:${saturateHover} justify-self-center`,
     locked: true,
-    projectLink: "/projects/magic-moon-florist"
-  },
-  {
-    title: "Bee & Tea",
-    year: "2023",
-    description: "A ecommerce website for a California-based honey and tea vendor.",
-    header: <Skeleton 
-      imageSrc={BeeTeaPic}
-      altText="Bee & Tea Project Cover"
-    />,
-    className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
-    locked: false,
-    projectLink: "/projects/bee-tea",
+    projectLink: "/#projectHighlights"
   },
   {
     title: "Asia Thompson's Portfolio",
@@ -137,8 +125,20 @@ const items = [
       altText="Mastery Coding Color Picker Project Cover"
     />,
     className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
-    locked: false,
-    projectLink: "/projects/asia-thompson-portfolio"
+    locked: true,
+    projectLink: "/#projectHighlights"
+  },
+  {
+    title: "Overanalyzing Anime",
+    year: "2024",
+    description: "A redesigned responsive website for a content creator seeking to revamp their pre-existing blog.",
+    header: <Skeleton 
+      imageSrc={OABlog}
+      altText="Overanalyzing Anime Blog Project Cover"
+    />,
+    className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
+    locked: true,
+    projectLink: "/#projectHighlights",
   },
 ];
 
