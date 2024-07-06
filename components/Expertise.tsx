@@ -13,6 +13,8 @@ const IconSize24px = `w-6 h-6`
 const IconSize28px = `w-7 h-7`
 const IconSize32px = `w-8 h-8`
 const IconSize40px = `w-10 h-10`
+const IconSize44px = `w-11 h-11`
+const IconSize48px = `w-12 h-12`
 
 /* Tool Descriptions
 Figma - Industry standard collaborative design tool
@@ -61,32 +63,31 @@ const expertise = [
             {
                 id: 1,
                 toolName: "Figma",
-                designation: "4+ Years",
-                icon: <CgFigma className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <CgFigma className='w-6 h-6 md:w-8 md:h-8 mx-auto'/>
             },
             {
                 id: 2,
                 toolName: "Blender",
                 designation: "2+ Years",
-                icon: <SiBlender className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiBlender className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 3,
                 toolName: "Adobe Photoshop",
                 designation: "3+ Years",
-                icon: <SiAdobephotoshop  className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiAdobephotoshop  className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 4,
                 toolName: "Adobe Illustrator",
                 designation: "1+ Years",
-                icon: <SiAdobeillustrator  className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiAdobeillustrator  className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 5,
                 toolName: "Adobe After Effects",
                 designation: "1+ Years",
-                icon: <SiAdobeaftereffects  className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiAdobeaftereffects  className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             }
         ]
     },
@@ -99,55 +100,55 @@ const expertise = [
                 id: 1,
                 toolName: "HTML5",
                 designation: "10+ Years",
-                icon: <SiHtml5 className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiHtml5 className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 2,
                 toolName: "CSS3",
                 designation: "10+ Years",
-                icon: <SiCss3 className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiCss3 className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 3,
                 toolName: "SASS",
                 designation: "4+ Years",
-                icon: <SiSass className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiSass className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 4,
                 toolName: "TailwindCSS",
                 designation: "1+ Years",
-                icon: <SiTailwindcss className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiTailwindcss className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 5,
                 toolName: "JavaScript",
                 designation: "10+ Years",
-                icon: <SiJavascript className={`${IconSize20px} md:${IconSize28px} mx-auto`}/>
+                icon: <SiJavascript className={`w-5 h-5 md:w-7 md:h-7 mx-auto`}/>
             },
             {
                 id: 6,
                 toolName: "TypeScript",
                 designation: "2+ Years",
-                icon: <SiTypescript className={`${IconSize20px} md:${IconSize28px} mx-auto`}/>
+                icon: <SiTypescript className={`$w-5 h-5 md:w-7 md:h-7 mx-auto`}/>
             }, 
             {
                 id: 7,
                 toolName: "React & React Native",
                 designation: "4+ Years",
-                icon: <SiReact className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiReact className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 8,
                 toolName: "Angular",
                 designation: "1+ Years",
-                icon: <FaAngular className={`${IconSize32px} md:${IconSize40px} mx-auto`}/>
+                icon: <FaAngular className={`w-8 h-8 md:w-10 md:h-10 mx-auto`}/>
             },
             {
                 id: 9,
                 toolName: "Laravel",
                 designation: "1+ Years",
-                icon: <SiLaravel className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiLaravel className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 10,
@@ -166,61 +167,61 @@ const expertise = [
                 id: 1,
                 toolName: "Node.js",
                 designation: "4+ Years",
-                icon: <SiNodedotjs className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiNodedotjs className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 2,
                 toolName: "C#",
                 designation: "4+ Years",
-                icon: <SiCsharp className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiCsharp className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 3,
                 toolName: ".NET",
                 designation: "2+ Years",
-                icon: <SiDotnet className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiDotnet className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 4,
                 toolName: "PHP",
                 designation: "2+ Years",
-                icon: <SiPhp className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiPhp className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 5,
                 toolName: "Python",
                 designation: "6+ Years",
-                icon: <SiPython className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiPython className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 6,
                 toolName: "Apollo GraphQL",
                 designation: "2+ Years",
-                icon: <SiApollographql className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiApollographql className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 7,
                 toolName: "Dockers",
                 designation: "1+ Years",
-                icon: <SiDocker className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiDocker className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 8,
                 toolName: "Kubernetes",
                 designation: "1+ Years",
-                icon: <SiKubernetes className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiKubernetes className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 9,
                 toolName: "Amazon Web Services",
                 designation: "3+ Years",
-                icon: <SiAmazonaws className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiAmazonaws className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 10,
                 toolName: "Terraform",
                 designation: "1+ Years",
-                icon: <SiTerraform className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiTerraform className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
         ]
     },
@@ -233,56 +234,56 @@ const expertise = [
                 id: 1,
                 toolName: "PostgreSQL",
                 designation: "6+ Years",
-                icon: <BiLogoPostgresql className={`${IconSize32px} md:${IconSize40px} mx-auto`}/>
+                icon: <BiLogoPostgresql className={`w-8 h-8 md:w-10 md:h-10 mx-auto`}/>
 
             },
             {
                 id: 2,
                 toolName: "MongoDB",
                 designation: "4+ Years",
-                icon: <SiMongodb className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiMongodb className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 3,
                 toolName: "Azure",
                 designation: "2+ Years",
-                icon: <SiMicrosoftazure className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiMicrosoftazure className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 4,
                 toolName: "Snowflake",
                 designation: "1+ Years",
-                icon: <SiSnowflake className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiSnowflake className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 5,
                 toolName: "Redis",
                 designation: "1+ Years",
-                icon: <SiRedis className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiRedis className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 6,
                 toolName: "Apache Airflow",
                 designation: "1+ Years",
-                icon: <SiApacheairflow className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiApacheairflow className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 7,
                 toolName: "Apache Spark",
                 designation: "1+ Years",
-                icon: <SiApachespark className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiApachespark className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 8,
                 toolName: "Tableau",
                 designation: "2+ Years",
-                icon: <SiTableau className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiTableau className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 9,
                 toolName: "Elasticsearch",
                 designation: "1+ Years",
-                icon: <SiElasticsearch className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+                icon: <SiElasticsearch className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
         ]
     }
@@ -292,7 +293,7 @@ const Expertise = () => {
   return (
     <div id="expertise">
         <PageHeader title="Expertise"/>
-        <div className='flex flex-col gap-12'>
+        <div className='flex flex-col gap-12 max-w-7xl mx-auto'>
             <ExpertiseCard 
                 id={expertise[0].id}
                 title={expertise[0].title}

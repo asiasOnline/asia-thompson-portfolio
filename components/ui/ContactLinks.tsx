@@ -6,7 +6,7 @@ import { BsTwitterX } from "react-icons/bs";
 
 const ContactLinks = () => {
   return (
-    <div className='w-full md:w-1/2 flex flex-row justify-evenly lg:items-center md:gap-6'>
+    <div className='w-full md:w-1/2 flex flex-row justify-evenly md:items-center md:gap-6 xl:gap-12'>
         <a href="mailto:asiasatwork@gmail.com">
             <TbMailFilled className='h-8 w-8 lg:h-10 lg:w-10'/>
         </a>

@@ -20,7 +20,7 @@ const ProjectHighlights = () => {
   return (
     <div id="projectHighlights">
         <PageHeader title="Project Highlights"/>
-        <BentoGrid className="max-w-7xl mx-auto" >
+        <BentoGrid className="mx-auto" >
         {items.map((item, i) => (
         <ProjectGridItem
           key={i}
@@ -30,6 +30,7 @@ const ProjectHighlights = () => {
           header={item.header}
           className={item.className}
           locked={item.locked}
+          projectLink={item.projectLink}
         />
       ))}
       </BentoGrid>
@@ -75,6 +76,7 @@ const items = [
     />,
     className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
     locked: false,
+    projectLink: "/projects/warm-wood"
   },
   {
     title: "Overanalyzing Anime",
@@ -86,6 +88,7 @@ const items = [
     />,
     className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
     locked: false,
+    projectLink: "/projects/overanalyzing-anime"
   },
   {
     title: "Magic Moon Florist",
@@ -96,8 +99,9 @@ const items = [
       altText="Magic Moon Florist Project Cover"  
       className='aspect-w-16 aspect-h-9'
     />,
-    className: `col-span-6 xl:col-span-4 ${rowSpan} md:${saturateHover}`,
+    className: `col-span-6 xl:col-span-4 ${rowSpan} md:${saturateHover} xl:justify-center`,
     locked: false,
+    projectLink: "/projects/magic-moon-florist"
   },
   {
     title: "Happy Home Manager",
@@ -108,8 +112,9 @@ const items = [
       altText="Warm Wood Project Cover"
       className='aspect-w-3 aspect-h-4'
     />,
-    className: `col-span-6 md:row-span-3 lg:col-start-2 lg:col-span-4 xl:col-span-2 ${rowSpan} md:${saturateHover} justify-self-center`,
+    className: `col-span-6 md:row-span-3 lg:col-start-2 lg:col-span-4 xl:col-span-2 xl:row-span-2 ${rowSpan} md:${saturateHover} justify-self-center`,
     locked: true,
+    projectLink: "/projects/magic-moon-florist"
   },
   {
     title: "Bee & Tea",
@@ -121,6 +126,7 @@ const items = [
     />,
     className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
     locked: false,
+    projectLink: "/projects/bee-tea",
   },
   {
     title: "Asia Thompson's Portfolio",
@@ -132,6 +138,7 @@ const items = [
     />,
     className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
     locked: false,
+    projectLink: "/projects/asia-thompson-portfolio"
   },
 ];
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const WarmWoodPage = () => {
   return (
-    <div>WarmWood</div>
+    <div><h1>Warm Wood</h1></div>
   )
 }
 

@@ -7,7 +7,7 @@ import ContactLinks from './ui/ContactLinks';
 
 const Hero = () => {
   return (
-    <div className='md:mx-auto'>
+    <div className='max-w-7xl md:mx-auto'>
         <div className='md:w-fit mx-auto md:m-0'>
           <div className='relative w-full'>
             <div className='absolute top-0 -left-4 w-40 h-40 md:w-60 lg:w-80  bg-steelPink rounded-full mix-blend-multiply filter blur-2xl opacity-25 animate-gradientAnimation
@@ -20,7 +20,7 @@ const Hero = () => {
             dark:mix-blend-screen dark:opacity-35'></div>
             <div className='flex items-end gap-4 lg:gap-8 xl:gap-16'>
               <p className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>Hello there!</p>
-              <div className='w-20 md:w-40 lg:w-56 h-auto'><HeroAvatar /></div>
+              <div className='w-20 md:w-40 lg:w-48 h-auto'><HeroAvatar /></div>
             </div>
           </div>
             <p className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider mt-5 lg:mt-8'>
@@ -42,7 +42,7 @@ const Hero = () => {
           locale={false}
           className='text-black font-bold uppercase tracking-wider px-6 py-6 dark:text-white flex items-center'>
             <PiFileText className='mr-2 h-8 w-8 lg:w-10 lg:h-10'/>
-            <p className="hover:underline lg:text-xl">View Resume</p>
+            <p className="hover:underline lg:text-xl text-nowrap">View Resume</p>
           </Link>
           <ContactLinks/>
         </div>
