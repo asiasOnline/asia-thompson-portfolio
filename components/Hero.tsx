@@ -28,24 +28,14 @@ const Hero = () => {
             </p>
         </div>
       <div className='mt-6 md:mt-10'>
-        <p className='text-lg md:text-2xl lg:text-4xl leading-8 md:leading-10 lg:leading-14 2xl:leading-16 font-display tracking-wider'>I&apos;m a <span className='underline decoration-steelPink decoration-4 underline-offset-8'>digital product designer</span> and a <span className='underline decoration-fountainBlue decoration-4 underline-offset-8'>full-stack developer</span> with a passion for <span className='underline decoration-ultramarine dark:decoration-slateBlue decoration-4 underline-offset-8'>concise planning and thorough execution</span>.</p>
+        <p className='text-lg md:text-2xl lg:text-3xl leading-8 md:leading-10 lg:leading-14 2xl:leading-16 font-display tracking-wider'>I&apos;m a <span className='underline decoration-steelPink decoration-4 underline-offset-8'>digital product designer</span> and a <span className='underline decoration-fountainBlue decoration-4 underline-offset-8'>full-stack developer</span> with a passion for <span className='underline decoration-ultramarine dark:decoration-slateBlue decoration-4 underline-offset-8'>concise planning and thorough execution</span>.</p>
       </div>
-      <div className='mt-8 md:mt-16 lg:mt-10 flex flex-col md:gap-4 lg:gap-8 xl:flex-row lg:justify-between'>
+      <div className='mt-8 md:mt-12 lg:mt-10 flex flex-col lg:flex-row md:gap-12 xl:flex-row lg:justify-between'>
         <div className='flex items-center gap-4'>
           <PiMapPinLineFill className='w-8 h-8 lg:w-10 lg:h-10'/>
-          <p className='text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-wider'>Based in Anaheim, CA</p>
+          <p className='text-lg md:text-2xl font-display font-bold tracking-wider'>Based in Anaheim, CA</p>
         </div>
-        <div className='flex flex-col gap-4 md:flex-row xl:justify-between place-content-center md:gap-10'>
-          <Link 
-          href="/Asia-Thompson-Public-Resume.pdf"
-          target='_blank'
-          locale={false}
-          className='text-black font-bold uppercase tracking-wider px-6 py-6 dark:text-white flex items-center'>
-            <PiFileText className='mr-2 h-8 w-8 lg:w-10 lg:h-10'/>
-            <p className="hover:underline lg:text-xl text-nowrap">View Resume</p>
-          </Link>
-          <ContactLinks/>
-        </div>
+        <ContactLinks/>
       </div>
     </div>
   )

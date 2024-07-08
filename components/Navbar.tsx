@@ -18,9 +18,10 @@ const Navbar = () => {
   };
 
   let Links = [
-    {name: "Expertise", link: "/#expertise"},
-    {name: "Projects", link: "/#projectHighlights"},
-    {name: "About", link: "/#about"}
+    {name: "Expertise", link: "/#expertise", newTab: false},
+    {name: "Projects", link: "/#projectHighlights", newTab: false},
+    {name: "About", link: "/#about", newTab: false},
+    {name: "Resume", link: "/Asia-Thompson-Public-Resume.pdf", newTab: true}
 ]
 
 const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
@@ -41,11 +42,15 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
           <nav className={isMenuOpen ? `absolute top-[125%] right-10 flex flex-col ${defaultNavbarStyle}` : `hidden ${defaultNavbarStyle}`}>
             {
                 Links.map((link) => (
-                  <Link key={link.name}
-                  className='hover:underline'
-                  onClick={toggleOff}
-                  href={link.link}
-                  > {link.name}
+                  <Link key={link.name} href={link.link} legacyBehavior passHref> 
+                    <a 
+                      className='hover:underline'
+                      onClick={toggleOff}
+                      target={link.newTab ? "_blank" : "_self"}
+                      rel={link.newTab ? "noopener noreferrer" : undefined}
+                    >
+                      {link.name}
+                    </a>
                   </Link>
                 ))
             }
