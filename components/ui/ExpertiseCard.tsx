@@ -1,21 +1,21 @@
 import React from 'react'
 import { ExpertiseTools } from './ExpertiseTools'
 
-type toolType = {
-    id: number,
-    toolName: string,
-    designation: string,
-    icon?: React.ReactNode,
+interface Tool {
+    id: number;
+    toolName: string;
+    designation: string;
+    icon: React.JSX.Element,
 }
 
-export const ExpertiseCard = ({
-    id, title, description, tools
-}: {
-    id: number,
-    title: string | React.ReactNode,
-    description: string | React.ReactNode,
-    tools: any
-}) => {
+interface ExpertiseCardProps {
+    id: number;
+    title: string | React.ReactNode;
+    description: string | React.ReactNode;
+    tools: Tool[];
+}
+
+export const ExpertiseCard: React.FC<ExpertiseCardProps> = ({id, title, description, tools}) => {
   return (
     <div className="relative group">
         <div className='absolute 

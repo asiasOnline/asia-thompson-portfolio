@@ -3,9 +3,11 @@ import React from 'react'
 import PageHeader from './ui/PageHeader'
 import ExpertiseCard from './ui/ExpertiseCard'
 import { CgFigma } from "react-icons/cg";
-import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiAdobeaftereffects, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiLaravel, SiAstro, SiNodedotjs, SiCsharp, SiDotnet, SiPhp, SiPython, SiApollographql, SiDocker, SiKubernetes, SiAmazonaws, SiTerraform, SiMongodb, SiMicrosoftazure, SiSnowflake, SiRedis, SiApacheairflow, SiApachespark, SiTableau, SiElasticsearch } from "react-icons/si";
+import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiAdobeaftereffects, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiShopify, SiLaravel, SiNodedotjs, SiDotnet, SiPhp, SiPython, SiGraphql, SiDocker, SiKubernetes, SiAmazonaws, SiTerraform, SiMongodb, SiMicrosoftazure, SiLinux, SiRedis, SiApacheairflow, SiElasticsearch } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaAngular } from "react-icons/fa6";
+import { TbBrandCSharp } from "react-icons/tb";
+import { FaAngular, FaWordpress } from "react-icons/fa6";
+import { GrMysql } from "react-icons/gr";
 
 
 const IconSize20px = `w-5 h-5`
@@ -54,7 +56,7 @@ Elasticsearch - Search and analytics engine for structured and unstructured data
 */
 
 
-const expertise = [
+const expertiseCards = [
     {
         id: 1,
         title: "UX & UI Design",
@@ -147,16 +149,16 @@ const expertise = [
             },
             {
                 id: 9,
-                toolName: "Laravel",
-                designation: "1+ Years",
-                icon: <SiLaravel className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+                toolName: "Wordpress",
+                designation: "2+ Years",
+                icon: <FaWordpress className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 10,
-                toolName: "Astro",
+                toolName: "Shopify",
                 designation: "1+ Years",
-                icon: <SiAstro className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
-            }
+                icon: <SiShopify className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+            },
         ]
     },
     {
@@ -174,7 +176,7 @@ const expertise = [
                 id: 2,
                 toolName: "C#",
                 designation: "4+ Years",
-                icon: <SiCsharp className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+                icon: <TbBrandCSharp className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 3,
@@ -190,15 +192,15 @@ const expertise = [
             },
             {
                 id: 5,
-                toolName: "Python",
-                designation: "6+ Years",
-                icon: <SiPython className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+                toolName: "Laravel",
+                designation: "1+ Years",
+                icon: <SiLaravel className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 6,
-                toolName: "Apollo GraphQL",
+                toolName: "GraphQL",
                 designation: "2+ Years",
-                icon: <SiApollographql className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+                icon: <SiGraphql className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 7,
@@ -214,12 +216,6 @@ const expertise = [
             },
             {
                 id: 9,
-                toolName: "Amazon Web Services",
-                designation: "3+ Years",
-                icon: <SiAmazonaws className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
-            },
-            {
-                id: 10,
                 toolName: "Terraform",
                 designation: "1+ Years",
                 icon: <SiTerraform className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
@@ -240,21 +236,21 @@ const expertise = [
             },
             {
                 id: 2,
+                toolName: "MySQL",
+                designation: "2+ Years",
+                icon: <GrMysql className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+            },
+            {
+                id: 3,
                 toolName: "MongoDB",
                 designation: "4+ Years",
                 icon: <SiMongodb className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
-                id: 3,
-                toolName: "Azure",
-                designation: "2+ Years",
-                icon: <SiMicrosoftazure className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
-            },
-            {
                 id: 4,
-                toolName: "Snowflake",
+                toolName: "Elasticsearch",
                 designation: "1+ Years",
-                icon: <SiSnowflake className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+                icon: <SiElasticsearch className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 5,
@@ -264,27 +260,33 @@ const expertise = [
             },
             {
                 id: 6,
-                toolName: "Apache Airflow",
-                designation: "1+ Years",
-                icon: <SiApacheairflow className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+                toolName: "Amazon Web Services",
+                designation: "2+ Years",
+                icon: <SiAmazonaws className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 7,
-                toolName: "Apache Spark",
-                designation: "1+ Years",
-                icon: <SiApachespark className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+                toolName: "Azure",
+                designation: "2+ Years",
+                icon: <SiMicrosoftazure className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 8,
-                toolName: "Tableau",
+                toolName: "Linux",
                 designation: "2+ Years",
-                icon: <SiTableau className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+                icon: <SiLinux className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
                 id: 9,
-                toolName: "Elasticsearch",
+                toolName: "Python",
+                designation: "6+ Years",
+                icon: <SiPython className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+            },
+            {
+                id: 10,
+                toolName: "Apache Airflow",
                 designation: "1+ Years",
-                icon: <SiElasticsearch className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+                icon: <SiApacheairflow className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
         ]
     }
@@ -295,30 +297,17 @@ const Expertise = () => {
     <div id="expertise">
         <PageHeader title="Expertise"/>
         <div className='flex flex-col gap-12 max-w-7xl mx-auto'>
-            <ExpertiseCard 
-                id={expertise[0].id}
-                title={expertise[0].title}
-                description={expertise[0].description}
-                tools={expertise[0].tools}
-            />
-            <ExpertiseCard 
-                id={expertise[1].id}
-                title={expertise[1].title}
-                description={expertise[1].description}
-                tools={expertise[1].tools}
-            />
-            <ExpertiseCard 
-                id={expertise[2].id}
-                title={expertise[2].title}
-                description={expertise[2].description}
-                tools={expertise[2].tools}
-            />
-            <ExpertiseCard 
-                id={expertise[3].id}
-                title={expertise[3].title}
-                description={expertise[3].description}
-                tools={expertise[3].tools}
-            />
+            {
+                expertiseCards.map((card) => (
+                    <ExpertiseCard 
+                        key={card.id}
+                        id={card.id}
+                        title={card.title}
+                        description={card.description}
+                        tools={card.tools}
+                    />
+                ))
+            }
         </div>
     </div>
   )
