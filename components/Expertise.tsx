@@ -10,13 +10,8 @@ import { FaAngular, FaWordpress } from "react-icons/fa6";
 import { GrMysql } from "react-icons/gr";
 
 
-const IconSize20px = `w-5 h-5`
 const IconSize24px = `w-6 h-6`
-const IconSize28px = `w-7 h-7`
 const IconSize32px = `w-8 h-8`
-const IconSize40px = `w-10 h-10`
-const IconSize44px = `w-11 h-11`
-const IconSize48px = `w-12 h-12`
 
 /* Tool Descriptions
 Figma - Industry standard collaborative design tool
@@ -186,12 +181,6 @@ const expertiseCards = [
             },
             {
                 id: 4,
-                toolName: "Python",
-                designation: "6+ Years",
-                icon: <SiPython className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
-            },
-            {
-                id: 5,
                 toolName: "PHP",
                 designation: "2+ Years",
                 icon: <SiPhp className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
@@ -209,13 +198,13 @@ const expertiseCards = [
                 icon: <SiGraphql className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
-                id: 6,
+                id: 7,
                 toolName: "Dockers",
                 designation: "1+ Years",
                 icon: <SiDocker className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
-                id: 7,
+                id: 8,
                 toolName: "Kubernetes",
                 designation: "1+ Years",
                 icon: <SiKubernetes className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
