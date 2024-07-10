@@ -28,7 +28,7 @@ const tools = [
     id: 1,
     toolName: "Figma",
     designation: "4+ Years",
-    icon: <CgFigma className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+    icon: <CgFigma className='w-6 h-6 md:w-8 md:h-8 mx-auto'/>
   },
   {
     id: 2,
