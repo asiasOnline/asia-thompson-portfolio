@@ -15,7 +15,7 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: "Asia Thompson",
-  description: "The portfolio for Asia Thompson a digital product designer and full-stack developer with expertise in data engineering.",
+  description: "The portfolio for Asia Thompson a digital product designer and full-stack developer.",
 };
 
 export default function RootLayout({children }: Readonly<{

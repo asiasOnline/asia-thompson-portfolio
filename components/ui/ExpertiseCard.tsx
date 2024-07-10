@@ -1,13 +1,6 @@
 import React from 'react'
 import { ExpertiseTools } from './ExpertiseTools'
 
-type toolType = {
-    id: number,
-    toolName: string,
-    designation: string,
-    icon?: React.ReactNode,
-}
-
 export const ExpertiseCard = ({
     id, title, description, tools
 }: {

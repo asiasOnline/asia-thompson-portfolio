@@ -76,7 +76,7 @@ const items = [
     />,
     className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
     locked: true,
-    projectLink: "/#projectHighlights"
+    projectLink: "/projects/warm-wood"
   },
   {
     title: "Bee & Tea",
@@ -88,7 +88,7 @@ const items = [
     />,
     className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
     locked: true,
-    projectLink: "/#projectHighlights",
+    projectLink: "/projects/bee-tea",
   },
   {
     title: "Magic Moon Florist",
