@@ -75,7 +75,7 @@ const items = [
       altText="Warm Wood Project Cover"
     />,
     className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
-    locked: true,
+    locked: false,
     projectLink: "/projects/warm-wood"
   },
   {
@@ -87,7 +87,7 @@ const items = [
       altText="Bee & Tea Project Cover"
     />,
     className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
-    locked: true,
+    locked: false,
     projectLink: "/projects/bee-tea",
   },
   {

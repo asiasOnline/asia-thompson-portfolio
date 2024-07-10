@@ -11,7 +11,7 @@ import { BentoGrid } from "./ui/BentoGrid";
 import { ExpertiseTools } from './ui/ExpertiseTools';
 
 import profilePic from '../public/profile-pic.png';
-import { CoffeeCup, MeltingPizza, SleepyFace, Sun, Building, CSULB } from './ui/ThemeAssets';
+import { CoffeeCup, MeltingPizza, SleepyFace, Sun, Building, CSULB } from './ui/HomeSVGAssets';
 import SwordSlash from '../public/Sword_Slash.json';
 import { CgFigma } from "react-icons/cg";
 import { SiHtml5, SiCss3, SiTailwindcss, SiTypescript, SiReact, SiPython } from "react-icons/si";
