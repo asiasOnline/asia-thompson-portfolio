@@ -91,7 +91,7 @@ const expertiseCards = [
                 toolName: "Adobe After Effects",
                 designation: "1+ Years",
                 icon: <SiAdobeaftereffects  className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
-            }
+            },
         ]
     },
     {
@@ -186,6 +186,12 @@ const expertiseCards = [
             },
             {
                 id: 4,
+                toolName: "Python",
+                designation: "6+ Years",
+                icon: <SiPython className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+            },
+            {
+                id: 5,
                 toolName: "PHP",
                 designation: "2+ Years",
                 icon: <SiPhp className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
@@ -203,13 +209,13 @@ const expertiseCards = [
                 icon: <SiGraphql className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
-                id: 7,
+                id: 6,
                 toolName: "Dockers",
                 designation: "1+ Years",
                 icon: <SiDocker className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
             {
-                id: 8,
+                id: 7,
                 toolName: "Kubernetes",
                 designation: "1+ Years",
                 icon: <SiKubernetes className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
