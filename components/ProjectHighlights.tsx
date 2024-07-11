@@ -57,7 +57,7 @@ const Skeleton = ({
         alt={altText}
         fill
         style={{objectFit: 'cover'}}
-        className='group-hover/bento:rounded-lg'
+        className='group-hover/bento:rounded-lg aspect-square'
       />
   </motion.div>
 );

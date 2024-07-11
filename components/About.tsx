@@ -144,7 +144,7 @@ const About = () => {
 
             <AboutCard className='p-10 col-span-6 md:col-span-3 lg:col-span-2 row-span-2'>
               <h3 className='text-2xl font-bold tracking-wider'>Born & Raised</h3>
-              <p>As a Cali girl I’m used to perfect weather, crowded cities, and PST time, but I can work with any time zone.</p>
+              <p>As a Cali girl I&apos;m used to perfect weather, crowded cities, and PST time, but I can work with any time zone.</p>
             </AboutCard>
 
             <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-start-5 xl:col-span-1 xl:col-start-5 xl:row-start-5'>

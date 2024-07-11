@@ -10,10 +10,10 @@ const ProjectSectionExamples = ({
     description?: string;
 }) => {
   return (
-    <div className='flex flex-col'>
-        {visual}
-        {title}
-        {description}
+    <div className='w-1/3 flex flex-col items-center gap-2'>
+        <div className='w-32 h-32'>{visual}</div>
+        <p className='font-bold'>{title}</p>
+        <p className='text-center'>{description}</p>
     </div>
   )
 }
