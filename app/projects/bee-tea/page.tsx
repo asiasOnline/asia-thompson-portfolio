@@ -23,18 +23,21 @@ const BeeTeaPage = () => {
         <BeeTeaOverviewVideo />
       </ProjectHero>
 
+    <div className='flex'>
+      <div className='w-1/5'></div>
       <ProjectOverview 
-        clientBackground={clientBackround}
-        industryIcon={<MdEmojiFoodBeverage />}
-        industryTitle={industryTitle}
-        platformWebsite={true}
-        problemIntro={problemIntro}
-        problemExamples={<ProblemExamples />}
-        solutionIntro={solutionIntro}
-        solutionExamples={<SolutionExamples />}
-        roles={roles}
-        tools={tools}
-      />
+          clientBackground={clientBackround}
+          industryIcon={<MdEmojiFoodBeverage />}
+          industryTitle={industryTitle}
+          platformWebsite={true}
+          problemIntro={problemIntro}
+          problemExamples={<ProblemExamples />}
+          solutionIntro={solutionIntro}
+          solutionExamples={<SolutionExamples />}
+          roles={roles}
+          tools={tools}
+        />
+    </div>
     </>
   )
 }

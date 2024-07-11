@@ -17,12 +17,6 @@ import { CgFigma } from "react-icons/cg";
 import { SiHtml5, SiCss3, SiTailwindcss, SiTypescript, SiReact, SiPython } from "react-icons/si";
 import { BiLogoPostgresql } from 'react-icons/bi';
 
-const IconSize20px = `w-5 h-5`
-const IconSize24px = `w-6 h-6`
-const IconSize28px = `w-7 h-7`
-const IconSize32px = `w-8 h-8`
-const IconSize40px = `w-10 h-10`
-
 const tools = [
   {
     id: 1,
@@ -34,43 +28,43 @@ const tools = [
     id: 2,
     toolName: "HTML5",
     designation: "10+ Years",
-    icon: <SiHtml5 className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+    icon: <SiHtml5 className='w-6 h-6 md:w-8 md:h-8 mx-auto'/>
   },
   {
     id: 3,
     toolName: "CSS3",
     designation: "10+ Years",
-    icon: <SiCss3 className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+    icon: <SiCss3 className='w-6 h-6 md:w-8 md:h-8 mx-auto'/>
 },
   {
     id: 4,
     toolName: "TailwindCSS",
     designation: "1+ Years",
-    icon: <SiTailwindcss className={`${IconSize24px} md:${IconSize32px} mx-auto`}/>
+    icon: <SiTailwindcss className='w-6 h-6 md:w-8 md:h-8 mx-auto'/>
   },
   {
     id: 5,
     toolName: "TypeScript",
     designation: "2+ Years",
-    icon: <SiTypescript className={`${IconSize20px} md:${IconSize28px} mx-auto`}/>
+    icon: <SiTypescript className='w-5 h-5 md:w-7 md:h-7 mx-auto'/>
 }, 
   {
     id: 6,
     toolName: "React & React Native",
     designation: "4+ Years",
-    icon: <SiReact className={`${IconSize20px} md:${IconSize28px} mx-auto`}/>
+    icon: <SiReact className='w-5 h-5 md:w-7 md:h-7 mx-auto'/>
   },
   {
     id: 7,
     toolName: "Python",
     designation: "6+ Years",
-    icon: <SiPython className={`${IconSize20px} md:${IconSize28px} mx-auto`}/>
+    icon: <SiPython className='w-5 h-5 md:w-7 md:h-7 mx-auto'/>
 },
 {
     id: 8,
     toolName: "PostgreSQL",
     designation: "6+ Years",
-    icon: <BiLogoPostgresql className={`${IconSize32px} md:${IconSize40px} mx-auto`}/>
+    icon: <BiLogoPostgresql className='w-6 h-6 md:w-8 md:h-8 mx-auto'/>
 },
 ]
 

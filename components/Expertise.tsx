@@ -10,9 +10,6 @@ import { FaAngular, FaWordpress } from "react-icons/fa6";
 import { GrMysql } from "react-icons/gr";
 
 
-const IconSize24px = `w-6 h-6`
-const IconSize32px = `w-8 h-8`
-
 /* Tool Descriptions
 Figma - Industry standard collaborative design tool
 Blender - Open-source tool for creating 3D assets 
