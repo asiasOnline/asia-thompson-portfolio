@@ -1,6 +1,13 @@
 import React from 'react'
 import { ExpertiseTools } from './ExpertiseTools'
 
+interface Tool {
+    id: number;
+    toolName: string;
+    designation: string;
+    icon: React.JSX.Element;
+}
+
 interface ExpertiseCardProps {
     id: number;
     title: string | React.ReactNode;

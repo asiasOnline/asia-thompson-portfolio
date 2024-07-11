@@ -93,13 +93,13 @@ const SolutionExamples = () => {
 
 const projectTitle = "Bee & Tea"
 
-const projectDescription = "Bee & Tea’s journey is centered around a passion for nature and reflecting that in the products we consume regularly."
+const projectDescription = "Bee & Tea&apos;s journey is centered around a passion for nature and reflecting that in the products we consume regularly."
 
 const clientBackround = <div><p>Bee & Tea began as a passion project fueled by a strong commitment to sustainability, quality, community, along with the founder&apos;s personal love of beekeeping and gardening.</p><br /> <p>Starting from humble beginnings as their popularity has grown they&apos;ve stayed true to their values and methods ensuring their products are free from any additives and preservatives.</p> <br /><p>Their goal is to inspire healthy living and environmental stewardship through their products sourced from their own maintained hives and seasonal tea blends.</p></div>
 
-const problemIntro = <div><p>Bee & Tea have been offering their wares locally at various farmers markets and noted how their popularity has grown both in-person and through their social media accounts.</p><br /><p>With an increase in profits they’ve carefully scaled their ability to produce more product and would like to break into the e-commerce market. To assist them in making this transition successful there are three main factors I’d like to keep at the forefront:</p></div>
+const problemIntro = <div><p>Bee & Tea have been offering their wares locally at various farmers markets and noted how their popularity has grown both in-person and through their social media accounts.</p><br /><p>With an increase in profits they&apos;ve carefully scaled their ability to produce more product and would like to break into the e-commerce market. To assist them in making this transition successful there are three main factors I&apos;d like to keep at the forefront:</p></div>
 
-const solutionIntro = <div><p>To break into the e-commerce market a responsive website that’s tailored to Bee and Tea’s brand identity and their customer engagement is the solution. /nThe website that’s made should address the specific aspects of the problem by incorporating the following elements into the end result:</p></div>
+const solutionIntro = <div><p>To break into the e-commerce market a responsive website that&apos;s tailored to Bee and Tea&apos;s brand identity and their customer engagement is the solution. /nThe website that&apos;s made should address the specific aspects of the problem by incorporating the following elements into the end result:</p></div>
 
 const industryTitle = "Food & Beverage"
 
@@ -147,7 +147,7 @@ const solutions = [
   {
     visual:<WindowSettingsScreen />,
     title: "User-Friendly & Scalable Platform",
-    description: "Selecting a intuitive e-commerce platform that’s easy to manage without extensive technical expertise will provide the client with confidence to utilize the platform effectively."
+    description: "Selecting a intuitive e-commerce platform that&apos;s easy to manage without extensive technical expertise will provide the client with confidence to utilize the platform effectively."
   },
 ]
 

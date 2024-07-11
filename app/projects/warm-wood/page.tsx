@@ -120,7 +120,7 @@ const problems = [
   {
     visual:<OneStarScreen />,
     title: "Negative Reputation",
-    description: "Their current system is unprofessional which can impact the amount of clients they’re able to obtain."
+    description: "Their current system is unprofessional which can impact the amount of clients they&apos;re able to obtain."
   },
   {
     visual:<ErrorScreen />,
