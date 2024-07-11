@@ -84,7 +84,7 @@ const ProjectOverview = ({
           <div>
             <h3 className='text-2xl font-bold tracking-wider'>Roles</h3>
             <ul className='grid grid-cols-2 gap-y-4 gap-x-10 list-disc'>
-            {roles.map((role) => (<li>{role}</li>))}
+            {roles.map((role, i) => (<li key={i}>{role}</li>))}
             </ul>
           </div>
           <div>
