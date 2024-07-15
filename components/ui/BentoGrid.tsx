@@ -66,10 +66,10 @@ export const ProjectGridItem = ({
           </div>
         </div>
         <Link href={projectLink}>
-        {header}
-        <div className='mt-2'>
-            {locked ? <div className='flex items-center gap-2'><BiSolidLockAlt /><p className='text-sm md:text-base'>Contact to discuss this project</p></div> : <div className='flex'><p className='text-sm md:text-base'>View Project</p><GoArrowUpRight /></div> }
+          <div className='mt-2'>
+              {locked ? <div className='flex items-center gap-2'><BiSolidLockAlt /><p className='text-sm md:text-base'>Contact to discuss this project</p></div> : <div className='flex'><p className='text-sm md:text-base'>View Project</p><GoArrowUpRight /></div> }
           </div>
+          {header}
         </Link>
       </motion.div>
     );

@@ -139,18 +139,6 @@ const expertiseCards = [
                 designation: "1+ Years",
                 icon: <FaAngular className={`w-8 h-8 md:w-10 md:h-10 mx-auto`}/>
             },
-            {
-                id: 9,
-                toolName: "Wordpress",
-                designation: "2+ Years",
-                icon: <FaWordpress className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
-            },
-            {
-                id: 10,
-                toolName: "Shopify",
-                designation: "1+ Years",
-                icon: <SiShopify className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
-            },
         ]
     },
     {
@@ -196,6 +184,19 @@ const expertiseCards = [
             },
             {
                 id: 7,
+                toolName: "Wordpress",
+                designation: "2+ Years",
+                icon: <FaWordpress className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+            },
+            {
+                id: 8,
+                toolName: "Shopify",
+                designation: "1+ Years",
+                icon: <SiShopify className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
+            },
+            /*
+            {
+                id: 7,
                 toolName: "Dockers",
                 designation: "1+ Years",
                 icon: <SiDocker className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
@@ -212,11 +213,12 @@ const expertiseCards = [
                 designation: "1+ Years",
                 icon: <SiTerraform className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
+            */
         ]
     },
     {
         id: 4,
-        title: "Database Engineering",
+        title: "Database Management",
         description: "I design and optimize high-performance databases by implementing efficient data structures, ensuring database integrity, and enabling storage solutions to power dynamic and data-driven applications.",
         tools: [
             {
@@ -262,24 +264,28 @@ const expertiseCards = [
                 designation: "2+ Years",
                 icon: <SiMicrosoftazure className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
+            /*
             {
                 id: 8,
                 toolName: "Linux",
                 designation: "2+ Years",
                 icon: <SiLinux className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
+            */
             {
                 id: 9,
                 toolName: "Python",
                 designation: "6+ Years",
                 icon: <SiPython className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
+            /*
             {
                 id: 10,
                 toolName: "Apache Airflow",
                 designation: "1+ Years",
                 icon: <SiApacheairflow className={`w-6 h-6 md:w-8 md:h-8 mx-auto`}/>
             },
+            */
         ]
     }
 ]
