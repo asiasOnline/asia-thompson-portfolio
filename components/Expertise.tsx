@@ -10,44 +10,6 @@ import { FaAngular, FaWordpress } from "react-icons/fa6";
 import { GrMysql } from "react-icons/gr";
 
 
-/* Tool Descriptions
-Figma - Industry standard collaborative design tool
-Blender - Open-source tool for creating 3D assets 
-Adobe Photoshop - Industry standard photo and raster graphic software | 
-Adobe Illustrator - Industry standard vector graphics editor
-Adobe After Effects - Industry standard motion graphics tool
-HTML5 - Markup language for web pages 
-CSS3 - Stylesheet language for web design 
-SASS - Standard CSS extension
-TailwindCSS - Current standard CSS framework 
-JavaScript - Core programming language for web page behavior 
-TypeScript - The working developer's JavaScript 
-React & React Native - Front end framework for web, iOS, and Android
-Angular - Typescript-based framework for web applications
-Laravel - PHP-based framework for web applications 
-Astro - Web framework for building content-driven websites
-Node.js - Tool for running JavaScript server-side 
-C# - General purpose programming language for apps and games
-.NET - C# framework for building web, mobile, and desktop apps
-PHP - General-purpose scripting language for web development 
-Python - High-level language for automation, databases, and machine learning 
-Apollo GraphQL - Tool for managing local and remote data with GraphQL
-Dockers - Containerization platform for virtualized app containers 
-Kubernetes - Container orchestration system for automatic deployment and scaling
-Amazon Web Services - Collection of cloud computing services from Amazon 
-Terraform - Tool for automating various infrastructure tasks 
-PostgreSQL - Relational database management system 
-MongoDB - NoSQL database that utilizes JSON-like documents
-Azure - Microsoft's cloud platform for infrastructure and database services
-Snowflake - Platform for data storage, processing, and analytic solutions
-Redis - NoSQL key-value database used for storage of complex data types 
-Apache Airflow - Automation tool to programmatically schedule and monitor workflows
-Apache Spark - Distributed data processing engine for data analytics and machine learning
-Tableau - Business intelligence and analytics software for visualizing data
-Elasticsearch - Search and analytics engine for structured and unstructured data
-*/
-
-
 const expertiseCards = [
     {
         id: 1,
@@ -293,7 +255,7 @@ const expertiseCards = [
 const Expertise = () => {
   return (
     <div id="expertise">
-        <PageHeader title="Expertise"/>
+        <PageHeader title="Services"/>
         <div className='flex flex-col gap-12 max-w-7xl mx-auto'>
             {
                 expertiseCards.map((card) => (

@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   let Links = [
-    {name: "Expertise", link: "/#expertise", newTab: false},
+    {name: "Services", link: "/#expertise", newTab: false},
     {name: "Projects", link: "/#projectHighlights", newTab: false},
     {name: "About", link: "/#about", newTab: false},
     {name: "Resume", link: "/Asia-Thompson-Public-Resume.pdf", newTab: true}
