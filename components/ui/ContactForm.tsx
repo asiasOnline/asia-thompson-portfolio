@@ -17,7 +17,10 @@ import {
 import { Input } from "@/components/ui/Input"
 
 const formSchema = z.object({
-  username: z.string().min(2, {
+  fullName: z.string().min(2, {
+    message: "Username must be at least 2 characters.",
+  }),
+  email: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
 })
@@ -27,7 +30,7 @@ export function ContactForm() {
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
       defaultValues: {
-        username: "",
+        fullName: "",
       },
     })
 
@@ -43,10 +46,10 @@ export function ContactForm() {
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <FormField
             control={form.control}
-            name="username"
+            name="fullName"
             render={({ field }) => (
                 <FormItem>
-                <FormLabel>Username</FormLabel>
+                <FormLabel>Full Name</FormLabel>
                 <FormControl>
                     <Input placeholder="shadcn" {...field} />
                 </FormControl>

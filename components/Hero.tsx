@@ -6,8 +6,8 @@ import { Stars } from './ui/SVGAssets';
 
 const Hero = () => {
   return (
-    <div className='max-w-7xl md:mx-auto'>
-        <div className='md:w-fit mx-auto md:m-0'>
+    <div id="hero" className='max-w-7xl md:mx-auto'>
+        <div className='md:w-fit mx-auto 2xl:m-0'>
           <div className='relative w-full'>
             {/*Animated Background Gradient*/}
 
@@ -28,7 +28,7 @@ const Hero = () => {
             {/*Main Header*/}
             {/*Headline*/}
             <div className='flex items-end gap-4 lg:gap-8 xl:gap-16'>
-              <p className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>Hello there!</p>
+              <h1 className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>Hello there!</h1>
               <div className='relative md:ml-4'>
                 <div className='w-4 h-8 md:w-6 md:h-8 lg:w-10 lg:h-12 absolute -bottom-4 -left-2 md:-bottom-2 lg:-left-8'><Stars width='40' height='48'/></div>
                 <div className='w-20 md:w-32 lg:w-48 h-auto'><HeroAvatar /></div>
@@ -37,14 +37,14 @@ const Hero = () => {
             </div>
           </div>
             {/*Sub-Headline*/}
-            <p className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider mt-5 lg:mt-8'>
-              My name is <span className='text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink animate-gradientAnimation '> Asia</span>
-            </p>
+            <h1 className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider mt-5 lg:mt-8'>
+              My name is <span className='text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink'> Asia</span>
+            </h1>
         </div>
       
       {/*Sub-Header*/}
       <div className='mt-6 md:mt-10'>
-        <p className='text-lg md:text-2xl lg:text-3xl leading-8 md:leading-10 lg:leading-14 2xl:leading-16 font-display tracking-wider'>I&apos;m a <span className='underline decoration-steelPink decoration-4 underline-offset-8'>digital product designer</span> and a <span className='underline decoration-fountainBlue decoration-4 underline-offset-8'>full-stack developer</span> with a passion for <span className='underline decoration-ultramarine dark:decoration-slateBlue decoration-4 underline-offset-8'>concise planning and thorough execution</span>.</p>
+        <h2 className='text-lg md:text-2xl lg:text-3xl leading-8 md:leading-10 lg:leading-14 2xl:leading-16 font-display tracking-wider'>I&apos;m a <span className='underline decoration-steelPink decoration-4 underline-offset-8'>digital product designer</span> and a <span className='underline decoration-fountainBlue decoration-4 underline-offset-8'>full-stack developer</span> with a passion for <span className='underline decoration-ultramarine dark:decoration-slateBlue decoration-4 underline-offset-8'>concise planning and thorough execution</span>.</h2>
       </div>
       
       <div className='mt-12 lg:mt-10 flex flex-col lg:flex-row gap-8 md:gap-12 xl:flex-row lg:justify-between'>
@@ -54,7 +54,7 @@ const Hero = () => {
           <p className='text-lg md:text-2xl font-display font-bold tracking-wider'>Based in Anaheim, CA</p>
         </div>
         {/*Mail & Social Media Links*/}
-        <ContactLinks/>
+        <ContactLinks className='place-self-center'/>
       </div>
     </div>
   )

@@ -4,26 +4,33 @@ import ContactLinks from './ui/ContactLinks'
 import HeroAvatar from './ui/HeroAvatar'
 import { ContactForm } from './ui/ContactForm'
 
+
 const Contact = () => {
   return (
-    <div>
+    <div id="contact">
         <PageHeader title='Contact'/>
-        <div className='flex'>
-          <div className='w-1/2 flex flex-col'>
-            <h1>Let's Work Together!</h1>
-            <p>Fill out the form to get in contact me as soon as possible.</p>
-            <p>Otherwise, contact me through one of my socials and I’ll do my best to follow up there as well. </p>
-            <ContactLinks />
-            <div className='flex'>
+        <div className='flex max-w-7xl mx-auto'>
+          {/*Contact Call Out*/}
+          <div className='w-2/3 flex flex-col'>
+            <div className='flex flex-col gap-4'>
+              <h2 className='text-lg font-bold md:text-2xl lg:text-3xl leading-8 md:leading-10 lg:leading-14 2xl:leading-16 font-display tracking-wider'><span className='text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink'>Let's Work Together!</span></h2>
+              <p>Fill out the form to get in contact me as soon as possible.</p>
+              <p>Otherwise, contact me through one of my socials and I’ll do my best to follow up there as well. </p>
+              <ContactLinks className='mt-4 place-self-center'/>
+            </div>
+            
+            <div className='flex mt-8 gap-10 justify-center items-center text-center'>
               <HeroAvatar />
-              <div>
-                <h2>My Timezone</h2>
+              <div className='flex flex-col max-w-60 gap-4'>
+                <h3 className='text-2xl font-bold tracking-wider '>My Timezone</h3>
                 <p>4:03 in Anaheim, CA</p>
                 <p>If you contact me now I'll typically respond immediately!</p>
               </div>
             </div>
           </div>
-          <div className='w-1/2'>
+
+          {/*Contact Form*/}
+          <div className='w-1/3'>
             <ContactForm />
           </div>
         </div>

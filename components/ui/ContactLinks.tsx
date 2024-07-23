@@ -1,11 +1,12 @@
 import React from 'react'
+import { cn } from "@/lib/utils"
 import { TbMailFilled } from "react-icons/tb";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
 
-const ContactLinks = () => {
+const ContactLinks = ({className} : {className?:string}) => {
   return (
-    <div className='w-full md:w-1/2 lg:w-1/3 flex flex-row justify-evenly md:items-center md:place-self-center md:gap-6 xl:gap-12 2xl:gap-4'>
+    <div className={cn('w-fit flex flex-row justify-evenly md:items-center gap-10 md:gap-16', className)}>
         <a href="mailto:asiasatwork@gmail.com">
             <TbMailFilled className='h-8 w-8'/>
         </a>
