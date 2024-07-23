@@ -20,7 +20,7 @@ const ProjectHighlights = () => {
   return (
     <div id="projectHighlights">
         <PageHeader title="Project Highlights"/>
-        <BentoGrid className="mx-auto" >
+        <BentoGrid className="mx-auto gap-y-16" >
         {items.map((item, i) => (
         <ProjectGridItem
           key={i}
@@ -62,7 +62,8 @@ const Skeleton = ({
   </motion.div>
 );
 
-const saturateHover = "saturate-0 hover:saturate-100"
+const zeroSaturation = "saturate-0"
+const fullSaturation = "saturate-100"
 const rowSpan = "row-span-2"
 
 const items = [
@@ -74,7 +75,7 @@ const items = [
       imageSrc={warmWoodPic}
       altText="Warm Wood Project Cover"
     />,
-    className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
+    className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${zeroSaturation} md:hover:${fullSaturation}`,
     locked: false,
     projectLink: "/projects/warm-wood"
   },
@@ -86,7 +87,7 @@ const items = [
       imageSrc={BeeTeaPic}
       altText="Bee & Tea Project Cover"
     />,
-    className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
+    className: `col-span-6 lg:col-span-4 xl:col-span-3 ${rowSpan} md:${zeroSaturation} md:hover:${fullSaturation}`, 
     locked: false,
     projectLink: "/projects/bee-tea",
   },
@@ -99,7 +100,7 @@ const items = [
       altText="Magic Moon Florist Project Cover"  
       className='aspect-w-16 aspect-h-9'
     />,
-    className: `col-span-6 xl:col-span-4 ${rowSpan} md:${saturateHover} xl:justify-center`,
+    className: `col-span-6 xl:col-span-4 ${rowSpan} md:${zeroSaturation} md:hover:${fullSaturation} xl:justify-center`,
     locked: true,
     projectLink: "/#projectHighlights"
   },
@@ -112,7 +113,7 @@ const items = [
       altText="Warm Wood Project Cover"
       className='aspect-w-3 aspect-h-4'
     />,
-    className: `col-span-6 md:row-span-3 lg:col-start-2 lg:col-span-4 xl:col-span-2 xl:row-span-2 ${rowSpan} md:${saturateHover} justify-self-center`,
+    className: `col-span-6 md:row-span-3 lg:col-start-2 lg:col-span-4 xl:col-span-2 xl:row-span-2 ${rowSpan} md:${zeroSaturation} md:hover:${fullSaturation} justify-self-center`,
     locked: true,
     projectLink: "/#projectHighlights"
   },
@@ -124,7 +125,7 @@ const items = [
       imageSrc={ATPortfolio}
       altText="Mastery Coding Color Picker Project Cover"
     />,
-    className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${saturateHover}`, 
+    className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${zeroSaturation} md:hover:${fullSaturation}`, 
     locked: true,
     projectLink: "/#projectHighlights"
   },
@@ -136,7 +137,7 @@ const items = [
       imageSrc={OABlog}
       altText="Overanalyzing Anime Blog Project Cover"
     />,
-    className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${saturateHover}`,
+    className: `col-span-6 lg:col-span-4 lg:col-start-3 xl:col-span-3 ${rowSpan} md:${zeroSaturation} md:hover:${fullSaturation}`,
     locked: true,
     projectLink: "/#projectHighlights",
   },

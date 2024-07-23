@@ -12,7 +12,7 @@ import { BeeTeaOverviewVideo } from '@/components/ui/VideoAssets';
 import { BeeTeaLogo } from '@/components/ui/ProjectLogoAssets';
 import ProjectOverview from '@/components/ProjectOverview';
 import ProjectSectionExamples from '@/components/ui/ProjectSectionExamples';
-import { TopThreeTier, HeartChat, AlertScreen, ThreeStarScreen, SmileyFaceChat, WindowSettingsScreen } from '@/components/ui/ProjectSVGAssets';
+import { TopThreeTier, HeartChat, AlertScreen, ThreeStarScreen, SmileyFaceChat, WindowSettingsScreen } from '@/components/ui/SVGAssets';
 
 const BeeTeaPage = () => {
   return (

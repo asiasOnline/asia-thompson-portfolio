@@ -6,7 +6,7 @@ import ProjectOverview from '@/components/ProjectOverview';
 import ProjectSectionExamples from '@/components/ui/ProjectSectionExamples';
 import { WarmWoodOverviewVideo } from '@/components/ui/VideoAssets';
 import { WarmWoodLogo } from '@/components/ui/ProjectLogoAssets';
-import { OneStarScreen, ThreeStarScreen, ErrorScreen, Hourglass, AngryFace, CheckScreen, Stopwatch, PleasedFace } from '@/components/ui/ProjectSVGAssets';
+import { OneStarScreen, ThreeStarScreen, ErrorScreen, Hourglass, AngryFace, CheckScreen, Stopwatch, PleasedFace } from '@/components/ui/SVGAssets';
 
 import { PiPencilRuler } from "react-icons/pi";
 import { CgFigma } from 'react-icons/cg';
