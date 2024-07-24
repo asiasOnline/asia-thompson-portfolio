@@ -158,7 +158,16 @@ export function ContactForm() {
                   </FormItem>
               )}
             />
-            <Button variant="default" type="submit" className="gap-4 font-bold tracking-wide p-6"><TbMail className="w-6 h-6"/>Send Message</Button>
+            <Button 
+              variant="default" 
+              type="submit" 
+              className="gap-4 font-bold tracking-wide p-6"
+              onClick={async () => {
+                await fetch('api/emails', { method: "POST"});
+              }}
+              >
+                <TbMail className="w-6 h-6"/>Send Message
+              </Button>
         </form>
         </Form>
     )
