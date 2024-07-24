@@ -83,7 +83,7 @@ export function ContactForm() {
             render={({ field }) => (
                 <FormItem>
                   <FormLabel>Full Name</FormLabel>
-                <FormControl>
+                <FormControl className="mt-2">
                     <Input placeholder="Enter your full name" {...field} />
                 </FormControl>
                 <FormMessage />
@@ -96,7 +96,7 @@ export function ContactForm() {
             render={({ field }) => (
                 <FormItem>
                   <FormLabel>Email</FormLabel>
-                <FormControl>
+                <FormControl className="mt-2">
                     <Input placeholder="Enter your email address" {...field} />
                 </FormControl>
                 <FormMessage />
@@ -109,36 +109,39 @@ export function ContactForm() {
               render={() => (
                 <FormItem>
                   <FormLabel>Services</FormLabel>
-                  {services.map((service) => (
-                    <FormField 
-                      key={service.id}
-                      control={form.control}
-                      name="services"
-                      render={({ field }) => {
-                        return (
-                          <FormItem
-                            key={service.id}
-                          >
-                            <FormControl>
-                              <Checkbox 
-                                checked={field.value?.includes(service.id)}
-                                onCheckedChange={(checked) => {
-                                  return checked
-                                    ? field.onChange([...field.value, service.id])
-                                    : field.onChange(
-                                      field.value?.filter(
-                                        (value) => value !== service.id
+                  <div className="flex flex-wrap justify-between mt-2">
+                    {services.map((service) => (
+                      <FormField 
+                        key={service.id}
+                        control={form.control}
+                        name="services"
+                        render={({ field }) => {
+                          return (
+                              <FormItem
+                              key={service.id}
+                              className="my-2 flex justify-center gap-2"
+                              >
+                              <FormControl>
+                                <Checkbox 
+                                  checked={field.value?.includes(service.id)}
+                                  onCheckedChange={(checked) => {
+                                    return checked
+                                      ? field.onChange([...field.value, service.id])
+                                      : field.onChange(
+                                        field.value?.filter(
+                                          (value) => value !== service.id
+                                        )
                                       )
-                                    )
-                                }}
-                              />
-                            </FormControl>
-                            <FormLabel>{service.label}</FormLabel>
-                          </FormItem>
-                        )
-                      }}
-                    />
-                  ))}
+                                  }}
+                                />
+                              </FormControl>
+                              <FormLabel>{service.label}</FormLabel>
+                            </FormItem>
+                          )
+                        }}
+                      />
+                    ))}
+                  </div>
                 </FormItem>
               )}
             />
@@ -148,14 +151,14 @@ export function ContactForm() {
               render={({ field }) => (
                   <FormItem>
                     <FormLabel>Message</FormLabel>
-                  <FormControl>
+                  <FormControl className="mt-2">
                       <Textarea placeholder="Include a message to offer further explanation as needed" {...field} />
                   </FormControl>
                   <FormMessage />
                   </FormItem>
               )}
             />
-            <Button variant="default" type="submit"><TbMail />Submit</Button>
+            <Button variant="default" type="submit" className="gap-4 font-bold tracking-wide p-6"><TbMail className="w-6 h-6"/>Send Message</Button>
         </form>
         </Form>
     )

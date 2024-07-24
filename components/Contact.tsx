@@ -4,6 +4,15 @@ import ContactLinks from './ui/ContactLinks'
 import HeroAvatar from './ui/HeroAvatar'
 import { ContactForm } from './ui/ContactForm'
 
+const now = new Date();
+const dayFormatter = new Intl.DateTimeFormat('en-US', {
+  dateStyle: "full",
+  timeZone: 'America/Los_Angeles'
+})
+const timeFormatter = new Intl.DateTimeFormat('en-US', {
+  timeStyle: "short",
+  timeZone: 'America/Los_Angeles'
+})
 
 const Contact = () => {
   return (
@@ -20,11 +29,10 @@ const Contact = () => {
             </div>
             
             <div className='flex mt-8 gap-10 justify-center items-center text-center'>
-              <HeroAvatar />
+              <div className='w-48 h-48 scale-x-[-1]'><HeroAvatar /></div>
               <div className='flex flex-col max-w-60 gap-4'>
                 <h3 className='text-2xl font-bold tracking-wider '>My Timezone</h3>
-                <p>4:03 in Anaheim, CA</p>
-                <p>If you contact me now I'll typically respond immediately!</p>
+                <p>It is currently <br /><span className='font-bold'>{dayFormatter.format(now)} <br/> {timeFormatter.format(now)}  </span> <br />in Anaheim, CA right now.</p>
               </div>
             </div>
           </div>
