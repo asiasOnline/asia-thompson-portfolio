@@ -21,7 +21,8 @@ const Navbar = () => {
     {name: "Services", link: "/#expertise", newTab: false},
     {name: "Projects", link: "/#projectHighlights", newTab: false},
     {name: "About", link: "/#about", newTab: false},
-    {name: "Resume", link: "/Asia-Thompson-Public-Resume.pdf", newTab: true}
+    {name: "Resume", link: "/Asia-Thompson-Public-Resume.pdf", newTab: true},
+    {name: "Contact", link: "/#contact", newTab: false}
 ]
 
 const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`

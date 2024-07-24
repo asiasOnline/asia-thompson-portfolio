@@ -12,16 +12,6 @@ const config = {
   ],
   prefix: "",
   theme: {
-    colors: {
-      'transparent': 'transparent',
-      'white': '#F9F8F8',
-      'black': '#1E1E1E',
-      'green': '#15803d',
-      'ultramarine': '#190F88',
-      'slateBlue': '#8175FF',
-      'steelPink': '#C554B9',
-      'fountainBlue': '#32B6BE',
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -33,6 +23,16 @@ const config = {
       'display': ['var(--font-raleway)']
     },
     extend: { 
+      colors: {
+        'transparent': 'transparent',
+        'white': '#F9F8F8',
+        'black': '#1E1E1E',
+        'green': '#15803d',
+        'ultramarine': '#190F88',
+        'slateBlue': '#8175FF',
+        'steelPink': '#C554B9',
+        'fountainBlue': '#32B6BE',
+      },
       lineHeight: {
         '12': '3rem',
         '14': '3.5rem',
