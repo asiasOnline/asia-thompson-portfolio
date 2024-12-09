@@ -25,7 +25,7 @@ const config = {
     extend: { 
       colors: {
         'transparent': 'transparent',
-        'white': '#F9F8F8',
+        'white': '#F5F5F5',
         'black': '#1E1E1E',
         'green': '#15803d',
         'ultramarine': '#190F88',

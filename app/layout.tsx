@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Raleway, Roboto } from "next/font/google";
+import { Raleway, Figtree } from "next/font/google";
 import "./globals.css";
 import { CSPostHogProvider } from "./providers";
 import { ThemeProvider } from "@/components/ui/ThemeProvider"
 
-const roboto = Roboto({ 
+const figtree = Figtree({ 
   subsets: ["latin"], 
   weight: ['400', '700'],
   variable: '--font-roboto' });
@@ -23,7 +23,7 @@ export default function RootLayout({children }: Readonly<{
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${roboto.variable} font-sans`}>
+      <body className={`${figtree.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from 'react'
-import Logo from './ui/Logo'
 import { Button } from "@/components/ui/Button";
+import Image from 'next/image';
 import ThemeButton from './ui/ThemeButton'
 import Link from "next/link";
 import { SlMenu } from "react-icons/sl";
@@ -18,8 +18,8 @@ const Navbar = () => {
   };
 
   let Links = [
-    {name: "Services", link: "/#expertise", newTab: false},
     {name: "Projects", link: "/#projectHighlights", newTab: false},
+    {name: "Services", link: "/#expertise", newTab: false},
     {name: "About", link: "/#about", newTab: false},
     {name: "Resume", link: "/Asia-Thompson-Public-Resume.pdf", newTab: true},
     {name: "Contact", link: "/#contact", newTab: false}
@@ -29,14 +29,18 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
 
   return (
     <div>
-      <div className='w-screen max-w-[1920px] sticky top-0 mx-auto p-6 md:px-12 lg:px-24 xl:px-32 xl:py-14 mb-6 flex justify-between items-center z-20'>
+      <div className='w-screen max-w-[1920px] sticky top-0 mx-auto p-6 md:px-12 lg:px-24 xl:px-32 xl:py-10 mb-6 flex justify-between items-center z-20'>
         <div className='w-1/3 md:w-1/6 lg:w-32'>
           <Link href="/">
-            <Logo />
+            <Image 
+              src={"/light-primary-logo.png"}
+              width={456}
+              height={204}
+              alt="Primary Logo"
+            />
           </Link>
         </div>
         <div className='flex items-center gap-10 md:gap-12 lg:gap-20'>
-          <ThemeButton />
           <Button className="lg:hidden text-black dark:text-white" variant="outline" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <CgClose className='w-8 h-8'/> : <SlMenu className='w-8 h-8'/>}
           </Button>

@@ -12,9 +12,10 @@ export default function Home() {
       <Navbar/>
       <main className="w-screen 2xl:w-full px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 mx-auto flex flex-col gap-12 md:gap-20">
         <Hero />
-        <Expertise />
         <ProjectHighlights />
+        <Expertise />
         <About />
+        <Contact />
       </main>
       <Footer />
     </div>
