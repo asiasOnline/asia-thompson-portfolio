@@ -24,7 +24,7 @@ const Contact = () => {
             <div className='flex flex-col gap-4'>
               <h2 className='text-lg font-bold md:text-2xl lg:text-3xl leading-8 md:leading-10 lg:leading-14 2xl:leading-16 font-display tracking-wider'><span className='text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink'>Let's Work Together!</span></h2>
               <p>Fill out the form to get in contact me as soon as possible.</p>
-              <p>Otherwise, contact me through one of my socials and I’ll do my best to follow up there as well. </p>
+              <p>Otherwise, contact me through one of my socials and I`&apos;`ll do my best to follow up there as well. </p>
               <ContactLinks className='mt-4 place-self-center'/>
             </div>
             

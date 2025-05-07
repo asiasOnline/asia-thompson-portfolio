@@ -2,7 +2,7 @@ import React from 'react'
 import { getImageProps } from 'next/image'
 
 const HeroAvatar = () => {
-    const common = { alt: 'Profile avatar', width: 200, height: 200 }
+    const common = { alt: 'Profile avatar', width: 300, height: 300 }
 
     const {
         props: { srcSet: dark },

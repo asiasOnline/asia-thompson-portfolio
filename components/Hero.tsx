@@ -7,15 +7,17 @@ import { Stars } from './ui/SVGAssets';
 
 const Hero = () => {
   return (
-    <div id="hero" className='max-w-7xl md:mx-auto flex flex-col gap-6'>
-        <div className='md:w-fit mx-auto 2xl:m-0 flex flex-col items-center'>
+    <div id="hero" className='mx-auto flex flex-col gap-6'>
+        <div className='mx-auto 2xl:m-0 flex flex-col items-center'>
           <div className='flex flex-col items-center w-full'>
             {/*Main Header*/}
 
             {/*Intro & Avatar Header*/}
-            <div className='flex items-end'>
-              <p className='text-2xl'>My name is <b>Asia</b>.</p>
-              <div className='w-20 md:w-32 h-auto'><HeroAvatar /></div>
+            <div className='flex items-end mb-3'>
+              <p className='text-3xl'>My name is <b>Asia</b>.</p>
+              <div className='w-24 md:w-48 h-auto'>
+                <HeroAvatar />
+              </div>
             </div>
 
             {/*Headline*/}
@@ -36,8 +38,8 @@ const Hero = () => {
         </div>
       
       {/*Sub-Header*/}
-      <div className='w-4/5 mx-auto md:mt-6'>
-        <h2 className='text-lg md:text-2xl leading-8 md:leading-10 lg:leading-10 2xl:leading-16 tracking-wide'>I’m a <b>digital product designer</b> and <b>full stack developer</b> and I build branding, websites, and apps for small businesses so they can focus on the work they want to do.</h2>
+      <div className='w-3/5 mx-auto md:mt-6'>
+        <h2 className='text-lg md:text-2xl leading-8 md:leading-10 lg:leading-10 2xl:leading-12 tracking-wide'>I`&apos;`m a <b>digital product designer</b> and <b>full stack developer</b> and I help entrepreneurs and small to mid sized businesses so they can focus on the work they want to do.</h2>
       </div>
       {/*
         <div className='mt-12 lg:mt-10 flex flex-col lg:flex-row gap-8 md:gap-12 xl:flex-row lg:justify-between'>

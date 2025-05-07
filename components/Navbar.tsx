@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react'
 import { Button } from "@/components/ui/Button";
-import Image from 'next/image';
-import ThemeButton from './ui/ThemeButton'
+import ThemeButton from './ui/ThemeButton';
 import Link from "next/link";
 import { SlMenu } from "react-icons/sl";
 import { CgClose } from "react-icons/cg";
@@ -29,22 +28,29 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
 
   return (
     <div>
-      <div className='w-screen max-w-[1920px] sticky top-0 mx-auto p-6 md:px-12 lg:px-24 xl:px-32 xl:py-10 mb-6 flex justify-between items-center z-20'>
+      <div className='w-screen max-w-[1920px] sticky top-0 mx-auto p-6 md:px-12 lg:px-24 xl:px-32 xl:py-10  flex justify-between items-center z-20'>
         <div className='w-1/3 md:w-1/6 lg:w-32'>
           <Link href="/">
-            <Image 
-              src={"/light-primary-logo.png"}
-              width={456}
-              height={204}
-              alt="Primary Logo"
+          <div className="relative w-40 h-auto">
+            <img 
+              src="/asia-thompson-logo.svg" 
+              className="block dark:hidden w-full h-full" 
+              alt='default light mode friendly logo'
             />
+            <img 
+            src="/asia-thompson-logo-dark.svg"  
+            className="hidden dark:block w-full h-full" 
+            alt='dark mode friendly logo'
+            />
+          </div>
           </Link>
         </div>
-        <div className='flex items-center gap-10 md:gap-12 lg:gap-20'>
-          <Button className="lg:hidden text-black dark:text-white" variant="outline" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div className='flex gap-12'>
+          <ThemeButton />
+          <Button className="text-black dark:text-white" variant="outline" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <CgClose className='w-8 h-8'/> : <SlMenu className='w-8 h-8'/>}
           </Button>
-          <nav className={isMenuOpen ? `absolute top-[125%] right-10 flex flex-col ${defaultNavbarStyle}` : `hidden ${defaultNavbarStyle}`}>
+          <nav className={isMenuOpen ? `absolute top-[125%] right-20 flex flex-col ${defaultNavbarStyle}` : `hidden`}>
             {
                 Links.map((link) => (
                   <Link key={link.name} href={link.link} legacyBehavior passHref> 
