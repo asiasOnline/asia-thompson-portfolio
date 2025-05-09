@@ -15,7 +15,7 @@ const Hero = () => {
             {/*Intro & Avatar Header*/}
             <div className='flex items-end mb-3'>
               <p className='text-3xl'>My name is <b>Asia</b>.</p>
-              <div className='w-24 md:w-48 h-auto'>
+              <div className='w-24 md:w-40 h-auto'>
                 <HeroAvatar />
               </div>
             </div>
@@ -32,14 +32,27 @@ const Hero = () => {
             </div>
           </div>
             {/*Sub-Headline*/}
-            <h1 className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider lg:mt-4'>
-              <span className='text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink'> Better Products</span>
-            </h1>
+            <h1 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-8xl text-nowrap font-display font-bold tracking-wider lg:mt-4">
+            {/* Stroke Layer (behind) */}
+            <span className="absolute inset-0 text-stroke dark:text-stroke-white z-0">
+              Better Products
+            </span>
+
+            {/* Shadow Layer (middle) */}
+            <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow dark:text-shadow-white">
+              Better Products
+            </span>
+
+            {/* Fill Layer (on top) */}
+            <span className="relative z-20 text-fill-gradient bg-gradient-to-r from-brightBlue via-brightPurple to-brightPink dark:from-brightBlue dark:via-slateBlue dark:to-brightPink">
+              Better Products
+            </span>
+          </h1>
         </div>
       
       {/*Sub-Header*/}
       <div className='w-3/5 mx-auto md:mt-6'>
-        <h2 className='text-lg md:text-2xl leading-8 md:leading-10 lg:leading-10 2xl:leading-12 tracking-wide'>I&apos;m a <b>digital product designer</b> and <b>full stack developer</b> and I help entrepreneurs and small to mid sized businesses so they can focus on the work they want to do.</h2>
+        <p className='text-lg md:text-3xl leading-8 md:leading-10 lg:leading-10 2xl:leading-12 tracking-wide'>I&apos;m a <b><span className='underline'>digital product designer</span></b> and <b><span className='underline'>full stack developer</span></b> who helps small to mid sized businesses with the technical stuff, so they can focus on the work they love.</p>
       </div>
       {/*
         <div className='mt-12 lg:mt-10 flex flex-col lg:flex-row gap-8 md:gap-12 xl:flex-row lg:justify-between'>
@@ -52,10 +65,6 @@ const Hero = () => {
           <ContactLinks className='place-self-center'/>
       </div>
       */}
-      <div className='flex items-center gap-4 justify-center'>
-        <div className='w-3 h-3 rounded-full bg-green'></div>
-        Available for Work
-      </div>
       <div className='flex gap-12 justify-center'>
         <Button 
           variant="default" 
@@ -66,9 +75,13 @@ const Hero = () => {
         <Button 
           variant="outline" 
           type="submit" 
-          className="gap-4 font-bold tracking-wide p-6"
+          className="gap-4 font-bold tracking-wide p-6 border-2 border-black"
           >View My Projects
         </Button>
+      </div>
+      <div className='flex items-center gap-4 justify-start'>
+        <div className='w-3 h-3 rounded-full bg-green'></div>
+        Available for Work
       </div>
     </div>
   )

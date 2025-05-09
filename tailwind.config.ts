@@ -33,6 +33,9 @@ const config = {
         'slateBlue': '#8175FF',
         'steelPink': '#C554B9',
         'fountainBlue': '#32B6BE',
+        'brightBlue': '#97E4F8',
+        'brightPurple': '#9D99FF',
+        'brightPink': '#FBACA4',
       },
       lineHeight: {
         '12': '3rem',
