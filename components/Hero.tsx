@@ -39,7 +39,7 @@ const Hero = () => {
       
       {/*Sub-Header*/}
       <div className='w-3/5 mx-auto md:mt-6'>
-        <h2 className='text-lg md:text-2xl leading-8 md:leading-10 lg:leading-10 2xl:leading-12 tracking-wide'>I`&apos;`m a <b>digital product designer</b> and <b>full stack developer</b> and I help entrepreneurs and small to mid sized businesses so they can focus on the work they want to do.</h2>
+        <h2 className='text-lg md:text-2xl leading-8 md:leading-10 lg:leading-10 2xl:leading-12 tracking-wide'>I&apos;m a <b>digital product designer</b> and <b>full stack developer</b> and I help entrepreneurs and small to mid sized businesses so they can focus on the work they want to do.</h2>
       </div>
       {/*
         <div className='mt-12 lg:mt-10 flex flex-col lg:flex-row gap-8 md:gap-12 xl:flex-row lg:justify-between'>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Raleway, Figtree } from "next/font/google";
+import localFont from "next/font/local"
 import "./globals.css";
 import { CSPostHogProvider } from "./providers";
 import { ThemeProvider } from "@/components/ui/ThemeProvider"
@@ -9,8 +10,9 @@ const figtree = Figtree({
   weight: ['400', '700'],
   variable: '--font-roboto' });
 
-const raleway = Raleway({
-  subsets: ["latin"]
+const coolvetica = localFont({
+  src: "../public/fonts/coolvetica-rg.otf",
+  variable: '--font-coolvetica',
 })
 
 export const metadata: Metadata = {
@@ -23,7 +25,7 @@ export default function RootLayout({children }: Readonly<{
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${figtree.variable} font-sans`}>
+      <body className={`${figtree.variable} ${coolvetica.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
