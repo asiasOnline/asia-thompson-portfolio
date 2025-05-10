@@ -8,12 +8,12 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import PageHeader from './ui/PageHeader'
 import { BentoGrid, ProjectGridItem } from "./ui/BentoGrid";
 
-import warmWoodPic from "../public/Warm-Wood-Portfolio-Cover.png"
-import BeeTeaPic from "../public/Bee-Tea-mockup.png"
-import MMFlorist from "../public/MM-Florist-Portfolio-Mockup-Cover.png"
-import OABlog from "../public/OA Anime Mockup.png"
-import HHManager from "../public/Happy-Home-Mockup.png"
-import ATPortfolio from '../public/portfolio-mockup.png'
+import warmWoodPic from "../public/project-assets/Warm-Wood-Portfolio-Cover.png"
+import BeeTeaPic from "../public/project-assets/Bee-Tea-mockup.png"
+import MMFlorist from "../public/project-assets/MM-Florist-Portfolio-Mockup-Cover.png"
+import OABlog from "../public/project-assets/OA Anime Mockup.png"
+import HHManager from "../public/project-assets/Happy-Home-Mockup.png"
+import ATPortfolio from '../public/project-assets/portfolio-mockup.png'
 
 
 const ProjectHighlights = () => {
