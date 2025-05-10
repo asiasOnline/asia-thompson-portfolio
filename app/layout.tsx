@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Raleway, Figtree } from "next/font/google";
+import { Figtree } from "next/font/google";
 import localFont from "next/font/local"
 import "./globals.css";
 import { CSPostHogProvider } from "./providers";

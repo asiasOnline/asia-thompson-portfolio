@@ -39,7 +39,7 @@ const Hero = () => {
             </span>
 
             {/* Shadow Layer (middle) */}
-            <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow dark:text-shadow-white">
+            <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow">
               Better Products
             </span>
 
@@ -52,7 +52,7 @@ const Hero = () => {
       
       {/*Sub-Header*/}
       <div className='w-3/5 mx-auto md:mt-6'>
-        <p className='text-lg md:text-3xl leading-8 md:leading-10 lg:leading-10 2xl:leading-12 tracking-wide'>I&apos;m a <b><span className='underline'>digital product designer</span></b> and <b><span className='underline'>full stack developer</span></b> who helps small to mid sized businesses with the technical stuff, so they can focus on the work they love.</p>
+        <p className='text-lg md:text-3xl leading-8 md:leading-10 lg:leading-10 2xl:leading-12 tracking-normal'>I&apos;m a <b><span className='underline'>digital product designer</span></b> and <b><span className='underline'>full stack developer</span></b> who helps small to mid sized businesses with the technical stuff, so they can focus on the work they love.</p>
       </div>
       {/*
         <div className='mt-12 lg:mt-10 flex flex-col lg:flex-row gap-8 md:gap-12 xl:flex-row lg:justify-between'>
@@ -69,7 +69,7 @@ const Hero = () => {
         <Button 
           variant="default" 
           type="submit" 
-          className="gap-4 font-bold tracking-wide p-6"
+          className="gap-4 font-bold tracking-wide p-6 shadow-xl/100"  
           >Let's Chat
         </Button>
         <Button 
