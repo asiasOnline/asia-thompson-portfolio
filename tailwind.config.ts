@@ -43,15 +43,30 @@ const config = {
         '16': '4rem',
       },
       animation: {
-        gradientAnimation: "gradientAnimation 5s infinite"
+        gradientAnimation: "gradientAnimation 5s infinite",
+        scroll: 'scroll 30s linear infinite',
+        'scroll-40': 'scroll 40s linear infinite',
+        'scroll-60': 'scroll 60s linear infinite',
+        'scroll-reverse': 'scroll-reverse 30s linear infinite',
+        'scroll-reverse-40': 'scroll-reverse 40s linear infinite',
+        'scroll-reverse-60': 'scroll-reverse 60s linear infinite',
       },
       keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'scroll-reverse': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
         gradientAnimation: {
           '0%': { transform: "translate(0px, 0px) scale(1)" },
           '33%': { transform: "translate(30px, -50px) scale(1.1)" },
           "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
           "100%": { transform: "translate(0px, 0px) scale(1)" },
         }
+        
       }
     },
   },
