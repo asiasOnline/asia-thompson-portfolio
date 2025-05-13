@@ -67,16 +67,16 @@ const Hero = () => {
       */}
       <div className='flex gap-12 justify-center'>
         <Button 
-          variant="default" 
-          type="submit" 
-          className="gap-4 font-bold tracking-wide p-6 shadow-xl/100"  
-          >Let's Chat
-        </Button>
-        <Button 
           variant="outline" 
           type="submit" 
-          className="gap-4 font-bold tracking-wide p-6 border-2 border-black"
+          className="text-md min-w-52 gap-4 font-bold tracking-wide p-6 border-2 border-black button-shadow-xl dark:bg-black dark:text-white dark:border-white dark:button-shadow-none"
           >View My Projects
+        </Button>
+        <Button 
+          variant="default" 
+          type="submit" 
+          className="text-md min-w-52 gap-4 font-bold tracking-wide p-6 border-2 border-black button-shadow-xl dark:bg-slateBlue dark:button-shadow-none"  
+          >Let's Chat
         </Button>
       </div>
       <div className='flex items-center gap-4 justify-start'>

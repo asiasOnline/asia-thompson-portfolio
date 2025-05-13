@@ -107,4 +107,12 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 4px 4px 0 #1E1E1E;
   }
 
+  .button-shadow-xl {
+    box-shadow:rgb(6, 8, 35) -6px 8px 0px;
+  }
+
+  .button-shadow-none {
+    box-shadow:rgb(6, 8, 35) 0px 0px 0px;
+  }
+
 }

@@ -32,18 +32,17 @@ import React from 'react'
 
 const ProjectCarousel = () => {
   return (
-    <section className="space-y-4 py-10">
-      <h2 className="text-3xl font-bold">Featured Projects</h2>
+    <section className="space-y-6 py-10">
       <InfiniteCarousel 
         images={projectImagesTop} 
-        speed={60}
+        speed={40}
         gradient={true}
         gradientWidth={60}
         gradientColor='rgb(245 245 245)'
       />
       <InfiniteCarousel 
         images={projectImagesBottom} 
-        speed={60}
+        speed={40}
         reverse={true}
         gradient={true}
         gradientWidth={60}

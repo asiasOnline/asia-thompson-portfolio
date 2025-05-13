@@ -40,7 +40,7 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
               alt={image.alt}
               width={image.square ? 512 : 720}
               height={512}
-              className="mr-6"
+              className="mr-6 border-2 border-black rounded-md"
             />
           })}
           </div>
