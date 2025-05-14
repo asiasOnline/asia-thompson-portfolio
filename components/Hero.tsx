@@ -75,7 +75,7 @@ const Hero = () => {
         <Button 
           variant="default" 
           type="submit" 
-          className="text-md min-w-52 gap-4 font-bold tracking-wide p-6 border-2 border-black button-shadow-xl dark:bg-slateBlue dark:button-shadow-none"  
+          className="text-md min-w-52 gap-4 font-bold tracking-wide p-6 border-2 border-black button-shadow-xl dark:bg-brightPurple  dark:button-shadow-none"  
           >Let's Chat
         </Button>
       </div>
