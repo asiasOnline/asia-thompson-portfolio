@@ -19,8 +19,8 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
   reverse= false,
   speed= 30,
   gradient= false,
-  gradientColor= 'white',
-  gradientWidth= 200,
+  gradientColor,
+  gradientWidth
 }) => {
 
   return (

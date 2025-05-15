@@ -16,7 +16,9 @@ const Hero = () => {
             <div className='flex items-end mb-3'>
               <p className='text-3xl'>My name is <b>Asia</b>.</p>
               <div className='w-24 md:w-40 h-auto'>
-                <HeroAvatar />
+                <div className="relative w-40 h-auto">
+                  < HeroAvatar />
+                </div>
               </div>
             </div>
 

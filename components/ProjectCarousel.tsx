@@ -1,3 +1,5 @@
+"use client";
+
 import InfiniteCarousel from './ui/InfiniteCarousel';
 
 const projectImagesTop = [
@@ -36,17 +38,11 @@ const ProjectCarousel = () => {
       <InfiniteCarousel 
         images={projectImagesTop} 
         speed={40}
-        gradient={true}
-        gradientWidth={60}
-        gradientColor='rgb(245 245 245)'
       />
       <InfiniteCarousel 
         images={projectImagesBottom} 
         speed={40}
         reverse={true}
-        gradient={true}
-        gradientWidth={60}
-        gradientColor='rgb(245 245 245)'
       />
     </section>
   )

@@ -29,7 +29,9 @@ const Contact = () => {
             </div>
             
             <div className='flex mt-8 gap-10 justify-center items-center text-center'>
-              <div className='w-48 h-48 scale-x-[-1]'><HeroAvatar /></div>
+              <div className='w-48 h-48 scale-x-[-1]'>
+                <HeroAvatar />
+              </div>
               <div className='flex flex-col max-w-60 gap-4'>
                 <h3 className='text-2xl font-bold tracking-wider '>My Timezone</h3>
                 <p>It is currently <br /><span className='font-bold'>{dayFormatter.format(now)} <br/> {timeFormatter.format(now)}  </span> <br />in Anaheim, CA right now.</p>
