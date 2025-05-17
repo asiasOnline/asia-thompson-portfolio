@@ -20,6 +20,7 @@
     "clsx": "^2.1.1",
     "contentful": "^10.12.15",
     "framer-motion": "^11.2.10",
+    "locomotive-scroll": "^5.0.0-beta.21",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.394.0",
     "next": "14.2.3",

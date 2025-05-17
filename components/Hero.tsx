@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button"
 import HeroAvatar from './ui/HeroAvatar';
 import ContactLinks from './ui/ContactLinks';
 import { Stars } from './ui/SVGAssets';
+import ContentBorder from './ui/ContentBorder';
 
 const Hero = () => {
   return (

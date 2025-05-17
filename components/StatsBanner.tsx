@@ -3,7 +3,7 @@ import AnimatedCounter from './ui/AnimatedCounter'
 
 const StatsBanner = () => {
   return (
-    <div className='w-full flex justify-around bg-ultramarine text-white dark:bg-brightPurple dark:text-black py-10'>
+    <div id="statsBanner" className='w-full flex justify-around bg-ultramarine text-white dark:bg-brightPurple dark:text-black py-10'>
         <div className="flex flex-col justify-between gap-3 text-center">
           <p className='text-4xl font-bold'>
             <AnimatedCounter startingNumber={0} endingNumber={6} />+

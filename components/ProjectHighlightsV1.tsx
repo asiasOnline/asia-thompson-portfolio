@@ -18,7 +18,7 @@ import ATPortfolio from '../public/project-assets/portfolio-mockup.png'
 
 const ProjectHighlights = () => {
   return (
-    <div id="projectHighlights">
+    <div>
         <PageHeader title="Project Highlights"/>
         <BentoGrid className="mx-auto gap-y-16" >
         {items.map((item, i) => (
