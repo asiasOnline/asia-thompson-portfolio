@@ -88,8 +88,8 @@ h1, h2, h3, h4, h5, h6 {
   .text-shadow {
     text-shadow:
        0px 2px 0 #1E1E1E,
-     -10px 8px 0 #1E1E1E,  
-      0px -0px 0 #1E1E1E,
+     -12px 8px 0 #1E1E1E,  
+      0px 0px 0 #1E1E1E,
       -0px 0px 0 #1E1E1E,
        0px 0px 0 #1E1E1E;
   }
