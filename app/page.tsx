@@ -4,7 +4,6 @@ import ProjectCarousel from "@/components//landingPage/ProjectCarousel";
 import StatsBanner from "@/components/landingPage//StatsBanner";
 import ProjectHighlights from "@/components/landingPage/ProjectHighlights";
 import Service from "@/components/landingPage/Services"
-import Expertise from "@/components/ui/Expertise";
 import About from "@/components/landingPage//About";
 import Contact from "@/components/landingPage/Contact";
 import Footer from "@/components/navigation/Footer";
@@ -19,7 +18,6 @@ export default function Home() {
         <StatsBanner />
         <ProjectHighlights />
         <Service />
-        <Expertise />
         <About />
         <Contact />
       </main>

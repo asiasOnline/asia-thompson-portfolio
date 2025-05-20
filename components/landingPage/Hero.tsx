@@ -72,13 +72,13 @@ const Hero = () => {
         <Button 
           variant="outline" 
           type="submit" 
-          className="text-md min-w-52 gap-4 font-bold tracking-wide p-6 border-2 border-black button-shadow-xl dark:bg-black dark:text-white dark:border-white dark:button-shadow-none"
+          className="text-lg min-w-60 gap-4 font-bold tracking-wide px-5 py-7 border-2 border-black dark:bg-black button-shadow-xl dark:text-white dark:border-white hover:shadow-none"
           >View My Projects
         </Button>
         <Button 
           variant="default" 
           type="submit" 
-          className="text-md min-w-52 gap-4 font-bold tracking-wide p-6 border-2 border-black button-shadow-xl dark:bg-brightPurple  dark:button-shadow-none"  
+          className="text-lg min-w-60  gap-4 font-bold tracking-wide px-5 py-7 border-2 border-slateBlue button-shadow-primary hover:shadow-none dark:bg-brightPurple"  
           >Let's Chat
         </Button>
       </div>

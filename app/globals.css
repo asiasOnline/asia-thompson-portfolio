@@ -108,11 +108,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .button-shadow-xl {
-    box-shadow:rgb(6, 8, 35) -6px 8px 0px;
+    box-shadow: #F5F5F5 -6px 6px 0 0,#1E1E1E -6px 6px 0 2px;
   }
 
-  .button-shadow-none {
+  .button-shadow-primary {
+    box-shadow: #F5F5F5 -6px 6px 0 0,#8175FF -6px 6px 0 2px;
+  }
+
+  .shadow-none {
     box-shadow:rgb(6, 8, 35) 0px 0px 0px;
   }
 
+  .card-shadow {
+    box-shadow: #F5F5F5 -10px 10px 0 0,#1E1E1E -10px 10px 0 1px;
+  }
+
 }
+

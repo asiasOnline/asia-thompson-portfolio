@@ -30,7 +30,7 @@ const config = {
         'black': '#1E1E1E',
         'green': '#15803d',
         'ultramarine': '#190F88',
-        'slateBlue': '#8175FF',
+        'slateBlue': '#4E4AB7',
         'steelPink': '#C554B9',
         'fountainBlue': '#32B6BE',
         'brightBlue': '#97E4F8',
