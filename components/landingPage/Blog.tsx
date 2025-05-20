@@ -1,5 +1,5 @@
 import React from 'react'
-import PageHeader from './ui/PageHeader'
+import PageHeader from '../ui/PageHeader'
 
 const Blog = () => {
   return (

@@ -7,10 +7,10 @@ import { MdEmojiFoodBeverage } from "react-icons/md";
 import { CgDesignmodo, CgFigma } from 'react-icons/cg';
 import { SiTailwindcss, SiReact, SiTypescript, SiShopify } from 'react-icons/si';
 
-import ProjectHero from '@/components/ProjectHero'
+import ProjectHero from '@/components/archive/ProjectHero'
 import { BeeTeaOverviewVideo } from '@/components/ui/VideoAssets';
 import { BeeTeaLogo } from '@/components/ui/ProjectLogoAssets';
-import ProjectOverview from '@/components/ProjectOverview';
+import ProjectOverview from '@/components/archive/ProjectOverview';
 import ProjectSectionExamples from '@/components/ui/ProjectSectionExamples';
 import { TopThreeTier, HeartChat, AlertScreen, ThreeStarScreen, SmileyFaceChat, WindowSettingsScreen } from '@/components/ui/SVGAssets';
 

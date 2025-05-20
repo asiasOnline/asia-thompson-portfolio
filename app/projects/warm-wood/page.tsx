@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
-import ProjectHero from '@/components/ProjectHero'
-import ProjectOverview from '@/components/ProjectOverview';
+import ProjectHero from '@/components/archive/ProjectHero'
+import ProjectOverview from '@/components/archive/ProjectOverview';
 import ProjectSectionExamples from '@/components/ui/ProjectSectionExamples';
 import { WarmWoodOverviewVideo } from '@/components/ui/VideoAssets';
 import { WarmWoodLogo } from '@/components/ui/ProjectLogoAssets';

@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
-import PageHeader from './ui/PageHeader'
-import ExpertiseCard from './ui/ExpertiseCard'
+import PageHeader from './PageHeader'
+import ExpertiseCard from './ExpertiseCard'
 import { CgFigma } from "react-icons/cg";
 import { SiBlender, SiAdobephotoshop, SiAdobeillustrator, SiAdobeaftereffects, SiHtml5, SiCss3, SiSass, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiShopify, SiLaravel, SiNodedotjs, SiDotnet, SiPhp, SiPython, SiGraphql, SiDocker, SiKubernetes, SiAmazonaws, SiTerraform, SiMongodb, SiMicrosoftazure, SiLinux, SiRedis, SiApacheairflow, SiElasticsearch } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";

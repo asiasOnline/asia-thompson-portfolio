@@ -1,10 +1,10 @@
 import React from 'react'
 import { PiMapPinLineFill } from "react-icons/pi";
 import { Button } from "@/components/ui/Button"
-import HeroAvatar from './ui/HeroAvatar';
-import ContactLinks from './ui/ContactLinks';
-import { Stars } from './ui/SVGAssets';
-import ContentBorder from './ui/ContentBorder';
+import HeroAvatar from '../ui/HeroAvatar';
+import ContactLinks from '../ui/ContactLinks';
+import { Stars } from '../ui/SVGAssets';
+import ContentBorder from '../ui/ContentBorder';
 
 const Hero = () => {
   return (

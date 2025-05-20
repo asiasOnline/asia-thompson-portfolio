@@ -1,6 +1,6 @@
 "use client";
 
-import InfiniteCarousel from './ui/InfiniteCarousel';
+import InfiniteCarousel from '../ui/InfiniteCarousel';
 
 const projectImagesTop = [
     { src: "/project-assets/bee-tea-project-cover.png", 

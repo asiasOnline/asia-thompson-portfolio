@@ -4,12 +4,12 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation';
 
-import PageHeader from './ui/PageHeader';
-import { BentoGrid } from "./ui/BentoGrid";
-import { ExpertiseTools } from './ui/ExpertiseTools';
+import PageHeader from '../ui/PageHeader';
+import { BentoGrid } from "../ui/BentoGrid";
+import { ExpertiseTools } from '../ui/ExpertiseTools';
 
-import profilePic from '../public/profile-pic.png';
-import { CoffeeCup, MeltingPizza, SleepyFace, Sun, Building, CSULB } from './ui/SVGAssets';
+import profilePic from '../../public/profile-pic.png';
+import { CoffeeCup, MeltingPizza, SleepyFace, Sun, Building, CSULB } from '../ui/SVGAssets';
 import { CgFigma } from "react-icons/cg";
 import { SiHtml5, SiCss3, SiTailwindcss, SiTypescript, SiReact, SiPython } from "react-icons/si";
 import { BiLogoPostgresql } from 'react-icons/bi';
@@ -150,40 +150,6 @@ const About = () => {
 
             <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-start-5 xl:col-span-1 xl:col-start-6 xl:row-start-5'>
             <div className='p-2 mx-auto w-24 h-24 md:w-32 md:h-32 xl:w-24 xl:h-24'><Building /></div>
-            </AboutCard>
-
-            {/*University Card*/}
-            <AboutCard className='p-6 col-span-6 md:col-span-2 lg:row-start-6 xl:col-span-2 row-span-2 place-items-center content-between'>
-              <h3 className='text-2xl font-bold tracking-wider'>Attended</h3>
-              <div className='w-28 h-auto xl:w-48'><CSULB /></div>
-
-            </AboutCard>
-
-            {/*Past Experience Card*/}
-            <AboutCard className='p-10 col-span-6 md:col-span-3 xl:col-span-2 row-span-2  md:row-span-3 lg:row-span-2 content-between xl:content-center'>
-              <h3 className='text-2xl font-bold tracking-wider'>Prior Positions</h3>
-              <div className='flex flex-col gap-6'>
-                <div className='flex flex-col gap-4'>
-                  <p className='font-bold'>UX Designer & Full-Stack Developer | Previous Writer</p>
-                  <div className='flex justify-between'>
-                    <p>UpWork</p>
-                    <p>2016 - 2021</p>
-                  </div>
-                </div>
-                <div className='flex flex-col gap-4'>
-                  <p className='font-bold'>Coding Foundations Curriculum Developer</p>
-                  <div className='flex justify-between'>
-                    <p>Mastery Coding</p>
-                    <p>2021 - 2023</p>
-                  </div>
-                </div>
-              </div>
-            </AboutCard>
-
-            {/*Tech Stack Card*/}
-            <AboutCard className='p-10 col-span-6 md:col-span-3 xl:col-span-2 row-span-2 md:row-span-3 lg:row-span-2'>
-              <h3 className='text-2xl font-bold tracking-wider'>Most Used Tech</h3>
-              <ExpertiseTools className="flex flex-row flex-wrap items-center justify-center" tools={tools}/>
             </AboutCard>
 
           </BentoGrid>

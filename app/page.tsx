@@ -1,12 +1,13 @@
-import ProjectHighlights from "@/components/ProjectHighlights";
-import Hero from "../components/Hero"
-import Navbar from "@/components/Navbar";
-import ProjectCarousel from "@/components/ProjectCarousel";
-import StatsBanner from "@/components/StatsBanner";
-import Expertise from "@/components/Expertise";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Hero from "../components/landingPage/Hero"
+import Navbar from "@/components/navigation//Navbar";
+import ProjectCarousel from "@/components//landingPage/ProjectCarousel";
+import StatsBanner from "@/components/landingPage//StatsBanner";
+import ProjectHighlights from "@/components/landingPage/ProjectHighlights";
+import Service from "@/components/landingPage/Services"
+import Expertise from "@/components/ui/Expertise";
+import About from "@/components/landingPage//About";
+import Contact from "@/components/landingPage/Contact";
+import Footer from "@/components/navigation/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <ProjectCarousel />
         <StatsBanner />
         <ProjectHighlights />
+        <Service />
         <Expertise />
         <About />
         <Contact />

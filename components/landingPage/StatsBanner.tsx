@@ -1,5 +1,5 @@
 import React from 'react'
-import AnimatedCounter from './ui/AnimatedCounter'
+import AnimatedCounter from '../ui/AnimatedCounter'
 
 const StatsBanner = () => {
   return (

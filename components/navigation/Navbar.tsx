@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { Button } from "@/components/ui/Button";
-import ThemeButton from './ui/ThemeButton';
+import ThemeButton from '../ui/ThemeButton';
 import Link from "next/link";
 import { SlMenu } from "react-icons/sl";
 import { CgClose } from "react-icons/cg";

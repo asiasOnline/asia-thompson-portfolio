@@ -1,8 +1,8 @@
 import React from 'react'
-import PageHeader from './ui/PageHeader'
-import ContactLinks from './ui/ContactLinks'
-import HeroAvatar from './ui/HeroAvatar'
-import { ContactForm } from './ui/ContactForm'
+import PageHeader from '../ui/PageHeader'
+import ContactLinks from '../ui/ContactLinks'
+import HeroAvatar from '../ui/HeroAvatar'
+import { ContactForm } from '../ui/ContactForm'
 
 const now = new Date();
 const dayFormatter = new Intl.DateTimeFormat('en-US', {

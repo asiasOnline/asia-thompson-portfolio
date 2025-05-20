@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { AnimatedTooltip } from "./AnimatedTooltip";
+import { AnimatedTooltip } from "../ui/AnimatedTooltip";
 
 export function ExpertiseTools({ 
   className,
