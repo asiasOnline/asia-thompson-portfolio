@@ -85,13 +85,13 @@ const About = () => {
             {/*Bio Card*/}
             <AboutCard className='p-6 md:p-10 col-span-6 lg:col-span-3 row-span-2'>
                 <h3 className='text-2xl font-bold tracking-wider '>Bio</h3>
-                <p>As a UX/UI designer and full-stack developer I have and continue to have a passion for design and development fueled be a personal desire for learning and self-improvement.</p>
+                <p className='text-lg'>As a UX/UI designer and full-stack developer I have and continue to have a passion for design and development fueled be a personal desire for learning and self-improvement.</p>
             </AboutCard>
 
             {/*Hobby Card*/}
             <AboutCard className='w-full h-72 md:h-auto p-6 md:p-10 col-span-6 lg:col-span-3 row-span-2'>
               <h3 className='text-2xl font-bold tracking-wider '>Hobbies</h3>
-              <p>I&apos;ll be honest, I spend a ton of time working. I&apos;m  still getting the work/life balance thing right 😅. However, when I do have some free time you might also catch me...
+              <p className='text-lg'>I&apos;ll be honest, I spend a ton of time working. I&apos;m  still getting the work/life balance thing right 😅. However, when I do have some free time you might also catch me...
                 <TypeAnimation 
                   sequence={[
                     "playing a new RPG that's consumed my personal life 🎮", 1000,
@@ -109,7 +109,7 @@ const About = () => {
 
             {/*Experience Card*/}
             <AboutCard className='p-6 col-span-6 md:col-span-3 row-span-1 xl:col-span-2'>
-              <h3 className='text-2xl font-bold text-center tracking-wider'>6+ Years of Experience</h3>
+              <h3 className='text-2xl font-bold text-center tracking-wider'>10+ Years of Experience</h3>
             </AboutCard>
 
             {/*Fuel Card*/}

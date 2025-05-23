@@ -32,9 +32,9 @@ export const ExpertiseCard: React.FC<ExpertiseCardProps> = ({id, title, descript
                     <p className='text-xs'>0{id}</p>
                     <h2 className='text-2xl font-bold tracking-wider text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink'>{title}</h2>
                 </div>
-                <p>{description} </p>
+                <p className='text-lg'>{description} </p>
             </div>
-            <ExpertiseTools className="flex flex-row flex-wrap items-center place-content-center lg:justify-center md:w-9/12 md:mt-0 lg:w-3/5 lg:min-w-96" tools={tools}/>
+            <ExpertiseTools className="flex flex-row flex-wrap items-center place-content-center lg:justify-center md:mt-0 lg:min-w-96" tools={tools}/>
         </div>
     </div>
   )

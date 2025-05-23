@@ -1,5 +1,4 @@
 import React from 'react'
-import PageHeader from '../ui/PageHeader'
 import ContactLinks from '../ui/ContactLinks'
 import HeroAvatar from '../ui/HeroAvatar'
 import { ContactForm } from '../ui/ContactForm'
@@ -18,10 +17,27 @@ const Contact = () => {
   return (
     <div id="contact">
         <div className='flex max-w-7xl mx-auto'>
+          <div>
+              <h3 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-6xl 2xl:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
+            {/* Stroke Layer (behind) */}
+            <span className="absolute inset-0 text-stroke dark:text-stroke-white z-0">
+              Let's Work Together!
+            </span>
+
+            {/* Shadow Layer (middle) */}
+            <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow-md">
+              Let's Work Together!
+            </span>
+
+            {/* Fill Layer (on top) */}
+            <span className="relative z-20 text-white">
+              Let's Work Together!
+            </span>
+          </h3>
+            </div>
           {/*Contact Call Out*/}
           <div className='w-2/3 flex flex-col'>
             <div className='flex flex-col gap-4'>
-              <h2 className='text-lg font-bold md:text-2xl lg:text-3xl leading-8 md:leading-10 lg:leading-14 2xl:leading-16 font-display tracking-wider'><span className='text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink'>Let's Work Together!</span></h2>
               <p>Fill out the form to get in contact me as soon as possible.</p>
               <p>Otherwise, contact me through one of my socials and I&apos;ll do my best to follow up there as well. </p>
               <ContactLinks className='mt-4 place-self-center'/>

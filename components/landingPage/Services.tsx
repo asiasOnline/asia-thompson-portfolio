@@ -1,6 +1,7 @@
 import ExpertiseCard from '../ui/ExpertiseCard'
 import services from '../../data/serviceData'
 import HeroAvatar from '../ui/HeroAvatar'
+import { Button } from '../ui/Button'
 
 export default function Services() {
   
@@ -50,6 +51,20 @@ export default function Services() {
                 />
             ))
         }
+      </div>
+      <div className='flex flex-col gap-4 my-14'>
+        <div className='text-lg text-center'>
+          <p>Not sure if what you need is covered with what I offer? No worries! </p>
+          <p>Let’s get it sorted out!</p>
+        </div>
+        <div className='flex justify-center'>
+          <Button 
+          variant="default" 
+          type="submit" 
+          className="text-lg min-w-60 gap-4 font-bold tracking-wide px-5 py-7 border-2 border-ultramarine button-shadow-primary hover:shadow-none dark:bg-brightPurple"  
+          >Let's Chat
+        </Button>
+        </div>
       </div>
     </div>
   )

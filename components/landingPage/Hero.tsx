@@ -78,7 +78,7 @@ const Hero = () => {
         <Button 
           variant="default" 
           type="submit" 
-          className="text-lg min-w-60  gap-4 font-bold tracking-wide px-5 py-7 border-2 border-slateBlue button-shadow-primary hover:shadow-none dark:bg-brightPurple"  
+          className="text-lg min-w-60  gap-4 font-bold tracking-wide px-5 py-7 border-2 border-ultramarine button-shadow-primary hover:shadow-none dark:bg-brightPurple"  
           >Let's Chat
         </Button>
       </div>
