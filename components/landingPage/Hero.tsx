@@ -42,7 +42,7 @@ const Hero = () => {
             </span>
 
             {/* Shadow Layer (middle) */}
-            <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow">
+            <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow-lg">
               Better Products
             </span>
 

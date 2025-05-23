@@ -68,8 +68,7 @@ const tools = [
 const About = () => {
 
   return (
-    <div id="about">
-        <PageHeader title="About"/>
+    <div id="about" className='my-20'>
         <div className='relative w-full'>
           {/*Background Gradient*/}
           <div className='absolute top-1/3 -left-4 w-40 h-40 md:w-2/3 md:h-2/3 bg-steelPink rounded-full filter blur-2xl opacity-25 animate-gradientAnimation
@@ -82,7 +81,7 @@ const About = () => {
             dark:mix-blend-screen dark:opacity-35'></div>
 
           {/*About Section Grid*/}
-          <BentoGrid className="relative max-w-7xl mx-auto md:auto-rows-[6rem] lg:auto-rows-[8rem] xl:auto-rows-[10rem] gap-y-8 gap-x-4 z-10" >
+          <BentoGrid className="relative max-w-7xl mx-auto md:auto-rows-[5rem] lg:auto-rows-[8rem] xl:auto-rows-[8rem] gap-y-4 gap-x-4 z-10" >
             {/*Bio Card*/}
             <AboutCard className='p-6 md:p-10 col-span-6 lg:col-span-3 row-span-2'>
                 <h3 className='text-2xl font-bold tracking-wider '>Bio</h3>
@@ -167,7 +166,7 @@ const AboutCard = ({
 }) => (
   <div 
     className={cn(
-      "flex flex-col flex-1 place-content-center gap-6 w-full h-full lg:min-h-[8rem] border-4 rounded-2xl opacity-90 border-black/10 shadow-lg bg-white dark:bg-black dark:border-white/10", 
+      "flex flex-col flex-1 place-content-center gap-6 w-full h-full lg:min-h-[8rem] border-2 rounded-2xl opacity-90 border-black/5 shadow-lg bg-white dark:bg-black dark:border-white/10", 
       className
     )}
   >

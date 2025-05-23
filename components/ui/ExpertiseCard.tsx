@@ -26,11 +26,11 @@ export const ExpertiseCard: React.FC<ExpertiseCardProps> = ({id, title, descript
         opacity-0
         group-hover:opacity-75 transition duration-500
         '/>
-        <div className='w-full h-full p-6 md:py-8 flex flex-col md:place-items-center lg:justify-between gap-6 lg:gap-4 bg-white relative border rounded-2xl border-black card-shadow dark:bg-black dark:border-white/10 hover:border-black/1 hover:shadow-none'>
-            <div className="md:w-4/5 flex flex-col gap-6">
+        <div className='w-full h-full min-h-32 p-6 md:py-8 flex flex-col md:place-items-center lg:justify-between gap-6 lg:gap-4 bg-white relative border rounded-2xl border-black card-shadow dark:bg-black dark:border-white/10 hover:border-black/5 hover:shadow-none'>
+            <div className="w-full px-5 flex flex-col gap-6">
                 <div className='flex justify-between items-center md:gap-6 lg:justify-start'>
-                    <h2 className='text-2xl font-bold tracking-wider text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink'>{title}</h2>
                     <p className='text-xs'>0{id}</p>
+                    <h2 className='text-2xl font-bold tracking-wider text-transparent bg-gradient-to-r from-fountainBlue via-ultramarine to-steelPink bg-clip-text dark:from-fountainBlue dark:via-slateBlue dark:to-steelPink'>{title}</h2>
                 </div>
                 <p>{description} </p>
             </div>

@@ -17,7 +17,6 @@ const timeFormatter = new Intl.DateTimeFormat('en-US', {
 const Contact = () => {
   return (
     <div id="contact">
-        <PageHeader title='Contact'/>
         <div className='flex max-w-7xl mx-auto'>
           {/*Contact Call Out*/}
           <div className='w-2/3 flex flex-col'>

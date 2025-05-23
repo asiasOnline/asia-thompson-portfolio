@@ -32,15 +32,15 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
       direction={reverse ? "right" : "left"}
     >
       <div className="overflow-hidden w-full relative">
-          <div className="flex">
+          <div className="flex items-center">
             {[...images, ...images].map((image, index) => {
             return <Image 
               key={index}
               src={image.src}
               alt={image.alt}
-              width={image.square ? 512 : 720}
-              height={512}
-              className="mr-6 border-2 border-black rounded-md"
+              width={image.square ? 422 : 598}
+              height={422}
+              className="mr-6 border border-black rounded-md"
             />
           })}
           </div>
