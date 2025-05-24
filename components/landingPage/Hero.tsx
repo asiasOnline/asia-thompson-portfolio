@@ -5,10 +5,11 @@ import HeroAvatar from '../ui/HeroAvatar';
 import ContactLinks from '../ui/ContactLinks';
 import { Stars } from '../ui/SVGAssets';
 import ContentBorder from '../ui/ContentBorder';
+import Availability from '../ui/Availability';
 
 const Hero = () => {
   return (
-    <div id="hero" className='mx-auto flex flex-col gap-6'>
+    <div id="hero" className='px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 mx-auto flex flex-col gap-6 '>
         <div className='mx-auto 2xl:m-0 flex flex-col items-center'>
           <div className='flex flex-col items-center w-full'>
             {/*Main Header*/}
@@ -82,10 +83,7 @@ const Hero = () => {
           >Let's Chat
         </Button>
       </div>
-      <div className='flex items-center gap-4 justify-start'>
-        <div className='w-3 h-3 rounded-full bg-green'></div>
-        Available for Work
-      </div>
+      <Availability />
     </div>
   )
 }

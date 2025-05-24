@@ -4,7 +4,7 @@ import ProjectScroll from '../ui/ProjectScroll'
 
 const ProjectHighlights = () => {
   return (
-    <div id="projectHighlights" className='w-full h-svh flex flex-col items-center '>
+    <div id="projectHighlights" className='w-full h-svh px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 flex flex-col items-center '>
         <div id="projectHighlightsHeader" 
             className='w-3/5 flex self-start ml-14 my-5'>
           <div className="relative w-full max-w-40 h-auto">

@@ -1,7 +1,7 @@
 import React from 'react'
-import ContactLinks from '../ui/ContactLinks'
 import HeroAvatar from '../ui/HeroAvatar'
-import { ContactForm } from '../ui/ContactForm'
+import { ProjectContactForm } from '../forms/ProjectContactForm'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/Tabs"
 
 const now = new Date();
 const dayFormatter = new Intl.DateTimeFormat('en-US', {
@@ -16,8 +16,7 @@ const timeFormatter = new Intl.DateTimeFormat('en-US', {
 const Contact = () => {
   return (
     <div id="contact">
-        <div className='flex max-w-7xl mx-auto'>
-          <div>
+        <div className='ml-32'>
               <h3 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-6xl 2xl:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
             {/* Stroke Layer (behind) */}
             <span className="absolute inset-0 text-stroke dark:text-stroke-white z-0">
@@ -34,29 +33,41 @@ const Contact = () => {
               Let's Work Together!
             </span>
           </h3>
-            </div>
-          {/*Contact Call Out*/}
-          <div className='w-2/3 flex flex-col'>
-            <div className='flex flex-col gap-4'>
-              <p>Fill out the form to get in contact me as soon as possible.</p>
-              <p>Otherwise, contact me through one of my socials and I&apos;ll do my best to follow up there as well. </p>
-              <ContactLinks className='mt-4 place-self-center'/>
-            </div>
+        </div>
+        <div className='flex max-w-7xl mx-auto'>
+          
+          {/*Availability*/}
+          <div className='w-1/2 flex flex-col'>
             
             <div className='flex mt-8 gap-10 justify-center items-center text-center'>
               <div className='w-48 h-48 scale-x-[-1]'>
                 <HeroAvatar />
               </div>
               <div className='flex flex-col max-w-60 gap-4'>
-                <h3 className='text-2xl font-bold tracking-wider '>My Timezone</h3>
-                <p>It is currently <br /><span className='font-bold'>{dayFormatter.format(now)} <br/> {timeFormatter.format(now)}  </span> <br />in Anaheim, CA right now.</p>
+                <h3 className='text-4xl font-bold tracking-wider '>Availability</h3>
+                <p>Monday - Friday</p>
+                <p>8 A.M. to 5 P.M.</p>
+                <p className='text-left'>Currently <span className='font-bold'>{dayFormatter.format(now)} {timeFormatter.format(now)}  </span> in Henderson, NV right now.
+                </p>
               </div>
             </div>
           </div>
 
           {/*Contact Form*/}
-          <div className='w-1/3'>
-            <ContactForm />
+          <div className='border-l w-1/2'>
+          <Tabs defaultValue="project" className="w-[400px]">
+            <TabsList>
+              <TabsTrigger value="project">Project Form</TabsTrigger>
+              <TabsTrigger value="general">General Form</TabsTrigger>
+            </TabsList>
+            <TabsContent value="project">
+              <p>If you have a business project you want to kickstart or one you’re currently working and you need some assistance this is the form for you!</p>
+              <ProjectContactForm />
+            </TabsContent>
+            <TabsContent value="general">
+              Any questions, comments, or concerns? This form is the fastest way to reach me!
+            </TabsContent>
+          </Tabs>
           </div>
         </div>
     </div>

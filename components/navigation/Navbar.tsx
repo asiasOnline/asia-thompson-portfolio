@@ -3,10 +3,21 @@
 import React, { useState } from 'react'
 import { Button } from "@/components/ui/Button";
 import ThemeButton from '../ui/ThemeButton';
+import Location from '../ui/Location';
 import Link from "next/link";
 import { SlMenu } from "react-icons/sl";
 import { CgClose } from "react-icons/cg";
+import DateTimeDisplay from '../ui/DateTimeDisplay';
 
+const now = new Date();
+const dayFormatter = new Intl.DateTimeFormat('en-US', {
+  dateStyle: "short",
+  timeZone: 'America/Los_Angeles'
+})
+const timeFormatter = new Intl.DateTimeFormat('en-US', {
+  timeStyle: "medium",
+  timeZone: 'America/Los_Angeles'
+})
 
 const Navbar = () => {
 
@@ -46,8 +57,17 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
           </Link>
         </div>
         <div className='flex gap-12'>
+          <div className='text-lg text-left'>
+            <Location />
+            <div className='ml-7'><DateTimeDisplay /></div>
+          </div>
           <ThemeButton />
-          <Button className="text-black dark:text-white" variant="outline" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <Button 
+          className="text-black dark:text-white" 
+          variant="outline" 
+          size="icon" 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
             {isMenuOpen ? <CgClose className='w-8 h-8'/> : <SlMenu className='w-8 h-8'/>}
           </Button>
           <nav className={isMenuOpen ? `absolute top-[125%] right-20 flex flex-col ${defaultNavbarStyle}` : `hidden`}>
