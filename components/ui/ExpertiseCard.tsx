@@ -26,7 +26,7 @@ export const ExpertiseCard: React.FC<ExpertiseCardProps> = ({id, title, descript
         opacity-0
         group-hover:opacity-75 transition duration-500
         '/>
-        <div className='w-full h-full min-h-32 p-6 md:py-8 flex flex-col md:place-items-center lg:justify-between gap-6 lg:gap-4 bg-white relative border rounded-2xl border-black card-shadow dark:bg-black dark:border-white/10 hover:border-black/5 hover:shadow-none'>
+        <div className='w-full h-auto min-h-[360px] p-6 md:py-8 flex flex-col md:place-items-center lg:justify-between gap-6 lg:gap-4 bg-white relative border rounded-2xl border-black card-shadow dark:bg-black dark:border-white/10 hover:border-black/5 hover:shadow-none'>
             <div className="w-full px-5 flex flex-col gap-6">
                 <div className='flex justify-between items-center md:gap-6 lg:justify-start'>
                     <p className='text-xs'>0{id}</p>

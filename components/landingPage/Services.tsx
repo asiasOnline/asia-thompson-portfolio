@@ -7,7 +7,8 @@ export default function Services() {
   
   return (
     <div>
-        <div className='w-full flex gap-10 justify-center'>
+      {/* Service Header */}
+        <div id="seviceHeader" className='w-full flex gap-10 justify-center'>
           <div className='max-w-40'>
             <HeroAvatar />
           </div>
@@ -39,7 +40,21 @@ export default function Services() {
             <p className='my-8 text-lg'>Here’s how I can help.</p>
         </div>
         </div>
-        <div className='grid grid-cols-3 gap-10 mx-20'>
+        {/* Main Service Section */}
+        <section className='w-full flex gap-20'>
+          {/* Service Listing */}
+        <div className='w-1/3 flex flex-col justify-around border-black border-2'>
+           {
+            services.map((service: any) => (
+                <div className='text-3xl pl-20 py-6 flex gap-4 border-b-2'>
+                  <h4 >0{service.id}</h4>
+                  <h4>{service.title}</h4>
+                </div>
+            ))
+        }
+        </div>
+        {/* Service Cards */}
+        <div id="serviceCards" className='w-1/2 flex gap-20'>
           {
             services.map((card: any) => (
                 <ExpertiseCard 
@@ -52,6 +67,8 @@ export default function Services() {
             ))
         }
       </div>
+        </section>
+      {/* Service CTA */}
       <div className='flex flex-col gap-4 my-14'>
         <div className='text-lg text-center'>
           <p>Not sure if what you need is covered with what I offer? No worries! </p>

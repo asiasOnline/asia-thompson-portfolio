@@ -57,9 +57,9 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
           </Link>
         </div>
         <div className='flex gap-12'>
-          <div className='text-lg text-left'>
+          <div className='min-w-[240px] flex flex-col justify-items-start text-left'>
             <Location />
-            <div className='ml-7'><DateTimeDisplay /></div>
+            <div className='ml-16'><DateTimeDisplay /></div>
           </div>
           <ThemeButton />
           <Button 

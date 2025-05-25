@@ -6,7 +6,7 @@ const Location = () => {
   return (
     <div className='flex justify-center gap-2'>
         <IoLocation className='w-5 h-5'/>
-        <p>Henderson, Nevada, U.S.A</p>
+        <p>Henderson, Nevada</p>
     </div>
   )
 }
