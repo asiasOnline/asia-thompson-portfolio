@@ -4,13 +4,52 @@ import { Button } from "@/components/ui/Button"
 import HeroAvatar from '../ui/HeroAvatar';
 import ContactLinks from '../ui/ContactLinks';
 import { Stars } from '../ui/SVGAssets';
-import ContentBorder from '../ui/ContentBorder';
 import Availability from '../ui/Availability';
 
 const Hero = () => {
   return (
-    <div id="hero" className='px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 mx-auto flex flex-col gap-6 '>
+    <div id="hero" className='relative px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 mx-auto flex flex-col gap-6 '>
+      {/*Borders*/}
+      {/*Top Left*/}
+      <div className='absolute top-8 -left-0'>
+        <div className='w-44 relative left-14'>
+            <hr className='border-t-black dark:border-t-white'/>
+        </div>
+        < div className='w-44 rotate-90 relative top-14'>
+            <hr className='border-t-black dark:border-t-white'/>
+          </div>
+        </div>
+        {/*Top Right*/}
+        <div className='absolute rotate-90 top-8 right-0'>
+          <div className='w-44 relative left-14'>
+            <hr className='border-t-black dark:border-t-white'/>
+          </div>
+          <div className='w-44 rotate-90 relative top-14'>
+              <hr className='border-t-black dark:border-t-white'/>
+          </div>
+        </div>
+        {/*Bottom Right*/}
+        <div className='absolute rotate-180 right-0 -bottom-8'>
+          <div className='w-44 relative left-14'>
+            <hr className='border-t-black dark:border-t-white'/>
+          </div>
+          <div className='w-44 rotate-90 relative top-14'>
+              <hr className='border-t-black dark:border-t-white'/>
+          </div>
+        </div>
+        {/*Bottom Right*/}
+        <div className='absolute -rotate-90 left-0 -bottom-8'>
+          <div className='w-44 relative left-14'>
+            <hr className='border-t-black dark:border-t-white'/>
+        </div>
+        <div className='w-44 rotate-90 relative top-14'>
+            <hr className='border-t-black dark:border-t-white'/>
+        </div>
+        </div>
+
+        {/*Main Hero Content*/}
         <div className='mx-auto 2xl:m-0 flex flex-col items-center'>
+          
           <div className='flex flex-col items-center w-full'>
             {/*Main Header*/}
 
@@ -22,7 +61,7 @@ const Hero = () => {
                   < HeroAvatar />
                 </div>
               </div>
-              <p className='w-96 text-2xl'>A <span className='underline font-bold'>digital product designer</span> and <span className='underline font-bold'>full-stack developer</span> based in Long Beach, California.</p>
+              <p className='w-96 text-2xl'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Long Beach, California.</p>
             </div>
 
             {/*Headline*/}
@@ -78,12 +117,12 @@ const Hero = () => {
           <Button 
             variant="default" 
             type="submit" 
-            className="text-lg min-w-60  gap-4 font-bold tracking-wide px-5 py-7 border-2 border-ultramarine dark:bg-brightPurple"  
+            className="text-lg min-w-60  gap-4 font-bold tracking-wide px-5 py-6 border-2 border-ultramarine dark:bg-brightPurple"  
             >Let's Chat
           </Button>
       </div>
       </div>
-    </div>
+      </div>
   )
 }
 
