@@ -9,7 +9,8 @@ import { SlMenu } from "react-icons/sl";
 import { CgClose } from "react-icons/cg";
 import DateTimeDisplay from '../ui/DateTimeDisplay';
 
-const now = new Date();
+{/**
+  const now = new Date();
 const dayFormatter = new Intl.DateTimeFormat('en-US', {
   dateStyle: "short",
   timeZone: 'America/Los_Angeles'
@@ -18,6 +19,7 @@ const timeFormatter = new Intl.DateTimeFormat('en-US', {
   timeStyle: "medium",
   timeZone: 'America/Los_Angeles'
 })
+  */}
 
 const Navbar = () => {
 
@@ -57,10 +59,6 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
           </Link>
         </div>
         <div className='flex gap-12'>
-          <div className='min-w-[240px] flex flex-col justify-items-start text-left'>
-            <Location />
-            <div className='ml-16'><DateTimeDisplay /></div>
-          </div>
           <ThemeButton />
           <Button 
           className="text-black dark:text-white" 

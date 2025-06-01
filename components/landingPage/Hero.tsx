@@ -15,18 +15,19 @@ const Hero = () => {
             {/*Main Header*/}
 
             {/*Intro & Avatar Header*/}
-            <div className='flex items-end mb-3'>
-              <p className='text-3xl'>My name is <b>Asia</b>.</p>
+            <div className='flex items-end mb-3 gap-4'>
+              <p className='text-2xl'>My name is <b>Asia</b>.</p>
               <div className='w-24 md:w-40 h-auto'>
                 <div className="relative w-40 h-auto">
                   < HeroAvatar />
                 </div>
               </div>
+              <p className='w-96 text-2xl'>A <span className='underline font-bold'>digital product designer</span> and <span className='underline font-bold'>full-stack developer</span> based in Long Beach, California.</p>
             </div>
 
             {/*Headline*/}
             <div className='gap-4 lg:gap-8 xl:gap-16 mt-6'>
-              <h1 className='text-4xl sm:text-6xl md:text-6xl lg:text-7xl 2xl:text-8xl text-nowrap font-display font-bold tracking-wider'>I Help Businesses Build </h1>
+              <h1 className='text-4xl sm:text-6xl md:text-6xl lg:text-7xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>I Help Creatives Build </h1>
               {/*
                 <div className='relative md:ml-4'>
                 <div className='w-4 h-8 md:w-6 md:h-8 lg:w-10 lg:h-12 absolute -bottom-4 -left-2 md:-bottom-2 lg:-left-8'><Stars width='40' height='48'/></div>
@@ -36,7 +37,7 @@ const Hero = () => {
             </div>
           </div>
             {/*Sub-Headline*/}
-            <h1 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-8xl text-nowrap font-display font-bold tracking-wider lg:mt-4">
+            <h1 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider lg:mt-4">
             {/* Stroke Layer (behind) */}
             <span className="absolute inset-0 text-stroke dark:text-stroke-white z-0">
               Better Products
@@ -56,7 +57,6 @@ const Hero = () => {
       
       {/*Sub-Header*/}
       <div className='w-3/5 mx-auto md:mt-6'>
-        <p className='text-lg md:text-2xl leading-8 md:leading-10 lg:leading-10 2xl:leading-12 tracking-normal'>I&apos;m a <b><span className='underline'>digital product designer</span></b> and <b><span className='underline'>full stack developer</span></b> who helps small to mid sized businesses with the technical stuff, so they can focus on the work they love.</p>
       </div>
       {/*
         <div className='mt-12 lg:mt-10 flex flex-col lg:flex-row gap-8 md:gap-12 xl:flex-row lg:justify-between'>
@@ -69,21 +69,20 @@ const Hero = () => {
           <ContactLinks className='place-self-center'/>
       </div>
       */}
-      <div className='flex gap-12 justify-center'>
-        <Button 
-          variant="outline" 
-          type="submit" 
-          className="text-lg min-w-60 gap-4 font-bold tracking-wide px-5 py-7 border-2 border-black dark:bg-black button-shadow-xl dark:text-white dark:border-white hover:shadow-none"
-          >View My Projects
-        </Button>
-        <Button 
-          variant="default" 
-          type="submit" 
-          className="text-lg min-w-60  gap-4 font-bold tracking-wide px-5 py-7 border-2 border-ultramarine button-shadow-primary hover:shadow-none dark:bg-brightPurple"  
-          >Let's Chat
-        </Button>
+      <div className='w-full flex justify-between'>
+        <div className='w-1/3'>
+          <p className='text-2xl'>Together, we’ll turn your bold ideas into a tangible product that <em>empowers</em>, <em>inspires</em>, and <em>influences</em>.</p>
+        </div>
+        <div className='flex flex-col items-center gap-6'>
+          <Availability />
+          <Button 
+            variant="default" 
+            type="submit" 
+            className="text-lg min-w-60  gap-4 font-bold tracking-wide px-5 py-7 border-2 border-ultramarine dark:bg-brightPurple"  
+            >Let's Chat
+          </Button>
       </div>
-      <Availability />
+      </div>
     </div>
   )
 }
