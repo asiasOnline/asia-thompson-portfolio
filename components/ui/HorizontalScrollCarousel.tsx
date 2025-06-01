@@ -9,7 +9,7 @@ const HorizontalScrollCarousel = ({children}: {children?: React.ReactNode;}) => 
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["20%", "-99%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["6%", "-47%"]);
 
   return (
     <div ref={targetRef} className="relative w-full h-[200vh]">

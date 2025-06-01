@@ -48,11 +48,8 @@ const Hero = () => {
         </div>
 
         {/*Main Hero Content*/}
-        <div className='mx-auto 2xl:m-0 flex flex-col items-center'>
+        <div className='mx-auto 2xl:m-0 flex flex-col items-center gap-16'>
           
-          <div className='flex flex-col items-center w-full'>
-            {/*Main Header*/}
-
             {/*Intro & Avatar Header*/}
             <div className='flex items-end mb-3 gap-4'>
               <p className='text-2xl'>My name is <b>Asia</b>.</p>
@@ -64,8 +61,10 @@ const Hero = () => {
               <p className='w-96 text-2xl'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Long Beach, California.</p>
             </div>
 
-            {/*Headline*/}
-            <div className='gap-4 lg:gap-8 xl:gap-16 mt-6'>
+            {/*Intro & Avatar Header*/}
+            <div className='flex flex-col text-center'>
+               {/*Headline*/}
+            <div className='gap-4 lg:gap-8 xl:gap-16'>
               <h1 className='text-4xl sm:text-6xl md:text-6xl lg:text-7xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>I Help Creatives Build </h1>
               {/*
                 <div className='relative md:ml-4'>
@@ -74,7 +73,7 @@ const Hero = () => {
                 </div>
               */}
             </div>
-          </div>
+
             {/*Sub-Headline*/}
             <h1 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider lg:mt-4">
             {/* Stroke Layer (behind) */}
@@ -92,37 +91,25 @@ const Hero = () => {
               Better Products
             </span>
           </h1>
+            </div>
+           
+          {/*Sub-Header*/}
+          <div className='w-full flex justify-between'>
+            <div className='w-1/3'>
+              <p className='text-2xl'>Together, we’ll turn your bold ideas into a tangible product that <em>empowers</em>, <em>inspires</em>, and <em>influences</em>.</p>
+            </div>
+            <div className='flex flex-col items-center gap-4'>
+              <Availability />
+              <Button 
+                variant="default" 
+                type="submit" 
+                className="text-lg min-w-60  gap-4 font-bold tracking-wide px-5 py-6 border-2 border-ultramarine dark:bg-brightPurple"  
+                >Let's Chat
+              </Button>
+            </div>
+          </div>
         </div>
-      
-      {/*Sub-Header*/}
-      <div className='w-3/5 mx-auto md:mt-6'>
-      </div>
-      {/*
-        <div className='mt-12 lg:mt-10 flex flex-col lg:flex-row gap-8 md:gap-12 xl:flex-row lg:justify-between'>
-        {/*Location
-        <div className='flex items-center gap-4'>
-          <PiMapPinLineFill className='w-8 h-8 lg:w-10 lg:h-10'/>
-          <p className='text-lg md:text-2xl font-display font-bold tracking-wider'>Based in Anaheim, CA</p>
-        </div>
-        {/*Mail & Social Media Links 
-          <ContactLinks className='place-self-center'/>
-      </div>
-      */}
-      <div className='w-full flex justify-between'>
-        <div className='w-1/3'>
-          <p className='text-2xl'>Together, we’ll turn your bold ideas into a tangible product that <em>empowers</em>, <em>inspires</em>, and <em>influences</em>.</p>
-        </div>
-        <div className='flex flex-col items-center gap-6'>
-          <Availability />
-          <Button 
-            variant="default" 
-            type="submit" 
-            className="text-lg min-w-60  gap-4 font-bold tracking-wide px-5 py-6 border-2 border-ultramarine dark:bg-brightPurple"  
-            >Let's Chat
-          </Button>
-      </div>
-      </div>
-      </div>
+    </div>
   )
 }
 

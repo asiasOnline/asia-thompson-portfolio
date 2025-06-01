@@ -1,13 +1,15 @@
 import Hero from "../components/landingPage/Hero"
 import Navbar from "@/components/navigation//Navbar";
 import ProjectCarousel from "@/components/landingPage/ProjectCarousel";
-import StatsBanner from "@/components/landingPage/StatsBanner";
+import Vision from "@/components/landingPage/Vision";
 import ProjectHighlights from "@/components/landingPage/ProjectHighlights";
 import Service from "@/components/landingPage/Services"
+import Testimonials from "@/components/landingPage/Testimonials";
 import About from "@/components/landingPage/About";
 import Contact from "@/components/landingPage/Contact";
 import Footer from "@/components/navigation/Footer";
-import Testimonials from "@/components/landingPage/Testimonials";
+
+
 
 export default function Home() {
   return (
@@ -16,11 +18,10 @@ export default function Home() {
       <main className="w-screen 2xl:w-full mx-auto flex flex-col gap-12 md:gap-12">
         <Hero />
         <ProjectCarousel />
-        <StatsBanner />
+        <Vision />
         <ProjectHighlights />
         <Service />
         <Testimonials />
-        <StatsBanner />
         <About />
         <Contact />
       </main>

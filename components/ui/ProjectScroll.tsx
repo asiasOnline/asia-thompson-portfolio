@@ -5,9 +5,9 @@ import highlightedProjects from '../../data/highlightedProjects'
 
 const ProjectScroll = () => {
   return (
-    <div className='w-full gap-16 gap-lg-0 flex flex-col justify-between px-6 max-h-[650px] border-black border-y-2 overflow-y-auto'>
+    <div className='w-full gap-16 gap-lg-0 flex flex-col justify-between px-6 max-h-[720px] border-black border-y-2 overflow-y-auto'>
       {highlightedProjects.map((project, index) => {
-        return <div className='flex my-16'>
+        return <div className='flex my-24'>
           {/*Project Details*/}
           <div className='w-1/2'>
             <div>

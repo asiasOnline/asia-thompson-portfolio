@@ -9,7 +9,7 @@ export default function Services() {
   return (
     <div>
       {/* Service Header */}
-        <div id="seviceHeader" className='w-full flex gap-10 justify-center'>
+        <div id="seviceHeader" className='w-full flex gap-16 justify-center'>
           <div className='max-w-40'>
             <HeroAvatar />
           </div>
@@ -37,23 +37,24 @@ export default function Services() {
           </h3>
             </div>
             </div>
-            <p className='text-lg'>I offer tailored design and development solutions that empower businesses to reach new heights. From ideation to development, I’m here to support your business goals.</p>
-            <p className='my-8 text-lg'>Here’s how I can help.</p>
+            <div className='flex flex-col gap-4'>
+        <div className='text-lg text-center'>
+          <p>Not sure if what you need is covered with what I offer? No worries! </p>
+          <p>Let’s get it sorted out!</p>
+        </div>
+        <div className='flex justify-center'>
+          <Button 
+          variant="default" 
+          type="submit" 
+          className="text-lg min-w-60 gap-4 font-bold tracking-wide px-5 py-7 border-2 border-ultramarine button-shadow-primary hover:shadow-none dark:bg-brightPurple"  
+          >Let's Chat
+        </Button>
+        </div>
+      </div>
         </div>
         </div>
         {/* Main Service Section */}
         <section className='w-full h-auto flex content-center'>
-        {/* Service Listing */}
-        <div className='w-1/3 flex flex-col justify-around border-black border-2 rounded-r-lg'>
-           {
-            services.map((service: any) => (
-                <div className='text-3xl pl-20 flex gap-4'>
-                  <h4 >0{service.id}</h4>
-                  <h4>{service.title}</h4>
-                </div>
-            ))
-        }
-        </div>
         {/* Service Cards */}
         <HorizontalScrollCarousel>
           <div id="serviceCards" className='flex gap-32'>
@@ -72,20 +73,7 @@ export default function Services() {
         </HorizontalScrollCarousel>
         </section>
       {/* Service CTA */}
-      <div className='flex flex-col gap-4 my-14'>
-        <div className='text-lg text-center'>
-          <p>Not sure if what you need is covered with what I offer? No worries! </p>
-          <p>Let’s get it sorted out!</p>
-        </div>
-        <div className='flex justify-center'>
-          <Button 
-          variant="default" 
-          type="submit" 
-          className="text-lg min-w-60 gap-4 font-bold tracking-wide px-5 py-7 border-2 border-ultramarine button-shadow-primary hover:shadow-none dark:bg-brightPurple"  
-          >Let's Chat
-        </Button>
-        </div>
-      </div>
+      
     </div>
   )
 }

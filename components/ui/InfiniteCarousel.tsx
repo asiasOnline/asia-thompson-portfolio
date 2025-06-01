@@ -38,8 +38,8 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
               key={index}
               src={image.src}
               alt={image.alt}
-              width={image.square ? 422 : 598}
-              height={422}
+              width={image.square ? 512 : 720}
+              height={512}
               className="mr-6 border border-black rounded-md"
             />
           })}
