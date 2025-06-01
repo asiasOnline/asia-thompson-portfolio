@@ -2,6 +2,7 @@ import ExpertiseCard from '../ui/ExpertiseCard'
 import services from '../../data/serviceData'
 import HeroAvatar from '../ui/HeroAvatar'
 import { Button } from '../ui/Button'
+import HorizontalScrollCarousel from '../ui/HorizontalScrollCarousel'
 
 export default function Services() {
   
@@ -41,12 +42,12 @@ export default function Services() {
         </div>
         </div>
         {/* Main Service Section */}
-        <section className='w-full flex gap-20'>
-          {/* Service Listing */}
-        <div className='w-1/3 flex flex-col justify-around border-black border-2'>
+        <section className='w-full h-auto flex content-center'>
+        {/* Service Listing */}
+        <div className='w-1/3 flex flex-col justify-around border-black border-2 rounded-r-lg'>
            {
             services.map((service: any) => (
-                <div className='text-3xl pl-20 py-6 flex gap-4 border-b-2'>
+                <div className='text-3xl pl-20 flex gap-4'>
                   <h4 >0{service.id}</h4>
                   <h4>{service.title}</h4>
                 </div>
@@ -54,7 +55,8 @@ export default function Services() {
         }
         </div>
         {/* Service Cards */}
-        <div id="serviceCards" className='w-1/2 flex gap-20'>
+        <HorizontalScrollCarousel>
+          <div id="serviceCards" className='flex gap-32'>
           {
             services.map((card: any) => (
                 <ExpertiseCard 
@@ -67,6 +69,7 @@ export default function Services() {
             ))
         }
       </div>
+        </HorizontalScrollCarousel>
         </section>
       {/* Service CTA */}
       <div className='flex flex-col gap-4 my-14'>
