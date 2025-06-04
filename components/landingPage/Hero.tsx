@@ -58,7 +58,7 @@ const Hero = () => {
                   < HeroAvatar />
                 </div>
               </div>
-              <p className='w-96 text-2xl'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Long Beach, California.</p>
+              <p className='w-96 text-2xl'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Henderson. Nevada.</p>
             </div>
 
             {/*Intro & Avatar Header*/}

@@ -12,7 +12,7 @@ const HorizontalScrollCarousel = ({children}: {children?: React.ReactNode;}) => 
   const x = useTransform(scrollYProgress, [0, 1], ["6%", "-47%"]);
 
   return (
-    <div ref={targetRef} className="relative w-full h-[200vh]">
+    <div ref={targetRef} className="relative w-full h-[250vh]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {children}

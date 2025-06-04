@@ -21,26 +21,40 @@ import { TbMail } from "react-icons/tb";
 
 const services = [
   {
-    id: "ux-ui-design",
-    label: "UX & UI Design",
+    id: "product-strategy",
+    label: "Product Strategy",
   },
   {
-    id: "front-end-development",
-    label: "Front End Development",
+    id: "web-app-design",
+    label: "Web / App Design",
   },
   {
-    id: "database-management",
-    label: "Database Management",
+    id: "single-page-website",
+    label: "Single Page Webiste",
   },
   {
-    id: "back-end-development",
-    label: "Back End Development",
+    id: "multi-page-website",
+    label: "Multi-Page Website",
+  },
+  {
+    id: "web-mobile-app-development",
+    label: "Web / Mobile App Development",
+  },
+  {
+    id: "data-management",
+    label: "Data Management",
   },
 ] as const 
 
 const formSchema = z.object({
-  fullName: z.string().min(2, {
-    message: "The full name must be at least 2 characters.",
+  firstName: z.string().min(2, {
+    message: "First name must be at least 2 characters.",
+  }),
+  lastName: z.string().min(2, {
+    message: "Last name must be at least 2 characters.",
+  }),
+  businessName: z.string().min(2, {
+    message: "Business name must be at least 2 characters.",
   }),
   email: z.string().email().min(2, {
     message: "The email must be at least 2 characters.",
@@ -51,7 +65,7 @@ const formSchema = z.object({
   contactMessage: z.string().min(2, {
     message: "The message must be at least 2 characters long."
   }).max(10000, {
-    message: "The message cannot be longer than 10,000 characters."
+    message: "The message cannot be longer than 1,000 characters."
   }),
 })
 
@@ -60,9 +74,11 @@ export function ProjectContactForm() {
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
       defaultValues: {
-        fullName: "",
+        firstName: "",
+        lastName: "",
+        businessName: "",
         email: "",
-        services: ["ux-ui-design", "front-end-development"],
+        services: ["product-stategy", "web-app-design"],
         contactMessage: "",
       },
     })
@@ -77,25 +93,58 @@ export function ProjectContactForm() {
     return (
         <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          {/* First Name Field */}
             <FormField
             control={form.control}
-            name="fullName"
+            name="firstName"
             render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Full Name</FormLabel>
+                  <FormLabel><h3 className="text-xl">First Name</h3></FormLabel>
                 <FormControl className="mt-2">
-                    <Input placeholder="Enter your full name" {...field} />
+                    <Input placeholder="Enter your first name" {...field} />
                 </FormControl>
                 <FormMessage />
                 </FormItem>
             )}
             />
+
+            {/* Last Name Field */}
+            <FormField
+            control={form.control}
+            name="lastName"
+            render={({ field }) => (
+                <FormItem>
+                  <FormLabel><h3 className="text-xl">Last Name</h3></FormLabel>
+                <FormControl className="mt-2">
+                    <Input placeholder="Enter your last name" {...field} />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+
+            {/* Business Name */}
+            <FormField
+            control={form.control}
+            name="businessName"
+            render={({ field }) => (
+                <FormItem>
+                  <FormLabel><h3 className="text-xl">Business Name</h3></FormLabel>
+                <FormControl className="mt-2">
+                    <Input placeholder="Enter your business name" {...field} />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+
+            {/* Email */}
             <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel><h3 className="text-xl">Email</h3></FormLabel>
                 <FormControl className="mt-2">
                     <Input placeholder="Enter your email address" {...field} />
                 </FormControl>
@@ -103,14 +152,16 @@ export function ProjectContactForm() {
                 </FormItem>
             )}
             />
-            <h4>What services do you need?</h4>
+
+            {/* Services */}
             <FormField 
               control={form.control}
               name="services"
               render={() => (
                 <FormItem>
-                  <FormLabel>Services</FormLabel>
-                  <div className="flex flex-wrap justify-between mt-2">
+                  <FormLabel><h3 className="text-xl mb-2">What services are you looking for?</h3></FormLabel>
+                  <p className="text-md">Max of 3 services per project.</p>
+                  <div className="flex items-start flex-col mt-2">
                     {services.map((service) => (
                       <FormField 
                         key={service.id}
@@ -120,7 +171,7 @@ export function ProjectContactForm() {
                           return (
                               <FormItem
                               key={service.id}
-                              className="my-2 flex justify-center gap-2"
+                              className="my-2 flex justify-center items-center gap-2"
                               >
                               <FormControl>
                                 <Checkbox 
@@ -136,7 +187,7 @@ export function ProjectContactForm() {
                                   }}
                                 />
                               </FormControl>
-                              <FormLabel>{service.label}</FormLabel>
+                              <FormLabel><p className="text-lg">{service.label}</p></FormLabel>
                             </FormItem>
                           )
                         }}
@@ -146,14 +197,17 @@ export function ProjectContactForm() {
                 </FormItem>
               )}
             />
+
+            {/* Project */}
             <FormField
               control={form.control}
               name="contactMessage"
               render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel><h3 className="text-xl mb-2">Project Details</h3></FormLabel>
+                    <p className="text-md">Without sharing the more private details of your project, please provide a brief description and how I would ideally help.</p>
                   <FormControl className="mt-2">
-                      <Textarea placeholder="Include a message to offer further explanation as needed" {...field} />
+                      <Textarea placeholder="Offer further explanation as needed..." {...field} />
                   </FormControl>
                   <FormMessage />
                   </FormItem>
