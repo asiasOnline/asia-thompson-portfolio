@@ -1,14 +1,13 @@
 import React from 'react'
 import HeroAvatar from '../ui/HeroAvatar'
 import AnimatedCounter from '../ui/AnimatedCounter'
+import ScrollTextOpacity from '../ui/ScrollTextOpacity'
 
 const Vision = () => {
   return (
     <div className='flex justify-center items-center gap-40 my-48'>
-        <div className='w-1/3'>
-            <p className='text-4xl text-justify leading-14 font-bold'>
-                You have a vision for what you want.  Your project may stem from a lifelong goal or a new creative ambition. Regardless I’m here to help bring that passion to life. 
-            </p>
+        <div className='w-2/5 2xl:w-1/3 text-4xl text-justify leading-14 font-bold'>
+            <ScrollTextOpacity content={<p>You have a vision for what you want. Together, we’ll turn your bold ideas into a tangible product that <em>empowers</em>, <em>inspires</em>, and <em>influences</em>.</p>}/>
         </div>
         <div className='flex flex-col items-center gap-8'>
             <div className='w-40'>

@@ -48,17 +48,17 @@ const Hero = () => {
         </div>
 
         {/*Main Hero Content*/}
-        <div className='mx-auto 2xl:m-0 flex flex-col items-center gap-16'>
+        <div className='mx-auto 2xl:m-0 flex flex-col items-center gap-8 2xl:gap-16'>
           
             {/*Intro & Avatar Header*/}
             <div className='flex items-end mb-3 gap-4'>
-              <p className='text-2xl'>My name is <b>Asia</b>.</p>
+              <p className='text-xl 2xl:text-2xl'>My name is <b>Asia</b>.</p>
               <div className='w-24 md:w-40 h-auto'>
-                <div className="relative w-40 h-auto">
+                <div className="relative w-32 2xl:w-40 h-auto">
                   < HeroAvatar />
                 </div>
               </div>
-              <p className='w-96 text-2xl'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Henderson. Nevada.</p>
+              <p className='w-96 text-xl 2xl:text-2xl'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Henderson. Nevada.</p>
             </div>
 
             {/*Intro & Avatar Header*/}
@@ -95,21 +95,18 @@ const Hero = () => {
            
           {/*Sub-Header*/}
           <div className='w-full flex justify-between'>
-            <div className='w-1/3'>
-              <p className='text-2xl'>Together, we’ll turn your bold ideas into a tangible product that <em>empowers</em>, <em>inspires</em>, and <em>influences</em>.</p>
+            <Availability />
             </div>
-            <div className='flex flex-col items-center gap-4'>
-              <Availability />
+            <div>
               <Button 
                 variant="default" 
                 type="submit" 
-                className="text-lg min-w-60  gap-4 font-bold tracking-wide px-5 py-6 border-2 border-ultramarine dark:bg-brightPurple"  
+                className="text-base 2xl:text-lg min-w-48 2xl:min-w-60  gap-4 font-bold tracking-wide px-5 py-6 border-2 border-ultramarine dark:bg-brightPurple"  
                 >Let's Chat
               </Button>
             </div>
           </div>
         </div>
-    </div>
   )
 }
 

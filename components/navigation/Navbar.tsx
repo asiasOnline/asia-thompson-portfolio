@@ -44,7 +44,7 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
       <div className='w-screen max-w-[1920px] sticky top-0 mx-auto p-6 md:px-12 lg:px-24 xl:px-32 xl:pt-10  flex justify-between items-center z-20'>
         <div className='w-1/3 md:w-1/6 lg:w-32'>
           <Link href="/">
-          <div className="relative w-40 h-auto">
+          <div className="w-32 2xl:w-40 relative h-auto">
             <img 
               src="/asia-thompson-logo.svg" 
               className="block dark:hidden w-full h-full" 
