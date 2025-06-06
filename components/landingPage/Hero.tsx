@@ -1,14 +1,16 @@
 import React from 'react'
+import { motion } from "framer-motion"
 import { PiMapPinLineFill } from "react-icons/pi";
 import { Button } from "@/components/ui/Button"
 import HeroAvatar from '../ui/HeroAvatar';
 import ContactLinks from '../ui/ContactLinks';
 import { Stars } from '../ui/SVGAssets';
 import Availability from '../ui/Availability';
+import TextMaskAnimation from '../ui/TextMaskAnimation';
 
 const Hero = () => {
   return (
-    <div id="hero" className='relative px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 mx-auto flex flex-col gap-6 '>
+    <div id="hero" className='w-full relative px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 mx-auto flex flex-col gap-6 '>
       {/*Borders*/}
       {/*Top Left*/}
       <div className='absolute top-8 -left-0'>
@@ -48,17 +50,21 @@ const Hero = () => {
         </div>
 
         {/*Main Hero Content*/}
-        <div className='mx-auto 2xl:m-0 flex flex-col items-center gap-8 2xl:gap-16'>
+        <div className='mx-auto pt-10 pb-5 xl:mx-10 2xl:m-0 flex flex-col items-center gap-8 2xl:gap-12'>
           
             {/*Intro & Avatar Header*/}
-            <div className='flex items-end mb-3 gap-4'>
-              <p className='text-xl 2xl:text-2xl'>My name is <b>Asia</b>.</p>
+            <div className='flex items-center gap-8'>
+              <motion.p 
+                className='text-xl 2xl:text-2xl'
+              >
+                My name is <b>Asia</b>.
+              </motion.p>
               <div className='w-24 md:w-40 h-auto'>
                 <div className="relative w-32 2xl:w-40 h-auto">
                   < HeroAvatar />
                 </div>
               </div>
-              <p className='w-96 text-xl 2xl:text-2xl'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Henderson. Nevada.</p>
+              <p className='w-96 text-xl 2xl:text-2xl self-end'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Henderson. Nevada.</p>
             </div>
 
             {/*Intro & Avatar Header*/}
@@ -75,7 +81,7 @@ const Hero = () => {
             </div>
 
             {/*Sub-Headline*/}
-            <h1 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider lg:mt-4">
+            <h1 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider lg:mt-6">
             {/* Stroke Layer (behind) */}
             <span className="absolute inset-0 text-stroke dark:text-stroke-white z-0">
               Better Products
@@ -94,9 +100,8 @@ const Hero = () => {
             </div>
            
           {/*Sub-Header*/}
-          <div className='w-full flex justify-between'>
+          <div className='w-full flex items-center justify-between'>
             <Availability />
-            </div>
             <div>
               <Button 
                 variant="default" 
@@ -107,6 +112,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
   )
 }
 

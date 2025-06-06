@@ -19,39 +19,20 @@ import { Textarea } from "@/components/ui/Textarea"
 
 import { TbMail } from "react-icons/tb";
 
-const services = [
-  {
-    id: "ux-ui-design",
-    label: "UX & UI Design",
-  },
-  {
-    id: "front-end-development",
-    label: "Front End Development",
-  },
-  {
-    id: "database-management",
-    label: "Database Management",
-  },
-  {
-    id: "back-end-development",
-    label: "Back End Development",
-  },
-] as const 
-
 const formSchema = z.object({
-  fullName: z.string().min(2, {
-    message: "The full name must be at least 2 characters.",
+  firstName: z.string().min(2, {
+    message: "First name must be at least 2 characters.",
+  }),
+  lastName: z.string().min(2, {
+    message: "Last name must be at least 2 characters.",
   }),
   email: z.string().email().min(2, {
     message: "The email must be at least 2 characters.",
   }),
-  services: z.array(z.string()).refine((value) => value.some((service) => service), {
-    message: "Please select at least one service."
-  }),
   contactMessage: z.string().min(2, {
     message: "The message must be at least 2 characters long."
   }).max(10000, {
-    message: "The message cannot be longer than 10,000 characters."
+    message: "The message cannot be longer than 1,000 characters."
   }),
 })
 
@@ -60,9 +41,9 @@ export function GeneralContactForm() {
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
       defaultValues: {
-        fullName: "",
+        firstName: "",
+        lastName: "",
         email: "",
-        services: ["ux-ui-design", "front-end-development"],
         contactMessage: "",
       },
     })
@@ -77,25 +58,43 @@ export function GeneralContactForm() {
     return (
         <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          {/* First Name Field */}
             <FormField
             control={form.control}
-            name="fullName"
+            name="firstName"
             render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Full Name</FormLabel>
+                  <FormLabel><p className="text-xl font-bold">First Name *</p></FormLabel>
                 <FormControl className="mt-2">
-                    <Input placeholder="Enter your full name" {...field} />
+                    <Input placeholder="Enter your first name" {...field} />
                 </FormControl>
                 <FormMessage />
                 </FormItem>
             )}
             />
+
+            {/* Last Name Field */}
+            <FormField
+            control={form.control}
+            name="lastName"
+            render={({ field }) => (
+                <FormItem>
+                  <FormLabel><p className="text-xl font-bold">Last Name *</p></FormLabel>
+                <FormControl className="mt-2">
+                    <Input placeholder="Enter your last name" {...field} />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+
+            {/* Email */}
             <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel><p className="text-xl font-bold">Email *</p></FormLabel>
                 <FormControl className="mt-2">
                     <Input placeholder="Enter your email address" {...field} />
                 </FormControl>
@@ -103,56 +102,17 @@ export function GeneralContactForm() {
                 </FormItem>
             )}
             />
-            <FormField 
-              control={form.control}
-              name="services"
-              render={() => (
-                <FormItem>
-                  <FormLabel>Services</FormLabel>
-                  <div className="flex flex-wrap justify-between mt-2">
-                    {services.map((service) => (
-                      <FormField 
-                        key={service.id}
-                        control={form.control}
-                        name="services"
-                        render={({ field }) => {
-                          return (
-                              <FormItem
-                              key={service.id}
-                              className="my-2 flex justify-center gap-2"
-                              >
-                              <FormControl>
-                                <Checkbox 
-                                  checked={field.value?.includes(service.id)}
-                                  onCheckedChange={(checked) => {
-                                    return checked
-                                      ? field.onChange([...field.value, service.id])
-                                      : field.onChange(
-                                        field.value?.filter(
-                                          (value) => value !== service.id
-                                        )
-                                      )
-                                  }}
-                                />
-                              </FormControl>
-                              <FormLabel>{service.label}</FormLabel>
-                            </FormItem>
-                          )
-                        }}
-                      />
-                    ))}
-                  </div>
-                </FormItem>
-              )}
-            />
+
+            {/* Project */}
             <FormField
               control={form.control}
               name="contactMessage"
               render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel><p className="text-xl font-bold mb-2">Project Details</p></FormLabel>
+                    <p className="text-md">Without sharing the more private details of your project, please provide a brief description and how I would ideally help.</p>
                   <FormControl className="mt-2">
-                      <Textarea placeholder="Include a message to offer further explanation as needed" {...field} />
+                      <Textarea placeholder="Offer further explanation as needed..." {...field} />
                   </FormControl>
                   <FormMessage />
                   </FormItem>

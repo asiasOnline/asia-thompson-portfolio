@@ -99,7 +99,7 @@ export function ProjectContactForm() {
             name="firstName"
             render={({ field }) => (
                 <FormItem>
-                  <FormLabel><h3 className="text-xl">First Name</h3></FormLabel>
+                  <FormLabel><p className="text-xl font-bold">First Name *</p></FormLabel>
                 <FormControl className="mt-2">
                     <Input placeholder="Enter your first name" {...field} />
                 </FormControl>
@@ -114,7 +114,7 @@ export function ProjectContactForm() {
             name="lastName"
             render={({ field }) => (
                 <FormItem>
-                  <FormLabel><h3 className="text-xl">Last Name</h3></FormLabel>
+                  <FormLabel><p className="text-xl font-bold">Last Name *</p></FormLabel>
                 <FormControl className="mt-2">
                     <Input placeholder="Enter your last name" {...field} />
                 </FormControl>
@@ -129,7 +129,7 @@ export function ProjectContactForm() {
             name="businessName"
             render={({ field }) => (
                 <FormItem>
-                  <FormLabel><h3 className="text-xl">Business Name</h3></FormLabel>
+                  <FormLabel><p className="text-xl font-bold">Business Name</p></FormLabel>
                 <FormControl className="mt-2">
                     <Input placeholder="Enter your business name" {...field} />
                 </FormControl>
@@ -144,7 +144,7 @@ export function ProjectContactForm() {
             name="email"
             render={({ field }) => (
                 <FormItem>
-                  <FormLabel><h3 className="text-xl">Email</h3></FormLabel>
+                  <FormLabel><p className="text-xl font-bold">Email *</p></FormLabel>
                 <FormControl className="mt-2">
                     <Input placeholder="Enter your email address" {...field} />
                 </FormControl>
@@ -159,7 +159,7 @@ export function ProjectContactForm() {
               name="services"
               render={() => (
                 <FormItem>
-                  <FormLabel><h3 className="text-xl mb-2">What services are you looking for?</h3></FormLabel>
+                  <FormLabel><p className="text-xl font-bold mb-2">What services are you looking for?</p></FormLabel>
                   <p className="text-md">Max of 3 services per project.</p>
                   <div className="flex items-start flex-col mt-2">
                     {services.map((service) => (
@@ -171,7 +171,7 @@ export function ProjectContactForm() {
                           return (
                               <FormItem
                               key={service.id}
-                              className="my-2 flex justify-center items-center gap-2"
+                              className="my-2 flex justify-center items-center gap-3"
                               >
                               <FormControl>
                                 <Checkbox 
@@ -204,7 +204,7 @@ export function ProjectContactForm() {
               name="contactMessage"
               render={({ field }) => (
                   <FormItem>
-                    <FormLabel><h3 className="text-xl mb-2">Project Details</h3></FormLabel>
+                    <FormLabel><p className="text-xl font-bold mb-2">Project Details</p></FormLabel>
                     <p className="text-md">Without sharing the more private details of your project, please provide a brief description and how I would ideally help.</p>
                   <FormControl className="mt-2">
                       <Textarea placeholder="Offer further explanation as needed..." {...field} />

@@ -5,7 +5,7 @@ import ScrollTextOpacity from '../ui/ScrollTextOpacity'
 
 const Vision = () => {
   return (
-    <div className='flex justify-center items-center gap-40 my-48'>
+    <div className='h-auto flex justify-center items-center gap-40 my-48'>
         <div className='w-2/5 2xl:w-1/3 text-4xl text-justify leading-14 font-bold'>
             <ScrollTextOpacity content={<p>You have a vision for what you want. Together, we’ll turn your bold ideas into a tangible product that <em>empowers</em>, <em>inspires</em>, and <em>influences</em>.</p>}/>
         </div>

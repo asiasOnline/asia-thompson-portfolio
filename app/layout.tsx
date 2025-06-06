@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Head from 'next/head'
 import { Figtree } from "next/font/google";
 import localFont from "next/font/local"
 import "./globals.css";

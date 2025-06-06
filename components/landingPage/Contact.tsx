@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import HeroAvatar from '../ui/HeroAvatar'
 import { ProjectContactForm } from '../forms/ProjectContactForm'
+import { GeneralContactForm } from '../forms/GeneralContactForm'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/Tabs"
 
 const Contact = () => {
@@ -48,11 +49,13 @@ const Contact = () => {
               <div className='w-48 h-48 scale-x-[-1]'>
                 <HeroAvatar />
               </div>
-              <div className='flex flex-col max-w-60 gap-4'>
+              <div className='flex flex-col max-w-60 gap-6'>
                 <h3 className='text-4xl font-bold tracking-wider '>Availability</h3>
-                <p className='text-lg'>Monday - Friday</p>
-                <p className='text-lg'>8 A.M. to 5 P.M.</p>
-                <p className='text-left text-lg'>It's currently <span className='font-bold' suppressHydrationWarning>{time.toLocaleTimeString()}</span> in Henderson, Nevada right now.
+                <div className='flex flex-col'>
+                  <p className='text-lg'>Monday - Friday</p>
+                  <p className='text-lg'>8 A.M. to 5 P.M.</p>
+                </div>
+                <p className='text-center text-lg'>It's currently <span className='font-bold' suppressHydrationWarning>{time.toLocaleTimeString()}</span> in Henderson, Nevada.
                 </p>
               </div>
             </div>
@@ -71,6 +74,7 @@ const Contact = () => {
             </TabsContent>
             <TabsContent value="general">
               <p className='my-8'>Any questions, comments, or concerns? This form is the fastest way to reach me!</p>
+              <GeneralContactForm />
             </TabsContent>
           </Tabs>
           </div>
