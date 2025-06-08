@@ -1,6 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
-import PreLoader from "../components/pageAnimations/PreLoader"
+import { Suspense, useEffect, useState } from "react";
 import Hero from "../components/landingPage/Hero"
 import Navbar from "@/components/navigation//Navbar";
 import ProjectCarousel from "@/components/landingPage/ProjectCarousel";
@@ -13,7 +12,6 @@ import Contact from "@/components/landingPage/Contact";
 import Footer from "@/components/navigation/Footer";
 
 export default function Home() {
-  const [isLoading, setLoading] = useState(true);
 
   useEffect( () => {
     (
@@ -25,22 +23,19 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="w-full min-w-80 2xl:mx-auto bg-white dark:bg-black">
-      {
-        isLoading && <PreLoader />
-      }
-      <Navbar/>
-      <main className="w-full 2xl:w-full mx-auto flex flex-col gap-12 md:gap-12">
-        <Hero />
-        <ProjectCarousel />
-        <Vision />
-        <ProjectHighlights />
-        <Service />
-        <Testimonials />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
+    <div className="w-screen min-w-80 2xl:mx-auto bg-white dark:bg-black">
+        <Navbar/>
+        <main className="w-full mx-auto flex flex-col gap-12 md:gap-12">
+          <Hero />
+          <ProjectCarousel />
+          <Vision />
+          <ProjectHighlights />
+          <Service />
+          <Testimonials />
+          <About />
+          <Contact />
+        </main>
+        <Footer />
     </div>
   );
 }

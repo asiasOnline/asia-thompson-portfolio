@@ -41,10 +41,10 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
 
   return (
     <div>
-      <div className='w-screen max-w-[1920px] sticky top-0 mx-auto p-6 md:px-12 lg:px-24 xl:px-24 xl:pt-10  flex justify-between items-center z-20'>
+      <div className='w-full max-w-[1920px] sticky top-0 mx-auto pt-6 px-4 md:px-12 lg:px-24 xl:px-24 xl:pt-10 flex justify-between items-center z-40'>
         <div className='w-1/3 md:w-1/6 lg:w-32'>
           <Link href="/">
-          <div className="w-32 2xl:w-40 relative h-auto">
+          <div className="w-24 m:w-32 2xl:w-40 relative h-auto">
             <img 
               src="/asia-thompson-logo.svg" 
               className="block dark:hidden w-full h-full" 
@@ -58,7 +58,7 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
           </div>
           </Link>
         </div>
-        <div className='flex gap-12'>
+        <div className='flex 2xl:gap-12'>
           <ThemeButton />
           <Button 
           className="text-black dark:text-white" 
@@ -66,7 +66,7 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
           size="icon" 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <CgClose className='w-8 h-8'/> : <SlMenu className='w-8 h-8'/>}
+            {isMenuOpen ? <CgClose className='w-6 h-6 2xl:w-8 2xlh-8'/> : <SlMenu className='w-6 h-6 2xlw-8 2xlh-8'/>}
           </Button>
           <nav className={isMenuOpen ? `absolute top-[125%] right-20 flex flex-col ${defaultNavbarStyle}` : `hidden`}>
             {
@@ -86,7 +86,7 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
           </nav>
         </div>
       </div> 
-      <div className={ isMenuOpen ? `fixed w-screen h-screen top-0 left-0 bg-white opacity-80 z-10 dark:bg-black` : `hidden`}>
+      <div className={ isMenuOpen ? `fixed w-screen h-screen top-0 left-0 bg-white opacity-100 z-30 dark:bg-black` : `hidden`}>
 
       </div> 
     </div>

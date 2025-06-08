@@ -22,10 +22,10 @@ const Contact = () => {
 
   return (
     <div id="contact">
-        <div className='ml-96'>
+        <div className='2xl:ml-96'>
               <h3 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-6xl 2xl:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
             {/* Stroke Layer (behind) */}
-            <span className="absolute inset-0 text-stroke dark:text-stroke-white z-0">
+            <span className="absolute inset-0 text-stroke-md xl:text-stroke-lg dark:text-stroke-white z-0">
               Let's Work Together!
             </span>
 
@@ -40,7 +40,7 @@ const Contact = () => {
             </span>
           </h3>
         </div>
-        <div className='flex max-w-7xl mx-auto'>
+        <div className='flex flex-col 2xl:flex-row max-w-7xl mx-auto'>
           
           {/*Availability*/}
           <div className='w-1/2 flex flex-col'>
@@ -63,17 +63,23 @@ const Contact = () => {
 
           {/*Contact Form*/}
           <div className='border-l w-1/2 pl-12'>
-          <Tabs defaultValue="project" className="w-[400px]">
+          <Tabs defaultValue="project" className="w-[450px]">
             <TabsList>
-              <TabsTrigger value="project"><p className='text-lg'>Project Form</p></TabsTrigger>
-              <TabsTrigger value="general"><p className='text-lg'>General Form</p></TabsTrigger>
+              <TabsTrigger value="project">
+                <p className='text-lg'>Project Form</p></TabsTrigger>
+              <TabsTrigger value="general">
+                <p className='text-lg'>General Form</p></TabsTrigger>
             </TabsList>
             <TabsContent value="project">
-              <p className='my-8'>If you have a business project you want to kickstart or one you’re currently working and you need some assistance this is the form for you!</p>
+              <div className='my-4 border-b h-20 flex items-center'>
+                <p>If you have a business project you want to kickstart or one you’re currently working and you need some assistance this is the form for you!</p>
+              </div>
               <ProjectContactForm />
             </TabsContent>
             <TabsContent value="general">
-              <p className='my-8'>Any questions, comments, or concerns? This form is the fastest way to reach me!</p>
+              <div className='my-4 border-b h-20 flex items-center'>
+                <p>Any questions, comments, or concerns? This form is the fastest way to reach me!</p>
+              </div>
               <GeneralContactForm />
             </TabsContent>
           </Tabs>

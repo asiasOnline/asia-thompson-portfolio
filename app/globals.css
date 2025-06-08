@@ -68,9 +68,14 @@ h1, h2, h3, h4, h5, h6 {
     animation-delay: 4s;
   }
   
-  .text-stroke {
+  .text-stroke-lg {
     color: transparent;
     -webkit-text-stroke: 8px #1E1E1E; /* fallback to black or any color */
+  }
+
+  .text-stroke-md {
+    color: transparent;
+    -webkit-text-stroke: 6px #1E1E1E; /* fallback to black or any color */
   }
 
   .text-stroke-white {

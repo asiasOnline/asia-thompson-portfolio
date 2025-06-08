@@ -10,10 +10,10 @@ import TextMaskAnimation from '../ui/TextMaskAnimation';
 
 const Hero = () => {
   return (
-    <div id="hero" className='w-full relative px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 mx-auto flex flex-col gap-6 '>
+    <div id="hero" className='w-full 2xl:w-4/5 relative px-4 md:px-16 lg:px-24 xl:px-28 2xl:px-32 mx-auto flex flex-col gap-6 '>
       {/*Borders*/}
       {/*Top Left*/}
-      <div className='absolute top-8 -left-0'>
+      <div className='hidden 2xl:block absolute top-8 -left-0'>
         <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
         </div>
@@ -22,7 +22,7 @@ const Hero = () => {
           </div>
         </div>
         {/*Top Right*/}
-        <div className='absolute rotate-90 top-8 right-0'>
+        <div className='hidden 2xl:block absolute rotate-90 top-8 right-0'>
           <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
           </div>
@@ -31,7 +31,7 @@ const Hero = () => {
           </div>
         </div>
         {/*Bottom Right*/}
-        <div className='absolute rotate-180 right-0 -bottom-8'>
+        <div className='hidden 2xl:block absolute rotate-180 right-0 -bottom-8'>
           <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
           </div>
@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
         </div>
         {/*Bottom Right*/}
-        <div className='absolute -rotate-90 left-0 -bottom-8'>
+        <div className='hidden 2xl:block absolute -rotate-90 left-0 -bottom-8'>
           <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
         </div>
@@ -50,28 +50,32 @@ const Hero = () => {
         </div>
 
         {/*Main Hero Content*/}
-        <div className='mx-auto pt-10 pb-5 xl:mx-10 2xl:m-0 flex flex-col items-center gap-8 2xl:gap-12'>
+        <div className='pt-10 pb-5 xl:mx-10 2xl:m-0 flex flex-col items-center gap-6 md:gap-8 xl:gap-12'>
           
             {/*Intro & Avatar Header*/}
-            <div className='flex items-center gap-8'>
-              <motion.p 
-                className='text-xl 2xl:text-2xl'
+            <div className='w-full flex flex-col xl:flex-row items-center xl:justify-center gap-6 2xl:gap-8'>
+              <div className='w-auto text-center'>
+                <motion.p 
+                className='text-center text-lg md:text-xl 2xl:text-2xl'
               >
-                My name is <b>Asia</b>.
+                My name is <strong>Asia</strong>.
               </motion.p>
-              <div className='w-24 md:w-40 h-auto'>
-                <div className="relative w-32 2xl:w-40 h-auto">
+              </div>
+              <div className='w-auto md:w-40 h-auto flex justify-center'>
+                <div className="relative w-28 md:w-32 2xl:w-40 h-auto">
                   < HeroAvatar />
                 </div>
               </div>
-              <p className='w-96 text-xl 2xl:text-2xl self-end'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Henderson. Nevada.</p>
+              <div className='w-auto flex justify-center'>
+                <p className='2xl:w-96 text-lg md:text-xl 2xl:text-2xl 2xl:self-end'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Henderson. Nevada.</p>
+              </div>
             </div>
 
             {/*Intro & Avatar Header*/}
             <div className='flex flex-col text-center'>
                {/*Headline*/}
             <div className='gap-4 lg:gap-8 xl:gap-16'>
-              <h1 className='text-4xl sm:text-6xl md:text-6xl lg:text-7xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>I Help Creatives Build </h1>
+              <h1 className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>I Help Creatives Build </h1>
               {/*
                 <div className='relative md:ml-4'>
                 <div className='w-4 h-8 md:w-6 md:h-8 lg:w-10 lg:h-12 absolute -bottom-4 -left-2 md:-bottom-2 lg:-left-8'><Stars width='40' height='48'/></div>
@@ -81,14 +85,14 @@ const Hero = () => {
             </div>
 
             {/*Sub-Headline*/}
-            <h1 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider lg:mt-6">
+            <h1 className="relative inline-block text-3xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-widest 2xl:tracking-wider lg:mt-6">
             {/* Stroke Layer (behind) */}
-            <span className="absolute inset-0 text-stroke dark:text-stroke-white z-0">
+            <span className="absolute inset-0 text-stroke-md xl:text-stroke-lg dark:text-stroke-white z-0">
               Better Products
             </span>
 
             {/* Shadow Layer (middle) */}
-            <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow-lg">
+            <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow-md 2xl:text-shadow-lg">
               Better Products
             </span>
 
@@ -99,8 +103,8 @@ const Hero = () => {
           </h1>
             </div>
            
-          {/*Sub-Header*/}
-          <div className='w-full flex items-center justify-between'>
+          {/*Availability & CTA Button*/}
+          <div className='w-full flex flex-col 2xl:flex-row items-center justify-between gap-4'>
             <Availability />
             <div>
               <Button 

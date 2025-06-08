@@ -33,6 +33,7 @@ export default function RootLayout({children }: Readonly<{
           enableSystem
           disableTransitionOnChange
         >
+          {/* PostHog is used to collect data for this portfolio project. */}
           <CSPostHogProvider>
             {children}
           </CSPostHogProvider>
