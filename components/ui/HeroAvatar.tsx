@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroAvatar = () => {
       return (
-        <div>
+        <>
           <img 
               src="/asiaAvatarLight.png" 
               className="block dark:hidden w-full h-full" 
@@ -13,7 +13,7 @@ const HeroAvatar = () => {
             className="hidden dark:block w-full h-full" 
             alt='dark mode friendly logo'
             />
-        </div>
+        </>
       )
     }
 export default HeroAvatar

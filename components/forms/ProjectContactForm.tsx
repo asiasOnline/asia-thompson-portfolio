@@ -1,23 +1,35 @@
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
+import { format } from "date-fns"
+import { toast } from "sonner"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
+import { cn } from "@/lib/utils"
+import { Calendar } from "@/components/ui/Calendar"
 import { Button } from "@/components/ui/Button"
 import {
   Form,
+  FormDescription,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/Form"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 import { Input } from "@/components/ui/Input"
+import { Slider } from "@/components/ui/Slider"
 import { Checkbox } from "@/components/ui/Checkbox"
 import { Textarea } from "@/components/ui/Textarea"
 
 import { TbMail } from "react-icons/tb";
+import { FaRegCalendar } from "react-icons/fa";
 
 const services = [
   {
@@ -41,8 +53,8 @@ const services = [
     label: "Web / Mobile App Development",
   },
   {
-    id: "data-management",
-    label: "Data Management",
+    id: "data-ai-integration",
+    label: "Data & AI Integration",
   },
 ] as const 
 
@@ -62,6 +74,13 @@ const formSchema = z.object({
   services: z.array(z.string()).refine((value) => value.some((service) => service), {
     message: "Please select at least one service."
   }),
+  startDate: z.date({
+    required_error: "Start date is required.",
+  }),
+  endDate: z.date({
+    required_error: "End date is required.",
+  }),
+  budget: z.number({}),
   contactMessage: z.string().min(2, {
     message: "The message must be at least 2 characters long."
   }).max(10000, {
@@ -198,7 +217,110 @@ export function ProjectContactForm() {
               )}
             />
 
-            {/* Project */}
+            {/* Project Timeline */}
+            <p className="text-xl font-bold">What is your project timeline?</p>
+            <div className="flex">
+              <FormField
+                control={form.control}
+                name="startDate"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col">
+                    <FormLabel><p className="text-lg mb-2">Start Date</p></FormLabel>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant={"outline"}
+                            className={cn(
+                              "w-[240px] pl-3 text-left font-normal",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+                            {field.value ? (
+                              format(field.value, "PPP")
+                            ) : (
+                              <span>Pick a date</span>
+                            )}
+                            <FaRegCalendar className="ml-auto h-4 w-4 opacity-50" />
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={field.value}
+                          onSelect={field.onChange}
+                          disabled={(date) =>
+                            date > new Date() || date < new Date("1900-01-01")
+                          }
+                          captionLayout="dropdown"
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            <FormField
+                control={form.control}
+                name="endDate"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col">
+                    <FormLabel><p className="text-lg mb-2">End Date</p></FormLabel>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant={"outline"}
+                            className={cn(
+                              "w-[240px] pl-3 text-left font-normal",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+                            {field.value ? (
+                              format(field.value, "PPP")
+                            ) : (
+                              <span>Pick a date</span>
+                            )}
+                            <FaRegCalendar className="ml-auto h-4 w-4 opacity-50" />
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={field.value}
+                          onSelect={field.onChange}
+                          disabled={(date) =>
+                            date > new Date() || date < new Date("1900-01-01")
+                          }
+                          captionLayout="dropdown"
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            {/* Project Budget */}
+            <FormField
+            control={form.control}
+            name="budget"
+            render={() => (
+                <FormItem>
+                  <FormLabel><p className="text-xl font-bold">What is your project's budget?</p></FormLabel>
+                <FormControl className="mt-2">
+                    <Slider defaultValue={[33]} max={100} step={1} />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+
+
+            {/* Project Details */}
             <FormField
               control={form.control}
               name="contactMessage"

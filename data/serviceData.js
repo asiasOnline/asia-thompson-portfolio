@@ -169,7 +169,7 @@ const serviceData = [
     },
     {
         "id": 6,
-        "title": "Data Management",
+        "title": "Data & AI Integration",
         "description": "Supercharge your workflow and products with AI functionality using natural language processing, automation, and generative AI tools to streamline operations and stand out from the competition.",
         "tools": [
             {

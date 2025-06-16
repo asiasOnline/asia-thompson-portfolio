@@ -10,7 +10,7 @@ export default function Services() {
     <div>
       {/* Service Header */}
         <div id="seviceHeader" className='w-full flex gap-16 justify-center'>
-          <div className='max-w-40'>
+          <div className='max-w-40 max-h-40'>
             <HeroAvatar />
           </div>
           <div className='w-1/3'>

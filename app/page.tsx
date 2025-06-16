@@ -1,5 +1,7 @@
 "use client"
-import { Suspense, useEffect, useState } from "react";
+import { useLayoutEffect, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import HeroAvatar from "@/components/ui/HeroAvatar";
 import Hero from "../components/landingPage/Hero"
 import Navbar from "@/components/navigation//Navbar";
 import ProjectCarousel from "@/components/landingPage/ProjectCarousel";
@@ -12,6 +14,39 @@ import Contact from "@/components/landingPage/Contact";
 import Footer from "@/components/navigation/Footer";
 
 export default function Home() {
+  const comp = useRef(null)
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const t1 = gsap.timeline()
+      t1.from("#pageSlider", {
+        xPercent: "-100",
+        duration: 1.3,
+        delay: 0.3,
+      })
+      .to(["#circleDrop1", "#circleDrop2", "#circleDrop3", "avatarDrop"], {
+        opacity: 1,
+        y: "+=30",
+        stagger: 0.5,
+      })
+      .to(["#circleDrop1", "#circleDrop2", "#circleDrop3", "avatarDrop"], {
+        opacity: 0,
+        y: "-=30",
+        delay: 0.3,
+        stagger: 0.5,
+      })
+      .to("#pageSlider", {
+        xPercent: "-100",
+        duration: 1.3,
+      })
+      .from("#landingPage", {
+        opacity: 0,
+        duration: 0.5,
+      })
+    }, comp)
+
+    return () => ctx.revert()
+  }, [])
 
   useEffect( () => {
     (
@@ -23,19 +58,33 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="w-screen min-w-80 2xl:mx-auto bg-white dark:bg-black">
-        <Navbar/>
-        <main className="w-full mx-auto flex flex-col gap-12 md:gap-12">
-          <Hero />
-          <ProjectCarousel />
-          <Vision />
-          <ProjectHighlights />
-          <Service />
-          <Testimonials />
-          <About />
-          <Contact />
-        </main>
-        <Footer />
+    <div 
+      ref={comp}
+      className="relative">
+        <div 
+          id="pageSlider"
+          className="w-full h-screen bg-slateBlue absolute top-0 left-0 z-50 flex flex-col justify-center items-center gap-8">
+          <div id="avatarDrop" className="w-40 h-40 opacity-0">
+            <HeroAvatar/>
+          </div>
+          <div id="circleDrop3" className="w-40 h-40 rounded-full bg-white opacity-0"></div>
+          <div id="circleDrop2" className="w-40 h-40 rounded-full bg-white opacity-0"></div>
+          <div id="circleDrop1" className="w-40 h-40 rounded-full bg-white opacity-0"></div>
+        </div>
+        <div id="landingPage" className="w-screen min-w-80 2xl:mx-auto bg-white dark:bg-black">
+          <Navbar/>
+          <main className="w-full mx-auto flex flex-col gap-12 md:gap-12">
+            <Hero />
+            <ProjectCarousel />
+            <Vision />
+            <ProjectHighlights />
+            <Service />
+            <Testimonials />
+            <About />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
     </div>
   );
 }
