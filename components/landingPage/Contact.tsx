@@ -22,7 +22,7 @@ const Contact = () => {
 
   return (
     <div id="contact">
-        <div className='2xl:ml-96'>
+        <div className='xl:ml-32 2xl:ml-96'>
               <h3 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-6xl 2xl:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
             {/* Stroke Layer (behind) */}
             <span className="absolute inset-0 text-stroke-md xl:text-stroke-lg dark:text-stroke-white z-0">
@@ -40,7 +40,7 @@ const Contact = () => {
             </span>
           </h3>
         </div>
-        <div className='flex flex-col 2xl:flex-row max-w-7xl mx-auto'>
+        <div className='flex flex-col xl:flex-row max-w-7xl mx-auto'>
           
           {/*Availability*/}
           <div className='w-1/2 flex flex-col'>

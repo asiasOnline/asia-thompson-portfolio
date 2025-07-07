@@ -41,7 +41,9 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
 
   return (
     <div>
+      {/*Extended Navbar*/}
       <div className='w-full max-w-[1920px] sticky top-0 mx-auto pt-6 px-4 md:px-12 lg:px-24 xl:px-24 xl:pt-10 flex justify-between items-center z-40'>
+        {/*Logo*/}
         <div className='w-1/3 md:w-1/6 lg:w-32'>
           <Link href="/">
           <div className="w-24 m:w-32 2xl:w-40 relative h-auto">
@@ -58,7 +60,8 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
           </div>
           </Link>
         </div>
-        <div className='flex 2xl:gap-12'>
+        {/*Right Navigation Buttons*/}
+        <div className='flex gap-6 2xl:gap-12'>
           <ThemeButton />
           <Button 
           className="text-black dark:text-white" 

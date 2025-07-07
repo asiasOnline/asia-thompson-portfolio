@@ -6,8 +6,8 @@ import ScrollTextOpacity from '../ui/ScrollTextOpacity'
 const Vision = () => {
   return (
     <div id="vision" className='h-auto flex flex-col xl:flex-row justify-center items-center gap-32 2xl:gap-40 my-40 2xl:my-48'>
-        <div className='px-10 lg:w-2/5 2xl:w-1/3 text-4xl xl:text-justify leading-16 2xl:leading-14 font-bold'>
-            <ScrollTextOpacity content={<p>You have a vision for what you want. Together, we’ll turn your bold ideas into a tangible product that <em>empowers</em>, <em>inspires</em>, and <em>influences</em>.</p>}/>
+        <div className='px-10 lg:w-2/5 2xl:w-1/3 text-4xl xl:text-justify leading-16 2xl:leading-[4.5rem] font-bold'>
+            <ScrollTextOpacity content={<p>You have a vision for what you want.  Your project may stem from a lifelong goal or a new creative ambition. Regardless I’m here to help bring that passion to life.  Together, we’ll turn your bold ideas into a complete product that can <em>empower</em>, <em>inspire</em>, and <em>influence</em>.</p>}/>
         </div>
         <div className='flex flex-col items-center gap-8'>
             <div className='w-40'>

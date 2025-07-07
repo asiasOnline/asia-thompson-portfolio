@@ -311,8 +311,15 @@ export function ProjectContactForm() {
             render={() => (
                 <FormItem>
                   <FormLabel><p className="text-xl font-bold">What is your project's budget?</p></FormLabel>
-                <FormControl className="mt-2">
-                    <Slider defaultValue={[33]} max={100} step={1} />
+                <FormControl className="mt-4">
+                    <div>
+                      <p className="text-center mb-3">$3,500</p>
+                    <div className="flex gap-2">
+                      <p>$300</p>
+                      <Slider defaultValue={[33]} max={100} step={1} />
+                      <p>$10,000</p>
+                      </div>
+                    </div>
                 </FormControl>
                 <FormMessage />
                 </FormItem>

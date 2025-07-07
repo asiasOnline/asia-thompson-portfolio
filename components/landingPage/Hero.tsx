@@ -10,10 +10,10 @@ import TextMaskAnimation from '../ui/TextMaskAnimation';
 
 const Hero = () => {
   return (
-    <div id="hero" className='w-full 2xl:w-4/5 relative px-4 md:px-16 lg:px-24 xl:px-28 2xl:px-32 mx-auto flex flex-col gap-6 '>
+    <div id="hero" className='w-full 2xl:w-4/5 relative px-4 md:px-16 lg:px-24 xl:px-32 mx-auto flex flex-col gap-6 '>
       {/*Borders*/}
       {/*Top Left*/}
-      <div className='hidden 2xl:block absolute top-8 -left-0'>
+      <div className='hidden xl:block absolute xl:top-8 xl:-left-0'>
         <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
         </div>
@@ -22,7 +22,7 @@ const Hero = () => {
           </div>
         </div>
         {/*Top Right*/}
-        <div className='hidden 2xl:block absolute rotate-90 top-8 right-0'>
+        <div className='hidden xl:block absolute rotate-90 top-8 right-0'>
           <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
           </div>
@@ -31,7 +31,7 @@ const Hero = () => {
           </div>
         </div>
         {/*Bottom Right*/}
-        <div className='hidden 2xl:block absolute rotate-180 right-0 -bottom-8'>
+        <div className='hidden xl:block absolute rotate-180 right-0 -bottom-8'>
           <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
           </div>
@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
         </div>
         {/*Bottom Right*/}
-        <div className='hidden 2xl:block absolute -rotate-90 left-0 -bottom-8'>
+        <div className='hidden xl:block absolute -rotate-90 left-0 -bottom-8'>
           <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
         </div>
@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
 
         {/*Main Hero Content*/}
-        <div className='pt-10 pb-5 xl:mx-10 2xl:m-0 flex flex-col items-center gap-6 md:gap-8 xl:gap-12'>
+        <div className='pt-10 pb-5 xl:mx-10 2xl:m-0 flex flex-col items-center gap-6 2xl:gap-12'>
           
             {/*Intro & Avatar Header*/}
             <div className='w-full flex flex-col xl:flex-row items-center xl:justify-center gap-6 2xl:gap-8'>
@@ -104,7 +104,7 @@ const Hero = () => {
             </div>
            
           {/*Availability & CTA Button*/}
-          <div className='w-full flex flex-col 2xl:flex-row items-center justify-between gap-4'>
+          <div className='w-full flex flex-col xl:flex-row items-center justify-between gap-4'>
             <Availability />
             <div>
               <Button 

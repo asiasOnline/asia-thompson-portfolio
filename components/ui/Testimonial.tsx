@@ -14,7 +14,7 @@ interface TestimonialProps {
 const Testimonial: React.FC<TestimonialProps> = ({i, providerName, avatarSrc, alt, role, company, testimonialText}) => {
   return (
     <div className='h-screen sticky top-0 flex items-center justify-center'>
-      <div className='w-3/5 xl:h-[500px] relative origin-top flex flex-col items-center justify-center gap-8 border border-black bg-white rounded-lg px-14 py-14' style={{top:`calc(-5vh + ${i * 24}px)`}}>
+      <div className='w-3/5 xl:h-[600px] relative origin-top flex flex-col items-center justify-center gap-8 border border-black bg-white rounded-lg px-14 py-14' style={{top:`calc(-5vh + ${i * 24}px)`}}>
         <div className='text-lg'>{testimonialText}</div>
         <div className='flex items-center gap-6'>
           <div>
