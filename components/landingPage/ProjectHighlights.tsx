@@ -5,8 +5,8 @@ import highlightedProjects from '../../data/highlightedProjects'
 
 const ProjectHighlights = () => {
   return (
-    <div id="projectHighlights" className='w-full px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 flex flex-col items-center'>
-          <div className='w-full h-auto gap-20 gap-lg-0 flex flex-col justify-between px-6 border-black '>
+    <div id="projectHighlights" className='w-full px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 2xl:mb-20 flex flex-col items-center'>
+          <div className='w-full h-auto gap-20 gap-lg-0 flex flex-col justify-between border-black '>
       {highlightedProjects.map((project, index) => {
         return <div className='flex flex-col xl:flex-row py-24'>
           {/*Project Details*/}
@@ -24,7 +24,7 @@ const ProjectHighlights = () => {
             </div>
             <div className='flex gap-4'>
               {project.jobTags.map((tag) => {
-                  return <div className='p-2 px-4rounded-lg border-2 border-black' style={{backgroundColor: `#${project.projectColor}`}}>{tag}</div>
+                  return <div className='p-2 px-4 rounded-lg border-2 border-black dark:text-black' style={{backgroundColor: `#${project.projectColor}`}}>{tag}</div>
                 })}
             </div>
             <div>

@@ -12,7 +12,7 @@ const Footer = () => {
 ]
 
   return (
-    <div className='w-full max-w-[1920px] py-20 mx-auto mt-12 bg-black text-white dark:bg-white flex flex-col items-center gap-10'>
+    <div className='w-full max-w-[1920px] py-20 mx-auto mt-12 bg-black text-white dark:bg-white dark:text-black flex flex-col items-center gap-10'>
       {/*Logo*/}
         <div className="w-32 2xl:w-40 relative h-auto">
             <img 
