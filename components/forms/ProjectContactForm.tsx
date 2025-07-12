@@ -1,5 +1,5 @@
 "use client"
-
+import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { format } from "date-fns"
 import { toast } from "sonner"
@@ -30,6 +30,8 @@ import { Textarea } from "@/components/ui/Textarea"
 
 import { TbMail } from "react-icons/tb";
 import { FaRegCalendar } from "react-icons/fa";
+
+
 
 const services = [
   {
@@ -89,6 +91,8 @@ const formSchema = z.object({
 })
 
 export function ProjectContactForm() {
+  const [projectBudget, setProjectBudget] = useState<number>(300);
+
     // Defines the form
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
@@ -313,11 +317,17 @@ export function ProjectContactForm() {
                   <FormLabel><p className="text-xl font-bold">What is your project's budget?</p></FormLabel>
                 <FormControl className="mt-4">
                     <div>
-                      <p className="text-center mb-3">$3,500</p>
+                      <p className="text-center mb-3">${projectBudget}</p>
                     <div className="flex gap-2">
                       <p>$300</p>
-                      <Slider defaultValue={[33]} max={100} step={1} />
-                      <p>$10,000</p>
+                      <Slider 
+                      value={[projectBudget]}
+                      onValueChange={(val : any) => setProjectBudget(val)}
+                      defaultValue={[300]} 
+                      min={300}
+                      max={10000} 
+                      step={100} />
+                      <p>$10,000+</p>
                       </div>
                     </div>
                 </FormControl>

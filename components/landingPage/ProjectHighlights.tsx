@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '../ui/Button'
 import Image from 'next/image'
+import { FaLock } from "react-icons/fa";
 import highlightedProjects from '../../data/highlightedProjects'
 
 const ProjectHighlights = () => {
@@ -8,11 +9,12 @@ const ProjectHighlights = () => {
     <div id="projectHighlights" className='w-full px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 2xl:mb-20 flex flex-col items-center'>
           <div className='w-full h-auto gap-20 gap-lg-0 flex flex-col justify-between border-black '>
       {highlightedProjects.map((project, index) => {
-        return <div className='flex flex-col xl:flex-row py-24'>
+        return <div className='flex flex-col xl:flex-row py-24 items-center' key={project.key}>
           {/*Project Details*/}
           <div className='w-1/3'>
-            <div>
-            <p className='italic'>{project.id}/{highlightedProjects.length}</p>
+            <div className='flex justify-between'>
+            <p className='italic'>{project.key}/{highlightedProjects.length}</p>
+            <FaLock />
           </div>
           <div className='flex flex-col gap-6 border-slate-500 border-y-2 py-12'>
             <div className='w-full flex justify-between pb-4 text-lg'>
@@ -22,9 +24,9 @@ const ProjectHighlights = () => {
             <div>
               <h4 className='text-6xl'>{project.title}</h4>
             </div>
-            <div className='flex gap-4'>
+            <div className='flex flex-wrap gap-4'>
               {project.jobTags.map((tag) => {
-                  return <div className='p-2 px-4 rounded-lg border-2 border-black dark:text-black' style={{backgroundColor: `#${project.projectColor}`}}>{tag}</div>
+                  return <div className='min-w-24 p-2 px-4 rounded-lg border-2 border-black dark:text-black' style={{backgroundColor: `#${project.projectColor}`}}>{tag}</div>
                 })}
             </div>
             <div>

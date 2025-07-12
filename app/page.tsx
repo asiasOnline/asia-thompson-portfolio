@@ -18,18 +18,24 @@ export default function Home() {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      const t1 = gsap.timeline()
+      const t1 = gsap.timeline({
+        // Pins animation to top of page
+        scrollTrigger: {
+
+        }
+      })
+
       t1.from("#pageSlider", {
         xPercent: "-100",
         duration: 1.3,
         delay: 0.3,
       })
-      .to(["#circleDrop1", "#circleDrop2", "#circleDrop3", "avatarDrop"], {
+      .to(["#circleDrop2", "#circleDrop3", "avatarDrop"], {
         opacity: 1,
         y: "+=30",
         stagger: 0.5,
       })
-      .to(["#circleDrop1", "#circleDrop2", "#circleDrop3", "avatarDrop"], {
+      .to(["#circleDrop2", "#circleDrop3", "avatarDrop"], {
         opacity: 0,
         y: "-=30",
         delay: 0.3,
@@ -61,6 +67,7 @@ export default function Home() {
     <div 
       ref={comp}
       className="relative">
+        {/* Page Animation */}
         <div 
           id="pageSlider"
           className="w-full h-screen bg-slateBlue absolute top-0 left-0 z-50 flex flex-col justify-center items-center gap-8">
@@ -68,9 +75,12 @@ export default function Home() {
             <HeroAvatar/>
           </div>
           <div id="circleDrop3" className="w-40 h-40 rounded-full bg-white opacity-0"></div>
-          <div id="circleDrop2" className="w-40 h-40 rounded-full bg-white opacity-0"></div>
-          <div id="circleDrop1" className="w-40 h-40 rounded-full bg-white opacity-0"></div>
+          <div id="circleDrop2" className="w-40 h-40 rounded-full bg-white opacity-0">
+            
+          </div>
         </div>
+
+        {/* Page Content */}
         <div id="landingPage" className="w-screen min-w-80 2xl:mx-auto bg-white dark:bg-black">
           <Navbar/>
           <main className="w-full mx-auto flex flex-col gap-12 md:gap-12">

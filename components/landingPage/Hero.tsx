@@ -7,8 +7,10 @@ import ContactLinks from '../ui/ContactLinks';
 import { Stars } from '../ui/SVGAssets';
 import Availability from '../ui/Availability';
 import TextMaskAnimation from '../ui/TextMaskAnimation';
+import { LettersPullUp } from '../utilities/LettersPullUp';
 
 const Hero = () => {
+
   return (
     <div id="hero" className='w-full 2xl:w-4/5 relative px-4 md:px-16 lg:px-24 xl:px-32 mx-auto flex flex-col gap-6 '>
       {/*Borders*/}
@@ -75,7 +77,11 @@ const Hero = () => {
             <div className='flex flex-col text-center'>
                {/*Headline*/}
             <div className='gap-4 lg:gap-8 xl:gap-16'>
-              <h1 className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>I Help Creatives Build </h1>
+              <h1 className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>
+              I Help Creatives Build
+              
+              </h1>
+
               {/*
                 <div className='relative md:ml-4'>
                 <div className='w-4 h-8 md:w-6 md:h-8 lg:w-10 lg:h-12 absolute -bottom-4 -left-2 md:-bottom-2 lg:-left-8'><Stars width='40' height='48'/></div>
@@ -87,12 +93,12 @@ const Hero = () => {
             {/*Sub-Headline*/}
             <h1 className="relative inline-block text-3xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-widest 2xl:tracking-wider lg:mt-6">
             {/* Stroke Layer (behind) */}
-            <span className="absolute inset-0 text-stroke-md xl:text-stroke-lg dark:text-stroke-white z-0">
+            <span className="absolute inset-0 text-stroke-sm md:text-stroke-md xl:text-stroke-lg dark:text-stroke-white z-0">
               Better Products
             </span>
 
             {/* Shadow Layer (middle) */}
-            <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow-md 2xl:text-shadow-lg">
+            <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow-sm md:text-shadow-md 2xl:text-shadow-lg">
               Better Products
             </span>
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const highlightedProjects = [
       { 
-      id: "1",
+      key: "1",
       title: "Holistic Hands",  
       year: "2024",
       industry: "Health",
@@ -17,7 +17,7 @@ const highlightedProjects = [
       }
     },
     { 
-      id: "2",
+      key: "2",
       title: "Coffee Lovers Club",  
       year: "2021",
       industry: "Food & Beverage",
@@ -32,7 +32,7 @@ const highlightedProjects = [
       }
     },
     { 
-      id: "3",
+      key: "3",
       title: "Warm Wood",  
       year: "2024",
       industry: "Interior Design",
@@ -47,7 +47,7 @@ const highlightedProjects = [
       }
     },
     { 
-      id: "4",
+      key: "4",
       title: "Bee & Tea",  
       year: "2022",
       industry: "Food & Beverage",
@@ -62,7 +62,7 @@ const highlightedProjects = [
       }
     },
       { 
-      id: "5",
+      key: "5",
       title: "MM Florist",  
       year: "2021",
       industry: "Ecommerce",
@@ -77,7 +77,7 @@ const highlightedProjects = [
       }
     },
     { 
-      id: "6",
+      key: "6",
       title: "Dave & Dave Development",  
       year: "2023",
       industry: "Real Estate",

@@ -78,6 +78,12 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-stroke: 6px #1E1E1E; /* fallback to black or any color */
   }
 
+  .text-stroke-sm {
+    color: transparent;
+    -webkit-text-stroke: 4px #1E1E1E; /* fallback to black or any color */
+  }
+
+
   .text-stroke-white {
     color: transparent;
     -webkit-text-stroke: 0px white;
@@ -103,6 +109,15 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow:
        0px 2px 0 #1E1E1E,
      -7px 5px 0 #1E1E1E,  
+      0px 0px 0 #1E1E1E,
+      -0px 0px 0 #1E1E1E,
+       0px 0px 0 #1E1E1E;
+  }
+
+  .text-shadow-sm {
+    text-shadow:
+       0px 2px 0 #1E1E1E,
+     -5px 3px 0 #1E1E1E,  
       0px 0px 0 #1E1E1E,
       -0px 0px 0 #1E1E1E,
        0px 0px 0 #1E1E1E;
