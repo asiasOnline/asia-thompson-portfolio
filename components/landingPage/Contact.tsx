@@ -2,14 +2,12 @@
 
 import React, { useEffect, useState } from 'react'
 import HeroAvatar from '../ui/HeroAvatar'
-import { ProjectContactForm } from '../forms/ProjectContactForm'
 import { GeneralContactForm } from '../forms/GeneralContactForm'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/Tabs"
 
 const Contact = () => {
   
   const now = new Date();
-  const [time, setTime] = useState(new Date());
+  const [time, setTime] = useState(now);
 
   useEffect(() => {
       setInterval(() => setTime(new Date()), 1000)
@@ -63,26 +61,10 @@ const Contact = () => {
 
           {/*Contact Form*/}
           <div className='border-l w-1/2 pl-12'>
-          <Tabs defaultValue="project" className="w-[450px]">
-            <TabsList>
-              <TabsTrigger value="project">
-                <p className='text-lg'>Project Form</p></TabsTrigger>
-              <TabsTrigger value="general">
-                <p className='text-lg'>General Form</p></TabsTrigger>
-            </TabsList>
-            <TabsContent value="project">
-              <div className='my-4 border-b h-20 flex items-center'>
-                <p>If you have a business project you want to kickstart or one you’re currently working and you need some assistance this is the form for you!</p>
-              </div>
-              <ProjectContactForm />
-            </TabsContent>
-            <TabsContent value="general">
-              <div className='my-4 border-b h-20 flex items-center'>
-                <p>Any questions, comments, or concerns? This form is the fastest way to reach me!</p>
-              </div>
-              <GeneralContactForm />
-            </TabsContent>
-          </Tabs>
+            <div className='my-4 border-b h-20 flex items-center'>
+              <p>Any questions, comments, or concerns? This form is the fastest way to reach me!</p>
+            </div>
+            <GeneralContactForm />
           </div>
         </div>
     </div>

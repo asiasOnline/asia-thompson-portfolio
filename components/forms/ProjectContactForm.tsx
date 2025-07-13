@@ -3,7 +3,7 @@ import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { format } from "date-fns"
 import { toast } from "sonner"
-import { useForm } from "react-hook-form"
+import { useForm, UseFormRegister, FieldError } from "react-hook-form"
 import { z } from "zod"
 
 import { cn } from "@/lib/utils"
@@ -61,17 +61,17 @@ const services = [
 ] as const 
 
 const formSchema = z.object({
-  firstName: z.string().min(2, {
-    message: "First name must be at least 2 characters.",
+  firstName: z.string().min(1, {
+    message: "First name is required.",
   }),
   lastName: z.string().min(2, {
-    message: "Last name must be at least 2 characters.",
+    message: "Last name is required.",
   }),
   businessName: z.string().min(2, {
     message: "Business name must be at least 2 characters.",
   }),
-  email: z.string().email().min(2, {
-    message: "The email must be at least 2 characters.",
+  email: z.string().email({
+    message: "Invalid email address"
   }),
   services: z.array(z.string()).refine((value) => value.some((service) => service), {
     message: "Please select at least one service."
