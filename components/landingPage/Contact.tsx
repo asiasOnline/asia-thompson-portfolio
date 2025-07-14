@@ -62,7 +62,7 @@ const Contact = () => {
           {/*Contact Form*/}
           <div className='border-l w-1/2 pl-12'>
             <div className='my-4 border-b h-20 flex items-center'>
-              <p>Any questions, comments, or concerns? This form is the fastest way to reach me!</p>
+              <p>Any questions, comments, or concerns? This form is the fastest way to reach me! I also check my socials when I can.</p>
             </div>
             <GeneralContactForm />
           </div>

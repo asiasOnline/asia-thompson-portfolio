@@ -89,7 +89,7 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
           </nav>
         </div>
       </div> 
-      <div className={ isMenuOpen ? `fixed w-screen h-screen top-0 left-0 bg-white opacity-100 z-30 dark:bg-black` : `hidden`}>
+      <div className={ isMenuOpen ? `fixed w-screen xl:w-1/3 h-9/10 top-0 right-0 bg-white border-black border-l border-b opacity-100 z-30 dark:bg-black dark:border-white` : `hidden`}>
 
       </div> 
     </div>

@@ -1,6 +1,8 @@
 "use client"
 import { useLayoutEffect, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import HeroAvatar from "@/components/ui/HeroAvatar";
 import Hero from "../components/landingPage/Hero"
 import Navbar from "@/components/navigation//Navbar";
@@ -13,11 +15,16 @@ import About from "@/components/landingPage/About";
 import Contact from "@/components/landingPage/Contact";
 import Footer from "@/components/navigation/Footer";
 
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 export default function Home() {
+
   const comp = useRef(null)
 
-  useLayoutEffect(() => {
+   /*
+  useGSAP(() => {
     let ctx = gsap.context(() => {
+
       const t1 = gsap.timeline({
         // Pins animation to top of page
         scrollTrigger: {
@@ -54,6 +61,8 @@ export default function Home() {
     return () => ctx.revert()
   }, [])
 
+  */
+
   useEffect( () => {
     (
       async () => {
@@ -68,9 +77,10 @@ export default function Home() {
       ref={comp}
       className="relative">
         {/* Page Animation */}
-        <div 
+        {/*
+          <div 
           id="pageSlider"
-          className="w-full h-screen bg-slateBlue absolute top-0 left-0 z-50 flex flex-col justify-center items-center gap-8">
+          className="w-full h-screen bg-slateBlue absolute top-0 right-0 z-50 flex flex-col justify-center items-center gap-8">
           <div id="avatarDrop" className="w-40 h-40 opacity-0">
             <HeroAvatar/>
           </div>
@@ -79,6 +89,7 @@ export default function Home() {
             
           </div>
         </div>
+        */}
 
         {/* Page Content */}
         <div id="landingPage" className="w-screen min-w-80 2xl:mx-auto bg-white dark:bg-black">
