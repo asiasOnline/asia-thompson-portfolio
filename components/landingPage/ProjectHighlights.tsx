@@ -1,10 +1,30 @@
-import React from 'react'
-import { Button } from '../ui/Button'
-import Image from 'next/image'
+"use client"
+
+import React from 'react';
+import { useState, useEffect } from 'react'
+import Image from 'next/image';
+import { Label } from '@radix-ui/react-label';
+import { Input } from '../ui/Input';
+import { Button } from '../ui/Button';
 import { FaLock } from "react-icons/fa";
-import highlightedProjects from '../../data/highlightedProjects'
+import highlightedProjects from '../../data/highlightedProjects';
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogClose
+} from "../ui/Dialog"
 
 const ProjectHighlights = () => {
+  const [open, setOpen] = React.useState(false)
+
+  function openProject() {
+    setOpen(open)
+  }
+
   return (
     <div id="projectHighlights" className='w-full px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 2xl:mb-20 flex flex-col items-center'>
           <div className='w-full h-auto gap-20 gap-lg-0 flex flex-col justify-between border-black '>
@@ -32,14 +52,42 @@ const ProjectHighlights = () => {
             <div>
               <p className='text-xl'>{project.description}</p>
             </div>
-            {/*
-            <Button 
-              variant="outline" 
-              type="submit" 
-              className="text-md w-2/5 gap-4 font-bold tracking-wide p-6 border-2 border-black button-shadow-xl dark:bg-black dark:text-white dark:border-white dark:button-shadow-none"
-              >View My Projects
-            </Button>
-            */}
+            <Dialog>
+              <form>
+                <DialogTrigger asChild>
+                <Button 
+                  variant="outline" 
+                  onClick={openProject}
+                  className="text-md w-2/5 gap-4 font-bold tracking-wide p-6 border-2 border-black button-shadow-xl dark:bg-black dark:text-white dark:border-white dark:button-shadow-none hover:shadow-none hover:translate-y-2 hover:-translate-x-2"
+                  >View Project
+                </Button>
+                </DialogTrigger>
+                <DialogContent className="w-3/5 2xl:h-2/5 py-8 px-10 flex flex-col justify-between gap-6 2xl:gap-0">
+                  <DialogHeader>
+                    <div className='flex items-center justify-start gap-8'>
+                        <DialogTitle><h4 className='text-3xl tracking-wide'>This Project <br/> Is Current Locked</h4></DialogTitle>
+                        <FaLock className='w-5 h-5 md:w-6 md:h-6'/>
+                    </div>
+                    <DialogDescription className='pt-3'>
+                        <p className='text-base'>If you have the password to view this case study enter it below. Or, contact me for access.</p>
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="grid gap-2">
+                      <Label htmlFor="projectPassword" className="text-xl font-bold">Password</Label>
+                      <Input id="password" type='password' name="password" placeholder="Enter project password" />
+                  </div>
+                  <div className='flex justify-between'>
+                  <DialogClose asChild>
+                      <Button variant="outline">Cancel</Button>
+                  </DialogClose>
+                  <Button 
+                      type="submit"
+                      className="tracking-wide py-3 px-6"
+                  >View Project</Button>
+                  </div>
+                </DialogContent>
+              </form>
+            </Dialog>
           </div>
           </div>
           {/*Project Image*/}

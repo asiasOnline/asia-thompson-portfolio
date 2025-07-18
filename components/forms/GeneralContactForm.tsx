@@ -109,8 +109,8 @@ export function GeneralContactForm() {
               name="contactMessage"
               render={({ field }) => (
                   <FormItem>
-                    <FormLabel><p className="text-xl font-bold mb-2">Project Details</p></FormLabel>
-                    <p className="text-md">Without sharing the more private details of your project, please provide a brief description and how I would ideally help.</p>
+                    <FormLabel><p className="text-xl font-bold mb-2">Message</p></FormLabel>
+                    <p className="text-md">Without sharing any private details, please provide a brief description and how I can help.</p>
                   <FormControl className="mt-2">
                       <Textarea placeholder="Offer further explanation as needed..." {...field} />
                   </FormControl>

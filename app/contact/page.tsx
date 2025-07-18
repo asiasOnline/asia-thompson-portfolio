@@ -1,4 +1,8 @@
+"use client"
+
 import React, { useEffect, useState } from 'react'
+import Navbar from '@/components/navigation/Navbar'
+import Footer from '@/components/navigation/Footer'
 import HeroAvatar from '../../components/ui/HeroAvatar'
 import { ProjectContactForm } from '../../components/forms/ProjectContactForm'
 import { GeneralContactForm } from '../../components/forms/GeneralContactForm'
@@ -19,7 +23,8 @@ const ContactPage = () => {
   
     return (
       <div id="contact">
-          <div className='xl:ml-32 2xl:ml-96'>
+        <Navbar />
+          <div className='mt-8 xl:ml-32 2xl:ml-96'>
                 <h3 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-6xl 2xl:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
               {/* Stroke Layer (behind) */}
               <span className="absolute inset-0 text-stroke-md xl:text-stroke-lg dark:text-stroke-white z-0">
@@ -82,6 +87,7 @@ const ContactPage = () => {
             </Tabs>
             </div>
           </div>
+        <Footer />
       </div>
     )
 }
