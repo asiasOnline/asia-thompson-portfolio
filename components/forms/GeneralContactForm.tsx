@@ -14,23 +14,22 @@ import {
   FormMessage,
 } from "@/components/ui/Form"
 import { Input } from "@/components/ui/Input"
-import { Checkbox } from "@/components/ui/Checkbox"
 import { Textarea } from "@/components/ui/Textarea"
-
+import { Toaster, toast } from "sonner"
 import { TbMail } from "react-icons/tb";
 
-const formSchema = z.object({
+const GeneralContact = z.object({
   firstName: z.string().min(2, {
-    message: "First name must be at least 2 characters.",
+    message: "First name is required.",
   }),
   lastName: z.string().min(2, {
-    message: "Last name must be at least 2 characters.",
+    message: "Last name is required.",
   }),
   email: z.string().email().min(2, {
-    message: "The email must be at least 2 characters.",
+    message: "Valid email required.",
   }),
   contactMessage: z.string().min(2, {
-    message: "The message must be at least 2 characters long."
+    message: "Message required."
   }).max(10000, {
     message: "The message cannot be longer than 1,000 characters."
   }),
@@ -38,8 +37,8 @@ const formSchema = z.object({
 
 export function GeneralContactForm() {
     // Defines the form
-    const form = useForm<z.infer<typeof formSchema>>({
-      resolver: zodResolver(formSchema),
+    const form = useForm<z.infer<typeof GeneralContact>>({
+      resolver: zodResolver(GeneralContact),
       defaultValues: {
         firstName: "",
         lastName: "",
@@ -49,13 +48,35 @@ export function GeneralContactForm() {
     })
 
     // Defines the submit handler.
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
-    }
+    const onSubmit = async (values: z.infer<typeof GeneralContact>) => {
+        console.log("Submitting:", values)
+        const payload = JSON.stringify(values);
+        console.log("JSON.stringify result:", payload)
+        try {
+          const res = await fetch('http://localhost:3000/api/generalContacts', {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: payload
+          })
+
+          if (res.ok) {
+            toast.success("Message recieved!");
+            form.reset();
+          } else {
+            toast.error("Something went wrong.");
+          }
+        } catch (error) {
+          console.error("Fetch error", error);
+          toast.error("Failed to send message. Please try again later.");
+          }
+        }
     
     return (
+      <>
+        <Toaster richColors position="top-right" />
+
         <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           {/* First Name Field */}
@@ -130,5 +151,6 @@ export function GeneralContactForm() {
               </Button>
         </form>
         </Form>
+      </>
     )
 }

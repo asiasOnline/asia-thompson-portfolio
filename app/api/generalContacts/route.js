@@ -2,10 +2,16 @@ import connectMongoDB from "../../../lib/mongodb";
 import { NextResponse } from "next/server";
 import GeneralContact from "../../../models/generalContact";
 
-export async function POST(request) {
-    const {firstName, lastName, email, message} = await request.json();
+export async function POST(req) {
+    const body = await req.json();
 
     await connectMongoDB();
-    await GeneralContact.create({firstName, lastName, email, message})
-    return NextResponse.json({message: "General Contact Inquiry Recieved"}, {status: 201});
+
+    const savedContact = await GeneralContact.create(body);
+
+    console.log("Mongo result:", savedContact);
+    return NextResponse.json(
+        {message: "General Contact Inquiry Recieved", data: savedContact}, 
+        {status: 201}
+    );
 }

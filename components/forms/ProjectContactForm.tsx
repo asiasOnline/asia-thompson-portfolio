@@ -1,11 +1,9 @@
 "use client"
 import { useState } from "react"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { format } from "date-fns"
-import { toast } from "sonner"
 import { useForm, UseFormRegister, FieldError } from "react-hook-form"
 import { z } from "zod"
-
+import { zodResolver } from "@hookform/resolvers/zod"
+import { format } from "date-fns"
 import { cn } from "@/lib/utils"
 import { Calendar } from "@/components/ui/Calendar"
 import { Button } from "@/components/ui/Button"
@@ -28,10 +26,9 @@ import { Slider } from "@/components/ui/Slider"
 import { Checkbox } from "@/components/ui/Checkbox"
 import { Textarea } from "@/components/ui/Textarea"
 
+import { toast } from "sonner"
 import { TbMail } from "react-icons/tb";
 import { FaRegCalendar } from "react-icons/fa";
-
-
 
 const services = [
   {
@@ -60,7 +57,7 @@ const services = [
   },
 ] as const 
 
-const formSchema = z.object({
+const projectFormSchema = z.object({
   firstName: z.string().min(1, {
     message: "First name is required.",
   }),
@@ -76,11 +73,21 @@ const formSchema = z.object({
   services: z.array(z.string()).refine((value) => value.some((service) => service), {
     message: "Please select at least one service."
   }),
-  startDate: z.date({
-    required_error: "Start date is required.",
-  }),
-  endDate: z.date({
-    required_error: "End date is required.",
+  dateRange: z.object(
+    {
+      from: z.date({
+        required_error: "A start date is required."
+      }),
+      to: z.date({
+        required_error: "A end date is required."
+      }),
+    },
+    {
+      required_error: "Select a date range"
+    }
+  ).refine((data) => data.from < data.to, {
+    path: ["dateRange"],
+    message: "The start date cannot come after the due date."
   }),
   budget: z.number({}),
   contactMessage: z.string().min(2, {
@@ -94,23 +101,28 @@ export function ProjectContactForm() {
   const [projectBudget, setProjectBudget] = useState<number>(300);
 
     // Defines the form
-    const form = useForm<z.infer<typeof formSchema>>({
-      resolver: zodResolver(formSchema),
+    const form = useForm<z.infer<typeof projectFormSchema>>({
+      resolver: zodResolver(projectFormSchema),
       defaultValues: {
         firstName: "",
         lastName: "",
         businessName: "",
         email: "",
         services: ["product-stategy", "web-app-design"],
+        dateRange: {
+          from: new Date(),
+          to: new Date(),
+        },
         contactMessage: "",
       },
-    })
+    });
 
     // Defines the submit handler.
-    function onSubmit(values: z.infer<typeof formSchema>) {
+    function onSubmit(values: z.infer<typeof projectFormSchema>) {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
         console.log(values)
+        toast.success("Data successfully submitted!")
     }
     
     return (
@@ -204,7 +216,7 @@ export function ProjectContactForm() {
                                       ? field.onChange([...field.value, service.id])
                                       : field.onChange(
                                         field.value?.filter(
-                                          (value) => value !== service.id
+                                          (value:any) => value !== service.id
                                         )
                                       )
                                   }}
@@ -222,41 +234,50 @@ export function ProjectContactForm() {
             />
 
             {/* Project Timeline */}
-            <p className="text-xl font-bold">What is your project timeline?</p>
-            <div className="flex">
               <FormField
                 control={form.control}
-                name="startDate"
+                name="dateRange"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel><p className="text-lg mb-2">Start Date</p></FormLabel>
-                    <Popover>
+                    <FormLabel><p className="text-xl font-bold mb-2">What is your project timeline?</p></FormLabel>
+                    <Popover modal={true}>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
+                            id="date"
                             variant={"outline"}
                             className={cn(
-                              "w-[240px] pl-3 text-left font-normal",
+                              "w-[400px] items-center justify-start text-left text-lg font-normal gap-2",
                               !field.value && "text-muted-foreground"
                             )}
                           >
-                            {field.value ? (
-                              format(field.value, "PPP")
+                            <FaRegCalendar className="h-4 w-4 opacity-50" />
+                            {field.value.from ? (
+                              field.value.to ? (
+                              <>
+                                {format(field.value.from, "LLL dd, yyyy")} -{" "}
+                                {format(field.value.to, "LLL dd, yyyy")}
+                              </>
                             ) : (
+                              format(field.value.from, "LLL dd, yyyy")
+                            )) : (
                               <span>Pick a date</span>
                             )}
-                            <FaRegCalendar className="ml-auto h-4 w-4 opacity-50" />
                           </Button>
                         </FormControl>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
                         <Calendar
-                          mode="single"
-                          selected={field.value}
+                          initialFocus
+                          mode="range"
+                          defaultMonth={field.value.from}
+                          numberOfMonths={2}
+                          selected={{
+                            from: field.value.from!, 
+                            to: field.value.to,
+                          }}
                           onSelect={field.onChange}
-                          disabled={(date) =>
-                            date > new Date() || date < new Date("1900-01-01")
-                          }
+                          disabled={{ dayOfWeek: [0, 6] }}
                           captionLayout="dropdown"
                         />
                       </PopoverContent>
@@ -265,48 +286,6 @@ export function ProjectContactForm() {
                   </FormItem>
                 )}
               />
-            <FormField
-                control={form.control}
-                name="endDate"
-                render={({ field }) => (
-                  <FormItem className="flex flex-col">
-                    <FormLabel><p className="text-lg mb-2">End Date</p></FormLabel>
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <FormControl>
-                          <Button
-                            variant={"outline"}
-                            className={cn(
-                              "w-[240px] pl-3 text-left font-normal",
-                              !field.value && "text-muted-foreground"
-                            )}
-                          >
-                            {field.value ? (
-                              format(field.value, "PPP")
-                            ) : (
-                              <span>Pick a date</span>
-                            )}
-                            <FaRegCalendar className="ml-auto h-4 w-4 opacity-50" />
-                          </Button>
-                        </FormControl>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar
-                          mode="single"
-                          selected={field.value}
-                          onSelect={field.onChange}
-                          disabled={(date) =>
-                            date > new Date() || date < new Date("1900-01-01")
-                          }
-                          captionLayout="dropdown"
-                        />
-                      </PopoverContent>
-                    </Popover>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
 
             {/* Project Budget */}
             <FormField
