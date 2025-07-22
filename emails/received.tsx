@@ -51,7 +51,7 @@ export const Received: React.FC<Readonly<ReceivedProps>> = ({
       </Head>
         <Tailwind>
           <Body>
-            <Container>
+            <Container style={containerStyles}>
               <Section style={headerSection}>
                 <Column align="center">
                   <Img src='https://images.ctfassets.net/7r1ctwpcnyrk/2J8Nazd9YAQTekVQQUnFtb/02d0182e0089f0586cc40170e3529131/asiaAvatarDark.png' alt="default avatar" width="120" height="120"/>
@@ -69,7 +69,10 @@ export const Received: React.FC<Readonly<ReceivedProps>> = ({
               <Section>
                 <Hr className="border-slate-200" />
                 <Section style={signatureSection}>
+                  <Heading as="h2" style={signatureHeader}>Asia Thompson</Heading>
+                  <Text style={bodyText}>Digital Product Designer & Full-Stack Developer</Text>
                   <Row>
+                    
                     <Column style={footerLeftColumn}>
                       <Img
                         alt="Asia Thompson Logo"
@@ -79,9 +82,8 @@ export const Received: React.FC<Readonly<ReceivedProps>> = ({
                         src="https://images.ctfassets.net/7r1ctwpcnyrk/1THnD20e0AfFmsmSbgh2oz/8f70ff5a2b74338d0ac9ddd6e320352f/profile-pic.png"
                       />
                     </Column>
+                    
                     <Column align="left" className="table-cell align-bottom">
-                      <Heading as="h2" style={signatureHeader}>Asia Thompson</Heading>
-                      <Text style={bodyText}>Digital Product Designer & Full-Stack Developer</Text>
                       <Text className="text-slate-700" style={footerText}>Based out of Henderson, NV & Anaheim, CA</Text>
                       <Text className="text-slate-700" style={footerText}>@asiaIsOnline</Text>
                       <Row className="table-cell h-[40px] w-[56px] align-center">
@@ -139,18 +141,32 @@ export const Received: React.FC<Readonly<ReceivedProps>> = ({
 
 export default Received
 
+  const containerStyles = {
+    width: '648px',
+    maxWidth: '100%',
+    border: '1px solid #eee',
+    borderRadius: '5px',
+    boxShadow: '0 5px 10px rgba(20,50,70,.2)',
+    paddingLeft: '24px',
+    paddingRight: '24px',
+    paddingTop: '24px',
+    marginTop: '24px',
+    marginBottom: '48px'
+  }
+
   const headerSection = {
     backgroundColor: '#4E4AB7',
     color: '#F5F5F5',
-    paddingLeft: '24px',
-    paddingRight: '24px',
+    paddingLeft: '16px',
+    paddingRight: '16px',
     paddingTop: '24px' 
   }
 
   const bodySection = {
     paddingTop: '24px',
     paddingBottom: '24px',
-    paddingLeft: '24px',
+    paddingLeft: '16px',
+    paddingRight: '16px',
     fontSize: '16px',
   }
 
@@ -165,13 +181,14 @@ export default Received
   const signatureSection = {
     paddingTop: '24px',
     paddingBottom: '48px',
-    paddingLeft: '32px',
+    paddingLeft: '16px',
     paddingRight: '16px',
     backgroundColor: '#F5F5F5',
   }
 
   const footerLeftColumn = {
-    width: "160px",
+    width: '120px',
+    paddingRight: '24px',
   }
 
   const footerText = {
