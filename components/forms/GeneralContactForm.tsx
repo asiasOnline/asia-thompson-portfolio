@@ -49,26 +49,31 @@ export function GeneralContactForm() {
 
     // Defines the submit handler.
     const onSubmit = async (values: z.infer<typeof GeneralContact>) => {
-        console.log("Submitting:", values)
         const payload = JSON.stringify(values);
-        console.log("JSON.stringify result:", payload)
         try {
-          const res = await fetch('http://localhost:3000/api/generalContacts', {
-            method: "POST",
-            headers: {
-              "Content-type": "application/json",
-            },
-            body: payload
-          })
+          const [contactRes, emailRes] = await Promise.all([
+            fetch("api/generalContacts", {
+              method: "POST",
+              headers: {"Content-type": "application/json"},
+              body: payload
+            }),
+            fetch("api/emails", {
+              method: "POST",
+              headers: {"Content-type": "application/json"},
+              body: payload
+            }),
+          ])
 
-          if (res.ok) {
+          if (contactRes.ok && emailRes.ok) {
             toast.success("Message recieved!");
             form.reset();
           } else {
+            if (!contactRes.ok) console.error("Contact route failed");
+            if (!emailRes.ok) console.error("Email route failed")
             toast.error("Something went wrong.");
           }
         } catch (error) {
-          console.error("Fetch error", error);
+          console.error("Unexpected error:", error);
           toast.error("Failed to send message. Please try again later.");
           }
         }
@@ -143,9 +148,6 @@ export function GeneralContactForm() {
               variant="default" 
               type="submit" 
               className="gap-4 font-bold tracking-wide p-6"
-              onClick={async () => {
-                await fetch('api/emails', { method: "POST"});
-              }}
               >
                 <TbMail className="w-6 h-6"/>Send Message
               </Button>

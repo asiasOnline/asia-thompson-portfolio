@@ -69,7 +69,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className='w-auto flex justify-center'>
-                <p className='2xl:w-96 text-lg md:text-xl 2xl:text-2xl 2xl:self-end'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Henderson. Nevada.</p>
+                <p className='w-full 2xl:w-96 text-lg md:text-xl 2xl:text-2xl 2xl:self-end'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Henderson. Nevada.</p>
               </div>
             </div>
 

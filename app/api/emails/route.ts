@@ -1,23 +1,24 @@
-import { ReceivedEmail } from '../../../emails/received'
+import { Received } from '../../../emails/Received'
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-export async function POST() {
+export async function POST(req: Request) {
+    const body = await req.json();
+    console.log("Email Body:", body)
+    const { firstName, lastName, email, contactMessage } = body
+
     try {
-        const { data, error } = await resend.emails.send({
-          from: 'Acme <onboarding@resend.dev>',
-          to: ['asiasatwork@gmail.com'],
-          subject: 'Hello There',
-          react: ReceivedEmail({ fullName: 'John Smith' }),
+        const { data } = await resend.emails.send({
+          from: 'asiaIsOnline <onboarding@resend.dev>',
+          to: [email],
+          subject: 'Thanks For Reaching Out!',
+          react: Received({ firstName: firstName }),
         });
-    
-        if (error) {
-          return Response.json({ error }, { status: 500 });
-        }
-    
+
         return Response.json(data);
       } catch (error) {
+        console.log("Resend error:", error)
         return Response.json({ error }, { status: 500 });
       }
 }

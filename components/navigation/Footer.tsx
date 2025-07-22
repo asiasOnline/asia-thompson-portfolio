@@ -16,12 +16,12 @@ const Footer = () => {
       {/*Logo*/}
         <div className="w-32 2xl:w-40 relative h-auto">
             <img 
-              src="/asia-thompson-logo-dark.svg"  
+              src="/logos/asia-thompson-logo-dark.svg"  
               className="block dark:hidden w-full h-full" 
               alt='dark mode friendly logo'
             />
             <img 
-            src="/asia-thompson-logo.svg"  
+            src="/logos/asia-thompson-logo.svg"  
             className="hidden dark:block w-full h-full" 
             alt='default light mode friendly logo'
             />

@@ -4,12 +4,12 @@ const HeroAvatar = () => {
       return (
         <>
           <img 
-              src="/asiaAvatarLight.png" 
+              src="personal-avatars/asiaAvatarLight.png" 
               className="block dark:hidden w-full h-full" 
               alt='default light mode friendly logo'
             />
             <img 
-            src="/asiaAvatarDark.png"  
+            src="personal-avatars/asiaAvatarDark.png"  
             className="hidden dark:block w-full h-full" 
             alt='dark mode friendly logo'
             />

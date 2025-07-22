@@ -31,7 +31,7 @@ const ProjectHighlights = () => {
       {highlightedProjects.map((project, index) => (
         <div key={project.key} className='flex flex-col xl:flex-row py-24 items-center'>
           {/*Project Details*/}
-          <div className='w-1/3'>
+          <div className='w-full px-8 mb-6 xl:mb-0 xl:px-0 xl:w-1/3'>
             <div className='flex justify-between'>
             <p className='italic'>{project.key}/{highlightedProjects.length}</p>
             <FaLock />
@@ -45,8 +45,9 @@ const ProjectHighlights = () => {
               <h4 className='text-6xl'>{project.title}</h4>
             </div>
             <div className='flex flex-wrap gap-4'>
-              {project.jobTags.map((tag) => {
-                  return <div className='min-w-24 p-2 px-4 rounded-lg border-2 border-black dark:text-black' style={{backgroundColor: `#${project.projectColor}`}}>{tag}</div>
+              {project.jobTags.map((tag, i) => {
+                  return <div 
+                  key={`${project.key}-${tag}-${i}`} className='min-w-24 p-2 px-4 rounded-lg border-2 border-black dark:text-black' style={{backgroundColor: `#${project.projectColor}`}}>{tag}</div>
                 })}
             </div>
             <div>
@@ -69,7 +70,7 @@ const ProjectHighlights = () => {
                         <FaLock className='w-5 h-5 md:w-6 md:h-6'/>
                     </div>
                     <DialogDescription className='pt-3'>
-                        <p className='text-base'>If you have the password to view this case study enter it below. Or, contact me for access.</p>
+                        <p className='text-base'>If you have the password to view this case study enter it below. Or, contact me directly for access.</p>
                     </DialogDescription>
                   </DialogHeader>
                   <div className="grid gap-2">
@@ -91,10 +92,9 @@ const ProjectHighlights = () => {
           </div>
           </div>
           {/*Project Image*/}
-          <div className='w-2/3 flex justify-center'>
-            <div className=''>
+          <div className='w-full xl:w-2/3 flex justify-center'>
+            <div className='px-6 xl:px-0'>
             <Image 
-              key={index}
               src={project.image.src}
               alt={project.image.alt}
               width={720}

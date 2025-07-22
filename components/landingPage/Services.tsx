@@ -7,13 +7,13 @@ import HorizontalScrollCarousel from '../ui/HorizontalScrollCarousel'
 export default function Services() {
   
   return (
-    <div>
+    <div id="services">
       {/* Service Header */}
-        <div id="seviceHeader" className='w-full flex gap-16 justify-center'>
-          <div className='max-w-40 max-h-40'>
+        <div id="seviceHeader" className='w-full flex flex-col xl:flex-row gap-4 xl:gap-16 justify-center content-center items-center'>
+          <div className='w-40 h-40'>
             <HeroAvatar />
           </div>
-          <div className='w-1/3'>
+          <div className='xl:w-1/3'>
             <div className='flex flex-col justify-center'>
               <div>
               <h3 className='text-6xl text-center'>Tailored Solutions to</h3>

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const highlightedProjects = [
       { 
       key: "1",
