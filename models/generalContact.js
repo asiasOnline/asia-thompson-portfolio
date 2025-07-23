@@ -2,10 +2,10 @@ import mongoose, { Schema } from "mongoose";
 
 const generalContactSchema = new Schema (
     {
-        firstName: String,
-        lastName: String,
-        email: String,
-        contactMessage: String
+        firstName: { type: String, required: true },
+        lastName: { type: String, required: true },
+        email: { type: String, required: true },
+        contactMessage: { type: String, required: true }
     }, {
         timestamps: true,
     }

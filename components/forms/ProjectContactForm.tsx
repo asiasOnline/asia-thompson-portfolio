@@ -1,5 +1,4 @@
 "use client"
-import { useState } from "react"
 import { useForm, UseFormRegister, FieldError } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -26,7 +25,7 @@ import { Slider } from "@/components/ui/Slider"
 import { Checkbox } from "@/components/ui/Checkbox"
 import { Textarea } from "@/components/ui/Textarea"
 
-import { toast } from "sonner"
+import { Toaster, toast } from "sonner"
 import { TbMail } from "react-icons/tb";
 import { FaRegCalendar } from "react-icons/fa";
 
@@ -57,75 +56,106 @@ const services = [
   },
 ] as const 
 
-const projectFormSchema = z.object({
-  firstName: z.string().min(1, {
-    message: "First name is required.",
-  }),
-  lastName: z.string().min(2, {
-    message: "Last name is required.",
-  }),
-  businessName: z.string().min(2, {
-    message: "Business name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Invalid email address"
-  }),
-  services: z.array(z.string()).refine((value) => value.some((service) => service), {
-    message: "Please select at least one service."
-  }),
-  dateRange: z.object(
+const ProjectContact = z.object({
+  firstName: z
+  .string()
+  .min(1, { message: "First name is required." }),
+  
+  lastName: z
+  .string()
+  .min(2, { message: "Last name is required." }),
+  
+  businessName: z
+  .string()
+  .min(2, { message: "Business name must be at least 2 characters." }),
+  
+  email: z
+  .string()
+  .email({ message: "Invalid email address" }),
+  
+  services: z
+  .array(z.string())
+  .min(1, { message: "Please select at least one service." })
+  .max(3, { message: "Please limit a project request to 3 services. "}),
+  
+  dateRange: z
+  .object(
     {
-      from: z.date({
-        required_error: "A start date is required."
-      }),
-      to: z.date({
-        required_error: "A end date is required."
-      }),
+      from: z.date({ required_error: "A start date is required." }),
+      to: z.date({ required_error: "A end date is required." }),
     },
     {
       required_error: "Select a date range"
     }
-  ).refine((data) => data.from < data.to, {
+  )
+  .refine((data) => data.from < data.to, {
     path: ["dateRange"],
     message: "The start date cannot come after the due date."
   }),
-  budget: z.number({}),
-  contactMessage: z.string().min(2, {
-    message: "The message must be at least 2 characters long."
-  }).max(10000, {
-    message: "The message cannot be longer than 1,000 characters."
-  }),
+
+  budget: z
+  .number({}),
+
+  contactMessage: z
+  .string()
+  .min(2, { message: "The message must be at least 2 characters long." })
+  .max(10000, { message: "The message cannot be longer than 1,000 characters." }),
 })
 
 export function ProjectContactForm() {
-  const [projectBudget, setProjectBudget] = useState<number>(300);
 
     // Defines the form
-    const form = useForm<z.infer<typeof projectFormSchema>>({
-      resolver: zodResolver(projectFormSchema),
+    const form = useForm<z.infer<typeof ProjectContact>>({
+      resolver: zodResolver(ProjectContact),
       defaultValues: {
         firstName: "",
         lastName: "",
         businessName: "",
         email: "",
-        services: ["product-stategy", "web-app-design"],
+        services: [],
         dateRange: {
           from: new Date(),
           to: new Date(),
         },
+        budget: 300,
         contactMessage: "",
       },
     });
 
     // Defines the submit handler.
-    function onSubmit(values: z.infer<typeof projectFormSchema>) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
-        toast.success("Data successfully submitted!")
+    const onSubmit = async (values: z.infer<typeof ProjectContact>) => {
+      const payload = JSON.stringify(values);
+      try {
+        const [contactRes, emailRes] = await Promise.all([
+          fetch("api/projectContacts", {
+            method: "POST",
+            headers: {"Content-type": "application/json"},
+            body: payload
+          }),
+          fetch("api/emails/project", {
+            method: "POST",
+            headers: {"Content-type": "application/json"},
+            body: payload
+          }),
+        ])
+
+        if (contactRes.ok && emailRes.ok) {
+          toast.success("Message recieved!");
+          form.reset();
+        } else {
+          if (!contactRes.ok) console.error("Contact route failed");
+          if (!emailRes.ok) console.error("Email route failed")
+          toast.error("Something went wrong.");
+        }
+      } catch (error) {
+        console.error("Unexpected error:", error);
+        toast.error("Failed to send message. Please try again later.");
+        }
     }
     
     return (
+      <>
+        <Toaster richColors position="top-right" />
         <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           {/* First Name Field */}
@@ -195,7 +225,7 @@ export function ProjectContactForm() {
               render={() => (
                 <FormItem>
                   <FormLabel><p className="text-xl font-bold mb-2">What services are you looking for?</p></FormLabel>
-                  <p className="text-md">Max of 3 services per project.</p>
+                  <p className="text-md">Select at least 1 and a max of 3 services per project.</p>
                   <div className="flex items-start flex-col mt-2">
                     {services.map((service) => (
                       <FormField 
@@ -211,14 +241,14 @@ export function ProjectContactForm() {
                               <FormControl>
                                 <Checkbox 
                                   checked={field.value?.includes(service.id)}
+                                  disabled={
+                                    !field.value?.includes(service.id) && field.value?.length >= 3
+                                  }
                                   onCheckedChange={(checked) => {
-                                    return checked
+                                    if (checked && field.value.length >= 3) return;
+                                    checked
                                       ? field.onChange([...field.value, service.id])
-                                      : field.onChange(
-                                        field.value?.filter(
-                                          (value:any) => value !== service.id
-                                        )
-                                      )
+                                      : field.onChange(field.value?.filter((value:any) => value !== service.id))
                                   }}
                                 />
                               </FormControl>
@@ -291,17 +321,17 @@ export function ProjectContactForm() {
             <FormField
             control={form.control}
             name="budget"
-            render={() => (
+            render={( {field} ) => (
                 <FormItem>
                   <FormLabel><p className="text-xl font-bold">What is your project's budget?</p></FormLabel>
                 <FormControl className="mt-4">
                     <div>
-                      <p className="text-center mb-3">${projectBudget}</p>
+                      <p className="text-center mb-3">${field.value}</p>
                     <div className="flex gap-2">
                       <p>$300</p>
                       <Slider 
-                      value={[projectBudget]}
-                      onValueChange={(val : any) => setProjectBudget(val)}
+                      value={[field.value]}
+                      onValueChange={(val : any) => field.onChange(val[0])}
                       defaultValue={[300]} 
                       min={300}
                       max={10000} 
@@ -335,13 +365,11 @@ export function ProjectContactForm() {
               variant="default" 
               type="submit" 
               className="gap-4 font-bold tracking-wide p-6"
-              onClick={async () => {
-                await fetch('api/emails', { method: "POST"});
-              }}
               >
                 <TbMail className="w-6 h-6"/>Send Message
               </Button>
         </form>
         </Form>
+      </>
     )
 }

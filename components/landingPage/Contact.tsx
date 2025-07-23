@@ -20,8 +20,9 @@ const Contact = () => {
 
   return (
     <div id="contact">
-        <div className='mx-8 xl:mx-0 xl:ml-32 2xl:ml-96'>
-              <h3 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-6xl 2xl:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
+      {/*Title*/}
+        <div className='mx-8 lg:mx-auto md:ml-20 lg:ml-32 2xl:ml-96'>
+              <h3 className="relative inline-block text-4xl sm:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
             {/* Stroke Layer (behind) */}
             <span className="absolute inset-0 text-stroke-md xl:text-stroke-lg dark:text-stroke-white z-0">
               Let's Work Together!

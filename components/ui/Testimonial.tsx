@@ -7,14 +7,18 @@ interface TestimonialProps {
     avatarSrc: string;
     alt: string;
     role: string;
+    bgColor: string;
     company: string;
     testimonialText: string | React.ReactNode;
 }
 
-const Testimonial: React.FC<TestimonialProps> = ({i, providerName, avatarSrc, alt, role, company, testimonialText}) => {
+const Testimonial: React.FC<TestimonialProps> = ({i, providerName, avatarSrc, alt, role, bgColor, company, testimonialText}) => {
   return (
     <div className='h-screen sticky top-0 flex items-center justify-center'>
-      <div className='w-full xl:w-4/5 2xl:w-3/5 mx-12 px-14 py-14 xl:mx-0 xl:h-[600px] relative origin-top flex flex-col items-center justify-center gap-8 border border-black bg-white rounded-lg  dark:border-white dark:bg-black' style={{top:`calc(-5vh + ${i * 24}px)`}}>
+      <div 
+      className='w-full xl:w-4/5 2xl:w-3/5 mx-12 px-14 py-14 xl:mx-0 xl:h-[600px] relative origin-top flex flex-col items-center justify-center gap-8 border border-black bg-white rounded-lg  dark:border-white dark:bg-black' 
+      style={{backgroundColor: `${bgColor}`, top:`calc(-5vh + ${i * 24}px)`}}
+      >
         <div className='text-lg'>{testimonialText}</div>
         <div className='flex items-center gap-6'>
           <div>
@@ -23,7 +27,7 @@ const Testimonial: React.FC<TestimonialProps> = ({i, providerName, avatarSrc, al
             alt={alt}
             width={100}
             height={100}
-            className='border-2 border-black rounded-full'
+            className='border-2 border-black dark:border-white rounded-full'
             />
           </div>
           <div className=''>

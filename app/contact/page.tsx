@@ -22,10 +22,10 @@ const ContactPage = () => {
     })
   
     return (
-      <div id="contact">
+      <div id="contact" className='bg-white'>
         <Navbar />
-          <div className='mt-8 xl:ml-32 2xl:ml-96'>
-                <h3 className="relative inline-block text-4xl sm:text-6xl md:text-7xl lg:text-6xl 2xl:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
+        <div className='mx-8 lg:mx-auto md:ml-20 lg:ml-40 2xl:ml-96'>
+                <h3 className="relative inline-block text-4xl sm:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
               {/* Stroke Layer (behind) */}
               <span className="absolute inset-0 text-stroke-md xl:text-stroke-lg dark:text-stroke-white z-0">
                 Let's Work Together!
@@ -42,10 +42,10 @@ const ContactPage = () => {
               </span>
             </h3>
           </div>
-          <div className='flex flex-col xl:flex-row max-w-7xl mx-auto'>
+          <div className='flex flex-col xl:flex-row max-w-7xl mx-auto gap-8 xl:gap-0'>
             
             {/*Availability*/}
-            <div className='w-1/2 flex flex-col'>
+            <div className='w-full xl:w-1/2 flex flex-col'>
               
               <div className='flex mt-8 gap-10 justify-center items-center text-center'>
                 <div className='w-48 h-48 scale-x-[-1]'>
@@ -64,7 +64,7 @@ const ContactPage = () => {
             </div>
   
             {/*Contact Form*/}
-            <div className='border-l w-1/2 pl-12'>
+            <div className='mx-auto w-full lg:w-1/2 xl:pl-12 xl:border-l'>
             <Tabs defaultValue="project" className="w-[450px]">
               <TabsList>
                 <TabsTrigger value="project">

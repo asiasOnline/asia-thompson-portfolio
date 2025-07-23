@@ -68,9 +68,11 @@ const tools = [
 const About = () => {
 
   return (
-    <div id="about" className='my-20'>
-        <div className='relative w-full overflow-x-hidden'>
+    <div id="about" className='max-w-[1920px] mx-auto my-20 px-10'>
+        <div className=' relative w-full overflow-y-visible'>
+          
           {/*Background Gradient*/}
+          <div className='absolute inset-0'>
           <div className='absolute top-1/3 -left-4 w-40 h-40 md:w-2/3 md:h-2/3 bg-steelPink rounded-full filter blur-2xl opacity-25 animate-gradientAnimation
             dark:mix-blend-screen dark:opacity-35'></div>
             <div className='
@@ -79,11 +81,12 @@ const About = () => {
             <div className='
             absolute top-0 right-0 w-40 h-40 md:w-2/3 md:h-2/3 bg-fountainBlue rounded-full mix-blend-multiply filter blur-2xl opacity-25 animate-gradientAnimation animation-delay-4000
             dark:mix-blend-screen dark:opacity-35'></div>
+          </div>
 
           {/*About Section Grid*/}
-          <BentoGrid className="relative max-w-7xl mx-auto lg:px-6 xl:mx-12 md:auto-rows-[5rem] lg:auto-rows-[8rem] xl:auto-rows-[8rem] gap-y-4 gap-x-4 z-10" >
+          <BentoGrid className="relative max-w-7xl mx-auto lg:px-6 md:auto-rows-[5rem] lg:auto-rows-[8rem] xl:auto-rows-[8rem] gap-y-4 gap-x-4 z-10" >
             {/*Bio Card*/}
-            <AboutCard className='p-6 md:p-10 col-span-6 lg:col-span-2 xl:col-span-3 row-span-2'>
+            <AboutCard className='p-6 md:p-10 col-span-6 lg:col-span-3 row-span-2'>
                 <h3 className='text-2xl font-bold tracking-wider '>Bio</h3>
                 <p className='text-lg'>As a UX/UI designer and full-stack developer I have and continue to have a passion for design and development fueled be a personal desire for learning and self-improvement.</p>
             </AboutCard>
@@ -137,17 +140,17 @@ const About = () => {
             </AboutCard>
 
             {/*Born & Raised Card*/}
-            <AboutCard className='p-10 col-span-6 md:col-span-3 lg:col-span-2 row-span-2'>
+            <AboutCard className='p-10 col-span-6 md:col-span-3 lg:col-span-4 xl:col-span-2 row-span-2'>
               <h3 className='text-2xl font-bold tracking-wider'>Born & Raised</h3>
               <p>As a Cali girl I&apos;m used to perfect weather, crowded cities, and PST time, but I can work with any time zone.</p>
             </AboutCard>
 
             {/*Sun & Building Card*/}
-            <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-start-5 xl:col-span-1 xl:col-start-5 xl:row-start-5'>
+            <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-span-3 xl:row-span-1 lg:col-start-5 xl:col-span-1 xl:col-start-5 xl:row-start-5'>
               <div className='p-2 mx-auto w-24 h-24 md:w-32 md:h-32 xl:w-24 xl:h-24'><Sun /></div>
             </AboutCard>
 
-            <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-start-5 xl:col-span-1 xl:col-start-6 xl:row-start-5'>
+            <AboutCard className='col-span-3 md:col-span-2 md:row-span-2 lg:row-span-1 lg:col-span-3 xl:row-span-1 lg:col-start-5 xl:col-span-1 xl:col-start-6 xl:row-start-5'>
             <div className='p-2 mx-auto w-24 h-24 md:w-32 md:h-32 xl:w-24 xl:h-24'><Building /></div>
             </AboutCard>
 

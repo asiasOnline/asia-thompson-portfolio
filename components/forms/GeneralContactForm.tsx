@@ -19,20 +19,23 @@ import { Toaster, toast } from "sonner"
 import { TbMail } from "react-icons/tb";
 
 const GeneralContact = z.object({
-  firstName: z.string().min(2, {
-    message: "First name is required.",
-  }),
-  lastName: z.string().min(2, {
-    message: "Last name is required.",
-  }),
-  email: z.string().email().min(2, {
-    message: "Valid email required.",
-  }),
-  contactMessage: z.string().min(2, {
-    message: "Message required."
-  }).max(10000, {
-    message: "The message cannot be longer than 1,000 characters."
-  }),
+  firstName: z
+  .string()
+  .min(2, { message: "First name is required.", }),
+  
+  lastName: z
+  .string()
+  .min(2, { message: "Last name is required.", }),
+  
+  email: z
+  .string()
+  .email()
+  .min(2, { message: "Valid email required.", }),
+  
+  contactMessage: z
+  .string()
+  .min(2, { message: "Please include a message." })
+  .max(10000, { message: "The message cannot be longer than 1,000 characters."}),
 })
 
 export function GeneralContactForm() {
@@ -57,7 +60,7 @@ export function GeneralContactForm() {
               headers: {"Content-type": "application/json"},
               body: payload
             }),
-            fetch("api/emails", {
+            fetch("api/emails/general", {
               method: "POST",
               headers: {"Content-type": "application/json"},
               body: payload
@@ -135,7 +138,7 @@ export function GeneralContactForm() {
               name="contactMessage"
               render={({ field }) => (
                   <FormItem>
-                    <FormLabel><p className="text-xl font-bold mb-2">Message</p></FormLabel>
+                    <FormLabel><p className="text-xl font-bold mb-2">Message *</p></FormLabel>
                     <p className="text-md">Without sharing any private details, please provide a brief description and how I can help.</p>
                   <FormControl className="mt-2">
                       <Textarea placeholder="Offer further explanation as needed..." {...field} />
