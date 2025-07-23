@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { Button } from "@/components/ui/Button";
 import ThemeButton from '../ui/ThemeButton';
 import Location from '../ui/Location';
@@ -22,8 +23,10 @@ const timeFormatter = new Intl.DateTimeFormat('en-US', {
   */}
 
 const Navbar = () => {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const { scrollY } = useScroll();
+  const priorYRef = useRef(0);
 
   const toggleOff = () => {
     setIsMenuOpen(false);
@@ -37,14 +40,35 @@ const Navbar = () => {
     {name: "Contact", link: "/contact", newTab: false}
 ]
 
-const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
+  useMotionValueEvent(scrollY, 'change', (y) => {
+    const yDifference = y - priorYRef.current;
+    if (Math.abs(yDifference) > 50) {
+      setIsHidden(yDifference > 0); 
+    }
+
+    priorYRef.current = y;
+  });
 
   return (
-    <div>
+    <>
       {/*Extended Navbar*/}
-      <div className='w-full max-w-[1920px] sticky top-0 mx-auto pt-6 px-4 md:px-12 lg:px-24 xl:px-24 xl:pt-10 flex justify-between items-center z-40'>
+      <motion.div 
+        variants={{
+          hidden: {
+            y: "-90%",
+          },
+          visible: {
+            y: "0%",
+          }
+        }}
+        animate={isHidden ? "hidden" : "visible"}
+        whileHover="visible"
+        transition={{
+          duration: 0.2,
+        }}
+        className='w-full max-w-[1920px] sticky top-0 mx-auto pt-6 px-4 md:px-12 lg:px-16 xl:px-16 py-6 xl:py-8 flex justify-between items-center z-40 bg-white dark:bg-black'>
         {/*Logo*/}
-        <div className='w-1/3 md:w-1/6 lg:w-32'>
+        <div className='w-auto'>
           <Link href="/">
           <div className="w-24 m:w-32 2xl:w-40 relative h-auto">
             <img 
@@ -71,7 +95,7 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
           >
             {isMenuOpen ? <CgClose className='w-6 h-6 2xl:w-8 2xlh-8'/> : <SlMenu className='w-6 h-6 2xlw-8 2xlh-8'/>}
           </Button>
-          <nav className={isMenuOpen ? `absolute top-[125%] right-20 flex flex-col ${defaultNavbarStyle}` : `hidden`}>
+          <nav className={isMenuOpen ? `absolute top-[50%] left-[38%] mt-24 text-8xl flex flex-col lg:flex gap-12 font-bold uppercase tracking-wider` : `hidden`}>
             {
                 Links.map((link) => (
                   <Link key={link.name} href={link.link} legacyBehavior passHref> 
@@ -88,11 +112,11 @@ const defaultNavbarStyle = `lg:flex gap-10 font-bold uppercase tracking-wider`
             }
           </nav>
         </div>
-      </div> 
-      <div className={ isMenuOpen ? `fixed w-screen xl:w-1/3 h-9/10 top-0 right-0 bg-white border-black border-l border-b opacity-100 z-30 dark:bg-black dark:border-white` : `hidden`}>
+      </motion.div> 
+      <div className={ isMenuOpen ? `fixed w-full h-full top-0 right-0 bg-white opacity-100 z-30 dark:bg-black dark:border-white` : `hidden`}>
 
       </div> 
-    </div>
+    </>
   )
 }
 

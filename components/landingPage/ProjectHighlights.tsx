@@ -29,7 +29,7 @@ const ProjectHighlights = () => {
     <div id="projectHighlights" className='w-full px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 2xl:mb-20 flex flex-col items-center'>
           <div className='w-full h-auto gap-20 gap-lg-0 flex flex-col justify-between border-black '>
       {highlightedProjects.map((project, index) => (
-        <div key={project.key} className='flex flex-col xl:flex-row py-24 items-center'>
+        <div key={project.key} className='flex flex-col xl:flex-row gap-10 py-24 items-center'>
           {/*Project Details*/}
           <div className='w-full px-8 mb-6 xl:mb-0 xl:px-0 xl:w-1/3'>
             <div className='flex justify-between'>

@@ -55,7 +55,7 @@ const Hero = () => {
         <div className='pt-10 pb-5 xl:mx-10 2xl:m-0 flex flex-col items-center gap-6 2xl:gap-12'>
           
             {/*Intro & Avatar Header*/}
-            <div className='w-full flex flex-col xl:flex-row items-center xl:justify-center gap-6 2xl:gap-8'>
+            <div className='w-full flex flex-col lg:flex-row items-center lg:justify-center gap-6 2xl:gap-8'>
               <div className='w-auto text-center'>
                 <motion.p 
                 className='text-center text-lg md:text-xl 2xl:text-2xl'

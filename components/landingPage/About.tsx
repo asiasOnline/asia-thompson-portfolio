@@ -69,7 +69,7 @@ const About = () => {
 
   return (
     <div id="about" className='my-20'>
-        <div className='relative w-full'>
+        <div className='relative w-full overflow-x-hidden'>
           {/*Background Gradient*/}
           <div className='absolute top-1/3 -left-4 w-40 h-40 md:w-2/3 md:h-2/3 bg-steelPink rounded-full filter blur-2xl opacity-25 animate-gradientAnimation
             dark:mix-blend-screen dark:opacity-35'></div>
@@ -81,9 +81,9 @@ const About = () => {
             dark:mix-blend-screen dark:opacity-35'></div>
 
           {/*About Section Grid*/}
-          <BentoGrid className="relative max-w-7xl mx-auto md:auto-rows-[5rem] lg:auto-rows-[8rem] xl:auto-rows-[8rem] gap-y-4 gap-x-4 z-10" >
+          <BentoGrid className="relative max-w-7xl mx-auto lg:px-6 xl:mx-12 md:auto-rows-[5rem] lg:auto-rows-[8rem] xl:auto-rows-[8rem] gap-y-4 gap-x-4 z-10" >
             {/*Bio Card*/}
-            <AboutCard className='p-6 md:p-10 col-span-6 lg:col-span-3 row-span-2'>
+            <AboutCard className='p-6 md:p-10 col-span-6 lg:col-span-2 xl:col-span-3 row-span-2'>
                 <h3 className='text-2xl font-bold tracking-wider '>Bio</h3>
                 <p className='text-lg'>As a UX/UI designer and full-stack developer I have and continue to have a passion for design and development fueled be a personal desire for learning and self-improvement.</p>
             </AboutCard>
