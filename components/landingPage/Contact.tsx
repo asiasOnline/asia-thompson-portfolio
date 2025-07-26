@@ -44,8 +44,8 @@ const Contact = () => {
           {/*Availability*/}
           <div className='w-full xl:w-1/2 flex flex-col'>
             
-            <div className='flex mt-8 gap-10 justify-center items-center text-center'>
-              <div className='w-48 h-48 scale-x-[-1]'>
+            <div className='flex flex-col md:flex-row mt-8 gap-4 md:gap-10 justify-center items-center text-center'>
+              <div className='w-32 h-32 md:w-48 md:h-48 scale-x-[-1]'>
                 <HeroAvatar />
               </div>
               <div className='flex flex-col max-w-60 gap-6'>

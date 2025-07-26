@@ -7,7 +7,7 @@ const highlightedProjects = [
       jobTags: ["Branding", "Web Design"],
       projectColor: "e3eadd",
       description: "Branding and web design for a holistic healing practioner. The project included a full visual direction, from logo and color palette to typography and image selection as well as a landing page.",
-      locked: false,
+      locked: true,
       image: {
         src: "/project-assets/holistic-hands-project-cover.png", 
         alt: "reiki healing website project cover",
@@ -66,7 +66,7 @@ const highlightedProjects = [
       industry: "Ecommerce",
       jobTags: ["Web Design", "Web Development"],
       projectColor: "CABDF6",
-      description: "Lorem ipsum dolor sit amet consectetur. Lacus velit mi vitae mi amet est orci leo eget. Arcu faucibus nam pulvinar venenatis amet in scelerisque.",
+      description: "Design and development for a whimsical florist website featuring an balanced layout, thoughtful animations, and intuitive navigation.",
       locked: true,
       image: {
         src: "/project-assets/mm-florist-project-cover.png", 
@@ -81,7 +81,7 @@ const highlightedProjects = [
       industry: "Real Estate",
       jobTags: ["Web Design", "Web Development"],
       projectColor: "B2D1FB",
-      description: "Lorem ipsum dolor sit amet consectetur. Lacus velit mi vitae mi amet est orci leo eget. Arcu faucibus nam pulvinar venenatis amet in scelerisque.",
+      description: "A sleek, high-end website for a real estate group specializing in luxury properties and experiences for their clients. The result is a polished platform that prioritizes clarity and elegance.",
       locked: true,
       image: {
         src: "/project-assets/dave-dave-project-cover-landscape.png", 

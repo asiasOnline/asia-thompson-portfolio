@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 
 interface TestimonialProps {
@@ -13,11 +13,20 @@ interface TestimonialProps {
 }
 
 const Testimonial: React.FC<TestimonialProps> = ({i, providerName, avatarSrc, alt, role, bgColor, company, testimonialText}) => {
+  const [isMobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => setMobile(window.innerWidth < 1024);
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
+  
   return (
-    <div className='h-screen sticky top-0 flex items-center justify-center'>
+    <div className={`${isMobile ? 'relative' : 'h-screen sticky top-0'} flex items-center justify-center`}>
       <div 
       className='w-full xl:w-4/5 2xl:w-3/5 mx-12 px-14 py-14 xl:mx-0 xl:h-[600px] relative origin-top flex flex-col items-center justify-center gap-8 border border-black bg-white rounded-lg  dark:border-white dark:bg-black' 
-      style={{backgroundColor: `${bgColor}`, top:`calc(-5vh + ${i * 24}px)`}}
+      style={{backgroundColor: `${bgColor}`, top: isMobile ? undefined : `calc(-5vh + ${i * 24}px)`}}
       >
         <div className='text-lg'>{testimonialText}</div>
         <div className='flex items-center gap-6'>

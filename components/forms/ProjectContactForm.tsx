@@ -157,7 +157,7 @@ export function ProjectContactForm() {
       <>
         <Toaster richColors position="top-right" />
         <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="w-screen space-y-8 px-4">
           {/* First Name Field */}
             <FormField
             control={form.control}

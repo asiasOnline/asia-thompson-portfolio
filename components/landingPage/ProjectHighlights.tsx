@@ -64,7 +64,7 @@ const ProjectHighlights = () => {
                     <Button 
                       variant="outline" 
                       onClick={openProject}
-                      className="text-md w-2/5 gap-4 font-bold tracking-wide p-6 border-2 border-black button-shadow-xl dark:bg-black dark:text-white dark:border-white dark:button-shadow-none hover:shadow-none hover:translate-y-2 hover:-translate-x-2"
+                      className="text-md md:w-2/5 gap-4 font-bold tracking-wide p-6 border-2 border-black button-shadow-xl dark:bg-black dark:text-white dark:border-white dark:button-shadow-none hover:shadow-none hover:translate-y-2 hover:-translate-x-2"
                       >View Project
                     </Button>
                     </DialogTrigger>

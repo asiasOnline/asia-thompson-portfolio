@@ -18,7 +18,7 @@ export default function Services() {
               <div>
               <h3 className='text-6xl text-center'>Tailored Solutions to</h3>
             </div>
-            <div>
+            <div className='mx-auto'>
               <h3 className="relative inline-block text-4xl sm:text-6xl md:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
             {/* Stroke Layer (behind) */}
             <span className="absolute inset-0 text-stroke-md xl:text-stroke-lg dark:text-stroke-white z-0">

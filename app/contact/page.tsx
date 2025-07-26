@@ -22,7 +22,7 @@ const ContactPage = () => {
     })
   
     return (
-      <div id="contact" className='bg-white'>
+      <div id="contact" className='bg-white overflow-x-hidden'>
         <Navbar />
         <div className='mx-8 lg:mx-auto md:ml-20 lg:ml-40 2xl:ml-96'>
                 <h3 className="relative inline-block text-4xl sm:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
@@ -46,22 +46,22 @@ const ContactPage = () => {
             
             {/*Availability*/}
             <div className='w-full xl:w-1/2 flex flex-col'>
-              
-              <div className='flex mt-8 gap-10 justify-center items-center text-center'>
-                <div className='w-48 h-48 scale-x-[-1]'>
-                  <HeroAvatar />
+            
+            <div className='flex flex-col md:flex-row mt-8 gap-4 md:gap-10 justify-center items-center text-center'>
+              <div className='w-32 h-32 md:w-48 md:h-48 scale-x-[-1]'>
+                <HeroAvatar />
+              </div>
+              <div className='flex flex-col max-w-60 gap-6'>
+                <h3 className='text-4xl font-bold tracking-wider '>Availability</h3>
+                <div className='flex flex-col'>
+                  <p className='text-lg'>Monday - Friday</p>
+                  <p className='text-lg'>8 A.M. to 5 P.M.</p>
                 </div>
-                <div className='flex flex-col max-w-60 gap-6'>
-                  <h3 className='text-4xl font-bold tracking-wider '>Availability</h3>
-                  <div className='flex flex-col'>
-                    <p className='text-lg'>Monday - Friday</p>
-                    <p className='text-lg'>8 A.M. to 5 P.M.</p>
-                  </div>
-                  <p className='text-center text-lg'>It&apos;s currently <span className='font-bold' suppressHydrationWarning>{time.toLocaleTimeString()}</span> in Henderson, Nevada.
-                  </p>
-                </div>
+                <p className='text-center text-lg'>It&apos;s currently <span className='font-bold' suppressHydrationWarning>{time.toLocaleTimeString()}</span> in Henderson, Nevada.
+                </p>
               </div>
             </div>
+          </div>
   
             {/*Contact Form*/}
             <div className='mx-auto w-full lg:w-1/2 xl:pl-12 xl:border-l'>

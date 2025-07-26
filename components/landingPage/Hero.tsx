@@ -156,7 +156,7 @@ const Hero = () => {
             {/* Sub-Headline */}
             <h1 className="relative inline-block text-3xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-widest 2xl:tracking-wider lg:mt-6">
               {/* Combined Stroke + 3D Shadow Layer */}
-              <span className="absolute inset-0 z-0 text-[#5362F6] text-shadow-3d-hero text-stroke-md">
+              <span className="absolute inset-0 z-0 text-shadow-3d-lg text-stroke-md">
                 Better Products
               </span>
 

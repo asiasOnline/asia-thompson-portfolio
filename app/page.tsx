@@ -92,9 +92,9 @@ export default function Home() {
         */}
 
         {/* Page Content */}
-        <div id="landingPage" className="w-screen min-w-80 2xl:mx-auto bg-white dark:bg-black">
+        <div id="landingPage" className="w-screen 2xl:mx-auto overflow-x-hidden bg-white dark:bg-black">
           <Navbar/>
-          <main className="w-full mx-auto flex flex-col gap-12 md:gap-12">
+          <main className="w-screen mx-auto flex flex-col gap-12 md:gap-12">
             <Hero />
             <ProjectCarousel />
             <Vision />
