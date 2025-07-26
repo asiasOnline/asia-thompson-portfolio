@@ -1,8 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 
-import ProjectHero from '@/components/archive/ProjectHero'
-import ProjectOverview from '@/components/archive/ProjectOverview';
 import ProjectSectionExamples from '@/components/ui/ProjectSectionExamples';
 import { WarmWoodOverviewVideo } from '@/components/ui/VideoAssets';
 import { WarmWoodLogo } from '@/components/ui/ProjectLogoAssets';
@@ -17,41 +15,7 @@ import { FaAngular } from "react-icons/fa6";
 const WarmWoodPage = () => {
   return (
     <>
-      <ProjectHero
-        projectLogo={<WarmWoodLogo />}
-        title={projectTitle}
-        description={projectDescription}
-        caseStudy={true}
-      >
-        <WarmWoodOverviewVideo />
-      </ProjectHero>
-      <div className='flex'>
-      <div className='w-1/5'></div>
-      <ProjectOverview 
-          clientBackground={clientBackround}
-          industryIcon={industryIcon}
-          industryTitle={industryTitle}
-          platformWebsite={true}
-          overviewAsset={
-            <Image
-            src="/warm-wood-overview-img.jpg"
-            alt="Living room illustration"
-            fill
-            style={{objectFit: 'contain'}}
-            />
-          }
-          problemIntro={problemIntro}
-          problemExamples={<ProblemExamples />}
-          solutionIntro={solutionIntro}
-          solutionExamples={<SolutionExamples />}
-          weekNumber={weekNumber}
-          hourTotal={hourTotal}
-          designWeeks={designWeeks}
-          devWeeks={devWeeks}
-          roles={roles}
-          tools={tools}
-        />
-    </div>
+     <h1>Warm Wood</h1>
     </>
   )
 }

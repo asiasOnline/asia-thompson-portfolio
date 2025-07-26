@@ -19,7 +19,7 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@/components/ui/Popover"
 import { Input } from "@/components/ui/Input"
 import { Slider } from "@/components/ui/Slider"
 import { Checkbox } from "@/components/ui/Checkbox"
@@ -323,7 +323,7 @@ export function ProjectContactForm() {
             name="budget"
             render={( {field} ) => (
                 <FormItem>
-                  <FormLabel><p className="text-xl font-bold">What is your project's budget?</p></FormLabel>
+                  <FormLabel><p className="text-xl font-bold">What is your project&apos;s budget?</p></FormLabel>
                 <FormControl className="mt-4">
                     <div>
                       <p className="text-center mb-3">${field.value}</p>

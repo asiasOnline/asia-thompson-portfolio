@@ -28,17 +28,17 @@ const ContactPage = () => {
                 <h3 className="relative inline-block text-4xl sm:text-6xl text-nowrap font-display font-bold tracking-widest mt-2 mb-6">
               {/* Stroke Layer (behind) */}
               <span className="absolute inset-0 text-stroke-md xl:text-stroke-lg dark:text-stroke-white z-0">
-                Let's Work Together!
+                Let&apos;s Work Together!
               </span>
   
               {/* Shadow Layer (middle) */}
               <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow-md">
-                Let's Work Together!
+                Let&apos;s Work Together!
               </span>
   
               {/* Fill Layer (on top) */}
               <span className="relative z-20 text-white">
-                Let's Work Together!
+                Let&apos;s Work Together!
               </span>
             </h3>
           </div>
@@ -57,7 +57,7 @@ const ContactPage = () => {
                     <p className='text-lg'>Monday - Friday</p>
                     <p className='text-lg'>8 A.M. to 5 P.M.</p>
                   </div>
-                  <p className='text-center text-lg'>It's currently <span className='font-bold' suppressHydrationWarning>{time.toLocaleTimeString()}</span> in Henderson, Nevada.
+                  <p className='text-center text-lg'>It&apos;s currently <span className='font-bold' suppressHydrationWarning>{time.toLocaleTimeString()}</span> in Henderson, Nevada.
                   </p>
                 </div>
               </div>
@@ -74,7 +74,7 @@ const ContactPage = () => {
               </TabsList>
               <TabsContent value="project">
                 <div className='my-4 border-b h-20 flex items-center'>
-                  <p>If you have a business project you want to kickstart or one you’re currently working and you need some assistance this is the form for you!</p>
+                  <p>If you have a business project you want to kickstart or one you&apos;re currently working and you need some assistance this is the form for you!</p>
                 </div>
                 <ProjectContactForm />
               </TabsContent>

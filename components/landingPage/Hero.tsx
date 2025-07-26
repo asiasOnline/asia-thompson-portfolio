@@ -1,15 +1,76 @@
-import React from 'react'
-import { motion } from "framer-motion"
-import { PiMapPinLineFill } from "react-icons/pi";
+import React, { useEffect, useRef } from 'react'
+import { gsap } from "gsap"; 
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/Button"
 import HeroAvatar from '../ui/HeroAvatar';
-import ContactLinks from '../ui/ContactLinks';
+import { AuroraText } from "@/components/magicui/aurora-text";
 import { Stars } from '../ui/SVGAssets';
 import Availability from '../ui/Availability';
-import TextMaskAnimation from '../ui/TextMaskAnimation';
-import { LettersPullUp } from '../utilities/LettersPullUp';
+
+gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+  {/*Hero Animations*/}
+  // Reference Variables
+  const headlineRef = useRef<HTMLHeadingElement | null>(null);
+  const tlRef = useRef<gsap.core.Timeline | null>(null);
+  const splitRef = useRef<SplitText | null>(null);
+
+  useEffect(() => {
+    if(!headlineRef.current) return;
+
+    // Kills old SplitText iterations on hot reloads (for dev mode)
+    splitRef.current && splitRef.current.revert();
+
+    // Saves the headline as characters
+    splitRef.current = SplitText.create(headlineRef.current, {type: 'chars',});
+
+    const chars = splitRef.current.chars;
+
+    // Initial Animation
+    const tl = gsap.timeline({ paused: true });
+    let isAnimating = false;
+
+    // Define the Timeline
+    tl.from(chars, {
+      y: 100,
+      autoAlpha: 0,
+      ease: 'back.out(1.7)',
+      duration: 0.5,
+      stagger: 0.05,
+      onStart: () => { isAnimating = true },
+      onComplete: () => { isAnimating = false },
+    });
+
+    tlRef.current = tl;
+
+    // Initial Play
+    tl.play();
+
+    // Rerun on hover
+    const headline = headlineRef.current;
+    const replay = () => {
+      // Blocks rerun until finished
+      if (isAnimating) return;
+
+      gsap.set(chars, {
+        y: 100,
+        autoAlpha: 0
+      });
+      // Reset
+      tl.restart();
+    };
+
+    headline.addEventListener('mouseenter', replay);
+
+    // Cleanup
+    return () => {
+      headline.removeEventListener('mouseenter', replay);
+      splitRef.current && splitRef.current.revert();
+    };
+  }, []);
 
   return (
     <div id="hero" className='w-full 2xl:w-4/5 relative px-4 md:px-16 lg:px-24 xl:px-32 mx-auto flex flex-col gap-6 '>
@@ -57,11 +118,11 @@ const Hero = () => {
             {/*Intro & Avatar Header*/}
             <div className='w-full flex flex-col md:flex-row items-center lg:justify-center gap-6 2xl:gap-8'>
               <div className='w-auto text-center'>
-                <motion.p 
+                <p
                 className='text-center text-lg md:text-xl 2xl:text-2xl'
               >
                 My name is <strong>Asia</strong>.
-              </motion.p>
+              </p>
               </div>
               <div className='w-auto md:w-40 h-auto flex justify-center'>
                 <div className="relative w-28 md:w-32 2xl:w-40 h-auto">
@@ -69,7 +130,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className='w-auto flex justify-center'>
-                <p className='w-full 2xl:w-96 text-lg md:text-xl 2xl:text-2xl 2xl:self-end'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Henderson. Nevada.</p>
+                <p className='w-full 2xl:w-96 text-lg md:text-xl 2xl:text-2xl 2xl:self-end'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Nevada & California.</p>
               </div>
             </div>
 
@@ -77,7 +138,9 @@ const Hero = () => {
             <div className='flex flex-col text-center'>
                {/*Headline*/}
             <div className='gap-4 lg:gap-8 xl:gap-16'>
-              <h1 className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>
+              <h1 
+              ref={headlineRef}
+              className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>
               I Help Creatives Build
               
               </h1>
@@ -90,23 +153,22 @@ const Hero = () => {
               */}
             </div>
 
-            {/*Sub-Headline*/}
+            {/* Sub-Headline */}
             <h1 className="relative inline-block text-3xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-widest 2xl:tracking-wider lg:mt-6">
-            {/* Stroke Layer (behind) */}
-            <span className="absolute inset-0 text-stroke-sm md:text-stroke-md xl:text-stroke-lg dark:text-stroke-white z-0">
-              Better Products
-            </span>
+              {/* Combined Stroke + 3D Shadow Layer */}
+              <span className="absolute inset-0 z-0 text-[#5362F6] text-shadow-3d-hero text-stroke-md">
+                Better Products
+              </span>
 
-            {/* Shadow Layer (middle) */}
-            <span className="absolute inset-0 z-10 text-white dark:text-black text-shadow-sm md:text-shadow-md 2xl:text-shadow-lg">
-              Better Products
-            </span>
-
-            {/* Fill Layer (on top) */}
-            <span className="relative z-20 text-fill-gradient bg-gradient-to-r from-brightBlue via-brightPurple to-brightPink dark:from-brightBlue dark:via-slateBlue dark:to-brightPink">
-              Better Products
-            </span>
-          </h1>
+              {/* Fill Layer (on top) */} 
+              <span className="relative z-10">
+                <AuroraText
+                  colors={["#97E4F8", "#9D99FF", "#FBACA4"]}
+                  speed={100}
+                >Better Products
+                </AuroraText>
+              </span>
+            </h1>
             </div>
            
           {/*Availability & CTA Button*/}
@@ -117,7 +179,7 @@ const Hero = () => {
                 variant="default" 
                 type="submit" 
                 className="text-base 2xl:text-lg min-w-48 2xl:min-w-60  gap-4 font-bold tracking-wide px-5 py-6 border-2 border-ultramarine dark:bg-brightPurple"  
-                >Let's Chat
+                >Let&apos;s Chat
               </Button>
             </div>
           </div>

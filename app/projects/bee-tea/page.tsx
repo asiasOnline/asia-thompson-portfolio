@@ -7,52 +7,15 @@ import { MdEmojiFoodBeverage } from "react-icons/md";
 import { CgDesignmodo, CgFigma } from 'react-icons/cg';
 import { SiTailwindcss, SiReact, SiTypescript, SiShopify } from 'react-icons/si';
 
-import ProjectHero from '@/components/archive/ProjectHero'
 import { BeeTeaOverviewVideo } from '@/components/ui/VideoAssets';
 import { BeeTeaLogo } from '@/components/ui/ProjectLogoAssets';
-import ProjectOverview from '@/components/archive/ProjectOverview';
 import ProjectSectionExamples from '@/components/ui/ProjectSectionExamples';
 import { TopThreeTier, HeartChat, AlertScreen, ThreeStarScreen, SmileyFaceChat, WindowSettingsScreen } from '@/components/ui/SVGAssets';
 
 const BeeTeaPage = () => {
   return (
     <>
-      <ProjectHero
-        projectLogo={<BeeTeaLogo />}
-        title={projectTitle}
-        description={projectDescription}
-        caseStudy={true}
-      >
-        <BeeTeaOverviewVideo />
-      </ProjectHero>
-
-    <div className='flex'>
-      <div className='w-1/5'></div>
-      <ProjectOverview 
-          clientBackground={clientBackround}
-          industryIcon={industryIcon}
-          industryTitle={industryTitle}
-          platformWebsite={true}
-          overviewAsset={
-            <Image
-            src="/bee-tea-overview-img.jpg"
-            alt="Woman beekeeping"
-            fill
-            style={{objectFit: 'contain'}}
-            />
-          }
-          problemIntro={problemIntro}
-          problemExamples={<ProblemExamples />}
-          solutionIntro={solutionIntro}
-          solutionExamples={<SolutionExamples />}
-          weekNumber={weekNumber}
-          hourTotal={hourTotal}
-          designWeeks={designWeeks}
-          devWeeks={devWeeks}
-          roles={roles}
-          tools={tools}
-        />
-    </div>
+      <h1>Bee & Tea</h1>
     </>
   )
 }

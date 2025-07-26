@@ -15,6 +15,7 @@ const Testimonials = () => {
                 avatarSrc={testimonial.avatarSrc}
                 alt={testimonial.alt}
                 role={testimonial.role}
+                bgColor={testimonial.bgColor}
                 company={testimonial.company}
                 testimonialText={testimonial.testimonialText}
               />

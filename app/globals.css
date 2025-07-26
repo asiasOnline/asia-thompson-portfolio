@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   overflow-x: hidden;
   font-family: var(--font-figtree);
@@ -57,6 +56,10 @@ h1, h2, h3, h4, h5, h6 {
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
   }
+  .theme {
+    --animate-aurora: aurora 8s ease-in-out infinite alternate;
+    --animate-gradient: gradient 8s linear infinite;
+  }
 }
 
 @layer utilities {
@@ -67,24 +70,20 @@ h1, h2, h3, h4, h5, h6 {
   .animation-delay-4000 {
     animation-delay: 4s;
   }
-  
+
   .text-stroke-lg {
-    color: transparent;
-    -webkit-text-stroke: 8px #1E1E1E; /* fallback to black or any color */
+    -webkit-text-stroke: 8px rgba(0,0,0,0.95); /* fallback to black or any color */
   }
 
   .text-stroke-md {
-    color: transparent;
-    -webkit-text-stroke: 6px #1E1E1E; /* fallback to black or any color */
+    -webkit-text-stroke: 6px rgba(0,0,0,0.95); /* fallback to black or any color */
   }
 
   .text-stroke-sm {
-    color: transparent;
-    -webkit-text-stroke: 4px #1E1E1E; /* fallback to black or any color */
+    -webkit-text-stroke: 4px rgba(0,0,0,0.95); /* fallback to black or any color */
   }
 
-
-  .text-stroke-white {
+  .text-stroke-dark {
     color: transparent;
     -webkit-text-stroke: 0px white;
     opacity: 10%;
@@ -95,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .text-shadow-lg {
     text-shadow:
        0px 2px 0 #1E1E1E,
@@ -136,6 +135,28 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 4px 4px 0 #1E1E1E;
   }
 
+  .text-shadow-3d-hero {
+    text-shadow:
+      -2px 1px #1E1E1E,
+      -2px 2px #1E1E1E,
+      -3px 3px #1E1E1E,
+      -4px 4px #1E1E1E,
+      -5px 5px #1E1E1E,
+      -6px 6px #1E1E1E,
+      -7px 7px #1E1E1E,
+      -8px 8px #1E1E1E;
+  }
+
+  .text-shadow-3d {
+    text-shadow:
+      1px 1px #1E1E1E,
+      2px 2px #1E1E1E,
+      3px 3px #1E1E1E,
+      4px 4px #1E1E1E,
+      5px 5px #1E1E1E,
+      6px 6px #1E1E1E;
+  }
+
   .button-shadow-xl {
     box-shadow: #F5F5F5 -6px 6px 0 0,#1E1E1E -6px 6px 0 2px;
   }
@@ -152,5 +173,42 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: #F5F5F5 -10px 10px 0 0,#1E1E1E -10px 10px 0 1px;
   }
 
+  .perspective-3d {
+    perspective: 800px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
 }
 
+@theme inline {
+  @keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+    transform: rotate(-5deg) scale(0.9);
+    }
+  25% {
+    background-position: 50% 100%;
+    transform: rotate(5deg) scale(1.1);
+    }
+  50% {
+    background-position: 100% 50%;
+    transform: rotate(-3deg) scale(0.95);
+    }
+  75% {
+    background-position: 50% 0%;
+    transform: rotate(3deg) scale(1.05);
+    }
+  100% {
+    background-position: 0% 50%;
+    transform: rotate(-5deg) scale(0.9);
+    }
+  }
+  @keyframes gradient {
+  to {
+    background-position: var(--bg-size, 300%) 0;
+    }
+  }
+}
