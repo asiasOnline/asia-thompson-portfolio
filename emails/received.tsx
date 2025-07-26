@@ -22,7 +22,7 @@ interface ReceivedProps {
   firstName: string;
 }
 
-export const Received: React.FC<Readonly<ReceivedProps>> = ({
+const Received: React.FC<Readonly<ReceivedProps>> = ({
   firstName, 
 }) => {
     return (
@@ -139,7 +139,7 @@ export const Received: React.FC<Readonly<ReceivedProps>> = ({
     );
   }
 
-export default Received
+export default Received;
 
   const containerStyles = {
     width: '648px',

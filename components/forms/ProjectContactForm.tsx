@@ -19,7 +19,7 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "../ui/Popover"
+} from "@/components/ui/Popover"
 import { Input } from "@/components/ui/Input"
 import { Slider } from "@/components/ui/Slider"
 import { Checkbox } from "@/components/ui/Checkbox"
