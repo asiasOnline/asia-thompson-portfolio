@@ -7,6 +7,7 @@ import HeroAvatar from '../ui/HeroAvatar';
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { Stars } from '../ui/SVGAssets';
 import Availability from '../ui/Availability';
+import { FaPaperPlane } from "react-icons/fa";
 
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
@@ -156,7 +157,7 @@ const Hero = () => {
             {/* Sub-Headline */}
             <h1 className="relative inline-block text-3xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-widest 2xl:tracking-wider lg:mt-6">
               {/* Combined Stroke + 3D Shadow Layer */}
-              <span className="absolute inset-0 z-0 text-shadow-3d-lg text-stroke-md">
+              <span className="absolute inset-0 z-0 text-shadow-3d-md lg:text-shadow-3d-lg text-stroke-md">
                 Better Products
               </span>
 
@@ -178,8 +179,9 @@ const Hero = () => {
               <Button 
                 variant="default" 
                 type="submit" 
-                className="text-base 2xl:text-lg min-w-48 2xl:min-w-60  gap-4 font-bold tracking-wide px-5 py-6 border-2 border-ultramarine dark:bg-brightPurple"  
+                className="group relative flex items-center justify-center pl-8 text-base 2xl:text-lg min-w-48 2xl:min-w-60 gap-4 font-bold tracking-wide py-6 border-2 border-ultramarine dark:bg-brightPurple"  
                 >Let&apos;s Chat
+                <FaPaperPlane className='bsolute opacity-0 transform transition-opacity duration-300 ease-in-out group-hover:opacity-100 text-white'/>
               </Button>
             </div>
           </div>

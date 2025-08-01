@@ -1,11 +1,45 @@
+"use client"
+
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ExpertiseCard from '../ui/ExpertiseCard'
 import services from '../../data/serviceData'
 import HeroAvatar from '../ui/HeroAvatar'
 import { Button } from '../ui/Button'
-import HorizontalScrollCarousel from '../ui/HorizontalScrollCarousel'
 
 export default function Services() {
-  
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLDivElement>(null);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    if(!triggerRef.current || !scrollContainerRef.current) return;
+
+    const cardContainer = scrollContainerRef.current;
+    const wrapper = triggerRef.current;
+    const totalScroll = cardContainer.scrollWidth - window.innerWidth;
+
+    const ctx = gsap.context(() => {
+      gsap.to(cardContainer, {
+        x: () => `-${totalScroll}`,
+        ease: "none",
+        scrollTrigger: {
+          trigger: wrapper,
+          start: "top top",
+          end: () => `+=${totalScroll}`,
+          pin: true,
+          scrub: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        }
+      });
+      }, wrapper);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div id="services">
       {/* Service Header */}
@@ -54,23 +88,31 @@ export default function Services() {
         </div>
         </div>
         {/* Main Service Section */}
-        <section className='w-full h-auto flex content-center'>
+        <section 
+        ref={triggerRef} 
+        className='relative w-screen h-screen overflow-hidden'>
         {/* Service Cards */}
-        <HorizontalScrollCarousel>
-          <div id="serviceCards" className='flex gap-32'>
-          {
-            services.map((card: any) => (
-                <ExpertiseCard 
-                    key={card.id}
-                    id={card.id}
-                    title={card.title}
-                    description={card.description}
-                    tools={card.tools}
-                />
-            ))
-        }
-      </div>
-        </HorizontalScrollCarousel>
+            <div 
+            id="serviceCards" 
+            ref={scrollContainerRef}
+            className="flex h-full gap-24 pl-[20vw] pr-[20vw] snap-x snap-mandatory"
+            >
+              {
+                services.map((card: any) => (
+                  <div 
+                  key={card.id} 
+                  className="snap-center shrink-0 w-[450px] flex items-center justify-center">
+                      <ExpertiseCard 
+                        key={card.id}
+                        id={card.id}
+                        title={card.title}
+                        description={card.description}
+                        tools={card.tools}
+                    />
+                  </div>
+                ))
+              }
+            </div>
         </section>
       {/* Service CTA */}
       

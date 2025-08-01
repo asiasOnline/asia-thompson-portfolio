@@ -130,7 +130,7 @@ const About = () => {
               <Image
                 src={profilePic}
                 alt="Asia Thompson Profile Pic"
-                className='w-40 lg:w-48 xl:w-56 rounded-full'
+                className='w-24 md:w-28 lg:w-48 xl:w-56 rounded-full'
               />
               <h3 className='text-2xl font-bold tracking-wider'>Asia Thompson</h3>
               <div className='flex items-center gap-2'>

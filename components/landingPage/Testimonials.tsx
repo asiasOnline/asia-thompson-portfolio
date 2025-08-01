@@ -3,20 +3,10 @@ import Testimonial from '../ui/Testimonial'
 import testimonials from '../../data/testimonials'
 
 const Testimonials = () => {
-  const [isMobile, setMobile] = useState(false);
-
-  useEffect(() => {
-    const checkScreen = () => setMobile(window.innerWidth < 1024);
-    checkScreen();
-    window.addEventListener('resize', checkScreen);
-    return () => window.removeEventListener('resize', checkScreen);
-  }, []);
-  
 
   return (
-    <div>
-        <div className='my-24 xl:my-12' style={{ height: isMobile ? 'auto' : `${testimonials.length * 100}vh` }}>
-           {
+    <div className='my-[20vh] xl:my-12'>
+          {
             testimonials.map( (testimonial, i) => {
               return <Testimonial 
                 key={`p_${i}`}
@@ -30,8 +20,7 @@ const Testimonials = () => {
                 testimonialText={testimonial.testimonialText}
               />
             })
-           }
-        </div>
+          }
     </div>
   )
 }

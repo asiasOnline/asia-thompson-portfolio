@@ -60,7 +60,7 @@ export const ProjectRequest: React.FC<Readonly<ProjectProps>> = ({
                 </Column>
               </Section>
               <Section style={bodySection}>
-                <Text style={bodyText}>You should be hearing back from me in <span className='font-bold'>less than 1 business day</span>.</Text>
+                <Text style={bodyText}>You should be hearing back from me in <span className='font-bold'>less than 2 business days</span>.</Text>
                 <Text style={bodyText}>If it's a weekday between 8 A.M. - 5 P.M. PST be on the lookout for a response in a few hours, with holidays being the exception.</Text>
                 <Text style={bodyText}>In the meantime you can get a better understanding of who I am by exploring my blog or checking out some of my favorite case studies.</Text>
                 <Text style={bodyText}>Regardless, I appreciate you reaching out and look forward to connecting soon!</Text>

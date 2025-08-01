@@ -95,7 +95,7 @@ const Navbar = () => {
           >
             {isMenuOpen ? <CgClose className='w-6 h-6 2xl:w-8 2xlh-8'/> : <SlMenu className='w-6 h-6 2xlw-8 2xlh-8'/>}
           </Button>
-          <nav className={isMenuOpen ? `absolute top-[50%] left-[38%] mt-12 text-4xl lg:text-8xl flex flex-col lg:flex gap-14 font-bold uppercase tracking-wider` : `hidden`}>
+          <nav className={isMenuOpen ? `absolute top-[50%] left-[38%] mt-20 text-2xl md:text-4xl lg:text-6xl xl:text-8xl flex flex-col gap-8 lg:gap-14 font-bold uppercase tracking-wider` : `hidden`}>
             {
                 Links.map((link) => (
                   <Link key={link.name} href={link.link} legacyBehavior passHref> 
@@ -113,7 +113,7 @@ const Navbar = () => {
           </nav>
         </div>
       </motion.div> 
-      <div className={ isMenuOpen ? `fixed w-full h-full top-0 right-0 bg-white opacity-100 z-30 dark:bg-black dark:border-white` : `hidden`}>
+      <div className={ isMenuOpen ? `fixed w-full h-full top-0 right-0 overflow-y-hidden bg-white opacity-100 z-30 dark:bg-black dark:border-white` : `hidden`}>
 
       </div> 
     </>

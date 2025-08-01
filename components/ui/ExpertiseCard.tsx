@@ -18,15 +18,18 @@ interface ExpertiseCardProps {
 export const ExpertiseCard: React.FC<ExpertiseCardProps> = ({id, title, description, tools}) => {
   return (
     <div className="relative group">
-        <div className='absolute 
+        {/* Hover Glow */}
+        <div className='
+        absolute 
         -inset-0.5 
         bg-gradient-to-r from-fountainBlue via-slateBlue to-steelPink 
         rounded-md 
         blur-md 
         opacity-0
-        group-hover:opacity-75 transition duration-500
+        group-hover:opacity-75 
+        transition duration-500
         '/>
-        <div className='w-[360px] h-auto min-h-[400px] p-6 md:py-8 flex flex-col md:place-items-center md:justify-between gap-6 lg:gap-4 bg-white relative border rounded-2xl border-black dark:bg-black dark:border-white/10 hover:border-black/5 hover:shadow-none'>
+        <div className='w-[360px] md:w-[450px] h-auto min-h-[400px] p-6 md:py-8 flex flex-col md:place-items-center justify-between gap-6 lg:gap-4 bg-white relative border rounded-2xl border-black dark:bg-black dark:border-white/10 hover:border-black/5 hover:shadow-none'>
             <div className="w-full px-5 flex flex-col gap-6">
                 <div className='flex justify-between items-center md:gap-6 lg:justify-start'>
                     <p className='text-xs'>0{id}</p>
