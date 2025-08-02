@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import Link from "next/link";
 import { gsap } from "gsap"; 
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -177,11 +178,16 @@ const Hero = () => {
             <Availability />
             <div>
               <Button 
+                asChild
                 variant="default" 
-                type="submit" 
                 className="group relative flex items-center justify-center pl-8 text-base 2xl:text-lg min-w-48 2xl:min-w-60 gap-4 font-bold tracking-wide py-6 border-2 border-ultramarine dark:bg-brightPurple"  
-                >Let&apos;s Chat
-                <FaPaperPlane className='bsolute opacity-0 transform transition-opacity duration-300 ease-in-out group-hover:opacity-100 text-white'/>
+                >
+                  <Link
+                    href="/contact"
+                  >
+                    Let&apos;s Chat
+                    <FaPaperPlane className='bsolute opacity-0 transform transition-opacity duration-300 ease-in-out group-hover:opacity-100 text-white'/>
+                  </Link>
               </Button>
             </div>
           </div>

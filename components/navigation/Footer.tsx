@@ -8,7 +8,7 @@ const Footer = () => {
     {name: "Services", link: "/#expertise", newTab: false},
     {name: "About", link: "/#about", newTab: false},
     {name: "Resume", link: "/resume/Asia-Thompson-Public-Resume.pdf", newTab: true},
-    {name: "Contact", link: "/#contact", newTab: false}
+    {name: "Contact", link: "/contact", newTab: false}
 ]
 
   return (

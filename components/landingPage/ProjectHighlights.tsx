@@ -68,18 +68,18 @@ const ProjectHighlights = () => {
                       >View Project
                     </Button>
                     </DialogTrigger>
-                    <DialogContent className="w-3/5 2xl:h-2/5 py-8 px-10 flex flex-col justify-between gap-6 2xl:gap-0">
+                    <DialogContent className="w-full mr-4 md:w-3/5 2xl:h-2/5 py-8 px-6 md:px-10 flex flex-col justify-between gap-6 2xl:gap-0">
                       <DialogHeader>
                         <div className='flex items-center justify-start gap-8'>
-                            <DialogTitle><h4 className='text-3xl tracking-wide'>This Project <br/> Is Current Locked</h4></DialogTitle>
-                            <FaLock className='w-5 h-5 md:w-6 md:h-6'/>
+                            <DialogTitle><h4 className='text-left text-lg md:text-3xl tracking-wide'>This Project <br/> Is Current Locked</h4></DialogTitle>
+                            <FaLock className='hidden md:block w-5 h-5 md:w-6 md:h-6'/>
                         </div>
                         <DialogDescription className='pt-3'>
-                            <p className='text-base'>If you have the password to view this case study enter it below. Or, contact me directly for access.</p>
+                            <p className='text-base text-left'>If you have the password to view this case study enter it below. Or, contact me directly for access.</p>
                         </DialogDescription>
                       </DialogHeader>
                       <div className="grid gap-2">
-                          <Label htmlFor="projectPassword" className="text-xl font-bold">Password</Label>
+                          <Label htmlFor="projectPassword" className="text-base md:text-xl font-bold">Password</Label>
                           <Input id="password" type='password' name="password" placeholder="Enter project password" />
                       </div>
                       <div className='flex justify-between'>

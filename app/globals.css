@@ -59,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   .theme {
     --animate-aurora: aurora 8s ease-in-out infinite alternate;
     --animate-gradient: gradient 8s linear infinite;
+    --animate-meteor: meteor 5s linear infinite;
   }
 }
 
@@ -156,7 +157,6 @@ h1, h2, h3, h4, h5, h6 {
       -4px 4px #1E1E1E,
   }
 
-
   .button-shadow-xl {
     box-shadow: #F5F5F5 -6px 6px 0 0,#1E1E1E -6px 6px 0 2px;
   }
@@ -209,6 +209,19 @@ h1, h2, h3, h4, h5, h6 {
   @keyframes gradient {
   to {
     background-position: var(--bg-size, 300%) 0;
+    }
+  }
+  @keyframes meteor {
+  0% {
+    transform: rotate(var(--angle)) translateX(0);
+    opacity: 1;
+    }
+  70% {
+    opacity: 1;
+    }
+  100% {
+    transform: rotate(var(--angle)) translateX(-500px);
+    opacity: 0;
     }
   }
 }
