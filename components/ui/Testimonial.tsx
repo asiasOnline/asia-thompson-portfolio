@@ -42,7 +42,7 @@ const Testimonial: React.FC<TestimonialProps> = ({i, providerName, avatarSrc, al
   return (
     <div className='h-screen flex items-center justify-center sticky top-0'>
       <div 
-      className="mx-12 p-8 md:p-14 xl:mx-0 xl:h-[600px] relative origin-top w-full xl:w-[1000px] flex flex-col items-center justify-center border border-black bg-white rounded-lg  dark:border-white dark:bg-black"
+      className="mx-12 p-8 md:p-14 xl:mx-0 xl:h-[600px] relative origin-top w-full xl:w-[1000px] flex flex-col items-center justify-center border border-black text-black rounded-lg"
       style={{backgroundColor: `${bgColor}`, top: `calc(-5vh + ${i * 24}px)`}}
       >
         <div className='text-lg'>{displayText}</div>
@@ -53,7 +53,7 @@ const Testimonial: React.FC<TestimonialProps> = ({i, providerName, avatarSrc, al
             alt={alt}
             width={100}
             height={100}
-            className='border-2 border-black dark:border-white rounded-full'
+            className='border-2 border-black rounded-full'
             />
           </div>
           <div className=''>

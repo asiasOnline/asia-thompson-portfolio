@@ -56,7 +56,6 @@ const Received: React.FC<Readonly<ReceivedProps>> = ({
                 <Column align="center">
                   <Img src='https://images.ctfassets.net/7r1ctwpcnyrk/2J8Nazd9YAQTekVQQUnFtb/02d0182e0089f0586cc40170e3529131/asiaAvatarDark.png' alt="default avatar" width="120" height="120"/>
                   <Heading as='h1'>Thanks for reaching out, {firstName}! 👋🏽</Heading>
-                  <Heading as='h2'>Your message has been received!</Heading>
                 </Column>
               </Section>
               <Section style={bodySection}>

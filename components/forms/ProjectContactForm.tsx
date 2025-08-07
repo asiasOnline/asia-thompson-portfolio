@@ -1,5 +1,5 @@
 "use client"
-import { useForm, UseFormRegister, FieldError } from "react-hook-form"
+import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { format } from "date-fns"
@@ -8,7 +8,6 @@ import { Calendar } from "@/components/ui/Calendar"
 import { Button } from "@/components/ui/Button"
 import {
   Form,
-  FormDescription,
   FormControl,
   FormField,
   FormItem,
@@ -157,7 +156,7 @@ export function ProjectContactForm() {
       <>
         <Toaster richColors position="top-right" />
         <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="w-screen space-y-8 px-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           {/* First Name Field */}
             <FormField
             control={form.control}

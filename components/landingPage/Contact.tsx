@@ -39,7 +39,7 @@ const Contact = () => {
             </span>
           </h3>
         </div>
-        <div className='flex flex-col xl:flex-row max-w-7xl mx-auto'>
+        <div className='flex flex-col xl:flex-row justify-center max-w-7xl mx-auto'>
           
           {/*Availability*/}
           <div className='w-full xl:w-1/2 flex flex-col'>
@@ -61,11 +61,11 @@ const Contact = () => {
           </div>
 
           {/*Contact Form*/}
-          <div className='xl:border-l w-full xl:w-1/2 pl-12'>
+          <div className='xl:border-l w-full xl:w-1/2 max-w-[500px] pl-12'>
             <div className='my-4 border-b h-20 flex items-center'>
               <p>Any questions, comments, or concerns? This form is the fastest way to reach me!</p>
             </div>
-            <GeneralContactForm />
+            <GeneralContactForm/>
           </div>
         </div>
     </div>
