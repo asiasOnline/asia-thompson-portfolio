@@ -5,7 +5,9 @@ import GeneralContact from "../../../models/generalContact.js";
 export async function POST(req) {
     try {
         const body = await req.json();
+        console.log("Connecting to DB...");
         await connectMongoDB();
+        console.log("DB connected. Creating contact...");
         const savedContact = await GeneralContact.create(body);
 
         console.log("Mongo result:", savedContact);
