@@ -126,12 +126,12 @@ export function ProjectContactForm() {
       const payload = JSON.stringify(values);
       try {
         const [contactRes, emailRes] = await Promise.all([
-          fetch("api/projectContacts", {
+          fetch("/api/projectContacts", {
             method: "POST",
             headers: {"Content-type": "application/json"},
             body: payload
           }),
-          fetch("api/emails/project", {
+          fetch("/api/emails/project", {
             method: "POST",
             headers: {"Content-type": "application/json"},
             body: payload

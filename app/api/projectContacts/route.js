@@ -1,17 +1,24 @@
 import connectMongoDB from "../../../lib/mongodb";
 import { NextResponse } from "next/server";
-import ProjectContact from "../../../models/projectContact";
+import ProjectContact from "../../../models/projectContact.js";
 
 export async function POST(req) {
-    const body = await req.json();
+    try {
+        const body = await req.json();
+        await connectMongoDB();
+        const savedContact = await ProjectContact.create(body);
 
-    await connectMongoDB();
+        console.log("Mongo result:", savedContact);
 
-    const savedContact = await ProjectContact.create(body);
-
-    console.log("Mongo result:", savedContact);
-    return NextResponse.json(
-        {message: "Project Inquiry Recieved", data: savedContact}, 
-        {status: 201}
-    );
+        return NextResponse.json(
+            {message: "Project Inquiry Recieved", data: savedContact}, 
+            {status: 201}
+        );
+    } catch (error) {
+        console.error("Project contact route error:", error);
+        return NextResponse.json(
+            { error: "Failed to save project contact" },
+            { status: 500 }
+        );
+    }
 }
