@@ -75,9 +75,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="hero" className='w-full 2xl:w-4/5 relative px-4 md:px-16 lg:px-24 xl:px-32 mx-auto flex flex-col gap-6 '>
+    <div id="hero" className='w-full 2xl:w-4/5 relative pt-6 2xl:pt-20 px-4 md:px-16 lg:px-24 xl:px-32 mx-auto flex flex-col gap-6 '>
       {/*Borders*/}
-      {/*Top Left*/}
+      {/*Top Left
       <div className='hidden xl:block absolute xl:top-8 xl:-left-0'>
         <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
@@ -86,7 +86,8 @@ const Hero = () => {
             <hr className='border-t-black dark:border-t-white'/>
           </div>
         </div>
-        {/*Top Right*/}
+        */}
+        {/*Top Right
         <div className='hidden xl:block absolute rotate-90 top-8 right-0'>
           <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
@@ -95,7 +96,8 @@ const Hero = () => {
               <hr className='border-t-black dark:border-t-white'/>
           </div>
         </div>
-        {/*Bottom Right*/}
+        */}
+        {/*Bottom Right
         <div className='hidden xl:block absolute rotate-180 right-0 -bottom-8'>
           <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
@@ -104,7 +106,8 @@ const Hero = () => {
               <hr className='border-t-black dark:border-t-white'/>
           </div>
         </div>
-        {/*Bottom Right*/}
+        */}
+        {/*Bottom Left
         <div className='hidden xl:block absolute -rotate-90 left-0 -bottom-8'>
           <div className='w-44 relative left-14'>
             <hr className='border-t-black dark:border-t-white'/>
@@ -113,9 +116,10 @@ const Hero = () => {
             <hr className='border-t-black dark:border-t-white'/>
         </div>
         </div>
-
+        */}
+        
         {/*Main Hero Content*/}
-        <div className='pt-10 pb-5 xl:mx-10 2xl:m-0 flex flex-col items-center gap-6 2xl:gap-12'>
+        <div className='xl:mx-10 2xl:m-0 flex flex-col items-center gap-6 2xl:gap-12'>
           
             {/*Intro & Avatar Header*/}
             <div className='w-full flex flex-col md:flex-row items-center lg:justify-center gap-6 2xl:gap-8'>
@@ -127,8 +131,16 @@ const Hero = () => {
               </p>
               </div>
               <div className='w-auto md:w-40 h-auto flex justify-center'>
-                <div className="relative w-28 md:w-32 2xl:w-40 h-auto">
-                  < HeroAvatar />
+                <div className='relative'>
+                  <div className='w-8 h-auto absolute -right-4 -top-4'>
+                    < Stars />
+                  </div>
+                  <div className="relative w-28 md:w-32 2xl:w-40 h-auto">
+                    < HeroAvatar />
+                  </div>
+                  <div className='w-12 h-auto scale-x-[-1] scale-y-[-1] absolute -bottom-6 -left-6'>
+                    < Stars />
+                  </div>
                 </div>
               </div>
               <div className='w-auto flex justify-center'>

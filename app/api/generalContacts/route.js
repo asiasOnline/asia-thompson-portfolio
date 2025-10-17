@@ -16,9 +16,14 @@ export async function POST(req) {
             {status: 201}
         );
     } catch (error) {
-        console.error("Contact route error:", error);
+        console.error("Contact route error:", {
+            name: error.name,
+            message: error.message,
+            stack: error.stack,
+        });
+
         return NextResponse.json(
-            { error: "Failed to save contact" },
+            { error: error.message || "Failed to save contact" },
             { status: 500 }
         );
     }

@@ -35,7 +35,9 @@ const Navbar = () => {
   let Links = [
     {name: "Projects", link: "/#projectHighlights", newTab: false},
     {name: "Services", link: "/#expertise", newTab: false},
+    {name: "Process", link: "/#expertise", newTab: false},
     {name: "About", link: "/#about", newTab: false},
+    {name: "Blog", link: "/#about", newTab: false},
     {name: "Resume", link: "/resume/Asia-Thompson-Public-Resume.pdf", newTab: true},
     {name: "Contact", link: "/contact", newTab: false}
 ]
@@ -66,7 +68,7 @@ const Navbar = () => {
         transition={{
           duration: 0.2,
         }}
-        className='w-full max-w-[1920px] sticky top-0 mx-auto pt-6 px-4 md:px-12 lg:px-16 xl:px-16 py-6 xl:py-8 flex justify-between items-center z-40 bg-white dark:bg-black'>
+        className='w-full max-w-[1920px] sticky top-0 mx-auto pt-6 px-4 md:px-12 lg:px-16 xl:px-16 py-6 xl:py-8 flex justify-between items-center z-40 bg-slate-100 dark:bg-slate-900'>
         {/*Logo*/}
         <div className='w-auto'>
           <Link href="/">
@@ -84,18 +86,7 @@ const Navbar = () => {
           </div>
           </Link>
         </div>
-        {/*Right Navigation Buttons*/}
-        <div className='flex gap-6 2xl:gap-12'>
-          <ThemeButton />
-          <Button 
-          className="text-black dark:text-white" 
-          variant="outline" 
-          size="icon" 
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <CgClose className='w-6 h-6 2xl:w-8 2xlh-8'/> : <SlMenu className='w-6 h-6 2xlw-8 2xlh-8'/>}
-          </Button>
-          <nav className={isMenuOpen ? `absolute top-[50%] left-[38%] mt-20 text-2xl md:text-4xl lg:text-6xl flex flex-col gap-8 lg:gap-14 font-bold uppercase tracking-wider` : `hidden`}>
+        <nav className={isMenuOpen ? `absolute top-[50%] left-[38%] mt-20 text-2xl md:text-4xl lg:text-6xl flex flex-col gap-8 lg:gap-14 font-bold uppercase tracking-wider` : `flex align-middle gap-10 rounded-full py-4 px-12 text-black bg-slate-50 dark:bg-slate-800 dark:text-white`}>
             {
                 Links.map((link) => (
                   <Link key={link.name} href={link.link} legacyBehavior passHref> 
@@ -111,6 +102,17 @@ const Navbar = () => {
                 ))
             }
           </nav>
+        {/*Right Navigation Buttons*/}
+        <div className='flex gap-6 2xl:gap-12'>
+          <ThemeButton />
+          <Button 
+          className="text-black dark:text-white block lg:hidden" 
+          variant="outline" 
+          size="icon" 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <CgClose className='w-6 h-6 2xl:w-8 2xlh-8'/> : <SlMenu className='w-6 h-6 2xlw-8 2xlh-8'/>}
+          </Button>
         </div>
       </motion.div> 
       <div className={ isMenuOpen ? `fixed w-full h-full top-0 right-0 overflow-y-hidden bg-white opacity-100 z-30 dark:bg-black dark:border-white` : `hidden`}>

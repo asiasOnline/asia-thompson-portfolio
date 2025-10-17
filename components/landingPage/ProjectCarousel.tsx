@@ -7,7 +7,7 @@ import React from 'react'
 
 const ProjectCarousel = () => {
   return (
-    <section id="projectCarousel" className="space-y-6 py-10">
+    <section id="projectCarousel" className="space-y-6 py-6">
       <InfiniteCarousel 
         images={carouselProjects} 
         speed={60}
