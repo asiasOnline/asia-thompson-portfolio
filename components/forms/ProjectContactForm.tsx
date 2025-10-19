@@ -231,13 +231,13 @@ export function ProjectContactForm() {
                                 <Checkbox 
                                   checked={field.value?.includes(service.id)}
                                   disabled={
-                                    !field.value?.includes(service.id) && field.value?.length >= 3
+                                    !field.value?.includes(service.id) && field.value?.length >= 4
                                   }
                                   onCheckedChange={(checked) => {
                                     if (checked && field.value.length >= 4) return;
                                     checked
                                       ? field.onChange([...field.value, service.id])
-                                      : field.onChange(field.value?.filter((value:any) => value !== service.label))
+                                      : field.onChange(field.value?.filter((value:any) => value !== service.id))
                                   }}
                                 />
                               </FormControl>
