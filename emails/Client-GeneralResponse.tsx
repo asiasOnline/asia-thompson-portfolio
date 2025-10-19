@@ -1,6 +1,5 @@
 import React from 'react'
 import { 
-  Button, 
   Html, 
   Font,
   Head,
@@ -16,7 +15,6 @@ import {
   Text, 
   Tailwind 
 } from "@react-email/components";
-import { px } from 'framer-motion';
 
 interface ReceivedProps {
   firstName: string;
@@ -195,6 +193,6 @@ export default Received;
   }
 
   const faceBookLink = "https://www.facebook.com/people/Asia-Thompson/61578269982896/"
-  const twitterLink = "https://x.com/asiaIsOnline"
-  const instagramLink = "https://www.instagram.com/asiaisonline/"
-  const linkedinLink = "https://www.linkedin.com/in/asiaisonline/"
+  const twitterLink = "https://x.com/asiasOnline"
+  const instagramLink = "https://www.instagram.com/asiasonline/"
+  const linkedinLink = "https://www.linkedin.com/in/asiasonline/"

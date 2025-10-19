@@ -1,16 +1,15 @@
-import  Received from '../../../../emails/Received'
+import  Received from '../../../../emails/Client-GeneralResponse'
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
     const body = await req.json();
-    console.log("Email Body:", body)
     const { firstName, lastName, email, contactMessage } = body
 
     try {
         const { data } = await resend.emails.send({
-          from: 'Asia Thompson <hello@contact.asiathompson.dev>',
+          from: 'Asia Thompson <hello@inquiries.asiasonline.com>',
           to: [email],
           subject: 'Thanks For Reaching Out!',
           react: Received({ firstName: firstName }),

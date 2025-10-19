@@ -53,25 +53,24 @@ export function GeneralContactForm() {
     const onSubmit = async (values: z.infer<typeof GeneralContact>) => {
         const payload = JSON.stringify(values);
         try {
-          const [contactRes, emailRes] = await Promise.all([
-            fetch("/api/generalContacts", {
+          const emailRes = await Promise.all([
+            fetch("/api/emails/clientGeneralResponse", {
               method: "POST",
               headers: {"Content-type": "application/json"},
               body: payload
             }),
-            fetch("/api/emails/general", {
+            fetch("/api/emails/internalGeneralReceived", {
               method: "POST",
               headers: {"Content-type": "application/json"},
               body: payload
             }),
           ])
 
-          if (contactRes.ok && emailRes.ok) {
+          if (emailRes) {
             toast.success("Message recieved!");
             form.reset();
           } else {
-            if (!contactRes.ok) console.error("Contact route failed");
-            if (!emailRes.ok) console.error("Email route failed")
+            if (!emailRes) console.error("Email route failed")
             toast.error("Something went wrong.");
           }
         } catch (error) {

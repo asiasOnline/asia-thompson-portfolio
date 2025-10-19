@@ -30,28 +30,20 @@ import { FaRegCalendar } from "react-icons/fa";
 
 const services = [
   {
-    id: "product-strategy",
-    label: "Product Strategy",
+    id: "branding",
+    label: "Branding",
   },
   {
-    id: "web-app-design",
-    label: "Web / App Design",
+    id: "digital-design",
+    label: "Digital Design",
   },
   {
-    id: "single-page-website",
-    label: "Single Page Webiste",
+    id: "web-development",
+    label: "Web Development",
   },
   {
-    id: "multi-page-website",
-    label: "Multi-Page Website",
-  },
-  {
-    id: "web-mobile-app-development",
-    label: "Web / Mobile App Development",
-  },
-  {
-    id: "data-ai-integration",
-    label: "Data & AI Integration",
+    id: "app-development",
+    label: "App Development",
   },
 ] as const 
 
@@ -74,8 +66,7 @@ const ProjectContact = z.object({
   
   services: z
   .array(z.string())
-  .min(1, { message: "Please select at least one service." })
-  .max(3, { message: "Please limit a project request to 3 services. "}),
+  .min(1, { message: "Please select at least one service." }),
   
   dateRange: z
   .object(
@@ -125,25 +116,24 @@ export function ProjectContactForm() {
     const onSubmit = async (values: z.infer<typeof ProjectContact>) => {
       const payload = JSON.stringify(values);
       try {
-        const [contactRes, emailRes] = await Promise.all([
-          fetch("/api/projectContacts", {
+        const [emailRes] = await Promise.all([
+          fetch("/api/emails/internalProjectReceived", {
             method: "POST",
             headers: {"Content-type": "application/json"},
             body: payload
           }),
-          fetch("/api/emails/project", {
+          fetch("/api/emails/clientProjectResponse", {
             method: "POST",
             headers: {"Content-type": "application/json"},
             body: payload
           }),
         ])
 
-        if (contactRes.ok && emailRes.ok) {
+        if (emailRes) {
           toast.success("Message recieved!");
           form.reset();
         } else {
-          if (!contactRes.ok) console.error("Contact route failed");
-          if (!emailRes.ok) console.error("Email route failed")
+          if (!emailRes) console.error("Email route failed")
           toast.error("Something went wrong.");
         }
       } catch (error) {
@@ -224,7 +214,7 @@ export function ProjectContactForm() {
               render={() => (
                 <FormItem>
                   <FormLabel><p className="text-xl font-bold mb-2">What services are you looking for?</p></FormLabel>
-                  <p className="text-md">Select at least 1 and a max of 3 services per project.</p>
+                  <p className="text-sm">Select at least 1 service.</p>
                   <div className="flex items-start flex-col mt-2">
                     {services.map((service) => (
                       <FormField 
@@ -244,10 +234,10 @@ export function ProjectContactForm() {
                                     !field.value?.includes(service.id) && field.value?.length >= 3
                                   }
                                   onCheckedChange={(checked) => {
-                                    if (checked && field.value.length >= 3) return;
+                                    if (checked && field.value.length >= 4) return;
                                     checked
                                       ? field.onChange([...field.value, service.id])
-                                      : field.onChange(field.value?.filter((value:any) => value !== service.id))
+                                      : field.onChange(field.value?.filter((value:any) => value !== service.label))
                                   }}
                                 />
                               </FormControl>

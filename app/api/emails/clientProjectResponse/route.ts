@@ -1,16 +1,15 @@
-import { ProjectRequest } from '../../../../emails/ProjectRequest'
+import { ProjectRequest } from '../../../../emails/Client-ProjectResponse'
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
     const body = await req.json();
-    console.log("Email Body:", body)
     const { firstName, lastName, email, contactMessage } = body
 
     try {
         const { data } = await resend.emails.send({
-          from: 'Asia Thompson <project@contact.asiathompson.dev>',
+          from: 'Asia Thompson <project@inquiries.asiasonline.com>',
           to: [email],
           subject: 'Project Request Received!',
           react: ProjectRequest({ firstName: firstName }),
