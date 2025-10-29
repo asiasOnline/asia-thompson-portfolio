@@ -1,6 +1,8 @@
 "use client"
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form"
 import { z } from "zod"
+import ReCAPTCHA from "react-google-recaptcha";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { format } from "date-fns"
 import { cn } from "@/lib/utils"
@@ -34,8 +36,8 @@ const services = [
     label: "Branding",
   },
   {
-    id: "digital-design",
-    label: "Digital Design",
+    id: "ux-ui-design",
+    label: "UX & UI Design",
   },
   {
     id: "web-development",
@@ -93,6 +95,11 @@ const ProjectContact = z.object({
 })
 
 export function ProjectContactForm() {
+    // RECAPTCHA Reference
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
     // Defines the form
     const form = useForm<z.infer<typeof ProjectContact>>({
@@ -114,6 +121,15 @@ export function ProjectContactForm() {
 
     // Defines the submit handler.
     const onSubmit = async (values: z.infer<typeof ProjectContact>) => {
+    // Verify ReCAPTCHA
+    const recaptchaValue = recaptchaRef.current?.getValue();
+    if (!recaptchaValue) {
+      toast.error('Please complete the CAPTCHA verification');
+      return;
+    }
+
+    setIsSubmitting(true);
+
       const payload = JSON.stringify(values);
       try {
         const [emailRes] = await Promise.all([
@@ -139,7 +155,15 @@ export function ProjectContactForm() {
       } catch (error) {
         console.error("Unexpected error:", error);
         toast.error("Failed to send message. Please try again later.");
+        } finally {
+          setIsSubmitting(false);
         }
+    }
+
+    // Prevents form from rendering if site key is not configured
+    if (!siteKey) {
+      console.error("ReCAPTCHA site key is not configured");
+      return <div>ReCAPTCHA configuration error. Please contact support.</div>
     }
     
     return (
@@ -350,12 +374,15 @@ export function ProjectContactForm() {
                   </FormItem>
               )}
             />
+            <ReCAPTCHA ref={recaptchaRef} sitekey={siteKey} />
             <Button 
               variant="default" 
               type="submit" 
+              disabled={isSubmitting}
               className="gap-4 font-bold tracking-wide p-6"
               >
-                <TbMail className="w-6 h-6"/>Send Message
+                <TbMail className="w-6 h-6"/>
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
         </form>
         </Form>
