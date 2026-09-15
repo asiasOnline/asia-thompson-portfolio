@@ -5,16 +5,13 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/Button"
 import HeroAvatar from '../ui/HeroAvatar';
-import { AuroraText } from "@/components/magicui/aurora-text";
-import { Stars } from '../ui/SVGAssets';
-import Availability from '../ui/Availability';
 import { FaPaperPlane } from "react-icons/fa";
 
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-  {/*Hero Animations*/}
+  {/*Hero Animations
   // Reference Variables
   const headlineRef = useRef<HTMLHeadingElement | null>(null);
   const tlRef = useRef<gsap.core.Timeline | null>(null);
@@ -73,95 +70,84 @@ const Hero = () => {
       splitRef.current && splitRef.current.revert();
     };
   }, []);
+  */}
 
   return (
-    <div id="hero" className='w-full 2xl:w-4/5 relative pt-6 2xl:pt-20 px-4 md:px-16 lg:px-24 xl:px-32 mx-auto flex flex-col gap-6 '>  
-        {/*Main Hero Content*/}
-        <div className='xl:mx-10 2xl:m-0 flex flex-col items-center gap-6 2xl:gap-12'>
-          
-            {/*Intro & Avatar Header*/}
-            <div className='w-full flex flex-col md:flex-row items-center lg:justify-center gap-6 2xl:gap-8'>
-              <div className='w-auto text-center'>
-                <p
-                className='text-center text-lg md:text-xl 2xl:text-2xl'
-              >
-                Hello, my name is...
-              </p>
-              </div>
-              <div className='w-auto md:w-40 h-auto flex justify-center'>
-                <div className='relative'>
-                  <div className='w-8 h-auto absolute -right-4 -top-4'>
-                    < Stars />
-                  </div>
-                  <div className="relative w-28 md:w-32 2xl:w-40 h-auto">
-                    < HeroAvatar />
-                  </div>
-                  <div className='w-12 h-auto scale-x-[-1] scale-y-[-1] absolute -bottom-6 -left-6'>
-                    < Stars />
-                  </div>
-                </div>
-              </div>
-              <div className='w-auto flex justify-center'>
-                <p className='w-full 2xl:w-96 text-lg md:text-xl 2xl:text-2xl 2xl:self-end'>A <span className='underline font-bold'>digital product designer</span> and <br/> <span className='underline font-bold'>full-stack developer</span> based in <br/> Nevada & California.</p>
-              </div>
-            </div>
-
-            {/*Intro & Avatar Header*/}
-            <div className='flex flex-col text-center'>
-               {/*Headline*/}
-            <div className='gap-4 lg:gap-8 xl:gap-16'>
-              <h1 
-              ref={headlineRef}
-              className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-wider'>
-              Asia Thompson
-              </h1>
-
-              {/*
-                <div className='relative md:ml-4'>
-                <div className='w-4 h-8 md:w-6 md:h-8 lg:w-10 lg:h-12 absolute -bottom-4 -left-2 md:-bottom-2 lg:-left-8'><Stars width='40' height='48'/></div>
-                <div className='w-8 h-10 md:w-12 md:h-16 lg:w-20 lg:h-24 absolute -top-2 -right-6 md:-top-4 md:-right-10 lg:-top-8 lg:-right-16'><Stars /></div>
-                </div>
-              */}
-            </div>
-
-            {/* Sub-Headline */}
-            <h1 className="relative inline-block text-3xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-nowrap font-display font-bold tracking-widest 2xl:tracking-wider lg:mt-6">
-              {/* Combined Stroke + 3D Shadow Layer */}
-              <span className="absolute inset-0 z-0 text-shadow-3d-md lg:text-shadow-3d-lg text-stroke-md">
-                Better Products
-              </span>
-
-              {/* Fill Layer (on top) */} 
-              <span className="relative z-10">
-                <AuroraText
-                  colors={["#97E4F8", "#9D99FF", "#FBACA4"]}
-                  speed={100}
-                >Better Products
-                </AuroraText>
-              </span>
+    <div id="hero" className='w-full pl-32 pr-36 z-20 grid grid-cols-12 text-black-500'>  
+    {/*Main Content*/}
+        <div className='col-start-1 col-end-4 mt-8'>
+          {/*Intro*/}
+          <div className='py-8 text-center'>
+            <p className='text-2xl'>Hello, my name is...</p>
+          </div>
+          <div className='py-4 bg-white border-ashGray border-4 border-r-2 border-opacity-20 -mb-2 text-center'>
+            <h1 className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold'>
+            Asia
             </h1>
-            </div>
-           
-          {/*Availability & CTA Button*/}
-          <div className='w-full flex flex-col xl:flex-row items-center justify-between gap-4'>
-            <Availability />
-            <div>
-              <Button 
-                asChild
-                variant="default" 
-                className="group relative flex items-center justify-center pl-8 text-base 2xl:text-lg min-w-48 2xl:min-w-60 gap-4 font-bold tracking-wide py-6 border-2 border-ultramarine dark:bg-brightPurple"  
-                >
-                  <Link
-                    href="/contact"
-                  >
-                    Let&apos;s Chat
-                    <FaPaperPlane className='bsolute opacity-0 transform transition-opacity duration-300 ease-in-out group-hover:opacity-100 text-white'/>
-                  </Link>
-              </Button>
-            </div>
           </div>
         </div>
-      </div>
+
+        {/*Avatar*/}
+        <div className='col-start-5 col-end-7 self-end justify-self-center'>
+          <div className='w-56'>
+            < HeroAvatar />
+          </div>
+        </div>
+
+        {/*Headline*/}
+        <div className='col-start-1 col-end-7 py-4 bg-white border-ashGray border-4 border-r-2 border-opacity-20 text-center'>
+          <h1 className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold'>
+          Thompson.
+          </h1>
+        </div>
+
+        {/*Shape Grid*/}
+        <div className='col-start-8 col-end-13 row-start-1 row-end-3 py-4 grid  grid-cols-5 grid-rows-5 bg-white border-ashGray border-4 border-r-2 border-opacity-20 text-center'>
+          <div className='h-full border-r-2'>
+  
+          </div>
+        </div>
+
+        {/*Role*/}
+        <div className='col-start-1 col-end-6 2xl:col-end-5 py-4 bg-white border-ashGray border-4 border-r-2 2xl:border-r-1 border-opacity-20 mt-8 px-4'>
+          <p className='w-full font-normal font-display text-lg md:text-4xl/12'>Digital Product Designer & Full-Stack Developer</p>
+        </div>            
+
+        {/*Role*/}
+        <div className='col-start-1 col-end-6 py-4 pr-4'>
+          <p className='w-full text-lg md:text-3xl xl:text-2xl/12 2xl:text-3xl/14 '>I help businesses and teams build digital products that stand out, specifically:</p>
+        </div> 
+           
+        {/*CTA Buttons*/}
+        <div className='col-start-6 col-end-8 flex flex-col items-center justify-between gap-4'>
+          <Button 
+              asChild
+              variant="default" 
+              className="group relative flex items-center justify-center pl-8 text-base 2xl:text-lg min-w-48 2xl:min-w-60 gap-4 font-bold tracking-wide py-6 border-2  dark:bg-brightPurple"  
+              >
+                <Link
+                  href="/contact"
+                >
+                  Let&apos;s Chat
+                  <FaPaperPlane className='opacity-0 transform transition-opacity duration-300 ease-in-out group-hover:opacity-100 text-white'/>
+                </Link>
+            </Button>
+          <Button 
+              asChild
+              variant="outline" 
+              className="group relative flex items-center justify-center pl-8 text-base 2xl:text-lg min-w-48 2xl:min-w-60 gap-4 font-bold tracking-wide py-6 border-2 text-black-700 border-black-700 dark:bg-brightPurple"  
+              >
+                <Link
+                  href="/contact"
+                >
+                  View My Work
+                  <FaPaperPlane className='bsolute opacity-0 transform transition-opacity duration-300 ease-in-out group-hover:opacity-100 text-white'/>
+                </Link>
+            </Button>
+        </div>
+
+
+    </div>
   )
 }
 

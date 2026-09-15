@@ -4,11 +4,11 @@
 
 body {
   overflow-x: hidden;
-  font-family: var(--font-figtree);
+  font-family: var(--font-plus-jakarta-sans);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-coolvetica), sans-serif;
+  font-family: var(--font-outfit), sans-serif;
 }
 
 @layer base {

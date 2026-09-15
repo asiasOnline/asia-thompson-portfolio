@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
 import Head from 'next/head'
-import { Figtree } from "next/font/google";
-import localFont from "next/font/local"
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { CSPostHogProvider } from "./providers";
 import { ThemeProvider } from "@/components/ui/ThemeProvider"
 
-const figtree = Figtree({ 
+const outfit = Outfit({
   subsets: ["latin"], 
-  weight: ['400', '700'],
-  variable: '--font-roboto' });
+  variable: '--font-outfit',
+})
+
+const plus_jakarta_sans = Plus_Jakarta_Sans({
+  subsets: ["latin"], 
+  variable: '--font-plus-jakarta-sans',
+})
 
 const coolvetica = localFont({
   src: "../public/fonts/coolvetica-rg.otf",
@@ -17,7 +22,7 @@ const coolvetica = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Asia Thompson - Asia Does Development",
+  title: "Asia Thompson - asiasOnline",
   description: "Portfolio for Asia Thompson a digital product designer and full-stack developer.",
 };
 
@@ -26,7 +31,10 @@ export default function RootLayout({children }: Readonly<{
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${figtree.variable} ${coolvetica.variable} font-sans`}>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/gom0idh.css" />
+      </head>
+      <body className={`${outfit.variable} ${plus_jakarta_sans.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
