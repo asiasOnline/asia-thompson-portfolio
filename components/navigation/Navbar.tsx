@@ -67,7 +67,7 @@ const Navbar = () => {
         transition={{
           duration: 0.2,
         }}
-        className='bg-white border-ashGray border-4 border-r-2 border-opacity-20 my-4 sticky top-0 mx-auto pt-6 px-4 md:px-12 lg:px-12 xl:ml-32 xl:mr-36 py-6 xl:py-4 flex  justify-between items-center z-40'>
+        className='bg-white border-ashGray border-4 border-r-4 border-opacity-20 my-4 sticky top-0 mx-auto pt-6 px-4 md:px-12 lg:px-8 xl:ml-32 xl:mr-32 py-6 xl:py-4 2xl:mr-32 flex justify-between items-center z-40'>
         {/*Logo*/}
         <div className='w-auto'>
           <Link href="/">
@@ -85,7 +85,7 @@ const Navbar = () => {
           </div>
           </Link>
         </div>
-        <nav className={isMenuOpen ? `absolute top-[50%] left-[38%] mt-20 text-2xl md:text-4xl lg:text-6xl flex flex-col gap-8 lg:gap-14 font-bold uppercase tracking-wider` : `flex align-middle gap-10 rounded-full py-4 px-12 text-black  dark:text-white`}>
+        <nav className={isMenuOpen ? `absolute top-[50%] left-[38%] mt-20 text-2xl md:text-4xl lg:text-6xl flex flex-col gap-8 lg:gap-14 font-bold uppercase tracking-wider` : `flex align-middle gap-20 rounded-full py-4 px-2 text-black  dark:text-white`}>
             {
                 Links.map((link) => (
                   <Link key={link.name} href={link.link} legacyBehavior passHref> 

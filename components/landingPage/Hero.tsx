@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/Button"
-import HeroAvatar from '../ui/HeroAvatar';
+import ColorSwapImageContainer from '../ui/ColorSwapImageContainer';
 import { FaPaperPlane } from "react-icons/fa";
 
 gsap.registerPlugin(SplitText);
@@ -73,15 +73,15 @@ const Hero = () => {
   */}
 
   return (
-    <div id="hero" className='w-full pl-32 pr-36 z-20 grid grid-cols-12 text-black-500'>  
+    <div id="hero" className='w-full pl-32 pr-32 z-20 grid grid-cols-12 text-black-500'>  
     {/*Main Content*/}
-        <div className='col-start-1 col-end-4 mt-8'>
+        <div className='w-full col-start-1 col-end-4 mt-8'>
           {/*Intro*/}
-          <div className='py-8 text-center'>
+          <div className='pb-12 pl-8'>
             <p className='text-2xl'>Hello, my name is...</p>
           </div>
-          <div className='py-4 bg-white border-ashGray border-4 border-r-2 border-opacity-20 -mb-2 text-center'>
-            <h1 className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold'>
+          <div className='py-4 bg-white border-ashGray border-t-4 border-l-4 border-r-2 2xl:border-r-4 2xl:-mr-0.5 border-opacity-20 -mb-2 text-center'>
+            <h1 className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl text-nowrap font-display font-bold'>
             Asia
             </h1>
           </div>
@@ -90,36 +90,117 @@ const Hero = () => {
         {/*Avatar*/}
         <div className='col-start-5 col-end-7 self-end justify-self-center'>
           <div className='w-56'>
-            < HeroAvatar />
+            < ColorSwapImageContainer />
           </div>
         </div>
 
         {/*Headline*/}
-        <div className='col-start-1 col-end-7 py-4 bg-white border-ashGray border-4 border-r-2 border-opacity-20 text-center'>
-          <h1 className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-nowrap font-display font-bold'>
+        <div className='col-start-1 col-end-7 py-4 bg-white border-ashGray border-t-4 border-b-4 border-l-4 border-r-2 2xl:border-r-4 2xl:-mr-0.5 border-opacity-20 text-center'>
+          <h1 className='text-3xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl text-nowrap font-display font-bold'>
           Thompson.
           </h1>
         </div>
 
         {/*Shape Grid*/}
-        <div className='col-start-8 col-end-13 row-start-1 row-end-3 py-4 grid  grid-cols-5 grid-rows-5 bg-white border-ashGray border-4 border-r-2 border-opacity-20 text-center'>
-          <div className='h-full border-r-2'>
-  
-          </div>
+        <div className='col-start-8 col-end-13 row-start-1 row-end-3 py-4 grid  grid-cols-5 grid-rows-5 border-t-4 border-b-4 border-r-4 2xl:border-r-4 2xl:mr-4 border-opacity-20 text-center'>
+          {/*First Row*/}
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+
+          {/*Second Row*/}
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+
+            {/*Second Row*/}
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+
+            {/*Second Row*/}
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+
+            {/*Second Row*/}
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='w-14 h-14 bg-primaryGreen-100'/>
+            </div>
         </div>
 
         {/*Role*/}
-        <div className='col-start-1 col-end-6 2xl:col-end-5 py-4 bg-white border-ashGray border-4 border-r-2 2xl:border-r-1 border-opacity-20 mt-8 px-4'>
+        <div className='col-start-1 col-end-6 2xl:col-end-5 py-4 bg-white border-ashGray border-t-4 border-b-4 border-l-4 border-r-2 2xl:border-r-4 2xl:-mr-0.5 border-opacity-20 mt-8 px-4'>
           <p className='w-full font-normal font-display text-lg md:text-4xl/12'>Digital Product Designer & Full-Stack Developer</p>
         </div>            
 
         {/*Role*/}
         <div className='col-start-1 col-end-6 py-4 pr-4'>
-          <p className='w-full text-lg md:text-3xl xl:text-2xl/12 2xl:text-3xl/14 '>I help businesses and teams build digital products that stand out, specifically:</p>
+          <p className='w-full text-lg md:text-3xl xl:text-2xl/12 2xl:text-2xl/12 '>I help entrepreneurs and teams build digital products that improve their business, specifically:</p>
         </div> 
            
         {/*CTA Buttons*/}
-        <div className='col-start-6 col-end-8 flex flex-col items-center justify-between gap-4'>
+        <div className='col-start-8 col-end-13 px-4 mt-16 flex items-center justify-between'>
           <Button 
               asChild
               variant="default" 
@@ -132,10 +213,10 @@ const Hero = () => {
                   <FaPaperPlane className='opacity-0 transform transition-opacity duration-300 ease-in-out group-hover:opacity-100 text-white'/>
                 </Link>
             </Button>
-          <Button 
+            <Button 
               asChild
               variant="outline" 
-              className="group relative flex items-center justify-center pl-8 text-base 2xl:text-lg min-w-48 2xl:min-w-60 gap-4 font-bold tracking-wide py-6 border-2 text-black-700 border-black-700 dark:bg-brightPurple"  
+              className="group relative flex items-center justify-center pl-8 text-base 2xl:text-lg min-w-48 2xl:min-w-60 gap-4 font-bold tracking-wide py-6 border-2 text-black-700 border-black-700 bg-white dark:bg-brightPurple"  
               >
                 <Link
                   href="/contact"
