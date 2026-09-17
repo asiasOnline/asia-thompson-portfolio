@@ -92,10 +92,16 @@ export default function Home() {
         */}
 
         {/* Page Content */}
-        <div id="landingPage" className="w-screen 2xl:mx-auto overflow-x-hidden bg-white dark:bg-slate-900">
+        <div id="landingPage" className="w-screen relative 2xl:mx-auto overflow-x-hidden bg-white dark:bg-slate-900">
           <Navbar/>
           <main className="w-screen mx-auto flex flex-col gap-12 2xl:gap-20">
             <Hero />
+            {/* Background grid */}
+            <div className='absolute h-screen inset-0 grid grid-cols-12 pointer-events-none px-32 z-0'>
+              {Array.from({ length: 12 }).map((_, i) => (
+                <div key={i} className='border-2 border-ashGray opacity-20 first:border-l-4 last:border-r-4' />
+              ))}
+            </div>
             <ProjectCarousel />
             <Vision />
             <ProjectHighlights />
@@ -105,12 +111,7 @@ export default function Home() {
             <Contact />
           </main>
           <Footer />
-          {/* Background grid */}
-          <div className='absolute inset-0 grid grid-cols-12 pointer-events-none px-32'>
-            {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} className='border-2 border-ashGray opacity-20 first:border-l-4 last:border-r-4' />
-            ))}
-          </div>
+          
         </div>
     </div>
   );

@@ -67,7 +67,7 @@ const Navbar = () => {
         transition={{
           duration: 0.2,
         }}
-        className='bg-white border-ashGray border-4 border-r-4 border-opacity-20 my-4 sticky top-0 mx-auto pt-6 px-4 md:px-12 lg:px-8 xl:ml-32 xl:mr-32 py-6 xl:py-4 2xl:mr-32 flex justify-between items-center z-40'>
+        className='bg-white border-ashGray border-t-4 border-b-4 border-opacity-20 my-4 sticky top-0 mx-auto pt-6 px-4 md:px-12 lg:px-8 xl:ml-32 xl:mr-32 py-6 xl:py-4 2xl:mx-[132px] flex justify-between items-center z-40'>
         {/*Logo*/}
         <div className='w-auto'>
           <Link href="/">
