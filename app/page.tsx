@@ -4,9 +4,10 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import HeroAvatar from "@/components/ui/HeroAvatar";
-import Hero from "../components/landingPage/Hero"
 import Navbar from "@/components/navigation//Navbar";
+import Hero from "../components/landingPage/Hero"
 import ProjectCarousel from "@/components/landingPage/ProjectCarousel";
+import HeroToExpertise from "@/components/landingPage/HeroToExpertise";
 import Vision from "@/components/landingPage/Vision";
 import ProjectHighlights from "@/components/landingPage/ProjectHighlights";
 import Service from "@/components/landingPage/Services"
@@ -92,7 +93,7 @@ export default function Home() {
         */}
 
         {/* Page Content */}
-        <div id="landingPage" className="w-screen relative 2xl:mx-auto overflow-x-hidden bg-white dark:bg-slate-900">
+        <div id="landingPage" className="w-screen relative 2xl:mx-auto  bg-white dark:bg-slate-900">
           <Navbar/>
           <main className="w-screen mx-auto flex flex-col gap-12 2xl:gap-20">
             <Hero />
@@ -102,8 +103,7 @@ export default function Home() {
                 <div key={i} className='border-2 border-ashGray opacity-20 first:border-l-4 last:border-r-4' />
               ))}
             </div>
-            <ProjectCarousel />
-            <Vision />
+            <HeroToExpertise />
             <ProjectHighlights />
             <Service />
             <Testimonials />
